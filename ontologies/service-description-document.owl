@@ -17,6 +17,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      ontologyIRI="http://purl.org/esip/service-description-document#"
      versionIRI="http://purl.org/esip/service-description-document/0.1.0#">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
@@ -54,6 +55,9 @@
         <ObjectProperty abbreviatedIRI="ServiceParameter:hasParameters"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="attribution"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="description"/>
     </Declaration>
     <Declaration>
@@ -117,6 +121,10 @@
         <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
     </ObjectPropertyRange>
     <DataPropertyDomain>
+        <DataProperty IRI="attribution"/>
+        <Class IRI="ServiceDescriptionDocument"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="description"/>
         <Class IRI="ServiceDescriptionDocument"/>
     </DataPropertyDomain>
@@ -160,6 +168,10 @@
         <DataProperty abbreviatedIRI="ServiceParameter:profileNameSpace"/>
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
     </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="attribution"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="description"/>
         <Datatype abbreviatedIRI="xsd:string"/>
@@ -215,6 +227,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>ServiceDescriptionDocument</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Service Description Document</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>attribution</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The author of the web service.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
