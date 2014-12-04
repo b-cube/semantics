@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://purl.org/esip/service-description-document#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://purl.org/esip/service-description-document#"
+     versionIRI="http://purl.org/esip/service-description-document/0.1.0#">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="nutch" IRI="http://purl.org/esip/nutch-document#"/>
+    <Prefix name="Profile" IRI="http://www.daml.org/services/owl-s/1.2/Profile.owl#"/>
+    <Prefix name="Service" IRI="http://www.daml.org/services/owl-s/1.2/Service.owl#"/>
+    <Prefix name="ServiceParameter" IRI="http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A Service Description Document can be used to describe the web interface of a search engine, the main components are a description and a URL template. This ontology describes the different basic elements that an OpenSearch document can contain and therefore represent.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="nutch:Document"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ServiceDescriptionDocument"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Service:Service"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="describedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Profile:hasServiceProfile"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="ServiceParameter:hasParameters"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="endpoint"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="namespace"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="profileType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="version"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="ServiceParameter:parameterFormat"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="ServiceParameter:parameterRange"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="ServiceParameter:parameterType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="ServiceParameter:profileNameSpace"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="ServiceDescriptionDocument"/>
+        <Class abbreviatedIRI="nutch:Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+        <Class IRI="ServiceDescriptionDocument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
+        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+    </SubClassOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="describedBy"/>
+        <Class abbreviatedIRI="Service:Service"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Profile:hasServiceProfile"/>
+        <Class IRI="ServiceDescriptionDocument"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="ServiceParameter:hasParameters"/>
+        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="describedBy"/>
+        <Class IRI="ServiceDescriptionDocument"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Profile:hasServiceProfile"/>
+        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="ServiceParameter:hasParameters"/>
+        <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="description"/>
+        <Class IRI="ServiceDescriptionDocument"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="endpoint"/>
+        <Class IRI="ServiceDescriptionDocument"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="namespace"/>
+        <Class IRI="ServiceDescriptionDocument"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="namespace"/>
+        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="namespace"/>
+        <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="profileType"/>
+        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="version"/>
+        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="ServiceParameter:parameterFormat"/>
+        <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="ServiceParameter:parameterRange"/>
+        <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="ServiceParameter:parameterType"/>
+        <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="ServiceParameter:profileNameSpace"/>
+        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="description"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="endpoint"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="namespace"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="profileType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="version"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="ServiceParameter:parameterFormat"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="ServiceParameter:parameterRange"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="ServiceParameter:parameterType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="ServiceParameter:profileNameSpace"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>nutch:Document</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">An Apache Nutch document is what Nutch indexes into a search engine, it can contain multiple attributes being the basic ones: timestamp, content, id and url. The complete attribute list varies depending on what users want to index.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>nutch:Document</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Nutch Document</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>ServiceDescriptionDocument</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A Service Description Document is a document that describes how to use a web service i.e. OpenSearch OSDD, WMS GetCapabilities document, OAI Identify Document, Swagger API Document.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ServiceDescriptionDocument</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Service Description Document</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>profileType</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This property has the short name of a given web service, wms, opensearch etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>Profile:ServiceProfile</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">We are using the OWL-S ontology to describe a general web service.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>Profile:ServiceProfile</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Service Profile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>ServiceParameter:ServiceParameter</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Service Parameter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>ServiceParameter:parameterFormat</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">If the paramter has to be formatted in a particular way, dates in an ISO format or float numbers with 2 decimal points etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>ServiceParameter:parameterType</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This property is intended to be filled with the data type of the parameter i.e. integer, date, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>ServiceParameter:profileNameSpace</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Different service types have different namespaces, for example OpenSearch uses http://a9.com/-/spec/opensearch/1.1/ while wms uses http://www.opengis.net/wms.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

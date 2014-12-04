@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://purl.org/esip/thredds-document#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://purl.org/esip/thredds-document#"
+     versionIRI="http://purl.org/esip/thredds-document/0.1.0#">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="sdd" IRI="http://purl.org/esip/service-description-document#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="dcat" IRI="http://www.w3.org/ns/dcat#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="Service" IRI="http://www.daml.org/services/owl-s/1.2/Service.owl#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A THREDDS document is a hierarchical catalog of services and datasets. They are represented in XML and written in a human readable way. This ontology represent the basic relations between the 3 main objects that a THREDDS catalog can contain: catalog, datasets and services. </Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://purl.org/esip/nutch-document#Document"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Catalog"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Dataset"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Service"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="THREDDSDocument"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Service:Service"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dcat:Dataset"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="describesDataset"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="describesService"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="geospatialCoverage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="id"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="timeCoverage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="version"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="Catalog"/>
+        <Class IRI="THREDDSDocument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Dataset"/>
+        <Class IRI="THREDDSDocument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Service"/>
+        <Class IRI="THREDDSDocument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="THREDDSDocument"/>
+        <Class IRI="http://purl.org/esip/nutch-document#Document"/>
+    </SubClassOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="describesDataset"/>
+        <Class IRI="Dataset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="describesService"/>
+        <Class IRI="Service"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="describesDataset"/>
+        <Class abbreviatedIRI="dcat:Dataset"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="describesService"/>
+        <Class abbreviatedIRI="Service:Service"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="geospatialCoverage"/>
+        <Class IRI="THREDDSDocument"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="id"/>
+        <Class IRI="THREDDSDocument"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="timeCoverage"/>
+        <Class IRI="THREDDSDocument"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="version"/>
+        <Class IRI="THREDDSDocument"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="geospatialCoverage"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="id"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="timeCoverage"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="version"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.org/esip/nutch-document#Document</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A nutch document represents a web resource retrieved by nutch. Each Nutch document has mandatory fields, id, timestamp and content, the rest can or cannot be send to an index engine such as solar. This ontology describes how these abstract elements are related and does not intent to describe the particulars of the search engine document representation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/esip/nutch-document#Document</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Nutch Document</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Catalog</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The catalog element is the top-level element. It may contain zero or more service elements, followed by zero or more datasetRoot elements, followed by zero or more property elements, followed by one or more dataset elements (actually any element in the dataset substitution group). The optional catalog name will be displayed to a user. The expires element tells clients until when this catalog should be reread, so they can cache the catalog information. The value of the version attribute indicates the version of the InvCatalog specification to which the catalog conforms. The version attribute is optional and to indicate conformance with this specification should be set to &quot;1.0.2&quot;. 
+
+http://www.unidata.ucar.edu/software/thredds/current/tds/catalog/InvCatalogSpec.html#catalog</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Catalog</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">THREDDS Catalog</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Dataset</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A dataset element represents a named, logical set of data at a level of granularity appropriate for presentation to a user. A dataset is direct if it contains at least one dataset access method, otherwise it is just a container for nested datasets, called a collection dataset. The name of the dataset element should be a human readable name that will be displayed to users. Multiple access methods specify different services for accessing the same dataset.
+
+http://www.unidata.ucar.edu/software/thredds/current/tds/catalog/InvCatalogSpec.html#dataset</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Dataset</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">THREDDS Dataset</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Service</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A service element represents a data access service and allows basic data access information to be factored out of dataset and access elements.
+
+The name attribute is required and its value must be unique for all service elements within the catalog. These unique names are used in the definition of a dataset access method to refer to a specific service element. The mandatory base attribute and the optional suffix attribute are both used in the construction of the dataset URL (see constructing URLS). The base may be an absolute URL or it may be relative to the catalog&apos;s base URL. The service element must have a serviceType attribute whose value is one of the serviceType values. The optional desc attribute allows you to give a human-readable description of the service.
+A service element may contain 0 or more property elements to allow for the encoding of additional information. One possible use is to encode additional information necessary for clients to be able to access datasets through this service.Though the intent is that the serviceType (and possibly the dataFormat attribute for bulk transport methods) should be sufficient to allow clients to access datasets.
+
+Only service element with serviceType=&quot;Compound&quot; may have nested service elements. Use Compound services when you systematically offer more than one way to access a dataset (e.g.DODS and FTP), and the access URLs are the same except for the service base. Nested service elements may also be used directly by dataset or access elements, and so must have unique names.
+
+http://www.unidata.ucar.edu/software/thredds/current/tds/catalog/InvCatalogSpec.html#service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Service</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">THREDDS Service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>THREDDSDocument</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A THREDDS catalog is a way to describe an inventory of available datasets. These catalogs provide a simple hierarchical structure for organizing a collection of datasets, an access method for each dataset, a human understandable name for each dataset, and a structure on which further descriptive information can be placed.
+
+This ontology describes the relationships between the elements that a THREDDS document can contain.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>THREDDSDocument</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">THREDDS Catalog</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>description</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Used to add a description of the catalog it can be nested in an element tag.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>geospatialCoverage</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A geospatialCoverage element specifies a lat/lon bounding box, and an altitude range that the data covers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>id</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A THREDDS id is normally a encoded string like EOS:1234</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>timeCoverage</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A timeCoverage element specifies a date range. The date range can be specified in three ways: 1) by giving both a start and an end date type element; 2) by specifying a start element and a duration element; or 3) by specifying an end element and a duration element. The optional resolution element should be used to indicate the data resolution for time series data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>version</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">THREDDS spec version</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>Service:Service</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">OWL-S is an ontology built on top of Web Ontology Language (OWL) by the DARPA DAML program. It replaces the former DAML-S ontology. &quot;OWL-S is an ontology, within the OWL-based framework of the Semantic Web, for describing Semantic Web Services. It will enable users and software agents to automatically discover, invoke, compose, and monitor Web resources offering services, under specified constraints.
+
+http://www.ai.sri.com/daml/services/owl-s/1.2/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dcat:Dataset</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The Data Catalog Vocabulary (DCAT) defines a standard way to publish machine-readable metadata about a dataset.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dcat:Dataset</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">DCAT Dataset</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

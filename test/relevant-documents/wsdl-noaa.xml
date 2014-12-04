@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<wsdl:definitions targetNamespace="http://opendap.co-ops.nos.noaa.gov/axis/webservices/watertemperature/wsdl" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://opendap.co-ops.nos.noaa.gov/axis/webservices/watertemperature/wsdl" xmlns:intf="http://opendap.co-ops.nos.noaa.gov/axis/webservices/watertemperature/wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <!-- 
+WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)
+
+  --> 
+    <wsdl:types>
+        <schema elementFormDefault="qualified" targetNamespace="http://opendap.co-ops.nos.noaa.gov/axis/webservices/watertemperature/wsdl" xmlns="http://www.w3.org/2001/XMLSchema">
+            <element name="Parameters">
+                <complexType>
+                    <sequence>
+                        <element name="stationId" type="xsd:string" /> 
+                        <element name="beginDate" type="xsd:string" /> 
+                        <element name="endDate" type="xsd:string" /> 
+                        <element name="unit" nillable="true" type="xsd:string" />
+                        <element name="timeZone" type="xsd:int" /> 
+                    </sequence>
+                </complexType>
+            </element>
+            <complexType name="Data">
+                <sequence>
+                    <element name="timeStamp" type="xsd:string" /> 
+                    <element name="WT" type="xsd:double" /> 
+                    <element name="X" type="xsd:int" /> 
+                    <element name="N" type="xsd:int" /> 
+                    <element name="R" type="xsd:int" /> 
+                </sequence>
+            </complexType>
+            <complexType name="ArrayOfData">
+                <sequence>
+                    <element maxOccurs="unbounded" minOccurs="0" name="item" type="impl:Data" /> 
+                </sequence>
+            </complexType>
+            <element name="WaterTemperatureMeasurements">
+                <complexType>
+                    <sequence>
+                        <element name="data" type="impl:ArrayOfData" /> 
+                    </sequence>
+                </complexType>
+            </element>  
+            <element name="WTandMetadata">
+                <complexType>
+                    <sequence>
+                        <element name="stationId" type="xsd:string" /> 
+                        <element name="stationName" type="xsd:string" /> 
+                        <element name="latitude" type="xsd:float" /> 
+                        <element name="longitude" type="xsd:float" /> 
+                        <element name="state" type="xsd:string" /> 
+                        <element name="dataSource" type="xsd:string" /> 
+                        <element name="COOPSDisclaimer" type="xsd:string" /> 
+                        <element name="beginDate" type="xsd:string" /> 
+                        <element name="endDate" type="xsd:string" /> 
+                        <element name="timeZone" type="xsd:string" /> 
+                        <element name="unit"     type="xsd:string" /> 
+                        <element name="data" type="impl:ArrayOfData" /> 
+                    </sequence>
+                </complexType>
+            </element>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="getWaterTemperatureResponse">
+        <wsdl:part element="impl:WaterTemperatureMeasurements" name="WaterTemperatureMeasurements" /> 
+    </wsdl:message>
+    <wsdl:message name="getWaterTemperatureRequest">
+        <wsdl:part element="impl:Parameters" name="Parameters" /> 
+    </wsdl:message>
+    <wsdl:message name="getWaterTemperatureAndMetadataRequest">
+        <wsdl:part element="impl:Parameters" name="Parameters" /> 
+    </wsdl:message>
+    <wsdl:message name="getWaterTemperatureAndMetadataResponse">
+        <wsdl:part element="impl:WTandMetadata" name="WTandMetadata" /> 
+    </wsdl:message>
+    <wsdl:portType name="WaterTemperaturePortType">
+        <wsdl:operation name="getWaterTemperature" parameterOrder="Parameters">
+            <wsdl:input message="impl:getWaterTemperatureRequest" name="getWaterTemperatureRequest" /> 
+            <wsdl:output message="impl:getWaterTemperatureResponse" name="getWaterTemperatureResponse" /> 
+        </wsdl:operation>
+        <wsdl:operation name="getWaterTemperatureAndMetadata" parameterOrder="Parameters">
+            <wsdl:input message="impl:getWaterTemperatureAndMetadataRequest" name="getWaterTemperatureAndMetadataRequest" /> 
+            <wsdl:output message="impl:getWaterTemperatureAndMetadataResponse" name="getWaterTemperatureAndMetadataResponse" /> 
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="WaterTemperatureSoapBinding" type="impl:WaterTemperaturePortType">
+        <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" /> 
+        <wsdl:operation name="getWaterTemperature">
+            <wsdlsoap:operation soapAction="" /> 
+            <wsdl:input name="getWaterTemperatureRequest">
+                <wsdlsoap:body use="literal" /> 
+            </wsdl:input>
+            <wsdl:output name="getWaterTemperatureResponse">
+                <wsdlsoap:body use="literal" /> 
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getWaterTemperatureAndMetadata">
+            <wsdlsoap:operation soapAction="" /> 
+            <wsdl:input name="getWaterTemperatureAndMetadataRequest">
+                <wsdlsoap:body use="literal" /> 
+            </wsdl:input>
+            <wsdl:output name="getWaterTemperatureAndMetadataResponse">
+                <wsdlsoap:body use="literal" /> 
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="WaterTemperatureService">
+        <wsdl:port binding="impl:WaterTemperatureSoapBinding" name="WaterTemperature">
+            <wsdlsoap:address location="http://opendap.co-ops.nos.noaa.gov/axis/services/WaterTemperature" />
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

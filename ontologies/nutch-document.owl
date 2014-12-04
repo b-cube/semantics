@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://purl.org/esip/nutch-document#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://purl.org/esip/nutch-document#"
+     versionIRI="http://purl.org/esip/nutch-document/0.1.0#">
+    <Prefix name="kml" IRI="http://purl.org/esip/kml-document#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="sdd" IRI="http://purl.org/esip/service-description-document#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="Service" IRI="http://www.daml.org/services/owl-s/1.2/Service.owl#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A nutch document represents a web resource retrieved by nutch. Each Nutch document has mandatory fields, id, timestamp and content, the rest can or cannot be send to an index engine such as solar. This ontology describes how these abstract elements are related and does not intent to describe the particulars of the search engine document representation.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="kml:KMLDocument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Document"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="sdd:ServiceDescriptionDocument"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="anchor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="host"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="id"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="parsedContent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="rawContent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="timestamp"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="title"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="updatedDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="url"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="version"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="xmlNamespaces"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="kml:KMLDocument"/>
+        <Class IRI="Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="sdd:ServiceDescriptionDocument"/>
+        <Class IRI="Document"/>
+    </SubClassOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="anchor"/>
+        <Class IRI="Document"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="date"/>
+        <Class IRI="Document"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="host"/>
+        <Class IRI="Document"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="id"/>
+        <Class IRI="Document"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="parsedContent"/>
+        <Class IRI="Document"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="rawContent"/>
+        <Class IRI="Document"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="timestamp"/>
+        <Class IRI="Document"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="title"/>
+        <Class IRI="Document"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="updatedDate"/>
+        <Class IRI="Document"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="url"/>
+        <Class IRI="Document"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="version"/>
+        <Class IRI="Document"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="xmlNamespaces"/>
+        <Class IRI="Document"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="anchor"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="date"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="host"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="id"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="parsedContent"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="rawContent"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="timestamp"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="timestamp"/>
+        <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="title"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="updatedDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="url"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="version"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="xmlNamespaces"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>kml:KMLDocument</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A KML document describes features and geometries in a map, it can contain metadata about geo located services and datasets. This Ontology represents how the elements in a KML file are related.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>kml:KMLDocument</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">KML Document</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Document</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A nutch document represents a web resource retrieved by nutch. Each Nutch document has mandatory fields, id, timestamp and content, the rest can or cannot be send to an index engine such as solar. This ontology describes how these abstract elements are related and does not intent to describe the particulars of the search engine document representation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Document</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Nutch Document</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>sdd:ServiceDescriptionDocument</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A Service Description Document can be used to describe the web interface of a search engine, the main components are a description and a URL template. This ontology describes the different basic elements that an OpenSearch document can contain and therefore represent.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>sdd:ServiceDescriptionDocument</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Service Description Document</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
