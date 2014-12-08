@@ -17,7 +17,6 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      ontologyIRI="http://purl.org/esip/service-description-document#"
      versionIRI="http://purl.org/esip/service-description-document/0.1.0#">
-    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
@@ -62,6 +61,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="endpoint"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="name"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="namespace"/>
@@ -130,6 +132,10 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="endpoint"/>
+        <Class IRI="ServiceDescriptionDocument"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="name"/>
         <Class IRI="ServiceDescriptionDocument"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -179,6 +185,10 @@
     <DataPropertyRange>
         <DataProperty IRI="endpoint"/>
         <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="namespace"/>

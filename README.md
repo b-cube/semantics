@@ -34,8 +34,20 @@ bcube-triple-generator
 bcube-ntriple-generator is a python tool that creates triples from documents found by the BCube Crawler using the BCube Service Ontology and the RESTCube API.
 
 
+Installation
+---------------
+
+Running the tests
+
+```
+$nosetests
+```
+
 Usage
--------------------
+---------------
+
+Changelog
+----------------
 
 
 TODO

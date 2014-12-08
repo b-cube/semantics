@@ -2,7 +2,8 @@
 
 import rdflib
 import re
-import xml.etree.ElementTree as ET
+import urllib2
+from lxml import etree
 
 
 class Parser():
@@ -11,12 +12,30 @@ class Parser():
     '''
 
     def __init__(self, url):
-        tree = ET.parse(url)
-        document = tree.getroot()
-        self.doc = document
+        try:
+            if url.startswith('http') or url.startswith('ftp'):
+                self.data = urllib2.urlopen(url).read()
+            else:
+                self.data = open(url).read()
+        except:
+            print "The url could not be openned"
+        self._parse()
 
-    def set_ns(self, ns):
-        self.NS = ns
+    def _parse(self):
+        try:
+            self.doc = etree.fromstring(self.data)
+        except:
+            print "The XML is malformed or truncated"
+            self.doc = None
+        ns = []
+        match = re.findall("xmlns.*\"(.*?)\"", self.data)
+        for namespace in match:
+            if namespace.startswith("http"):
+                ns.append("{" + namespace + "}")
+        self.ns = set()
+        self.default_ns = ns[0]
+        self.ns.update(ns)
+        self.data = None  # No longer needed.
 
     def find_node(self, nanmespaces, element, tag):
         '''
@@ -35,21 +54,12 @@ class Parser():
         '''
         Finds elements based on the default namespace set and the document root
         '''
-        for ns in self.NS:
-            found = self.doc.findall(ns+tag)
-            if found is not None:
-                return found
-            else:
-                continue
-        return None
+        found = self.doc.findall(self.default_ns+tag)
+        if found is not None:
+            return found
+        else:
+            return None
 
-    def get_namespaces(self):
-        uri_set = set()
-        for elem in self.doc.getiterator():
-            if elem.tag[0] == "{":
-                uri, tag = elem.tag[1:].split("}")
-                uri_set.add(uri)
-        return uri_set
 
 class OSDD():
     '''
@@ -57,7 +67,7 @@ class OSDD():
     into a n-triple file so it can be used by a triple store.
     '''
 
-    def validate_opensearch(self):
+    def _validate_opensearch(self):
         '''
         Simple naive validation, has an A9 namespace and
         and has at least one endpoint.
@@ -70,13 +80,48 @@ class OSDD():
         else:
             self.is_valid = False
             self.doc = None
-    def extract_url_template_variables(self):
+    def _charachterize_variables(self):
+        '''
+        This function will add properties to the variables found in a OSDD document.
+        i.e if it uses the ns geo or time etc.
+        '''
+        url_variables = self._extract_url_template_variables()
+        variables = []
+
+        for variable in url_variables:
+            if 'time' in variable:
+                timevar = {
+                    'name': variable,
+                    'type': 'time',
+                    'format': 'YYYY-MM-DDTHH:mm:ssZ',
+                    'namespace': 'http://a9.com/-/opensearch/extensions/time/1.0/'
+                }
+                variables.append(timevar)
+            elif 'geo:box' in variable:
+                geovar = {
+                    'name': variable,
+                    'type': 'geo',
+                    'format': 'geo:box ~ west, south, east, north',
+                    'namespace': 'http://a9.com/-/opensearch/extensions/geo/1.0/'
+                }
+                variables.append(geovar)
+            else:
+                genericvar = {
+                    'name': variable,
+                    'type': 'generic'
+                }
+                variables.append(genericvar)
+        return variables
+
+    def _extract_url_template_variables(self):
+        '''
+        Extracts variables from an OpenSearch url template.
+        '''
         variables = set()
         for endpoint in self.endpoints:
             match = re.findall("{(.*?)}", endpoint)
             variables.update(match)
         return variables
-
 
     def extract_core_properties(self):
         '''
@@ -87,14 +132,12 @@ class OSDD():
         self.endpoints = [item.attrib['template'] for item in
                           self.parser.find('Url')]
         self.description = self.parser.find('Description')[0].text
-        self.namespaces = self.parser.get_namespaces()
-        self.variables = self.extract_url_template_variables()
-
-
+        self.attribution = self.parser.find('Attribution')[0].text
+        self.name = self.parser.find('ShortName')[0].text
+        self.namespaces = self.parser.ns
+        self.variables = self._charachterize_variables()
 
     def __init__(self, parser):
-        ns = ['{http://a9.com/-/spec/opensearch/1.1/}']
         self.parser = parser
-        self.parser.set_ns(ns)
-        self.validate_opensearch()
+        self._validate_opensearch()
         self.extract_core_properties()
