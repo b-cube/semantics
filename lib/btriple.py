@@ -1,9 +1,40 @@
 #!/usr/bin/env python
 
-import rdflib
+from rdflib import Literal, URIRef, Namespace
+from rdflib.graph import Graph
 import re
 import urllib2
 from lxml import etree
+
+
+class Ontology():
+    '''
+    This class handles ontology binding and triples serialization.
+    The predefined ontologies are binded to the _ns variable.
+    '''
+
+    def __init__(self):
+        self._ns = [
+            ('sdo', Namespace('http://purl.org/nsidc/bcube/service-description-ontology#')),
+            ('Profile', Namespace('http://www.daml.org/services/owl-s/1.2/Profile.owl#')),
+            ('Service', Namespace('http://www.daml.org/services/owl-s/1.2/Service.owl#')),
+            ('ServiceParameter', Namespace('http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl'))]
+
+        self.g = Graph()
+        for ns in self._ns:
+            self.g.bind(ns[0], ns[1])
+
+    def add_namespace(self, prefix, uri):
+        if uri.startswith('http'):
+            ns = Namespace(uri)
+            self._ns.append((prefix, ns))
+            self.g.bind(prefix, ns)
+
+    def get_namespaces(self):
+        ns = []
+        for namespace in self.g.namespaces():
+            ns.append(namespace)
+        return ns
 
 
 class Parser():
@@ -80,13 +111,19 @@ class OSDD():
         else:
             self.is_valid = False
             self.doc = None
+
+    def valid(self):
+        return self.is_valid
+
     def _charachterize_variables(self):
         '''
-        This function will add properties to the variables found in a OSDD document.
-        i.e if it uses the ns geo or time etc.
+        This function will add properties to the variables found in a
+        OSDD document i.e if it uses the ns geo or time etc.
         '''
         url_variables = self._extract_url_template_variables()
         variables = []
+        self.has_time = False
+        self.has_geo = False
 
         for variable in url_variables:
             if 'time' in variable:
@@ -97,6 +134,7 @@ class OSDD():
                     'namespace': 'http://a9.com/-/opensearch/extensions/time/1.0/'
                 }
                 variables.append(timevar)
+                self.has_time = True
             elif 'geo:box' in variable:
                 geovar = {
                     'name': variable,
@@ -105,6 +143,7 @@ class OSDD():
                     'namespace': 'http://a9.com/-/opensearch/extensions/geo/1.0/'
                 }
                 variables.append(geovar)
+                self.has_geo = True
             else:
                 genericvar = {
                     'name': variable,
@@ -136,6 +175,9 @@ class OSDD():
         self.name = self.parser.find('ShortName')[0].text
         self.namespaces = self.parser.ns
         self.variables = self._charachterize_variables()
+
+    def create_triples(self):
+        pass
 
     def __init__(self, parser):
         self.parser = parser
