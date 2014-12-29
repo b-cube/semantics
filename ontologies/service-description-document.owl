@@ -17,7 +17,6 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      ontologyIRI="http://purl.org/nsidc/bcube/service-description-document#"
      versionIRI="http://purl.org/nsidc/bcube/service-description-document/0.1.0#">
-    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>

@@ -14,20 +14,21 @@ class Ontology():
     '''
 
     def __init__(self):
-        self._ns = [
-            ('sdo', Namespace('http://purl.org/nsidc/bcube/service-description-ontology#')),
-            ('Profile', Namespace('http://www.daml.org/services/owl-s/1.2/Profile.owl#')),
-            ('Service', Namespace('http://www.daml.org/services/owl-s/1.2/Service.owl#')),
-            ('ServiceParameter', Namespace('http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl'))]
+        self._ns = {
+            'sdo': Namespace('http://purl.org/nsidc/bcube/service-description-ontology#'),
+            'Profile': Namespace('http://www.daml.org/services/owl-s/1.2/Profile.owl#'),
+            'Service': Namespace('http://www.daml.org/services/owl-s/1.2/Service.owl#'),
+            'ServiceParameter': Namespace('http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl')}
 
         self.g = Graph()
         for ns in self._ns:
-            self.g.bind(ns[0], ns[1])
+            print ns
+            self.g.bind(ns, self._ns[ns])
 
     def add_namespace(self, prefix, uri):
         if uri.startswith('http'):
             ns = Namespace(uri)
-            self._ns.append((prefix, ns))
+            self._ns[prefix] = ns
             self.g.bind(prefix, ns)
 
     def get_namespaces(self):
@@ -35,6 +36,9 @@ class Ontology():
         for namespace in self.g.namespaces():
             ns.append(namespace)
         return ns
+
+    def add_triple(self, s, v, p):
+        self.g.add(s, v, p)
 
 
 class Parser():
@@ -176,10 +180,31 @@ class OSDD():
         self.namespaces = self.parser.ns
         self.variables = self._charachterize_variables()
 
-    def create_triples(self):
-        pass
+    def get_osdd_triples(self):
+        '''
+        Returns a graph with triples about an OSDD document
+        '''
+        subject = URIRef('http://purl.org/nsidc/bcube/service-description-ontology#ServiceDescriptionDocument')
+        has_profile = self.ontology._ns['sdo']['hasServiceProfile']
+        # now we add the triples in the subject, verb, predicate form
+        tuples = {
+            'hasProfile': (subject, has_profile , Literal('OpenSearch'))
+            }
+        return tuples
+
+
+    def get_triples(self):
+        '''
+        This method returns tiples about an OSDD document using the
+        ServiceDescriptionDocument ontology.
+        '''
+        self.extract_core_properties()
+
+        profile_subject = URIRef('http://www.daml.org/services/owl-s/1.2/Profile.owl#ServiceProfile')
+        parameter_subject = URIRef('http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#ServiceParameter')
+
 
     def __init__(self, parser):
+        self.ontology = Ontology()
         self.parser = parser
         self._validate_opensearch()
-        self.extract_core_properties()

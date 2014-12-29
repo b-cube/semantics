@@ -6,6 +6,7 @@ class TestOSDD(unittest.TestCase):
     def setUp(self):
         parser = Parser('test/relevant-documents/opensearch-nasa.xml')
         self.osdd = OSDD(parser)
+        self.osdd.extract_core_properties()
 
     def test_osdd_validates_osdd(self):
         self.assertIsInstance(self.osdd, OSDD)
@@ -51,6 +52,10 @@ class TestOSDD(unittest.TestCase):
         self.assertTrue(osdd_geovar in self.osdd.variables)
         self.assertTrue(osdd_timestart in self.osdd.variables)
         self.assertTrue(osdd_timestop in self.osdd.variables)
+
+    def test_osdd_returns_basic_triples(self):
+        triples = self.osdd.get_osdd_triples()
+        self.assertIsNotNone(triples)
 
     def test_osdd_frees_data_after_is_parsed(self):
         self.assertIsNotNone(self.osdd.parser.doc)
