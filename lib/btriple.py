@@ -1,35 +1,25 @@
 #!/usr/bin/env python
 
-from rdflib import Literal, URIRef, Namespace
-from rdflib.graph import Graph
+from rdflib import Literal, URIRef, Namespace, BNode, ConjunctiveGraph, RDF
 import re
 import urllib2
 from lxml import etree
 
 
-class Ontology():
+class Store():
     '''
-    This class handles ontology binding and triples serialization.
-    The predefined ontologies are binded to the _ns variable.
+    This class is a wrapper for the ConjunctiveGraph class that
+    handles ontology binding and triples serialization.
     '''
 
     def __init__(self):
-        self._ns = {
-            'sdo': Namespace('http://purl.org/nsidc/bcube/service-description-ontology#'),
-            'Profile': Namespace('http://www.daml.org/services/owl-s/1.2/Profile.owl#'),
-            'Service': Namespace('http://www.daml.org/services/owl-s/1.2/Service.owl#'),
-            'ServiceParameter': Namespace('http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl')}
+        self.g = ConjunctiveGraph()
+        self.ns = {}
 
-        self.g = Graph()
-        for ns in self._ns:
-            print ns
-            self.g.bind(ns, self._ns[ns])
-
-    def add_namespace(self, prefix, uri):
-        if uri.startswith('http'):
-            ns = Namespace(uri)
-            self._ns[prefix] = ns
-            self.g.bind(prefix, ns)
+    def bind_namespaces(self, namespaces):
+        for ns in namespaces:
+            self.g.bind(ns, Namespace(namespaces[ns]))
+            self.ns[ns] = Namespace(namespaces[ns])
 
     def get_namespaces(self):
         ns = []
@@ -38,7 +28,10 @@ class Ontology():
         return ns
 
     def add_triple(self, s, v, p):
-        self.g.add(s, v, p)
+        self.g.add((s, v, p))
+
+    def serialize(self, format):
+        return self.g.serialize(format=format)
 
 
 class Parser():
@@ -54,9 +47,17 @@ class Parser():
                 self.data = open(url).read()
         except:
             print "The url could not be openned"
+            return None
         self._parse()
+        self.url = url
 
     def _parse(self):
+        '''
+        This method parses the xml document and stores all the namespaces
+        found in self.ns, not to be confused with the namespaces used by
+        the ontology. This namespaces are used later to match elements
+        in the document.
+        '''
         try:
             self.doc = etree.fromstring(self.data)
         except:
@@ -77,7 +78,11 @@ class Parser():
         Finds elements from the root documents. Namespaces can vary therefore
         an array of their possible forms is used in the matching function.
         '''
+        if element is None:
+            element = self.doc
         for ns in nanmespaces:
+            if ns.startswith("http"):
+                ns = '{' + ns + '}'
             found = element.findall(ns+tag)
             if found is not None:
                 return found
@@ -94,6 +99,16 @@ class Parser():
             return found
         else:
             return None
+
+    def get_namespaces(self):
+        '''
+        returns a list with the document's namespaces
+        '''
+        doc_ns = []
+        for ns in self.ns:
+            doc_ns.append(ns[1:-1])
+        return doc_ns
+
 
 
 class OSDD():
@@ -151,7 +166,8 @@ class OSDD():
             else:
                 genericvar = {
                     'name': variable,
-                    'type': 'generic'
+                    'type': 'generic',
+                    'namespace': None
                 }
                 variables.append(genericvar)
         return variables
@@ -166,9 +182,9 @@ class OSDD():
             variables.update(match)
         return variables
 
-    def extract_core_properties(self):
+    def _extract_core_properties(self):
         '''
-        Extracts the main properties from a OSDD to populate
+        Extracts the main properties from an OSDD to populate
         an RDFlib graph.
         '''
         self.profile = "OpenSearch"
@@ -177,34 +193,90 @@ class OSDD():
         self.description = self.parser.find('Description')[0].text
         self.attribution = self.parser.find('Attribution')[0].text
         self.name = self.parser.find('ShortName')[0].text
-        self.namespaces = self.parser.ns
         self.variables = self._charachterize_variables()
 
-    def get_osdd_triples(self):
+    def create_service_triples(self):
         '''
-        Returns a graph with triples about an OSDD document
+        Top level triples to describe a Service Description Document
         '''
-        subject = URIRef('http://purl.org/nsidc/bcube/service-description-ontology#ServiceDescriptionDocument')
-        has_profile = self.ontology._ns['sdo']['hasServiceProfile']
-        # now we add the triples in the subject, verb, predicate form
-        tuples = {
-            'hasProfile': (subject, has_profile , Literal('OpenSearch'))
-            }
-        return tuples
+        sdo_ns = self.store.ns['sdo']
+        service_ns = self.store.ns['Service']
+        # The subject is the resource we are characterizing.
+        service = URIRef(self.url)
+        self.service_node = service
+        # adding triples about the service description document
+        self.store.add_triple(service, RDF.type, sdo_ns['ServiceDescriptionDocument'])
+        self.store.add_triple(service_ns['Service'], sdo_ns['describedBy'], service)
+        self.store.add_triple(service, sdo_ns['description'], Literal(self.description))
+        self.store.add_triple(service, sdo_ns['attribution'], Literal(self.attribution))
+        self.store.add_triple(service, sdo_ns['serviceName'], Literal(self.name))
+        self.store.add_triple(service, sdo_ns['type'], Literal('OpenSearch'))
+        for ns in self.parser.get_namespaces():
+            self.store.add_triple(service, sdo_ns['namespace'], Literal(ns))
+        if not hasattr(self, 'profile_node'):
+            self.profile_node = BNode()
+        self.store.add_triple(service, sdo_ns['hasProfile'], self.profile_node)
+        return self.store.g
 
-
-    def get_triples(self):
+    def create_profile_triples(self):
         '''
-        This method returns tiples about an OSDD document using the
-        ServiceDescriptionDocument ontology.
+        Creates triples for the service profile.
         '''
-        self.extract_core_properties()
+        sdo_ns = self.store.ns['sdo']
+        profile_ns = self.store.ns['Profile']
+        if not hasattr(self, 'profile_node'):
+            self.profile_node = BNode()
+        if not hasattr(self, 'service_node'):
+            self.service_node = URIRef(self.url)
 
-        profile_subject = URIRef('http://www.daml.org/services/owl-s/1.2/Profile.owl#ServiceProfile')
-        parameter_subject = URIRef('http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#ServiceParameter')
+        # Add triples
+        self.store.add_triple(self.profile_node, RDF.type, profile_ns['ServiceProfile'])
+        self.store.add_triple(self.profile_node, sdo_ns['profileType'], Literal('OpenSearch'))
+        # Not sure if each of the URL templates could qualify an an independent endpoint.
+        self.store.add_triple(self.profile_node, sdo_ns['endpoint'], URIRef(self.url))
+        self.store.add_triple(self.profile_node, sdo_ns['hasService'], self.service_node)
+        return self.store.g
 
+    def create_parameter_triples(self):
+        '''
+        Create triples for each variable found in the OSDD document
+        '''
+        self.parameter_nodes = []
+        if not hasattr(self, 'profile_node'):
+            self.profile_node = BNode()
+        for variable in self.variables:
+            # We use a blank node because a variable is an abstract class
+            parameter = BNode()
+            sdo_ns = self.store.ns['sdo']
+            param_ns = self.store.ns['ServiceParameter']
+            self.store.add_triple(parameter, RDF.type, param_ns['ServiceParameter'])
+            self.store.add_triple(parameter, param_ns['ServiceParameterName'], Literal(variable['name']))
+            self.store.add_triple(parameter, sdo_ns['serviceParameterType'], Literal(variable['type']))
+            self.store.add_triple(parameter, sdo_ns['namespace'], Literal(variable['namespace']))
+            self.store.add_triple(parameter, sdo_ns['hasProfile'], self.profile_node)
+            self.store.add_triple(self.profile_node, sdo_ns['hasParameter'], parameter)
+            self.parameter_nodes.append(parameter)
+        return self.store.g
 
-    def __init__(self, parser):
-        self.ontology = Ontology()
-        self.parser = parser
+    def generate_triples(self):
+        '''
+        Invokes the create_* methods to generate the graph for a given OSDD document.
+        '''
+        self.create_service_triples()
+        self.create_profile_triples()
+        self.create_parameter_triples()
+        return self.store.g
+
+    def __init__(self, url):
+        ontology_uris = {
+            'sdo': 'http//purl.org/nsidc/bcube/service-description-ontology#',
+            'Profile': 'http://www.daml.org/services/owl-s/1.2/Profile.owl#',
+            'Service': 'http://ww.daml.org/services/owl-s/1.2/Service.owl#',
+            'ServiceParameter': 'http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#'
+        }
+        self.store = Store()
+        self.store.bind_namespaces(ontology_uris)
+        self.parser = Parser(url)
         self._validate_opensearch()
+        self.url = url
+        self._extract_core_properties()

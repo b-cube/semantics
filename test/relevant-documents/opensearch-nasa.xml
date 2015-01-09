@@ -22,4 +22,5 @@
    <Language>en-us</Language>
    <OutputEncoding>UTF-8</OutputEncoding>
    <InputEncoding>UTF-8</InputEncoding>
+   <geo:Dummy>TestValue</geo:Dummy>
  </OpenSearchDescription>
