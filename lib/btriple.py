@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 from rdflib import Literal, URIRef, Namespace, BNode, ConjunctiveGraph, RDF
+from rdflib.namespace import DCTERMS
 import re
 import urllib2
 from lxml import etree
@@ -207,10 +208,10 @@ class OSDD():
         # adding triples about the service description document
         self.store.add_triple(service, RDF.type, sdo_ns['ServiceDescriptionDocument'])
         self.store.add_triple(service_ns['Service'], sdo_ns['describedBy'], service)
-        self.store.add_triple(service, sdo_ns['description'], Literal(self.description))
-        self.store.add_triple(service, sdo_ns['attribution'], Literal(self.attribution))
-        self.store.add_triple(service, sdo_ns['serviceName'], Literal(self.name))
-        self.store.add_triple(service, sdo_ns['type'], Literal('OpenSearch'))
+        self.store.add_triple(service, DCTERMS.description, Literal(self.description))
+        self.store.add_triple(service, DCTERMS.source, Literal(self.attribution))
+        self.store.add_triple(service, DCTERMS.title, Literal(self.name))
+        self.store.add_triple(service, DCTERMS.type, Literal('OpenSearch'))
         for ns in self.parser.get_namespaces():
             self.store.add_triple(service, sdo_ns['namespace'], Literal(ns))
         if not hasattr(self, 'profile_node'):
@@ -272,7 +273,8 @@ class OSDD():
             'sdo': 'http//purl.org/nsidc/bcube/service-description-ontology#',
             'Profile': 'http://www.daml.org/services/owl-s/1.2/Profile.owl#',
             'Service': 'http://ww.daml.org/services/owl-s/1.2/Service.owl#',
-            'ServiceParameter': 'http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#'
+            'ServiceParameter': 'http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#',
+            'dcterms': str(DCTERMS)
         }
         self.store = Store()
         self.store.bind_namespaces(ontology_uris)
