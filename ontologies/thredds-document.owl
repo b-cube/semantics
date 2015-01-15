@@ -84,7 +84,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="THREDDSDocument"/>
-        <Class IRI="http://purl.org/esip/nutch-document#Document"/>
+        <Class IRI="http://purl.org/nsidc/bcube/nutch-document#Document"/>
     </SubClassOf>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="describesDataset"/>
@@ -136,12 +136,12 @@
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://purl.org/esip/nutch-document#Document</IRI>
+        <IRI>http://purl.org/nsidc/bcube/nutch-document#Document</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">A nutch document represents a web resource retrieved by nutch. Each Nutch document has mandatory fields, id, timestamp and content, the rest can or cannot be send to an index engine such as solar. This ontology describes how these abstract elements are related and does not intent to describe the particulars of the search engine document representation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.org/esip/nutch-document#Document</IRI>
+        <IRI>http://purl.org/nsidc/bcube/nutch-document#Document</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Nutch Document</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
