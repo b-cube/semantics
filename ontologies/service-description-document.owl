@@ -21,7 +21,7 @@
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="nutch" IRI="http://purl.org/esip/nutch-document#"/>
+    <Prefix name="nutch" IRI="http://purl.org/nsidc/bcube/nutch-document#"/>
     <Prefix name="Profile" IRI="http://www.daml.org/services/owl-s/1.2/Profile.owl#"/>
     <Prefix name="Service" IRI="http://www.daml.org/services/owl-s/1.2/Service.owl#"/>
     <Prefix name="ServiceParameter" IRI="http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#"/>

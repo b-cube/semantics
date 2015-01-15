@@ -10,17 +10,17 @@
 
 
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://purl.org/esip/nutch-document#"
+     xml:base="http://purl.org/nsidc/bcube/nutch-document#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     ontologyIRI="http://purl.org/esip/nutch-document#"
-     versionIRI="http://purl.org/esip/nutch-document/0.1.0#">
-    <Prefix name="kml" IRI="http://purl.org/esip/kml-document#"/>
+     ontologyIRI="http://purl.org/nsidc/bcube/nutch-document#"
+     versionIRI="http://purl.org/nsidc/bcube/nutch-document/0.1.0#">
+    <Prefix name="kml" IRI="http://purl.org/nsidc/bcube/kml-document#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="sdd" IRI="http://purl.org/esip/service-description-document#"/>
+    <Prefix name="sdd" IRI="http://purl.org/nsidc/bcube/service-description-document#"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="Service" IRI="http://www.daml.org/services/owl-s/1.2/Service.owl#"/>
