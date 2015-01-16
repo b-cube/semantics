@@ -35,38 +35,21 @@ class TestOSDD(unittest.TestCase):
     def test_osdd_extracts_core_osdd_properties(self):
         osdd_name = 'MODAPS Web Services Search'
         osdd_attribution = 'nasa.gov'
-        osdd_endpoints = ['http://modwebsrv.modaps.eosdis.nasa.gov/axis2/services/MODAPSservices/getOpenSearch?products={MODAPSParameters:products}&collection={MODAPSParameters:collection?}&start={time:start}&stop={time:stop}&bbox={geo:box}&coordsOrTiles={MODAPSParameters:coordsOrTiles?}&dayNightBoth={MODAPSParameters:dayNightBoth?}',
-        'http://modwebsrv.modaps.eosdis.nasa.gov/axis2/services/MODAPSservices/getOpenSearch?products={MODAPSParameters:products}&collection={MODAPSParameters:collection?}&start={time:start}&stop={time:stop}&bbox={geo:box}&coordsOrTiles={MODAPSParameters:coordsOrTiles?}']
         osdd_description = 'Use MODAPS Web Services to search for various MODIS related data products'
-
-        osdd_geovar = {
-            'name': 'geo:box',
-            'namespace': 'http://a9.com/-/opensearch/extensions/geo/1.0/',
-            'type': 'geo',
-            'format': 'geo:box ~ west, south, east, north'
-        }
-
-        osdd_timestart = {
-            'name': 'time:start',
-            'namespace': 'http://a9.com/-/opensearch/extensions/time/1.0/',
-            'type': 'time',
-            'format': 'YYYY-MM-DDTHH:mm:ssZ'
-        }
-
-        osdd_timestop = {
-            'name': 'time:stop',
-            'namespace': 'http://a9.com/-/opensearch/extensions/time/1.0/',
-            'type': 'time',
-            'format': 'YYYY-MM-DDTHH:mm:ssZ'
-        }
+        osdd_developer = 'MODAPS Web Services Development Team'
 
         self.assertEqual(self.osdd.name, osdd_name)
         self.assertEqual(self.osdd.attribution, osdd_attribution)
-        self.assertEqual(self.osdd.endpoints, osdd_endpoints)
         self.assertEqual(self.osdd.description, osdd_description)
-        self.assertTrue(osdd_geovar in self.osdd.variables)
-        self.assertTrue(osdd_timestart in self.osdd.variables)
-        self.assertTrue(osdd_timestop in self.osdd.variables)
+        self.assertEqual(self.osdd.developer, osdd_developer)
+
+    def test_extract_endpoints(self):
+        pass
+
+      
+    def test_extract_variables_from_endpoint(self):
+        pass
+        
 
     def test_osdd_frees_data_after_is_parsed(self):
         self.assertIsNotNone(self.osdd.parser.doc)
