@@ -101,9 +101,9 @@ class TestOSDD(unittest.TestCase):
             self.assertEqual(str(endpoint), 'test/relevant-documents/opensearch-nasa.xml')
 
     def test_osdd_creates_service_triples(self):
-        sdo_ns = self.osdd.store.ns['sdo']
+        dct_ns = self.osdd.store.ns['dcterms']
         graph = self.osdd.create_service_triples()
-        subject_object = list(graph.subject_objects(sdo_ns['description']))
+        subject_object = list(graph.subject_objects(dct_ns['description']))
         uri = str(subject_object[0][0].n3())
         description = str(subject_object[0][1].n3())
         self.assertEqual(uri, '<test/relevant-documents/opensearch-nasa.xml>')
@@ -119,18 +119,20 @@ class TestStore(unittest.TestCase):
             'sdo': 'http://purl.org/nsidc/bcube/service-description-ontology#',
             'Profile': 'http://www.daml.org/services/owl-s/1.2/Profile.owl#',
             'Service': 'http://www.daml.org/services/owl-s/1.2/Service.owl#',
-            'ServiceParameter': 'http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl'}
+            'ServiceParameter': 'http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl',
+            'dcterms': 'http://purl.org/dc/terms/'
+            }
 
         self.assertTrue(isinstance(self.store, Store))
         self.store.bind_namespaces(namespaces)
         ns = self.store.get_namespaces()
 
-        self.assertEquals(len(ns), 8)
+        self.assertEquals(len(ns), 9)
         self.assertEquals(ns[0][0], 'xml')
         self.assertEquals(ns[1][0], 'Profile')
-        self.assertEquals(ns[2][0], 'Service')
-        self.assertEquals(ns[3][0], 'rdfs')
-        self.assertEquals(ns[4][0], 'rdf')
-        self.assertEquals(ns[5][0], 'xsd')
-        self.assertEquals(ns[6][0], 'sdo')
-        self.assertEquals(ns[7][0], 'ServiceParameter')
+        self.assertEquals(ns[3][0], 'Service')
+        self.assertEquals(ns[4][0], 'rdfs')
+        self.assertEquals(ns[5][0], 'rdf')
+        self.assertEquals(ns[6][0], 'xsd')
+        self.assertEquals(ns[7][0], 'sdo')
+        self.assertEquals(ns[8][0], 'ServiceParameter')
