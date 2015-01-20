@@ -168,7 +168,7 @@ class TestOSDD(unittest.TestCase):
         self.assertIsNotNone(graph)
         self.assertEqual(len(objects), 7)
         self.assertEqual(len(list(graph.triples((None, param_ns['serviceParameterType'], Literal('products'))))), 1)
-        self.assertEqual(len(list(graph.triples((None, param_ns['serviceParameterName'], Literal('start'))))), 2)
+        self.assertEqual(len(list(graph.triples((None, param_ns['serviceParameterName'], Literal('start'))))), 1)
 
 
 class TestStore(unittest.TestCase):
