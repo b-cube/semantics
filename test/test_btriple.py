@@ -1,5 +1,6 @@
 import unittest
 from btriple import OSDD, Store, Parser
+from rdflib import Literal
 
 from lxml import etree
 
@@ -140,6 +141,9 @@ class TestOSDD(unittest.TestCase):
             # it has an internal id
             self.assertEquals(str(subject.n3())[0:2], '_:')
         subject_objects = list(graph.subject_objects(sdo_ns['endpoint']))
+
+        self.assertTrue(len(subject_objects) > 0)
+
         for id, endpoint in subject_objects:
             self.assertEqual(str(endpoint), 'test/relevant-documents/opensearch-nasa.xml')
 
@@ -153,11 +157,18 @@ class TestOSDD(unittest.TestCase):
         self.assertEqual(description, '"Use MODAPS Web Services to search for various MODIS related data products"')
 
     def test_osdd_creates_endpoint_triples(self):
+        graph = self.osdd.create_endpoint_triples()
 
-        graph = self.osdd.create_endpoint_tripes()
+        sdo_ns = self.osdd.store.ns['sdo']
+        param_ns = self.osdd.store.ns['ServiceParameter']
 
+        #NOTE: does not return a consistently ordered list
+        objects = list(graph.subject_objects(param_ns['serviceParameterType']))
 
         self.assertIsNotNone(graph)
+        self.assertEqual(len(objects), 7)
+        self.assertEqual(len(list(graph.triples((None, param_ns['serviceParameterType'], Literal('products'))))), 1)
+        self.assertEqual(len(list(graph.triples((None, param_ns['serviceParameterName'], Literal('start'))))), 2)
 
 
 class TestStore(unittest.TestCase):
