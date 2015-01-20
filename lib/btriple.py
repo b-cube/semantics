@@ -114,7 +114,7 @@ class Parser():
     def get_document_namespaces(self):
         '''
         Pull all of the namespaces in the source document
-        and generate a list of tuples (prefix, URI)
+        and generate a list of tuples (prefix, URI) to dict
         '''
 
         return dict(self.doc.xpath('/*/namespace::*'))
