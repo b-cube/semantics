@@ -30,6 +30,9 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">A Service Description Document can be used to describe the web interface of a search engine, the main components are a description and a URL template. This ontology describes the different basic elements that an OpenSearch document can contain and therefore represent.</Literal>
     </Annotation>
     <Declaration>
+        <Class IRI="http://purl.org/nsidc/bcube/metadatarecord#MetadataRecord"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="ServiceDescriptionDocument"/>
     </Declaration>
     <Declaration>
@@ -42,6 +45,9 @@
         <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
     </Declaration>
     <Declaration>
+        <Class IRI="http://www.w3.org/ns/dcat#Dataset"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="describedBy"/>
     </Declaration>
     <Declaration>
@@ -49,6 +55,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasService"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="provides"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="Profile:hasServiceProfile"/>
@@ -95,8 +104,8 @@
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
     </SubClassOf>
     <InverseObjectProperties>
-        <ObjectProperty IRI="hasProfile"/>
         <ObjectProperty abbreviatedIRI="ServiceParameter:hasParameters"/>
+        <ObjectProperty IRI="hasProfile"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="hasService"/>
@@ -115,6 +124,10 @@
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="provides"/>
+        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty abbreviatedIRI="Profile:hasServiceProfile"/>
         <Class IRI="ServiceDescriptionDocument"/>
     </ObjectPropertyDomain>
@@ -133,6 +146,14 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasService"/>
         <Class IRI="ServiceDescriptionDocument"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="provides"/>
+        <Class IRI="http://purl.org/nsidc/bcube/metadatarecord#MetadataRecord"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="provides"/>
+        <Class IRI="http://www.w3.org/ns/dcat#Dataset"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="Profile:hasServiceProfile"/>

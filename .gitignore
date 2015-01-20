@@ -58,3 +58,7 @@ coverage.xml
 
 # PyBuilder
 target/
+
+# Floobits
+.floo
+.flooignore
