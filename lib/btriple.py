@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 
 from rdflib import Literal, URIRef, Namespace, BNode, ConjunctiveGraph, RDF
+from rdflib.namespace import DCTERMS
 import re
 import urllib2
+import urlparse
 from lxml import etree
 
 
@@ -109,6 +111,13 @@ class Parser():
             doc_ns.append(ns[1:-1])
         return doc_ns
 
+    def get_document_namespaces(self):
+        '''
+        Pull all of the namespaces in the source document
+        and generate a list of tuples (prefix, URI) to dict
+        '''
+
+        return dict(self.doc.xpath('/*/namespace::*'))
 
 
 class OSDD():
@@ -116,6 +125,12 @@ class OSDD():
     This class transforms OSDD documents represented in XML
     into a n-triple file so it can be used by a triple store.
     '''
+
+    _parameter_formats = {
+        "geo:box": "west, south, east, north",
+        "time:start": "YYYY-MM-DDTHH:mm:ssZ",
+        "time:stop": "YYYY-MM-DDTHH:mm:ssZ"
+    }
 
     def _validate_opensearch(self):
         '''
@@ -134,53 +149,48 @@ class OSDD():
     def valid(self):
         return self.is_valid
 
-    def _charachterize_variables(self):
-        '''
-        This function will add properties to the variables found in a
-        OSDD document i.e if it uses the ns geo or time etc.
-        '''
-        url_variables = self._extract_url_template_variables()
-        variables = []
-        self.has_time = False
-        self.has_geo = False
-
-        for variable in url_variables:
-            if 'time' in variable:
-                timevar = {
-                    'name': variable,
-                    'type': 'time',
-                    'format': 'YYYY-MM-DDTHH:mm:ssZ',
-                    'namespace': 'http://a9.com/-/opensearch/extensions/time/1.0/'
-                }
-                variables.append(timevar)
-                self.has_time = True
-            elif 'geo:box' in variable:
-                geovar = {
-                    'name': variable,
-                    'type': 'geo',
-                    'format': 'geo:box ~ west, south, east, north',
-                    'namespace': 'http://a9.com/-/opensearch/extensions/geo/1.0/'
-                }
-                variables.append(geovar)
-                self.has_geo = True
-            else:
-                genericvar = {
-                    'name': variable,
-                    'type': 'generic',
-                    'namespace': None
-                }
-                variables.append(genericvar)
-        return variables
-
-    def _extract_url_template_variables(self):
+    def _extract_url_template_variables(self, template, namespaces):
         '''
         Extracts variables from an OpenSearch url template.
+        
+        as name, namespace, prefix, type, format
+
         '''
-        variables = set()
-        for endpoint in self.endpoints:
-            match = re.findall("{(.*?)}", endpoint)
-            variables.update(match)
+        parsed_url = urlparse.urlparse(template)
+        query_params = urlparse.parse_qs(parsed_url.query)
+
+        variables = [
+            (
+                k, 
+                namespaces.get(v[0][1:-1].split(':')[0], 'None'),
+                v[0][1:-1].split(':')[0],
+                v[0][1:-1].split(':')[1],
+                OSDD._parameter_formats.get(v[0][1:-1], '')
+            ) 
+            for k, v in query_params.iteritems()
+        ]
         return variables
+
+    def _extract_endpoints(self):
+        '''
+        extract an endpoint as type, template, [variables]
+
+        noting that additional namespaces may be part of the url element 
+            and not just in the root document namespacing
+        '''
+        docspaces = self.parser.get_document_namespaces()
+
+        urls = self.parser.find('Url')
+        endpoints = [
+            (
+                url.get('type', ''),
+                url.get('template', ''),
+                self._extract_url_template_variables(url.get('template', ''), docspaces)
+            )
+            for url in urls
+        ]
+
+        return endpoints
 
     def _extract_core_properties(self):
         '''
@@ -188,12 +198,18 @@ class OSDD():
         an RDFlib graph.
         '''
         self.profile = "OpenSearch"
-        self.endpoints = [item.attrib['template'] for item in
-                          self.parser.find('Url')]
+        self.endpoints = self._extract_endpoints()
         self.description = self.parser.find('Description')[0].text
         self.attribution = self.parser.find('Attribution')[0].text
         self.name = self.parser.find('ShortName')[0].text
-        self.variables = self._charachterize_variables()
+        self.tags = self.parser.find('Tags')[0].text
+        self.contact = self.parser.find('Contact')[0].text
+        self.longname = self.parser.find('LongName')[0].text
+        self.developer = self.parser.find('Developer')[0].text
+        self.syndication = self.parser.find('SyndicationRight')[0].text
+        self.language = self.parser.find('Language')[0].text
+        self.input_encoding = self.parser.find('InputEncoding')[0].text
+        self.output_encoding = self.parser.find('OutputEncoding')[0].text
 
     def create_service_triples(self):
         '''
@@ -207,10 +223,17 @@ class OSDD():
         # adding triples about the service description document
         self.store.add_triple(service, RDF.type, sdo_ns['ServiceDescriptionDocument'])
         self.store.add_triple(service_ns['Service'], sdo_ns['describedBy'], service)
-        self.store.add_triple(service, sdo_ns['description'], Literal(self.description))
-        self.store.add_triple(service, sdo_ns['attribution'], Literal(self.attribution))
-        self.store.add_triple(service, sdo_ns['serviceName'], Literal(self.name))
-        self.store.add_triple(service, sdo_ns['type'], Literal('OpenSearch'))
+        self.store.add_triple(service, DCTERMS.description, Literal(self.description))
+        self.store.add_triple(service, DCTERMS.source, Literal(self.attribution))
+        self.store.add_triple(service, DCTERMS.title, Literal(self.name))
+
+        #this is questionable
+        self.store.add_triple(service, DCTERMS.abstract, Literal(self.longname))
+        self.store.add_triple(service, DCTERMS.type, Literal('OpenSearch'))
+        self.store.add_triple(service, DCTERMS.rights, Literal(self.syndication))
+        self.store.add_triple(service, DCTERMS.language, Literal(self.language))
+        self.store.add_triple(service, DCTERMS.subject, Literal(self.tags))
+        self.store.add_triple(service, DCTERMS.creator, Literal(self.developer))
         for ns in self.parser.get_namespaces():
             self.store.add_triple(service, sdo_ns['namespace'], Literal(ns))
         if not hasattr(self, 'profile_node'):
@@ -237,26 +260,38 @@ class OSDD():
         self.store.add_triple(self.profile_node, sdo_ns['hasService'], self.service_node)
         return self.store.g
 
-    def create_parameter_triples(self):
+    def create_endpoint_triples(self):
         '''
         Create triples for each variable found in the OSDD document
         '''
-        self.parameter_nodes = []
+        sdo_ns = self.store.ns['sdo']
+        param_ns = self.store.ns['ServiceParameter']
+
         if not hasattr(self, 'profile_node'):
             self.profile_node = BNode()
-        for variable in self.variables:
-            # We use a blank node because a variable is an abstract class
-            parameter = BNode()
-            sdo_ns = self.store.ns['sdo']
-            param_ns = self.store.ns['ServiceParameter']
-            self.store.add_triple(parameter, RDF.type, param_ns['ServiceParameter'])
-            self.store.add_triple(parameter, param_ns['ServiceParameterName'], Literal(variable['name']))
-            self.store.add_triple(parameter, sdo_ns['serviceParameterType'], Literal(variable['type']))
-            self.store.add_triple(parameter, sdo_ns['namespace'], Literal(variable['namespace']))
-            self.store.add_triple(parameter, sdo_ns['hasProfile'], self.profile_node)
-            self.store.add_triple(self.profile_node, sdo_ns['hasParameter'], parameter)
-            self.parameter_nodes.append(parameter)
-        return self.store.g
+
+        #TODO: these namespaces and hierarchies are COMPLETELY MADE UP
+        for endpoint in self.endpoints:
+            ep = BNode()
+            self.store.add_triple(ep, RDF.type, param_ns['ServiceEndpoint'])
+            self.store.add_triple(ep, param_ns['endpointType'], Literal(endpoint[0]))
+            self.store.add_triple(ep, param_ns['endpointStructure'], Literal(endpoint[1]))
+
+            for variable in endpoint[2]:
+                v = BNode()
+                self.store.add_triple(v, RDF.type, param_ns['ServiceParameter'])
+
+                self.store.add_triple(v, param_ns['serviceParameterName'], Literal(variable[0]))
+                self.store.add_triple(v, param_ns['serviceParameterType'], Literal(variable[3]))
+                self.store.add_triple(v, param_ns['serviceParameterNamespace'], Literal(variable[1]))
+                self.store.add_triple(v, param_ns['serviceParameterNSPrefix'], Literal(variable[2]))
+                self.store.add_triple(v, param_ns['serviceParameterFormat'], Literal(variable[4]))
+
+                self.store.add_triple(ep, sdo_ns['hasParameter'], v)
+
+            self.store.add_triple(self.profile_node, sdo_ns['hasEndpoint'], ep)
+
+            return self.store.g
 
     def generate_triples(self):
         '''
@@ -264,7 +299,7 @@ class OSDD():
         '''
         self.create_service_triples()
         self.create_profile_triples()
-        self.create_parameter_triples()
+        self.create_endpoint_triples()
         return self.store.g
 
     def __init__(self, url):
@@ -272,7 +307,8 @@ class OSDD():
             'sdo': 'http//purl.org/nsidc/bcube/service-description-ontology#',
             'Profile': 'http://www.daml.org/services/owl-s/1.2/Profile.owl#',
             'Service': 'http://ww.daml.org/services/owl-s/1.2/Service.owl#',
-            'ServiceParameter': 'http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#'
+            'ServiceParameter': 'http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#',
+            'dcterms': str(DCTERMS)
         }
         self.store = Store()
         self.store.bind_namespaces(ontology_uris)
