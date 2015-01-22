@@ -1,59 +1,72 @@
+[![Build Status](https://travis-ci.org/b-cube/semantics.svg)](https://travis-ci.org/b-cube/semantics) ![Project Status](http://img.shields.io/badge/status-alpha-red.svg)
+
+
 **BCube Semantics**
 ===================
 
-The BCube Semantics project contains ontologies to describe web services found by the BCube Crawler. These ontologies try to reuse already existing ontologies and implement the remaining classes using the nsidc purl namespace. This project includes a python tool that use these ontologies to characterize web services and serialize their facts into triples (tuxtle, n-triples or rdf-xml).
+The BCube Semantics project contains ontologies to describe web services and datasets found by the BCube Crawler. We try to reuse already existing ontologies and implement the remaining classes and attributes using the nsidc purl namespace. This project includes a python tool that will use these ontologies to generate triples to characterize these web services and datasets.
 
 Overview
 -------------------
 
-BCube Semantics works on top of the BCube crawler stack, after the crawler indexes web services the RESTCube API can be queried to get filtered results, i.e. OpenSearch services, SOAP services, etc. These filtered results are the input used by the bcube-triple-generator tool, the output will be triples represented in tuxtle, n-triples or rdf-xml format.
+BCube Semantics works on top of the BCube crawler, the following stack represents how the information flows.
 
-The following graph represents how the information flows in the BCube Crawler stack.
+1) [BCube Crawler](https://github.com/nsidc/nutch)
+Based on an initial set of url seeds the BCube crawler indexes documents that could potentially be geo-science web services and datasets.
 
-**(Seeds)  ->  (Bcube Crawler) -> (Solr) -> (RESTCube API) -> (bcube-triple-generator) -> (Triple Stores)**
+2) **Semantics**
+The current project will characterize these indexed documents using formal ontologies being the input urls and the outputs triples in turtle, n3 or rdf formats.
 
-__________________________________
+3) Triplestores
+The final layer will perform meaningful semantic queries about the services found by the crawler.
 
 Ontologies
 -------------------
 
- **Nutch Documents Ontology**
- A nutch document represents a web resource retrieved by nutch. Each Nutch document has mandatory fields, id, timestamp and content, the rest can or cannot be indexed in a search engine such as solar. This ontology describes how these abstract elements are related and does not intent to describe the particulars of the search engine document representation.
-
  **Service Description Ontology**
-The Service Description Ontology describes web interfaces of a search API, specifically OpenSearch services, these services can be categorized in service profiles that are represented using an extensio of the OWL-S ontology.
+ The Service Description Ontology describes web interfaces of a search API, specifically OpenSearch services, these services can be categorized in service profiles that are represented using an extension of the [OWL-S](http://www.w3.org/Submission/OWL-S/) ontology.
 
- **KML Ontology**
- A KML Document is any version of Google's Keyhole Markup Language that can describe features, datasets, services and more in a map, this ontology represents how these elements are related in KML files.
+**Visualizing and editing the ontologies**
 
 The ontologies were created using Standford's [Protege](http://protege.stanford.edu/products.php#desktop-protege) software and are represented in OWL.
 
-bcube-triple-generator
+BCube triple generator
 -------------------
 
-bcube-ntriple-generator is a python tool that creates triples from documents found by the BCube Crawler using the BCube Service Ontology and the RESTCube API.
-
+**btriple** will transform web services and dataset documents into triple files. This tool uses [rdflib](https://github.com/RDFLib/rdflib/) to create the triples and bootstrap ontologies from the ontologies/ directory.
 
 Installation
 ---------------
 
+```sh
+pip install -r requirements.txt
+```
+
 Running the tests
 
-```
+```sh
 $nosetests
 ```
 
 Usage
 ---------------
 
-Changelog
-----------------
+Once completed we intend to expose a python module to create the triples and dump them into a file or a triple store. Also there will be a python command line tool to do the same.
 
+```
+python btriple URL -f [n3|turtle|rdf] -o output
+```
 
 TODO
 ----------------
+This is a pre-alpha project
+
+* Complete ontologies for the remaining use cases (THREDDS, W*S, ISO19115)
+* Finish up btriple.py for the remaining ontologies.
+* Modularize btriple and upload it to pip
+* Create a use cases readme file to further expand on how to use the ontologies and triples.
 
 
 
-[License GPL v3](README.md)
+[License GPL v3](LICENSE)
 -------------------

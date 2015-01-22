@@ -2,18 +2,18 @@ import unittest
 from btriple import OSDD, Store, Parser
 from rdflib import Literal
 
-from lxml import etree
-
 
 class TestParser(unittest.TestCase):
     def setUp(self):
         self.parser = Parser('test/relevant-documents/opensearch-nasa.xml')
 
     def test_parser_gets_namespaces(self):
-        osdd_namespaces_for_libxml = {'{http://a9.com/-/spec/opensearch/1.1/}',
-        '{http://a9.com/-/opensearch/extensions/time/1.0/}',
-        '{http://a9.com/-/opensearch/extensions/geo/1.0/}',
-        '{http://modwebsrv.modaps.eosdis.nasa.gov/opensearchextensions/1.0/}'}
+        osdd_namespaces_for_libxml = set([
+            '{http://a9.com/-/spec/opensearch/1.1/}',
+            '{http://a9.com/-/opensearch/extensions/time/1.0/}',
+            '{http://a9.com/-/opensearch/extensions/geo/1.0/}',
+            '{http://modwebsrv.modaps.eosdis.nasa.gov/opensearchextensions/1.0/}'
+        ])
         self.assertEqual(self.parser.ns, osdd_namespaces_for_libxml)
 
     def test_parser_can_find_a_node(self):
@@ -22,13 +22,12 @@ class TestParser(unittest.TestCase):
 
     def test_parser_can_find_a_node_using_custom_ns(self):
         dummy_default = self.parser.find('Dummy')
-        self.assertEqual(dummy_default, []) # not using the default ns
+        self.assertEqual(dummy_default, [])  # not using the default ns
         dummy_default = self.parser.find_node(["http://a9.com/-/opensearch/extensions/geo/1.0/"], None, 'Dummy')[0].text
         self.assertEqual(dummy_default, 'TestValue')
 
     def test_parser_extracts_document_namespaces(self):
-        #fyi: get_namespaces does not include the prefixes
-        namespaces =  {
+        namespaces = {
             None: 'http://a9.com/-/spec/opensearch/1.1/',
             'geo': 'http://a9.com/-/opensearch/extensions/geo/1.0/',
             'time': 'http://a9.com/-/opensearch/extensions/time/1.0/',
@@ -40,6 +39,7 @@ class TestParser(unittest.TestCase):
         self.assertTrue(len(ns) is 4)
         self.assertTrue('geo' in ns)
         self.assertEqual(ns['geo'], namespaces['geo'])
+
 
 class TestOSDD(unittest.TestCase):
     def setUp(self):
@@ -62,8 +62,8 @@ class TestOSDD(unittest.TestCase):
 
     def test_extract_endpoints(self):
         test_endpoints = [
-            ('text/html', 
-                'http://modwebsrv.modaps.eosdis.nasa.gov/axis2/services/MODAPSservices/getOpenSearch?products={MODAPSParameters:products}&amp;collection={MODAPSParameters:collection?}&amp;start={time:start}&amp;stop={time:stop}&amp;bbox={geo:box}&amp;coordsOrTiles={MODAPSParameters:coordsOrTiles?}&amp;dayNightBoth={MODAPSParameters:dayNightBoth?}', 
+            ('text/html',
+                'http://modwebsrv.modaps.eosdis.nasa.gov/axis2/services/MODAPSservices/getOpenSearch?products={MODAPSParameters:products}&amp;collection={MODAPSParameters:collection?}&amp;start={time:start}&amp;stop={time:stop}&amp;bbox={geo:box}&amp;coordsOrTiles={MODAPSParameters:coordsOrTiles?}&amp;dayNightBoth={MODAPSParameters:dayNightBoth?}',
                 [('coordsOrTiles', 'None', 'MODAPSParameters', 'coordsOrTiles?', ''),
                ('dayNightBoth', 'None', 'MODAPSParameters', 'dayNightBoth?', ''),
                ('stop',
@@ -96,7 +96,6 @@ class TestOSDD(unittest.TestCase):
         self.assertEqual(endpoints[0][2][2][4], 'YYYY-MM-DDTHH:mm:ssZ')
         self.assertEqual(endpoints[0][2][6][3], 'box')
 
-      
     def test_extract_variables_from_endpoint(self):
         # as (name, namespace uri, prefix, param type, format)
         test_variables = [
@@ -114,7 +113,7 @@ class TestOSDD(unittest.TestCase):
         ]
 
         template = 'http://modwebsrv.modaps.eosdis.nasa.gov/axis2/services/MODAPSservices/getOpenSearch?products={MODAPSParameters:products}&amp;collection={MODAPSParameters:collection?}&amp;start={time:start}&amp;stop={time:stop}&amp;bbox={geo:box}&amp;coordsOrTiles={MODAPSParameters:coordsOrTiles?}&amp;dayNightBoth={MODAPSParameters:dayNightBoth?}'
-        namespaces =  {
+        namespaces = {
             None: 'http://a9.com/-/spec/opensearch/1.1/',
             'geo': 'http://a9.com/-/opensearch/extensions/geo/1.0/',
             'time': 'http://a9.com/-/opensearch/extensions/time/1.0/',
@@ -127,7 +126,6 @@ class TestOSDD(unittest.TestCase):
         self.assertEqual(variables[3][0], test_variables[0][0])
         self.assertEqual(variables[4][1], test_variables[1][1])
         self.assertEqual(variables[6][4], test_variables[2][4])
-        
 
     def test_osdd_frees_data_after_is_parsed(self):
         self.assertIsNotNone(self.osdd.parser.doc)
@@ -182,7 +180,7 @@ class TestStore(unittest.TestCase):
             'Service': 'http://www.daml.org/services/owl-s/1.2/Service.owl#',
             'ServiceParameter': 'http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl',
             'dcterms': 'http://purl.org/dc/terms/'
-            }
+        }
 
         self.assertTrue(isinstance(self.store, Store))
         self.store.bind_namespaces(namespaces)

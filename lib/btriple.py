@@ -152,7 +152,7 @@ class OSDD():
     def _extract_url_template_variables(self, template, namespaces):
         '''
         Extracts variables from an OpenSearch url template.
-        
+
         as name, namespace, prefix, type, format
 
         '''
@@ -161,12 +161,12 @@ class OSDD():
 
         variables = [
             (
-                k, 
+                k,
                 namespaces.get(v[0][1:-1].split(':')[0], 'None'),
                 v[0][1:-1].split(':')[0],
                 v[0][1:-1].split(':')[1],
                 OSDD._parameter_formats.get(v[0][1:-1], '')
-            ) 
+            )
             for k, v in query_params.iteritems()
         ]
         return variables
@@ -175,7 +175,7 @@ class OSDD():
         '''
         extract an endpoint as type, template, [variables]
 
-        noting that additional namespaces may be part of the url element 
+        noting that additional namespaces may be part of the url element
             and not just in the root document namespacing
         '''
         docspaces = self.parser.get_document_namespaces()
@@ -255,7 +255,6 @@ class OSDD():
         # Add triples
         self.store.add_triple(self.profile_node, RDF.type, profile_ns['ServiceProfile'])
         self.store.add_triple(self.profile_node, sdo_ns['profileType'], Literal('OpenSearch'))
-        # Not sure if each of the URL templates could qualify an an independent endpoint.
         self.store.add_triple(self.profile_node, sdo_ns['endpoint'], URIRef(self.url))
         self.store.add_triple(self.profile_node, sdo_ns['hasService'], self.service_node)
         return self.store.g
