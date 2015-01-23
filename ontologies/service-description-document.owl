@@ -19,9 +19,9 @@
      versionIRI="http://purl.org/nsidc/bcube/service-description-document/0.1.0#">
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="sdo" IRI="http://purl.org/nsidc/bcube/service-description-ontology#"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="nutch" IRI="http://purl.org/nsidc/bcube/nutch-document#"/>
     <Prefix name="Profile" IRI="http://www.daml.org/services/owl-s/1.2/Profile.owl#"/>
     <Prefix name="Service" IRI="http://www.daml.org/services/owl-s/1.2/Service.owl#"/>
     <Prefix name="ServiceParameter" IRI="http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#"/>
@@ -66,10 +66,34 @@
         <ObjectProperty abbreviatedIRI="ServiceParameter:hasParameters"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="attribution"/>
+        <DataProperty IRI="http://purl.org/dc/terms/abstract"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="description"/>
+        <DataProperty IRI="http://purl.org/dc/terms/creator"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://purl.org/dc/terms/description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://purl.org/dc/terms/language"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://purl.org/dc/terms/rights"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://purl.org/dc/terms/source"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://purl.org/dc/terms/subject"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://purl.org/dc/terms/title"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://purl.org/dc/terms/type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="attribution"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="endpoint"/>
@@ -82,6 +106,15 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="serviceName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="serviceParameterFormat"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="serviceParameterNSPrefix"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="serviceParameterNamespace"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="serviceParameterType"/>
@@ -103,10 +136,6 @@
         <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
     </SubClassOf>
-    <InverseObjectProperties>
-        <ObjectProperty abbreviatedIRI="ServiceParameter:hasParameters"/>
-        <ObjectProperty IRI="hasProfile"/>
-    </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="hasService"/>
         <ObjectProperty abbreviatedIRI="Profile:hasServiceProfile"/>
@@ -164,11 +193,43 @@
         <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
     </ObjectPropertyRange>
     <DataPropertyDomain>
-        <DataProperty IRI="attribution"/>
+        <DataProperty IRI="http://purl.org/dc/terms/abstract"/>
         <Class IRI="ServiceDescriptionDocument"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="description"/>
+        <DataProperty IRI="http://purl.org/dc/terms/creator"/>
+        <Class IRI="ServiceDescriptionDocument"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://purl.org/dc/terms/description"/>
+        <Class IRI="ServiceDescriptionDocument"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://purl.org/dc/terms/language"/>
+        <Class IRI="ServiceDescriptionDocument"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://purl.org/dc/terms/rights"/>
+        <Class IRI="ServiceDescriptionDocument"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://purl.org/dc/terms/source"/>
+        <Class IRI="ServiceDescriptionDocument"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://purl.org/dc/terms/subject"/>
+        <Class IRI="ServiceDescriptionDocument"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://purl.org/dc/terms/title"/>
+        <Class IRI="ServiceDescriptionDocument"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://purl.org/dc/terms/type"/>
+        <Class IRI="ServiceDescriptionDocument"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="attribution"/>
         <Class IRI="ServiceDescriptionDocument"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -208,6 +269,18 @@
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="serviceParameterFormat"/>
+        <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="serviceParameterNSPrefix"/>
+        <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="serviceParameterNamespace"/>
+        <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="serviceParameterType"/>
         <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
     </DataPropertyDomain>
@@ -219,12 +292,48 @@
         <DataProperty IRI="version"/>
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
     </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="ServiceParameter:serviceParameterName"/>
+        <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
+    </DataPropertyDomain>
     <DataPropertyRange>
-        <DataProperty IRI="attribution"/>
+        <DataProperty IRI="http://purl.org/dc/terms/abstract"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="description"/>
+        <DataProperty IRI="http://purl.org/dc/terms/creator"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://purl.org/dc/terms/description"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://purl.org/dc/terms/language"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://purl.org/dc/terms/rights"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://purl.org/dc/terms/source"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://purl.org/dc/terms/subject"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://purl.org/dc/terms/title"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://purl.org/dc/terms/type"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="attribution"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -244,6 +353,18 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="serviceParameterFormat"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="serviceParameterNSPrefix"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="serviceParameterNamespace"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="serviceParameterType"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
@@ -253,6 +374,10 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="version"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="ServiceParameter:serviceParameterName"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <AnnotationAssertion>
@@ -277,11 +402,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>description</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">What the service provides.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasProfile</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Weather a parameter belongs to 1 or more profiles.</Literal>
     </AnnotationAssertion>
@@ -299,6 +419,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>profileType</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">This property has the short name of a given web service, wms, opensearch etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>provides</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A profile can provide either a dataset or metadata records.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

@@ -46,7 +46,7 @@ class TestOSDD(unittest.TestCase):
         self.osdd = OSDD('test/relevant-documents/opensearch-nasa.xml')
 
     def test_osdd_validates_osdd(self):
-        self.assertIsInstance(self.osdd, OSDD)
+        self.assertTrue(isinstance(self.osdd, OSDD))
         self.assertTrue(self.osdd.is_valid is True)
 
     def test_osdd_extracts_core_osdd_properties(self):
@@ -128,8 +128,8 @@ class TestOSDD(unittest.TestCase):
         self.assertEqual(variables[6][4], test_variables[2][4])
 
     def test_osdd_frees_data_after_is_parsed(self):
-        self.assertIsNotNone(self.osdd.parser.doc)
-        self.assertIsNone(self.osdd.parser.data)
+        self.assertNotEqual(None, self.osdd.parser.doc)
+        self.assertEqual(None, self.osdd.parser.data)
 
     def test_osdd_creates_profile_triples(self):
         sdo_ns = self.osdd.store.ns['sdo']
@@ -163,7 +163,7 @@ class TestOSDD(unittest.TestCase):
         #NOTE: does not return a consistently ordered list
         objects = list(graph.subject_objects(param_ns['serviceParameterType']))
 
-        self.assertIsNotNone(graph)
+        self.assertNotEqual(None, graph)
         self.assertEqual(len(objects), 7)
         self.assertEqual(len(list(graph.triples((None, param_ns['serviceParameterType'], Literal('products'))))), 1)
         self.assertEqual(len(list(graph.triples((None, param_ns['serviceParameterName'], Literal('start'))))), 1)
@@ -178,7 +178,7 @@ class TestStore(unittest.TestCase):
             'sdo': 'http://purl.org/nsidc/bcube/service-description-ontology#',
             'Profile': 'http://www.daml.org/services/owl-s/1.2/Profile.owl#',
             'Service': 'http://www.daml.org/services/owl-s/1.2/Service.owl#',
-            'ServiceParameter': 'http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl',
+            'ServiceParameter': 'http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#',
             'dcterms': 'http://purl.org/dc/terms/'
         }
 
