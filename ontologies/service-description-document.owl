@@ -26,14 +26,79 @@
     <Prefix name="Service" IRI="http://www.daml.org/services/owl-s/1.2/Service.owl#"/>
     <Prefix name="ServiceParameter" IRI="http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#"/>
     <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/subject"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">https://github.com/swagger-api/swagger-spec/blob/master/versions/2.0.md</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/rights"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral"></Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.w3.org/1999/xhtml/vocab#license"/>
+        <IRI>http://creativecommons.org/publicdomain/zero/1.0/</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">BCube Project Team at NSIDC</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/subject"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">http://www.w3.org/Submission/wadl/</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/subject"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">http://www.opensearch.org/Specifications/OpenSearch/1.1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="&xsd;decimal">0.5</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/language"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">English</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/subject"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">http://schemas.opengis.net/wms/</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/subject"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">http://www.ai.sri.com/daml/services/owl-s/1.2/Service.owl</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Service Description Document Ontology</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">A Service Description Document can be used to describe the web interface of a search engine, the main components are a description and a URL template. This ontology describes the different basic elements that an OpenSearch document can contain and therefore represent.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A Service Description Document can be used to describe the web interface of a search engine, the main components are a description and a URL template. This ontology describes the different basic elements that an OpenSearch document can contain and therefore represent.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/subject"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">http://www.openarchives.org/OAI/openarchivesprotocol.html</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Service Description Documents Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/publisher"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The National Snow and Ice Data Center</Literal>
     </Annotation>
     <Declaration>
-        <Class IRI="http://purl.org/nsidc/bcube/metadatarecord#MetadataRecord"/>
+        <Class IRI="OAI-PMH"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OpenSearch"/>
     </Declaration>
     <Declaration>
         <Class IRI="ServiceDescriptionDocument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="WMS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/ImageObject"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
@@ -45,16 +110,22 @@
         <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
     </Declaration>
     <Declaration>
+        <Class IRI="http://www.w3.org/ns/dcat#CatalogRecord"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://www.w3.org/ns/dcat#Dataset"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://xml.opendap.org/ontologies/opendap-dap-3.2.owl#OpenDAP"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="describedBy"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasProfile"/>
+        <ObjectProperty IRI="describes"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="hasService"/>
+        <ObjectProperty IRI="providedBy"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="provides"/>
@@ -75,6 +146,9 @@
         <DataProperty IRI="http://purl.org/dc/terms/description"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="http://purl.org/dc/terms/hasVersion"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="http://purl.org/dc/terms/language"/>
     </Declaration>
     <Declaration>
@@ -93,16 +167,7 @@
         <DataProperty IRI="http://purl.org/dc/terms/type"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="attribution"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="endpoint"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="namespace"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="profileType"/>
+        <DataProperty IRI="ServiceEndpoint"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="serviceName"/>
@@ -111,46 +176,205 @@
         <DataProperty IRI="serviceParameterFormat"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="serviceParameterNSPrefix"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="serviceParameterNamespace"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="serviceParameterType"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="type"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="version"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="ServiceParameter:serviceParameterName"/>
     </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.iana.org/assignments/media-types/media-types.xhtml"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/TR/xml-names11/#NT-Prefix"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://creativecommons.org/publicdomain/zero/1.0/"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/language"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/publisher"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/rights"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/source"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/subject"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/1999/xhtml/vocab#license"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="OAI-PMH"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">http://www.openarchives.org/OAI/</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="OpenSearch"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">http://a9.com/-/spec/opensearch/</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="WMS"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">http://www.opengis.net/wms</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://xml.opendap.org/ontologies/opendap-dap-3.2.owl#OpenDAP"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">http://xml.opendap.org/ns/</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="OAI-PMH"/>
+        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OAI-PMH"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://purl.org/dc/terms/hasVersion"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OpenSearch"/>
+        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OpenSearch"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://purl.org/dc/terms/hasVersion"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ServiceDescriptionDocument"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="ServiceEndpoint"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WMS"/>
+        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WMS"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="provides"/>
+            <Class IRI="http://schema.org/ImageObject"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WMS"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://purl.org/dc/terms/hasVersion"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WMS"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">http://www.opengis.net/wms</Literal>
+        </DataHasValue>
+    </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
         <Class IRI="ServiceDescriptionDocument"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="provides"/>
+            <Class IRI="http://www.w3.org/ns/dcat#CatalogRecord"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="provides"/>
+            <Class IRI="http://www.w3.org/ns/dcat#Dataset"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="ServiceParameter:hasParameters"/>
+            <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="ServiceParameter:serviceParameterName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://xml.opendap.org/ontologies/opendap-dap-3.2.owl#OpenDAP"/>
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://xml.opendap.org/ontologies/opendap-dap-3.2.owl#OpenDAP"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://purl.org/dc/terms/hasVersion"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
     <InverseObjectProperties>
-        <ObjectProperty IRI="hasService"/>
-        <ObjectProperty abbreviatedIRI="Profile:hasServiceProfile"/>
+        <ObjectProperty IRI="describedBy"/>
+        <ObjectProperty IRI="describes"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="provides"/>
+        <ObjectProperty IRI="providedBy"/>
     </InverseObjectProperties>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="describedBy"/>
         <Class abbreviatedIRI="Service:Service"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasProfile"/>
-        <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
+        <ObjectProperty IRI="describes"/>
+        <Class IRI="ServiceDescriptionDocument"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasService"/>
-        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+        <ObjectProperty IRI="providedBy"/>
+        <Class IRI="http://schema.org/ImageObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="providedBy"/>
+        <Class IRI="http://www.w3.org/ns/dcat#CatalogRecord"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="providedBy"/>
+        <Class IRI="http://www.w3.org/ns/dcat#Dataset"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="provides"/>
@@ -169,16 +393,20 @@
         <Class IRI="ServiceDescriptionDocument"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hasProfile"/>
+        <ObjectProperty IRI="describes"/>
+        <Class abbreviatedIRI="Service:Service"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="providedBy"/>
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hasService"/>
-        <Class IRI="ServiceDescriptionDocument"/>
+        <ObjectProperty IRI="provides"/>
+        <Class IRI="http://schema.org/ImageObject"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="provides"/>
-        <Class IRI="http://purl.org/nsidc/bcube/metadatarecord#MetadataRecord"/>
+        <Class IRI="http://www.w3.org/ns/dcat#CatalogRecord"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="provides"/>
@@ -205,6 +433,10 @@
         <Class IRI="ServiceDescriptionDocument"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="http://purl.org/dc/terms/hasVersion"/>
+        <Class IRI="ServiceDescriptionDocument"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="http://purl.org/dc/terms/language"/>
         <Class IRI="ServiceDescriptionDocument"/>
     </DataPropertyDomain>
@@ -222,14 +454,6 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="http://purl.org/dc/terms/title"/>
-        <Class IRI="ServiceDescriptionDocument"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://purl.org/dc/terms/type"/>
-        <Class IRI="ServiceDescriptionDocument"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="attribution"/>
         <Class IRI="ServiceDescriptionDocument"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -237,7 +461,7 @@
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
             <Literal datatypeIRI="&rdf;PlainLiteral">This is the main endpoint, where we can retrieve the service description document which may or may not have multiple queryble endpoints.</Literal>
         </Annotation>
-        <DataProperty IRI="endpoint"/>
+        <DataProperty IRI="ServiceEndpoint"/>
         <Class IRI="ServiceDescriptionDocument"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -245,23 +469,7 @@
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
             <Literal datatypeIRI="&rdf;PlainLiteral">This endpoint refers to the endpoint provided by the service to each profile, i.e. OpenSearch can have multiple URL templates.</Literal>
         </Annotation>
-        <DataProperty IRI="endpoint"/>
-        <Class abbreviatedIRI="Profile:ServiceProfile"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="namespace"/>
-        <Class IRI="ServiceDescriptionDocument"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="namespace"/>
-        <Class abbreviatedIRI="Profile:ServiceProfile"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="namespace"/>
-        <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="profileType"/>
+        <DataProperty IRI="ServiceEndpoint"/>
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -273,24 +481,8 @@
         <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="serviceParameterNSPrefix"/>
-        <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="serviceParameterNamespace"/>
-        <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="serviceParameterType"/>
         <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="type"/>
-        <Class IRI="ServiceDescriptionDocument"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="version"/>
-        <Class abbreviatedIRI="Profile:ServiceProfile"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty abbreviatedIRI="ServiceParameter:serviceParameterName"/>
@@ -306,6 +498,10 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="http://purl.org/dc/terms/description"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://purl.org/dc/terms/hasVersion"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -329,24 +525,8 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="http://purl.org/dc/terms/type"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="attribution"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="endpoint"/>
+        <DataProperty IRI="ServiceEndpoint"/>
         <Datatype abbreviatedIRI="xsd:anyURI"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="namespace"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="profileType"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="serviceName"/>
@@ -357,73 +537,130 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="serviceParameterNSPrefix"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="serviceParameterNamespace"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
         <DataProperty IRI="serviceParameterType"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="type"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="version"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty abbreviatedIRI="ServiceParameter:serviceParameterName"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/TR/xml-names11/#NT-Prefix"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/dc/terms/abstract</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Abstract</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/dc/terms/creator</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Creator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/dc/terms/description</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.org/dc/terms/hasVersion</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The version of the protocol used by a service i.e. OpenSearch 1.1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/dc/terms/hasVersion</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Has Version</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/dc/terms/language</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/dc/terms/rights</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Rights</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/dc/terms/source</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Source</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/dc/terms/subject</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Subject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/dc/terms/title</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/dc/terms/type</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>OAI-PMH</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The Open Archives Initiative Protocol for Metadata Harvesting (referred to as the OAI-PMH in the remainder of this document) provides an application-independent interoperability framework based on metadata harvesting.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>OpenSearch</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An OpenSearch description document can be used to describe the web interface of a search engine.</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>ServiceDescriptionDocument</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">A Service Description Document is a document that describes how to use a web service i.e. OpenSearch OSDD, WMS GetCapabilities document, OAI Identify Document, Swagger API Document.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A Service Description Document is a document that describes how to use a web service i.e. OpenSearch OSDD, WMS GetCapabilities document, OAI Identify Document, Swagger API Document.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>ServiceDescriptionDocument</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Service Description Document</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Service Description Document</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>attribution</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The author of the web service.</Literal>
+        <IRI>ServiceEndpoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">And endpoint is any URI where a web service can be queried for data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ServiceEndpoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Service Endpoint</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>WMS</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The OpenGIS® Web Map Service Interface Standard (WMS) provides a simple HTTP interface for requesting geo-registered map images from one or more distributed geospatial databases. A WMS request defines the geographic layer(s) and area of interest to be processed. The response to the request is one or more geo-registered map images (returned as JPEG, PNG, etc) that can be displayed in a browser application. The interface also supports the ability to specify whether the returned images should be transparent so that layers from multiple servers can be combined or not.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>describedBy</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">A web service is described by a service description document.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A web service is described by a service description document.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasProfile</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Weather a parameter belongs to 1 or more profiles.</Literal>
+        <IRI>describes</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">All service description documents describe a particular service.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasService</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Weather a service profile belongs to a service description document.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>namespace</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Service description documents, their endpoints and sometimes their processes use defined namespaces, this attribute refers to those namespaces.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>profileType</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">This property has the short name of a given web service, wms, opensearch etc.</Literal>
+        <IRI>providedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Datasets and Metadata Records are provided by a Web Service.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>provides</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">A profile can provide either a dataset or metadata records.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A web service can provide Datasets or Metadata Records.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -431,34 +668,71 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">refers to the name of the service that is being offered. It can be used as an identifier of the service.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>serviceName</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Service Name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>serviceParameterFormat</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Examples: &apos;dd/mm/yyyy&apos;, &apos;North, East, South, West&apos;, &apos;2f&apos;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>serviceParameterFormat</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Service Parameter Format</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>serviceParameterType</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">This property is only filled when the parameter has a known type, for now just geo or time are supported.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>type</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">What service type is the document serving, OpenSearch, WMS etc.</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>serviceParameterType</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Service Parameter Type</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>version</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The version of the protocol used by a service i.e. OpenSearch 1.1</Literal>
+        <IRI>http://schema.org/ImageObject</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An Image Object is any image representing or containing data. Images are the basic result of querying a WMS service.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://schema.org/ImageObject</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Image Object</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>Profile:ServiceProfile</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">We are using the OWL-S ontology to describe a general web service.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">We are using the OWL-S ontology to describe a general web service.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>Profile:ServiceProfile</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Service Profile</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Service Profile</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>Profile:hasServiceProfile</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">A service can have 1 or more profiles, each profile describes what the the service does. A service can have multiple profiles each serving the same datasets using different representations i.e. OpenSearch, THREDDS etc.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A service can have 1 or more profiles, each profile describes what the the service does. A service can have multiple profiles each serving the same datasets using different representations i.e. OpenSearch, THREDDS etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>Service:Service</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The class Service provides an organizational point of reference for a declared Web service; one instance of Service will exist for each distinct published service. The properties presents, describedBy, and supports are properties of Service. The classes ServiceProfile, ServiceModel, and ServiceGrounding are the respective ranges of those properties. Each instance of Service will present a ServiceProfile description, be describedBy a ServiceModel description, and support a ServiceGrounding description. The details of profiles, models, and groundings may vary widely from one type of service to another--that is, from one instance of Service to another. 
+
+http://www.ai.sri.com/daml/services/owl-s/1.2/Service.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>Service:Service</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>ServiceParameter:ServiceParameter</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A Service Paramter aplies restrictions criteria to queries on web services. We are mainly interested in time and spatial constrains.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -468,12 +742,65 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>ServiceParameter:hasParameters</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">If a web service has a profile that profile can have 0 or more parameters.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">If a web service has a profile that profile can have 0 or more parameters.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>ServiceParameter:serviceParameterName</AbbreviatedIRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">the name of the actual parameter, which could be just a literal or perhaps the uri of the process parameter.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>ServiceParameter:serviceParameterName</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Service Paramter Name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.iana.org/assignments/media-types/media-types.xhtml</IRI>
+        <Literal datatypeIRI="&xsd;string">Mime Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/TR/xml-names11/#NT-Prefix</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Namespace Prefix</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/TR/xml-names11/#sec-namespaces</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Service description documents, their endpoints and sometimes their processes use defined namespaces, this attribute refers to those namespaces.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/TR/xml-names11/#sec-namespaces</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Namespace</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/dcat#CatalogRecord</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A record in a data catalog, describing a single dataset. Also known as a Metadata Record.
+http://www.w3.org/ns/dcat#CatalogRecord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/dcat#CatalogRecord</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Catalog Record</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/dcat#Dataset</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A collection of data, published or curated by a single agent, and available for access or download in one or more formats.
+
+http://www.w3.org/TR/vocab-dcat/#Class:_Dataset</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/dcat#Dataset</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Dataset</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://xml.opendap.org/ontologies/opendap-dap-3.2.owl#OpenDAP</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The DAP2 protocol provides a discipline-neutral means of requesting and providing data across the World Wide Web.</Literal>
     </AnnotationAssertion>
 </Ontology>
 
