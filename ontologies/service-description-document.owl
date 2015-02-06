@@ -86,13 +86,37 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The National Snow and Ice Data Center</Literal>
     </Annotation>
     <Declaration>
+        <Class IRI="ISORecord"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="OAI-PMH"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="OAIRecord"/>
     </Declaration>
     <Declaration>
         <Class IRI="OpenSearch"/>
     </Declaration>
     <Declaration>
+        <Class IRI="OpenSearchRecord"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="ServiceDescriptionDocument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="THREDDS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="THREDDSAccess"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="THREDDSCatalog"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="THREDDSDataset"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="THREDDSService"/>
     </Declaration>
     <Declaration>
         <Class IRI="WMS"/>
@@ -108,6 +132,9 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/ns/dcat#Catalog"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.w3.org/ns/dcat#CatalogRecord"/>
@@ -185,6 +212,9 @@
         <DataProperty IRI="http://www.iana.org/assignments/media-types/media-types.xhtml"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="xsd:name"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="http://www.w3.org/TR/xml-names11/#NT-Prefix"/>
     </Declaration>
     <Declaration>
@@ -252,6 +282,10 @@
         </DataHasValue>
     </EquivalentClasses>
     <SubClassOf>
+        <Class IRI="ISORecord"/>
+        <Class IRI="http://www.w3.org/ns/dcat#CatalogRecord"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="OAI-PMH"/>
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
     </SubClassOf>
@@ -263,6 +297,10 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="OAIRecord"/>
+        <Class IRI="http://www.w3.org/ns/dcat#CatalogRecord"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="OpenSearch"/>
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
     </SubClassOf>
@@ -272,6 +310,17 @@
             <DataProperty IRI="http://purl.org/dc/terms/hasVersion"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OpenSearchRecord"/>
+        <Class IRI="http://www.w3.org/ns/dcat#CatalogRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ServiceDescriptionDocument"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="Profile:hasServiceProfile"/>
+            <Class abbreviatedIRI="Profile:ServiceProfile"/>
+        </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="ServiceDescriptionDocument"/>
@@ -279,6 +328,60 @@
             <DataProperty IRI="ServiceEndpoint"/>
             <Datatype abbreviatedIRI="xsd:anyURI"/>
         </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="THREDDS"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://www.w3.org/ns/dcat#Catalog"/>
+            <DataHasValue>
+                <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="THREDDSAccess"/>
+        <Class IRI="THREDDS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="THREDDSAccess"/>
+        <DataHasValue>
+            <DataProperty abbreviatedIRI="xsd:name"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">access</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="THREDDSCatalog"/>
+        <Class IRI="THREDDS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="THREDDSCatalog"/>
+        <DataHasValue>
+            <DataProperty abbreviatedIRI="xsd:name"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">catalog</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="THREDDSDataset"/>
+        <Class IRI="THREDDS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="THREDDSDataset"/>
+        <DataHasValue>
+            <DataProperty abbreviatedIRI="xsd:name"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">dataset</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="THREDDSService"/>
+        <Class IRI="THREDDS"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="THREDDSService"/>
+        <DataHasValue>
+            <DataProperty abbreviatedIRI="xsd:name"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">service</Literal>
+        </DataHasValue>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="WMS"/>
@@ -639,6 +742,83 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>THREDDS</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A THREDDS catalog is a way to describe an inventory of available datasets. These catalogs provide a simple hierarchical structure for organizing a collection of datasets, an access method for each dataset, a human understandable name for each dataset, and a structure on which further descriptive information can be placed.
+
+This ontology describes the relationships between the elements that a THREDDS document can contain.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>THREDDS</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">THREDDS Catalog</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>THREDDS</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">http://www.unidata.ucar.edu/software/thredds/current/tds/catalog/InvCatalogSpec.html</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>THREDDSAccess</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An access element specifies how a dataset can be accessed through a data service. It always refers to the dataset that it is immediately contained within.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>THREDDSAccess</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Access</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>THREDDSAccess</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">http://www.unidata.ucar.edu/software/thredds/current/tds/catalog/InvCatalogSpec.html#access</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>THREDDSCatalog</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The catalog element is the top-level element. It may contain zero or more service elements, followed by zero or more datasetRoot elements, followed by zero or more property elements, followed by one or more dataset elements (actually any element in the dataset substitution group). The optional catalog name will be displayed to a user. The expires element tells clients until when this catalog should be reread, so they can cache the catalog information. The value of the version attribute indicates the version of the InvCatalog specification to which the catalog conforms. The version attribute is optional and to indicate conformance with this specification should be set to &quot;1.0.2&quot;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>THREDDSCatalog</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Catalog</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>THREDDSCatalog</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">http://www.unidata.ucar.edu/software/thredds/current/tds/catalog/InvCatalogSpec.html#catalog</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>THREDDSDataset</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A dataset element represents a named, logical set of data at a level of granularity appropriate for presentation to a user. A dataset is direct if it contains at least one dataset access method, otherwise it is just a container for nested datasets, called a collection dataset. The name of the dataset element should be a human readable name that will be displayed to users. Multiple access methods specify different services for accessing the same dataset.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>THREDDSDataset</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Dataset</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>THREDDSDataset</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">http://www.unidata.ucar.edu/software/thredds/current/tds/catalog/InvCatalogSpec.html#dataset</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>THREDDSService</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A service element represents a data access service and allows basic data access information to be factored out of dataset and access elements.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>THREDDSService</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>THREDDSService</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">http://www.unidata.ucar.edu/software/thredds/current/tds/catalog/InvCatalogSpec.html#service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>WMS</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The OpenGIS® Web Map Service Interface Standard (WMS) provides a simple HTTP interface for requesting geo-registered map images from one or more distributed geospatial databases. A WMS request defines the geographic layer(s) and area of interest to be processed. The response to the request is one or more geo-registered map images (returned as JPEG, PNG, etc) that can be displayed in a browser application. The interface also supports the ability to specify whether the returned images should be transparent so that layers from multiple servers can be combined or not.</Literal>
     </AnnotationAssertion>
@@ -761,6 +941,11 @@ http://www.ai.sri.com/daml/services/owl-s/1.2/Service.owl</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xsd:name</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.w3.org/TR/xml-names11/#NT-Prefix</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Namespace Prefix</Literal>
     </AnnotationAssertion>
@@ -773,6 +958,16 @@ http://www.ai.sri.com/daml/services/owl-s/1.2/Service.owl</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.w3.org/TR/xml-names11/#sec-namespaces</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Namespace</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.w3.org/ns/dcat#Catalog</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A data catalog is a curated collection of metadata about datasets.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/ns/dcat#Catalog</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Data Catalog</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
