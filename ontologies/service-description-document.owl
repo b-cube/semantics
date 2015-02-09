@@ -359,10 +359,16 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="OpenSearchESIP"/>
-        <DataHasValue>
-            <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
-            <Literal datatypeIRI="&rdf;PlainLiteral">http://www.echo.nasa.gov/esip</Literal>
-        </DataHasValue>
+        <ObjectUnionOf>
+            <DataHasValue>
+                <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">http://a9.com/-/opensearch/extensions/geo/1.0/</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">http://a9.com/-/opensearch/extensions/time/1.0/</Literal>
+            </DataHasValue>
+        </ObjectUnionOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="OpenSearchRecord"/>
@@ -478,33 +484,19 @@
         <Class IRI="WebDocument"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="Content"/>
-            <Datatype abbreviatedIRI="xsd:anyURI"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="WebDocument"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="ServiceEndpoint"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
         <Class IRI="ServiceDescriptionDocument"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Profile:ServiceProfile"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="provides"/>
-            <Class IRI="http://www.w3.org/ns/dcat#CatalogRecord"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Profile:ServiceProfile"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="provides"/>
-            <Class IRI="http://www.w3.org/ns/dcat#Dataset"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
