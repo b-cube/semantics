@@ -98,6 +98,9 @@
         <Class IRI="OpenSearch"/>
     </Declaration>
     <Declaration>
+        <Class IRI="OpenSearchESIP"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="OpenSearchRecord"/>
     </Declaration>
     <Declaration>
@@ -120,6 +123,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="WMS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="WebDocument"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://schema.org/ImageObject"/>
@@ -167,6 +173,9 @@
         <DataProperty IRI="http://purl.org/dc/terms/abstract"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="http://purl.org/dc/terms/coverage"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="http://purl.org/dc/terms/creator"/>
     </Declaration>
     <Declaration>
@@ -192,6 +201,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="http://purl.org/dc/terms/type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="Content"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="ServiceEndpoint"/>
@@ -286,6 +298,23 @@
         <Class IRI="http://www.w3.org/ns/dcat#CatalogRecord"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="ISORecord"/>
+        <ObjectUnionOf>
+            <DataHasValue>
+                <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">http://www.isotc211.org/2005/gco</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">http://www.isotc211.org/2005/gmi</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">http://www.isotc211.org/2005/srv</Literal>
+            </DataHasValue>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="OAI-PMH"/>
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
     </SubClassOf>
@@ -301,6 +330,19 @@
         <Class IRI="http://www.w3.org/ns/dcat#CatalogRecord"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="OAIRecord"/>
+        <ObjectIntersectionOf>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="xsd:name"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">record</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">http://www.openarchives.org/OAI/2.0/</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="OpenSearch"/>
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
     </SubClassOf>
@@ -312,8 +354,32 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="OpenSearchESIP"/>
+        <Class IRI="OpenSearch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OpenSearchESIP"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">http://www.echo.nasa.gov/esip</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="OpenSearchRecord"/>
         <Class IRI="http://www.w3.org/ns/dcat#CatalogRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="OpenSearchRecord"/>
+        <ObjectIntersectionOf>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="xsd:name"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">entry</Literal>
+            </DataHasValue>
+            <DataHasValue>
+                <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">http://www.w3.org/2005/Atom</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="ServiceDescriptionDocument"/>
@@ -407,6 +473,20 @@
             <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
             <Literal datatypeIRI="&rdf;PlainLiteral">http://www.opengis.net/wms</Literal>
         </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WebDocument"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="Content"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WebDocument"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="ServiceEndpoint"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
@@ -560,22 +640,6 @@
         <Class IRI="ServiceDescriptionDocument"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal datatypeIRI="&rdf;PlainLiteral">This is the main endpoint, where we can retrieve the service description document which may or may not have multiple queryble endpoints.</Literal>
-        </Annotation>
-        <DataProperty IRI="ServiceEndpoint"/>
-        <Class IRI="ServiceDescriptionDocument"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal datatypeIRI="&rdf;PlainLiteral">This endpoint refers to the endpoint provided by the service to each profile, i.e. OpenSearch can have multiple URL templates.</Literal>
-        </Annotation>
-        <DataProperty IRI="ServiceEndpoint"/>
-        <Class abbreviatedIRI="Profile:ServiceProfile"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="serviceName"/>
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
     </DataPropertyDomain>
@@ -661,6 +725,16 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Abstract</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.org/dc/terms/coverage</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.org/dc/terms/coverage</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Coverage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://purl.org/dc/terms/creator</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Creator</Literal>
@@ -712,6 +786,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Content</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The content of a web resource is the non parsed represention of an HTTP request. This property should be a fallback in case none of the parsers can identify the type of a particular URL.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Content</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Content</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>OAI-PMH</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The Open Archives Initiative Protocol for Metadata Harvesting (referred to as the OAI-PMH in the remainder of this document) provides an application-independent interoperability framework based on metadata harvesting.</Literal>
     </AnnotationAssertion>
@@ -738,7 +822,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>ServiceEndpoint</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Service Endpoint</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Endpoint</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -821,6 +905,16 @@ This ontology describes the relationships between the elements that a THREDDS do
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>WMS</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The OpenGIS® Web Map Service Interface Standard (WMS) provides a simple HTTP interface for requesting geo-registered map images from one or more distributed geospatial databases. A WMS request defines the geographic layer(s) and area of interest to be processed. The response to the request is one or more geo-registered map images (returned as JPEG, PNG, etc) that can be displayed in a browser application. The interface also supports the ability to specify whether the returned images should be transparent so that layers from multiple servers can be combined or not.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>WebDocument</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any resource in the web is a Web Document. Their representation can vary in formats such as HTML, XML, CSV, JSON etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>WebDocument</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Web Document</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
