@@ -86,6 +86,9 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The National Snow and Ice Data Center</Literal>
     </Annotation>
     <Declaration>
+        <Class IRI="Endpoint"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="ISORecord"/>
     </Declaration>
     <Declaration>
@@ -122,6 +125,12 @@
         <Class IRI="THREDDSService"/>
     </Declaration>
     <Declaration>
+        <Class IRI="WCS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="WFS"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="WMS"/>
     </Declaration>
     <Declaration>
@@ -149,13 +158,16 @@
         <Class IRI="http://www.w3.org/ns/dcat#Dataset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://xml.opendap.org/ontologies/opendap-dap-3.2.owl#OpenDAP"/>
+        <Class IRI="http://xml.opendap.org/ontologies/opendap-dap-3.2.owl#WSDL"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="describedBy"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="describes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasEndpoint"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="providedBy"/>
@@ -206,7 +218,10 @@
         <DataProperty IRI="Content"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="ServiceEndpoint"/>
+        <DataProperty IRI="Endpoint"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="RequestMethod"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="serviceName"/>
@@ -234,6 +249,12 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://creativecommons.org/publicdomain/zero/1.0/"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="GET"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="POST"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
@@ -269,14 +290,28 @@
         <Class IRI="OAI-PMH"/>
         <DataHasValue>
             <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
-            <Literal datatypeIRI="&rdf;PlainLiteral">http://www.openarchives.org/OAI/</Literal>
+            <Literal datatypeIRI="&rdf;PlainLiteral">http://www.openarchives.org/OAI</Literal>
         </DataHasValue>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="OpenSearch"/>
         <DataHasValue>
             <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
-            <Literal datatypeIRI="&rdf;PlainLiteral">http://a9.com/-/spec/opensearch/</Literal>
+            <Literal datatypeIRI="&rdf;PlainLiteral">http://a9.com/-/spec/opensearch</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="WCS"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">http://www.opengis.net/wcs</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="WFS"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">http://www.opengis.net/wfs</Literal>
         </DataHasValue>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -287,12 +322,26 @@
         </DataHasValue>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="http://xml.opendap.org/ontologies/opendap-dap-3.2.owl#OpenDAP"/>
+        <Class IRI="http://xml.opendap.org/ontologies/opendap-dap-3.2.owl#WSDL"/>
         <DataHasValue>
             <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
-            <Literal datatypeIRI="&rdf;PlainLiteral">http://xml.opendap.org/ns/</Literal>
+            <Literal datatypeIRI="&rdf;PlainLiteral">http://schemas.xmlsoap.org/wsdl</Literal>
         </DataHasValue>
     </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="Endpoint"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="Endpoint"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Endpoint"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="RequestMethod"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
     <SubClassOf>
         <Class IRI="ISORecord"/>
         <Class IRI="http://www.w3.org/ns/dcat#CatalogRecord"/>
@@ -396,10 +445,17 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="ServiceDescriptionDocument"/>
-        <DataMinCardinality cardinality="1">
-            <DataProperty IRI="ServiceEndpoint"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="Endpoint"/>
             <Datatype abbreviatedIRI="xsd:anyURI"/>
-        </DataMinCardinality>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ServiceDescriptionDocument"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="THREDDS"/>
@@ -456,6 +512,28 @@
         </DataHasValue>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="WCS"/>
+        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WCS"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://purl.org/dc/terms/hasVersion"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WFS"/>
+        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WFS"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://purl.org/dc/terms/hasVersion"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="WMS"/>
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
     </SubClassOf>
@@ -474,13 +552,6 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="WMS"/>
-        <DataHasValue>
-            <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
-            <Literal datatypeIRI="&rdf;PlainLiteral">http://www.opengis.net/wms</Literal>
-        </DataHasValue>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="WebDocument"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="Content"/>
@@ -490,7 +561,7 @@
     <SubClassOf>
         <Class IRI="WebDocument"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="ServiceEndpoint"/>
+            <DataProperty IRI="Endpoint"/>
             <Datatype abbreviatedIRI="xsd:anyURI"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -513,16 +584,24 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://xml.opendap.org/ontologies/opendap-dap-3.2.owl#OpenDAP"/>
+        <Class IRI="http://xml.opendap.org/ontologies/opendap-dap-3.2.owl#WSDL"/>
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://xml.opendap.org/ontologies/opendap-dap-3.2.owl#OpenDAP"/>
+        <Class IRI="http://xml.opendap.org/ontologies/opendap-dap-3.2.owl#WSDL"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="http://purl.org/dc/terms/hasVersion"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="GET"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual IRI="POST"/>
+    </ClassAssertion>
     <InverseObjectProperties>
         <ObjectProperty IRI="describedBy"/>
         <ObjectProperty IRI="describes"/>
@@ -684,8 +763,12 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="ServiceEndpoint"/>
+        <DataProperty IRI="Endpoint"/>
         <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="RequestMethod"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="serviceName"/>
@@ -788,6 +871,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Endpoint</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">And endpoint is any URI where a web service can be queried for data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>OAI-PMH</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The Open Archives Initiative Protocol for Metadata Harvesting (referred to as the OAI-PMH in the remainder of this document) provides an application-independent interoperability framework based on metadata harvesting.</Literal>
     </AnnotationAssertion>
@@ -798,6 +886,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>RequestMethod</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Defines how an endpoint can be accessed, i.e. RCP, HTTP GET etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>RequestMethod</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Request Method</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>ServiceDescriptionDocument</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A Service Description Document is a document that describes how to use a web service i.e. OpenSearch OSDD, WMS GetCapabilities document, OAI Identify Document, Swagger API Document.</Literal>
     </AnnotationAssertion>
@@ -805,16 +903,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>ServiceDescriptionDocument</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Service Description Document</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>ServiceEndpoint</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">And endpoint is any URI where a web service can be queried for data.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>ServiceEndpoint</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Endpoint</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1080,7 +1168,7 @@ http://www.w3.org/TR/vocab-dcat/#Class:_Dataset</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://xml.opendap.org/ontologies/opendap-dap-3.2.owl#OpenDAP</IRI>
+        <IRI>http://xml.opendap.org/ontologies/opendap-dap-3.2.owl#WSDL</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The DAP2 protocol provides a discipline-neutral means of requesting and providing data across the World Wide Web.</Literal>
     </AnnotationAssertion>
 </Ontology>
