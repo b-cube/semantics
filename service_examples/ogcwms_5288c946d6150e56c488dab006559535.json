@@ -1,0 +1,807 @@
+{
+    "solr_identifier": "5288c946d6150e56c488dab006559535", 
+    "service": {
+        "version": "1.1.1", 
+        "rights": "none", 
+        "abstract": null, 
+        "tags": [], 
+        "contact": "Peter N. Schweitzer", 
+        "title": "California_Geology", 
+        "endpoints": {
+            "GetCapabilities": [
+                {
+                    "url": "http://mrdata.usgs.gov/services/ca?", 
+                    "type": "Get", 
+                    "parameters": [
+                        {
+                            "name": "Version", 
+                            "prefix": "wms", 
+                            "values": [
+                                "application/vnd.ogc.wms_xml"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Request", 
+                            "prefix": "wms", 
+                            "values": [
+                                "application/vnd.ogc.wms_xml"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Service", 
+                            "prefix": "wms", 
+                            "values": [
+                                "application/vnd.ogc.wms_xml"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Format", 
+                            "prefix": "wms", 
+                            "values": [
+                                "application/vnd.ogc.wms_xml"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }
+                    ]
+                }, 
+                {
+                    "url": "http://mrdata.usgs.gov/services/ca?", 
+                    "type": "Post", 
+                    "parameters": [
+                        {
+                            "name": "Version", 
+                            "prefix": "wms", 
+                            "values": [
+                                "application/vnd.ogc.wms_xml"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Request", 
+                            "prefix": "wms", 
+                            "values": [
+                                "application/vnd.ogc.wms_xml"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Service", 
+                            "prefix": "wms", 
+                            "values": [
+                                "application/vnd.ogc.wms_xml"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Format", 
+                            "prefix": "wms", 
+                            "values": [
+                                "application/vnd.ogc.wms_xml"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }
+                    ]
+                }
+            ], 
+            "DescribeLayer": [
+                {
+                    "url": "http://mrdata.usgs.gov/services/ca?", 
+                    "type": "Get", 
+                    "parameters": []
+                }, 
+                {
+                    "url": "http://mrdata.usgs.gov/services/ca?", 
+                    "type": "Post", 
+                    "parameters": []
+                }
+            ], 
+            "GetStyles": [
+                {
+                    "url": "http://mrdata.usgs.gov/services/ca?", 
+                    "type": "Get", 
+                    "parameters": []
+                }, 
+                {
+                    "url": "http://mrdata.usgs.gov/services/ca?", 
+                    "type": "Post", 
+                    "parameters": []
+                }
+            ], 
+            "GetMap": [
+                {
+                    "url": "http://mrdata.usgs.gov/services/ca?", 
+                    "type": "Get", 
+                    "parameters": [
+                        {
+                            "name": "Version", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Request", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Service", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Format", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Layers", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "BBOX", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "minx,miny,maxx,maxy", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Height", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "integer"
+                        }, 
+                        {
+                            "name": "Width", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "integer"
+                        }, 
+                        {
+                            "name": "Styles", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "CRS", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Transparent", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "boolean"
+                        }, 
+                        {
+                            "name": "BgColor", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "hexadecimal"
+                        }, 
+                        {
+                            "name": "Elevation", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Time", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }
+                    ]
+                }, 
+                {
+                    "url": "http://mrdata.usgs.gov/services/ca?", 
+                    "type": "Post", 
+                    "parameters": [
+                        {
+                            "name": "Version", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Request", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Service", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Format", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Layers", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "BBOX", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "minx,miny,maxx,maxy", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Height", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "integer"
+                        }, 
+                        {
+                            "name": "Width", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "integer"
+                        }, 
+                        {
+                            "name": "Styles", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "CRS", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Transparent", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "boolean"
+                        }, 
+                        {
+                            "name": "BgColor", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "hexadecimal"
+                        }, 
+                        {
+                            "name": "Elevation", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Time", 
+                            "prefix": "wms", 
+                            "values": [
+                                "image/png", 
+                                "image/jpeg", 
+                                "image/gif", 
+                                "image/png; mode=8bit", 
+                                "application/x-pdf", 
+                                "image/svg+xml", 
+                                "image/tiff", 
+                                "application/vnd.google-earth.kml+xml", 
+                                "application/vnd.google-earth.kmz"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }
+                    ]
+                }
+            ], 
+            "GetLegendGraphic": [
+                {
+                    "url": "http://mrdata.usgs.gov/services/ca?", 
+                    "type": "Get", 
+                    "parameters": []
+                }, 
+                {
+                    "url": "http://mrdata.usgs.gov/services/ca?", 
+                    "type": "Post", 
+                    "parameters": []
+                }
+            ], 
+            "GetFeatureInfo": [
+                {
+                    "url": "http://mrdata.usgs.gov/services/ca?", 
+                    "type": "Get", 
+                    "parameters": [
+                        {
+                            "name": "Version", 
+                            "prefix": "wms", 
+                            "values": [
+                                "text/html", 
+                                "application/vnd.ogc.gml", 
+                                "text/plain"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Request", 
+                            "prefix": "wms", 
+                            "values": [
+                                "text/html", 
+                                "application/vnd.ogc.gml", 
+                                "text/plain"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Service", 
+                            "prefix": "wms", 
+                            "values": [
+                                "text/html", 
+                                "application/vnd.ogc.gml", 
+                                "text/plain"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Info_Format", 
+                            "prefix": "wms", 
+                            "values": [
+                                "text/html", 
+                                "application/vnd.ogc.gml", 
+                                "text/plain"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Feature_Count", 
+                            "prefix": "wms", 
+                            "values": [
+                                "text/html", 
+                                "application/vnd.ogc.gml", 
+                                "text/plain"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "integer"
+                        }
+                    ]
+                }, 
+                {
+                    "url": "http://mrdata.usgs.gov/services/ca?", 
+                    "type": "Post", 
+                    "parameters": [
+                        {
+                            "name": "Version", 
+                            "prefix": "wms", 
+                            "values": [
+                                "text/html", 
+                                "application/vnd.ogc.gml", 
+                                "text/plain"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Request", 
+                            "prefix": "wms", 
+                            "values": [
+                                "text/html", 
+                                "application/vnd.ogc.gml", 
+                                "text/plain"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Service", 
+                            "prefix": "wms", 
+                            "values": [
+                                "text/html", 
+                                "application/vnd.ogc.gml", 
+                                "text/plain"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Info_Format", 
+                            "prefix": "wms", 
+                            "values": [
+                                "text/html", 
+                                "application/vnd.ogc.gml", 
+                                "text/plain"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "string"
+                        }, 
+                        {
+                            "name": "Feature_Count", 
+                            "prefix": "wms", 
+                            "values": [
+                                "text/html", 
+                                "application/vnd.ogc.gml", 
+                                "text/plain"
+                            ], 
+                            "namespaces": "http://www.opengis.net/wms", 
+                            "formats": "", 
+                            "type": "integer"
+                        }
+                    ]
+                }
+            ]
+        }
+    }, 
+    "source_url": "http://mrdata.usgs.gov/services/ca?request=getcapabilities&service=WMS&version=1.1.1", 
+    "remainder": [], 
+    "harvested_date": "2014-10-29T23:58:42.782Z", 
+    "identity": {
+        "is_error": false, 
+        "protocol": "OGC:WMS", 
+        "service": "GetCapabilities", 
+        "has_dataset": false, 
+        "has_metadata": false, 
+        "subtype": "service", 
+        "version": "1.1.1"
+    }
+}
