@@ -88,7 +88,16 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The National Snow and Ice Data Center</Literal>
     </Annotation>
     <Declaration>
+        <Class IRI="AtomRecord"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Content"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="ISORecord"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="MetadataRecord"/>
     </Declaration>
     <Declaration>
         <Class IRI="OAI-PMH"/>
@@ -101,9 +110,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="OpenSearch"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="OpenSearchRecord"/>
     </Declaration>
     <Declaration>
         <Class IRI="Request"/>
@@ -136,6 +142,9 @@
         <Class IRI="WMS"/>
     </Declaration>
     <Declaration>
+        <Class IRI="WebDocument"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://schema.org/ImageObject"/>
     </Declaration>
     <Declaration>
@@ -161,6 +170,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="describes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasContent"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasEndpoint"/>
@@ -217,6 +229,12 @@
         <DataProperty IRI="RequestWithHTTPVerb"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="contentRaw"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="contentSize"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="serviceName"/>
     </Declaration>
     <Declaration>
@@ -242,12 +260,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://creativecommons.org/publicdomain/zero/1.0/"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="HTTP-GET"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="HTTP-POST"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
@@ -281,90 +293,133 @@
     </Declaration>
     <EquivalentClasses>
         <Class IRI="OAI-PMH"/>
-        <DataHasValue>
-            <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
-            <Literal datatypeIRI="&rdf;PlainLiteral">http://www.openarchives.org/OAI/</Literal>
-        </DataHasValue>
+        <ObjectIntersectionOf>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="http://purl.org/dc/terms/hasVersion"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">http://www.openarchives.org/OAI/</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="OGCService"/>
-        <DataHasValue>
-            <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
-            <Literal datatypeIRI="&rdf;PlainLiteral">http://www.opengis.net</Literal>
-        </DataHasValue>
+        <ObjectIntersectionOf>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="http://purl.org/dc/terms/hasVersion"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">http://www.opengis.net</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="OpenSearch"/>
+        <ObjectIntersectionOf>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="http://purl.org/dc/terms/hasVersion"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">http://a9.com/-/spec/opensearch/</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="THREDDS"/>
         <DataHasValue>
             <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
-            <Literal datatypeIRI="&rdf;PlainLiteral">http://a9.com/-/spec/opensearch/</Literal>
+            <Literal datatypeIRI="&rdf;PlainLiteral">http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0</Literal>
         </DataHasValue>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="Request"/>
+        <Class IRI="WMS"/>
+        <ObjectIntersectionOf>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="http://purl.org/dc/terms/hasVersion"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">http://www.opengis.net/wms</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="WebDocument"/>
         <ObjectIntersectionOf>
             <ObjectSomeValuesFrom>
-                <ObjectProperty abbreviatedIRI="ServiceParameter:hasParameters"/>
-                <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
+                <ObjectProperty IRI="hasContent"/>
+                <Class IRI="Content"/>
             </ObjectSomeValuesFrom>
             <DataSomeValuesFrom>
-                <DataProperty IRI="RequestWithHTTPVerb"/>
+                <DataProperty IRI="BaseURL"/>
+                <Datatype abbreviatedIRI="xsd:anyURI"/>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="http://www.iana.org/assignments/media-types/media-types.xhtml"/>
                 <Datatype abbreviatedIRI="xsd:string"/>
             </DataSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="Request"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="http://www.iana.org/assignments/media-types/media-types.xhtml"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="ServiceEndpoint"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="BaseURL"/>
-            <Datatype abbreviatedIRI="xsd:anyURI"/>
-        </DataSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="THREDDS"/>
+        <Class IRI="http://xml.opendap.org/ontologies/opendap-dap-3.2.owl#OpenDAP"/>
         <ObjectIntersectionOf>
-            <Class IRI="http://www.w3.org/ns/dcat#Catalog"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="http://purl.org/dc/terms/hasVersion"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataSomeValuesFrom>
             <DataHasValue>
                 <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
-                <Literal datatypeIRI="&rdf;PlainLiteral">http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">http://xml.opendap.org/ns/</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
     </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="WMS"/>
-        <DataHasValue>
-            <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
-            <Literal datatypeIRI="&rdf;PlainLiteral">http://www.opengis.net/wms</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://xml.opendap.org/ontologies/opendap-dap-3.2.owl#OpenDAP"/>
-        <DataHasValue>
-            <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
-            <Literal datatypeIRI="&rdf;PlainLiteral">http://xml.opendap.org/ns/</Literal>
-        </DataHasValue>
-    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="AtomRecord"/>
+        <Class IRI="http://www.w3.org/ns/dcat#CatalogRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Content"/>
+        <ObjectIntersectionOf>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="contentRaw"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="contentSize"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <FacetRestriction facet="&xsd;minInclusive">
+                        <Literal datatypeIRI="&xsd;integer">0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Content"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://purl.org/dc/terms/language"/>
+            <Datatype abbreviatedIRI="xsd:language"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
     <SubClassOf>
         <Class IRI="ISORecord"/>
         <Class IRI="http://www.w3.org/ns/dcat#CatalogRecord"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="OAI-PMH"/>
-        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+        <Class IRI="MetadataRecord"/>
+        <Class IRI="http://www.w3.org/ns/dcat#CatalogRecord"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="OAI-PMH"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="http://purl.org/dc/terms/hasVersion"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
+        <Class abbreviatedIRI="Profile:ServiceProfile"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="OAIRecord"/>
@@ -379,51 +434,60 @@
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="OpenSearch"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="http://purl.org/dc/terms/hasVersion"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="OpenSearchRecord"/>
-        <Class IRI="http://www.w3.org/ns/dcat#CatalogRecord"/>
+        <Class IRI="Request"/>
+        <Class IRI="ServiceEndpoint"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Request"/>
-        <Class IRI="ServiceEndpoint"/>
+        <ObjectIntersectionOf>
+            <ObjectUnionOf>
+                <DataHasValue>
+                    <DataProperty IRI="RequestWithHTTPVerb"/>
+                    <Literal datatypeIRI="&rdf;PlainLiteral">GET</Literal>
+                </DataHasValue>
+                <DataHasValue>
+                    <DataProperty IRI="RequestWithHTTPVerb"/>
+                    <Literal datatypeIRI="&rdf;PlainLiteral">POST</Literal>
+                </DataHasValue>
+            </ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="ServiceParameter:hasParameters"/>
+                <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
+            </ObjectSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="http://www.iana.org/assignments/media-types/media-types.xhtml"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Response"/>
         <Class IRI="ServiceEndpoint"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="ServiceDescriptionDocument"/>
+        <Class IRI="WebDocument"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="ServiceEndpoint"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="serveService"/>
-            <Class abbreviatedIRI="Profile:ServiceProfile"/>
-        </ObjectSomeValuesFrom>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="serveService"/>
+                <Class abbreviatedIRI="Profile:ServiceProfile"/>
+            </ObjectSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="BaseURL"/>
+                <Datatype abbreviatedIRI="xsd:anyURI"/>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="THREDDS"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="http://purl.org/dc/terms/abstract"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
+        <Class IRI="WebDocument"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="THREDDS"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="http://purl.org/dc/terms/title"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="THREDDS"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="BaseURL"/>
-            <Datatype abbreviatedIRI="xsd:anyURI"/>
-        </DataSomeValuesFrom>
+        <Class IRI="http://www.w3.org/ns/dcat#Catalog"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="THREDDSAccess"/>
@@ -481,20 +545,6 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="WMS"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="http://purl.org/dc/terms/hasVersion"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="WMS"/>
-        <DataHasValue>
-            <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
-            <Literal datatypeIRI="&rdf;PlainLiteral">http://www.opengis.net/wms</Literal>
-        </DataHasValue>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
         <Class IRI="ServiceDescriptionDocument"/>
     </SubClassOf>
@@ -521,33 +571,38 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
-        <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="ServiceParameter:serviceParameterName"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
+        <ObjectIntersectionOf>
+            <ObjectUnionOf>
+                <DataHasValue>
+                    <DataProperty IRI="serviceParameterType"/>
+                    <Literal datatypeIRI="&rdf;PlainLiteral">GEO</Literal>
+                </DataHasValue>
+                <DataHasValue>
+                    <DataProperty IRI="serviceParameterType"/>
+                    <Literal datatypeIRI="&rdf;PlainLiteral">OTHER</Literal>
+                </DataHasValue>
+                <DataHasValue>
+                    <DataProperty IRI="serviceParameterType"/>
+                    <Literal datatypeIRI="&rdf;PlainLiteral">TIME</Literal>
+                </DataHasValue>
+            </ObjectUnionOf>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="serviceParameterFormat"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty abbreviatedIRI="ServiceParameter:serviceParameterName"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://xml.opendap.org/ontologies/opendap-dap-3.2.owl#OpenDAP"/>
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
     </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://xml.opendap.org/ontologies/opendap-dap-3.2.owl#OpenDAP"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="http://purl.org/dc/terms/hasVersion"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <ClassAssertion>
-        <Class abbreviatedIRI="owl:Thing"/>
-        <NamedIndividual IRI="HTTP-GET"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="owl:Thing"/>
-        <NamedIndividual IRI="HTTP-POST"/>
-    </ClassAssertion>
     <InverseObjectProperties>
-        <ObjectProperty IRI="describedBy"/>
         <ObjectProperty IRI="describes"/>
+        <ObjectProperty IRI="describedBy"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="hasEndpoint"/>
@@ -560,6 +615,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="describes"/>
         <Class IRI="ServiceDescriptionDocument"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasContent"/>
+        <Class IRI="WebDocument"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasEndpoint"/>
@@ -596,6 +655,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="describedBy"/>
         <Class IRI="ServiceDescriptionDocument"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasContent"/>
+        <Class IRI="Content"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasEndpoint"/>
@@ -630,44 +693,16 @@
         <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
     </ObjectPropertyRange>
     <DataPropertyDomain>
-        <DataProperty IRI="http://purl.org/dc/terms/abstract"/>
-        <Class IRI="ServiceDescriptionDocument"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://purl.org/dc/terms/creator"/>
-        <Class IRI="ServiceDescriptionDocument"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://purl.org/dc/terms/description"/>
-        <Class IRI="ServiceDescriptionDocument"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://purl.org/dc/terms/hasVersion"/>
-        <Class IRI="ServiceDescriptionDocument"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://purl.org/dc/terms/language"/>
-        <Class IRI="ServiceDescriptionDocument"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://purl.org/dc/terms/rights"/>
-        <Class IRI="ServiceDescriptionDocument"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://purl.org/dc/terms/source"/>
-        <Class IRI="ServiceDescriptionDocument"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://purl.org/dc/terms/subject"/>
-        <Class IRI="ServiceDescriptionDocument"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="http://purl.org/dc/terms/title"/>
-        <Class IRI="ServiceDescriptionDocument"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="RequestWithHTTPVerb"/>
-        <Class IRI="ServiceEndpoint"/>
+        <Class IRI="Request"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="contentRaw"/>
+        <Class IRI="Content"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="contentSize"/>
+        <Class IRI="Content"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="serviceName"/>
@@ -727,7 +762,18 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="RequestWithHTTPVerb"/>
+        <DataOneOf>
+            <Literal datatypeIRI="&rdf;PlainLiteral">GET</Literal>
+            <Literal datatypeIRI="&rdf;PlainLiteral">POST</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="contentRaw"/>
         <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="contentSize"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="serviceName"/>
@@ -739,7 +785,11 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="serviceParameterType"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
+        <DataOneOf>
+            <Literal datatypeIRI="&rdf;PlainLiteral">GEO</Literal>
+            <Literal datatypeIRI="&rdf;PlainLiteral">OTHER</Literal>
+            <Literal datatypeIRI="&rdf;PlainLiteral">TIME</Literal>
+        </DataOneOf>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty abbreviatedIRI="ServiceParameter:serviceParameterName"/>
@@ -755,7 +805,7 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
-        <Datatype abbreviatedIRI="xsd:anyURI"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -775,12 +825,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>http://purl.org/dc/terms/hasVersion</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The version of the protocol used by a service i.e. OpenSearch 1.1</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The version of the protocol used by a service i.e. OpenSearch v 1.1</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://purl.org/dc/terms/hasVersion</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Has Version</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Version</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -814,13 +864,43 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>AtomRecord</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Atom Entry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>BaseURL</IRI>
         <Literal datatypeIRI="&xsd;anyURI">Base URL</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Content</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The raw representation of a web document.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Content</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Content</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ISORecord</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ISO Record</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>MetadataRecord</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Metadata Record</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>OAI-PMH</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The Open Archives Initiative Protocol for Metadata Harvesting (referred to as the OAI-PMH in the remainder of this document) provides an application-independent interoperability framework based on metadata harvesting.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>OAIRecord</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">OAI Record</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -941,6 +1021,36 @@ This ontology describes the relationships between the elements that a THREDDS do
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>WebDocument</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A web document is any document that can be retrieves using a URL</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>WebDocument</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Web Document</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>contentRaw</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The raw content of a document.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>contentRaw</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Raw Content</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>contentSize</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Content size in bytes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>contentSize</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Content Size</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>describedBy</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A web service is described by a service description document.</Literal>
     </AnnotationAssertion>
@@ -948,6 +1058,11 @@ This ontology describes the relationships between the elements that a THREDDS do
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>describes</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">All service description documents describe a particular service.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasContent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any document that&apos;s not a HTTP error has some content.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
