@@ -17,6 +17,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      ontologyIRI="http://purl.org/nsidc/bcube/web-services#"
      versionIRI="http://purl.org/nsidc/bcube/web-services/0.1.0#">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="os" IRI="http://a9.com/-/spec/opensearch/1.1/#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
@@ -139,7 +140,16 @@
         <Class IRI="THREDDSService"/>
     </Declaration>
     <Declaration>
+        <Class IRI="WCS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="WFS"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="WMS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="WSDL"/>
     </Declaration>
     <Declaration>
         <Class IRI="WebDocument"/>
@@ -163,7 +173,7 @@
         <Class IRI="http://www.w3.org/ns/dcat#Dataset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://xml.opendap.org/ontologies/opendap-dap-3.2.owl#OpenDAP"/>
+        <ObjectProperty IRI="childOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="describedBy"/>
@@ -176,6 +186,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasEndpoint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="parentOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="providedBy"/>
@@ -226,7 +239,13 @@
         <DataProperty IRI="BaseURL"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="Discovered"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="RequestWithHTTPVerb"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="Updated"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="contentRaw"/>
@@ -338,6 +357,32 @@
         </DataHasValue>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="WCS"/>
+        <ObjectIntersectionOf>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="http://purl.org/dc/terms/hasVersion"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">http://www.opengis.net/wcs</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="WFS"/>
+        <ObjectIntersectionOf>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="http://purl.org/dc/terms/hasVersion"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">http://www.opengis.net/wfs</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="WMS"/>
         <ObjectIntersectionOf>
             <DataSomeValuesFrom>
@@ -347,6 +392,19 @@
             <DataHasValue>
                 <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
                 <Literal datatypeIRI="&rdf;PlainLiteral">http://www.opengis.net/wms</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="WSDL"/>
+        <ObjectIntersectionOf>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="http://purl.org/dc/terms/hasVersion"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">http://schemas.xmlsoap.org/wsdl/</Literal>
             </DataHasValue>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -362,22 +420,13 @@
                 <Datatype abbreviatedIRI="xsd:anyURI"/>
             </DataSomeValuesFrom>
             <DataSomeValuesFrom>
+                <DataProperty IRI="Updated"/>
+                <Datatype abbreviatedIRI="xsd:dateTime"/>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
                 <DataProperty IRI="http://www.iana.org/assignments/media-types/media-types.xhtml"/>
                 <Datatype abbreviatedIRI="xsd:string"/>
             </DataSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://xml.opendap.org/ontologies/opendap-dap-3.2.owl#OpenDAP"/>
-        <ObjectIntersectionOf>
-            <DataSomeValuesFrom>
-                <DataProperty IRI="http://purl.org/dc/terms/hasVersion"/>
-                <Datatype abbreviatedIRI="xsd:string"/>
-            </DataSomeValuesFrom>
-            <DataHasValue>
-                <DataProperty IRI="http://www.w3.org/TR/xml-names11/#sec-namespaces"/>
-                <Literal datatypeIRI="&rdf;PlainLiteral">http://xml.opendap.org/ns/</Literal>
-            </DataHasValue>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <SubClassOf>
@@ -528,10 +577,24 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="THREDDSService"/>
-        <DataHasValue>
-            <DataProperty abbreviatedIRI="xsd:name"/>
-            <Literal datatypeIRI="&rdf;PlainLiteral">service</Literal>
-        </DataHasValue>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="provides"/>
+                <Class IRI="THREDDSService"/>
+            </ObjectSomeValuesFrom>
+            <DataHasValue>
+                <DataProperty abbreviatedIRI="xsd:name"/>
+                <Literal datatypeIRI="&rdf;PlainLiteral">service</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WCS"/>
+        <Class IRI="OGCService"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WFS"/>
+        <Class IRI="OGCService"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="WMS"/>
@@ -543,6 +606,10 @@
             <ObjectProperty IRI="provides"/>
             <Class IRI="http://schema.org/ImageObject"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WSDL"/>
+        <Class abbreviatedIRI="Profile:ServiceProfile"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
@@ -597,12 +664,16 @@
         </ObjectIntersectionOf>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://xml.opendap.org/ontologies/opendap-dap-3.2.owl#OpenDAP"/>
-        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+        <Class IRI="http://www.w3.org/ns/dcat#CatalogRecord"/>
+        <Class IRI="WebDocument"/>
     </SubClassOf>
     <InverseObjectProperties>
-        <ObjectProperty IRI="describes"/>
+        <ObjectProperty IRI="parentOf"/>
+        <ObjectProperty IRI="childOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="describedBy"/>
+        <ObjectProperty IRI="describes"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="hasEndpoint"/>
@@ -761,11 +832,19 @@
         <Datatype abbreviatedIRI="xsd:anyURI"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="Discovered"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="RequestWithHTTPVerb"/>
         <DataOneOf>
             <Literal datatypeIRI="&rdf;PlainLiteral">GET</Literal>
             <Literal datatypeIRI="&rdf;PlainLiteral">POST</Literal>
         </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="Updated"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="contentRaw"/>
@@ -881,6 +960,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Content</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Content</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Discovered</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">When the document was indexed by our Crawler, same as date in the Solr schema.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Discovered</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Discovered</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1016,6 +1105,26 @@ This ontology describes the relationships between the elements that a THREDDS do
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Updated</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The last time the document was updated according to the HTTP headers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Updated</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Updated Date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>WCS</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A WCS provides access to coverage data in forms that are useful for client-side rendering, as input into scientific models, and for other clients. The WCS may be compared to the OGC Web Feature Service (WFS) [4] and the Web Map Service (WMS) [5]. As with WMS and WFS service instances, a WCS allows clients to choose portions of a server&apos;s information holdings based on spatial constraints and other query criteria.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>WFS</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Web Feature Service Interface Standard (WFS) provides an interface allowing requests for geographical features across the web using platform-independent calls.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>WMS</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The OpenGIS® Web Map Service Interface Standard (WMS) provides a simple HTTP interface for requesting geo-registered map images from one or more distributed geospatial databases. A WMS request defines the geographic layer(s) and area of interest to be processed. The response to the request is one or more geo-registered map images (returned as JPEG, PNG, etc) that can be displayed in a browser application. The interface also supports the ability to specify whether the returned images should be transparent so that layers from multiple servers can be combined or not.</Literal>
     </AnnotationAssertion>
@@ -1028,6 +1137,11 @@ This ontology describes the relationships between the elements that a THREDDS do
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>WebDocument</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Web Document</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>childOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">If there are nested datasets we can say that they have a parent and the nested ones are the children of the master catalog.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1068,6 +1182,11 @@ This ontology describes the relationships between the elements that a THREDDS do
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasEndpoint</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Every service profile should have an endpoint, this is a base URL where we can query the service using a particular request and the endpoint should provide a response.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>parentOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Relationship between 2 datasets when there are nested datasets/catalogs.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1221,11 +1340,6 @@ http://www.w3.org/TR/vocab-dcat/#Class:_Dataset</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.w3.org/ns/dcat#Dataset</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Dataset</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>http://xml.opendap.org/ontologies/opendap-dap-3.2.owl#OpenDAP</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The DAP2 protocol provides a discipline-neutral means of requesting and providing data across the World Wide Web.</Literal>
     </AnnotationAssertion>
 </Ontology>
 
