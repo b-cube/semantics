@@ -411,10 +411,6 @@
     <EquivalentClasses>
         <Class IRI="WebDocument"/>
         <ObjectIntersectionOf>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="hasContent"/>
-                <Class IRI="Content"/>
-            </ObjectSomeValuesFrom>
             <DataSomeValuesFrom>
                 <DataProperty IRI="BaseURL"/>
                 <Datatype abbreviatedIRI="xsd:anyURI"/>
@@ -612,6 +608,13 @@
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="WebDocument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasContent"/>
+            <Class IRI="Content"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="Profile:ServiceProfile"/>
         <Class IRI="ServiceDescriptionDocument"/>
     </SubClassOf>
@@ -668,12 +671,12 @@
         <Class IRI="WebDocument"/>
     </SubClassOf>
     <InverseObjectProperties>
-        <ObjectProperty IRI="parentOf"/>
         <ObjectProperty IRI="childOf"/>
+        <ObjectProperty IRI="parentOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="describedBy"/>
         <ObjectProperty IRI="describes"/>
+        <ObjectProperty IRI="describedBy"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="hasEndpoint"/>
