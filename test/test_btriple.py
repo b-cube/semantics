@@ -1,8 +1,12 @@
 import unittest
-from btriple import Store
+from rdflib import Graph, URIRef, Literal
+from btriple import Store, JsonLoader, Triplelizer
 
 
 class TestStore(unittest.TestCase):
+    '''
+    Tests basic namespace binding.
+    '''
     def setUp(self):
         self.store = Store()
 
@@ -11,12 +15,85 @@ class TestStore(unittest.TestCase):
             '': 'http://purl.org/nsidc/bcube/web-services#',
             'Profile': 'http://www.daml.org/services/owl-s/1.2/Profile.owl#',
             'Service': 'http://www.daml.org/services/owl-s/1.2/Service.owl#',
-            'ServiceParameter': 'http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#',
+            'ServiceParameter':
+            'http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#',
             'dcterms': 'http://purl.org/dc/terms/'
         }
 
         self.assertTrue(isinstance(self.store, Store))
         self.store.bind_namespaces(namespaces)
         ns = self.store.get_namespaces()
-
         self.assertEquals(len(ns), 9)
+
+
+class TestJSONLoader(unittest.TestCase):
+    '''
+    Tests that we can parse json files without dying in
+    the process.
+    '''
+    def setUp(self):
+        self.json_loader = JsonLoader("service_examples")
+
+    def test_files_are_loaded(self):
+        self.assertEqual(len(self.json_loader.files), 7)
+
+    def test_malformed_json_returns_none(self):
+        data = self.json_loader.parse("service_examples/malformed.json")
+        self.assertTrue(data is None)
+
+    def test_parser_works(self):
+        data = self.json_loader.parse(
+            "service_examples/" +
+            "opensearch_4e724e1d3a4248747b184a9b039e8758.json")
+        self.assertFalse(data is None)
+        self.assertTrue(isinstance(data, dict))
+        self.assertEquals(data.solr_identifier,
+                          "4e724e1d3a4248747b184a9b039e8758")
+
+
+class TestTriples(unittest.TestCase):
+    '''
+    Tests the core triple extraction and SPARQL queries.
+    '''
+    def setUp(self):
+        self.json_loader = JsonLoader("service_examples")
+        self.triples = Triplelizer()
+
+    def test_triples_are_created_equal(self):
+        data = self.json_loader.parse(
+            "service_examples/" +
+            "opensearch_4e724e1d3a4248747b184a9b039e8758.json")
+        triples = self.triples.triplelize(data)
+        self.assertTrue(isinstance(triples, Store))
+        self.assertTrue(isinstance(triples.g, Graph))
+        for s, o, p in triples.g:
+            self.assertEquals(type(s), URIRef)
+            self.assertEquals(type(o), URIRef)
+            self.assertTrue(type(p) is Literal or type(p) is URIRef)
+
+    def test_triples_can_be_queried_1(self):
+        # We want to query the abstract of the OpenSearch service
+        abstract = Literal("[u'Pacific Islands Marine Portal(PIMRIS)']")
+        data = self.json_loader.parse(
+            "service_examples/" +
+            "opensearch_4e724e1d3a4248747b184a9b039e8758.json")
+        triples = self.triples.triplelize(data)
+        qres = triples.g.query(
+                """SELECT DISTINCT ?abstract
+                   WHERE {
+                            ?a dc:abstract ?abstract .
+                         }""")
+        for result in qres:
+            self.assertEquals(result[0], abstract)
+
+    def test_triples_can_be_queried_2(self):
+        # TODO
+        self.assertTrue(True)
+
+    def test_triples_can_be_queried_3(self):
+        # TODO
+        self.assertTrue(True)
+
+    def test_triples_can_be_serialized(self):
+        # TODO
+        self.assertTrue(True)

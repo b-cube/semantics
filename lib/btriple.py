@@ -12,6 +12,9 @@ import glob
 logging.basicConfig(filename="triples.log", level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
+__location__ = os.path.realpath(
+               os.path.join(os.getcwd(), os.path.dirname(__file__)))
+
 
 class Store():
     '''
@@ -52,6 +55,8 @@ class Triplelizer():
     def __init__(self):
         self.store = Store()
         self.WSO = Namespace('http//purl.org/nsidc/bcube/web-services#')
+        with open(__location__ + '/services.json', 'r') as fp:
+            self.fingerprints = bunchify(json.loads(fp.read()))
         ontology_uris = {
             'wso': 'http//purl.org/nsidc/bcube/web-services#',
             'Profile': 'http://www.daml.org/services/owl-s/1.2/Profile.owl#',
@@ -62,6 +67,12 @@ class Triplelizer():
         }
         self.store.bind_namespaces(ontology_uris)
 
+    def identify(self, document):
+        for attr in self.fingerprints:
+            if attr.DocType == document.identity.protocol:
+                return attr.object_type, attr.ontology_class
+        return None
+
     def triplelize(self, document):
         '''
         This method works fine with:
@@ -69,18 +80,25 @@ class Triplelizer():
         Otherwise bunch rises an exception for not found keys
         '''
         ns = 'http//purl.org/nsidc/bcube/web-services#'
-        doc_base_url = document.source_url
-        doc_identifier = document.solr_identifier
-        doc_version = document.identity.version
-        doc_title = document.service.title
-        doc_abstract = document.service.abstract
-        resource = self.store.get_resource(ns + doc_identifier)
+        if self.identify(document) is not None:
+            doc_base_url = document.source_url
+            doc_identifier = document.solr_identifier
+            doc_version = document.identity.version
+            doc_title = document.service.title
+            doc_abstract = document.service.abstract
+            doc_type, doc_ontology = self.identify(document)
 
-        resource.add(DCTERMS.title, Literal(doc_title))
-        resource.add(DCTERMS.hasVersion, Literal(doc_version))
-        resource.add(DCTERMS.abstract, Literal(doc_abstract))
-        resource.add(self.WSO.BaseURL, Literal(doc_base_url))
-        return self.store
+            resource = self.store.get_resource(ns + doc_identifier)
+
+            resource.add(RDF.type, URIRef(doc_type))
+            resource.add(RDF.type, URIRef(doc_ontology))
+            resource.add(DCTERMS.title, Literal(doc_title))
+            resource.add(DCTERMS.hasVersion, Literal(doc_version))
+            resource.add(DCTERMS.abstract, Literal(doc_abstract))
+            resource.add(self.WSO.BaseURL, Literal(doc_base_url))
+            return self.store
+        else:
+            return None
 
 
 class JsonLoader():
@@ -95,7 +113,17 @@ class JsonLoader():
                 data = json.load(json_file)
                 return bunchify(data)
         except:
-            logger.error("Error while loading: " + file)
+            logger.error(" Loading: " + j_file)
+            return None
+
+
+def triplify(json_data):
+    triple = Triplelizer()
+    triples_graph = triple.triplelize(json_data)
+    if triples_graph is not None:
+        return triples_graph
+    else:
+        return None
 
 
 def main():
@@ -104,13 +132,18 @@ def main():
     p.add_option("--format", "-f", default="turtle")
     options, arguments = p.parse_args()
     if options.path and os.path.isdir(options.path):
-        triple = Triplelizer()
         j_files = JsonLoader(options.path)
         print "Found: " + str(len(j_files.files)) + " files"
         for json_file in j_files.files:
             json_data = j_files.parse(json_file)
-            triples_graph = triple.triplelize(json_data)
-            print triples_graph.serialize(options.format)
+            if json_data is not None:
+                triples_graph = triplify(json_data)
+                if triples_graph is not None:
+                    print triples_graph.serialize(options.format)
+                else:
+                    logger.error(" Triples creation failed for: " + json_file)
+            else:
+                logger.error(" Parsing failed for : " + json_file)
     else:
         print options.path + " is not a valid path"
         p.print_help()
