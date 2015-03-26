@@ -72,28 +72,56 @@ class TestTriples(unittest.TestCase):
             self.assertTrue(type(p) is Literal or type(p) is URIRef)
 
     def test_triples_can_be_queried_1(self):
-        # We want to query the abstract of the OpenSearch service
+        # We want to query the abstract and the url of the OpenSearch service
+        base_url = Literal("http://www.pimrisportal.org/" +
+                           "component/search/?format=opensearch")
         abstract = Literal("[u'Pacific Islands Marine Portal(PIMRIS)']")
         data = self.json_loader.parse(
             "service_examples/" +
             "opensearch_4e724e1d3a4248747b184a9b039e8758.json")
         triples = self.triples.triplelize(data)
         qres = triples.g.query(
-                """SELECT DISTINCT ?abstract
+                """SELECT DISTINCT ?abstract ?base_url
                    WHERE {
                             ?a dc:abstract ?abstract .
+                            ?a wso:BaseURL ?base_url .
                          }""")
+        # we get exactly one result
+        self.assertEquals(len(qres), 1)
         for result in qres:
             self.assertEquals(result[0], abstract)
+            self.assertEquals(result[1], base_url)
 
     def test_triples_can_be_queried_2(self):
-        # TODO
-        self.assertTrue(True)
+        # We want to query the service identity for all
+        # opensearch documents, in this case just 1.
+        urn = URIRef("http//purl.org/nsidc/bcube/web-services#" +
+                     "4e724e1d3a4248747b184a9b039e8758")
+        data = self.json_loader.parse(
+            "service_examples/" +
+            "opensearch_4e724e1d3a4248747b184a9b039e8758.json")
+        triples = self.triples.triplelize(data)
+        qres = triples.g.query(
+                """SELECT *
+                   WHERE {
+                            ?subject rdf:type <http://purl.org/nsidc/bcube/web-services#OpenSearch> .
+                         }""")
+        self.assertEquals(len(qres), 1)
+        for result in qres:
+            self.assertEquals(result[0], urn)
 
     def test_triples_can_be_queried_3(self):
-        # TODO
+        # TODO: endpoints
+        self.assertTrue(True)
+
+    def test_triples_can_be_queried_4(self):
+        # TODO: parameters
+        self.assertTrue(True)
+
+    def test_triples_can_be_queried_5(self):
+        # TODO: datasets
         self.assertTrue(True)
 
     def test_triples_can_be_serialized(self):
-        # TODO
+        # TODO: others
         self.assertTrue(True)
