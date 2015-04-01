@@ -35,7 +35,7 @@ class TestJSONLoader(unittest.TestCase):
         self.json_loader = JsonLoader("service_examples")
 
     def test_files_are_loaded(self):
-        self.assertEqual(len(self.json_loader.files), 7)
+        self.assertEqual(len(self.json_loader.files), 6)
 
     def test_malformed_json_returns_none(self):
         data = self.json_loader.parse("service_examples/malformed.json")
@@ -58,6 +58,9 @@ class TestTriples(unittest.TestCase):
     def setUp(self):
         self.json_loader = JsonLoader("service_examples")
         self.triples = Triplelizer()
+
+    def tearDown(self):
+        self.triples = None
 
     def test_triples_are_created_equal(self):
         data = self.json_loader.parse(
@@ -104,15 +107,29 @@ class TestTriples(unittest.TestCase):
         qres = triples.g.query(
                 """SELECT *
                    WHERE {
-                            ?subject rdf:type <http://purl.org/nsidc/bcube/web-services#OpenSearch> .
+                            ?subject rdf:type wso:OpenSearch .
                          }""")
         self.assertEquals(len(qres), 1)
         for result in qres:
             self.assertEquals(result[0], urn)
 
-    def test_triples_can_be_queried_3(self):
+    def test_endpoints_triples(self):
         # TODO: endpoints
-        self.assertTrue(True)
+        ns = 'http//purl.org/nsidc/bcube/web-services#'
+        service = self.json_loader.parse(
+            "service_examples/" +
+            "ogcwms_130_03fe4d8784c89532539c7a121fe7a252.json")
+        parent_service = self.triples.store.get_resource(
+            ns + service.solr_identifier)
+        triples = self.triples.triplelize_endpoints(
+            service, parent_service)
+        qres = triples.g.query(
+                """SELECT *
+                   WHERE {
+                            ?subject rdf:type wso:ServiceEndpoint .
+                         }""")
+        print triples.serialize("turtle")
+        self.assertEquals(len(qres), 4)
 
     def test_triples_can_be_queried_4(self):
         # TODO: parameters

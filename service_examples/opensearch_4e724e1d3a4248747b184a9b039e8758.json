@@ -6,8 +6,10 @@
         ],
         "endpoints": [
             {
+                "name": "OpenSearch Search",
                 "url": "http://www.pimrisportal.org/component/search/?format=opensearch",
-                "type": "application/opensearchdescription+xml",
+                "protocol": "HTTP GET",
+                "mimeType": ["application/opensearchdescription+xml"],
                 "parameters": [
                     {
                         "prefix": "",
@@ -22,8 +24,10 @@
                 ]
             },
             {
+                "name": "OpenSearch Search",
                 "url": "http://www.pimrisportal.org/index.php?option=com_search&searchword={searchTerms}",
-                "type": "text/html",
+                "protocol": "HTTP GET",
+                "mimeType": ["text/html"],
                 "parameters": [
                     {
                         "prefix": "",

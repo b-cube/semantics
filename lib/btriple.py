@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from rdflib import Graph, Literal, BNode, RDF, Namespace, URIRef
+from rdflib import Graph, Literal, RDF, RDFS, Namespace, URIRef
 from rdflib.namespace import DCTERMS
 from bunch import bunchify
 from optparse import OptionParser
@@ -8,6 +8,7 @@ import os
 import json
 import logging
 import glob
+import uuid
 
 logging.basicConfig(filename="triples.log", level=logging.DEBUG)
 logger = logging.getLogger(__name__)
@@ -55,6 +56,8 @@ class Triplelizer():
     def __init__(self):
         self.store = Store()
         self.WSO = Namespace('http//purl.org/nsidc/bcube/web-services#')
+        self.MEDIA = Namespace(
+            'http://www.iana.org/assignments/media-types/media-types.xhtml#')
         with open(__location__ + '/services.json', 'r') as fp:
             self.fingerprints = bunchify(json.loads(fp.read()))
         ontology_uris = {
@@ -63,6 +66,8 @@ class Triplelizer():
             'Service': 'http://ww.daml.org/services/owl-s/1.2/Service.owl#',
             'ServiceParameter':
             'http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#',
+            'media':
+            'http://www.iana.org/assignments/media-types/media-types.xhtml#',
             'dc': str(DCTERMS)
         }
         self.store.bind_namespaces(ontology_uris)
@@ -72,6 +77,31 @@ class Triplelizer():
             if attr.DocType == document.identity.protocol:
                 return attr.object_type, attr.ontology_class
         return None
+
+    def triplelize_parameters(self, parameters, endpoint):
+        '''
+        '''
+        return None
+
+    def triplelize_endpoints(self, doc, service):
+        '''
+        '''
+        for item in doc.service.endpoints:
+            endpoint = self.store.get_resource(
+                item.url + "#" + str(uuid.uuid4()))
+            endpoint.add(self.WSO["Protocol"], Literal(item.protocol))
+            endpoint.add(self.WSO["BaseURL"], URIRef(item.url))
+            for mime_type in item.mimeType:
+                endpoint.add(self.MEDIA['type'], Literal(mime_type))
+            if doc.identity.subtype == "service":
+                endpoint.add(RDF.type, self.WSO["ServiceEndpoint"])
+                endpoint.add(self.WSO["hasService"], service)
+                if item.parameters is not None:
+                    self.triplelize_parameters(item.parameters, endpoint)
+            else:
+                endpoint.add(self.WSO["childOf"], service)
+            endpoint.add(RDFS.label, Literal(item.name))
+        return self.store
 
     def triplelize(self, document):
         '''
@@ -91,7 +121,7 @@ class Triplelizer():
             resource = self.store.get_resource(ns + doc_identifier)
 
             resource.add(RDF.type, URIRef(doc_type))
-            resource.add(RDF.type, URIRef(doc_ontology))
+            resource.add(RDF.type, self.WSO[doc_ontology])
             resource.add(DCTERMS.title, Literal(doc_title))
             resource.add(DCTERMS.hasVersion, Literal(doc_version))
             resource.add(DCTERMS.abstract, Literal(doc_abstract))

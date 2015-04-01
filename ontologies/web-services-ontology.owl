@@ -113,9 +113,6 @@
         <Class IRI="OpenSearch"/>
     </Declaration>
     <Declaration>
-        <Class IRI="Request"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="Response"/>
     </Declaration>
     <Declaration>
@@ -158,9 +155,6 @@
         <Class IRI="http://schema.org/ImageObject"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="Profile:ServiceProfile"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
     </Declaration>
     <Declaration>
@@ -188,6 +182,9 @@
         <ObjectProperty IRI="hasEndpoint"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="hasService"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="parentOf"/>
     </Declaration>
     <Declaration>
@@ -195,12 +192,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="provides"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="serveService"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Profile:hasServiceProfile"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="ServiceParameter:hasParameters"/>
@@ -240,6 +231,12 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="Discovered"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="HTTPResponseCode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="Protocol"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="RequestWithHTTPVerb"/>
@@ -464,7 +461,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="OAI-PMH"/>
-        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+        <Class IRI="ServiceDescriptionDocument"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="OAIRecord"/>
@@ -472,18 +469,26 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="OGCService"/>
-        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+        <Class IRI="ServiceDescriptionDocument"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="OpenSearch"/>
-        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+        <Class IRI="ServiceDescriptionDocument"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Request"/>
+        <Class IRI="Response"/>
         <Class IRI="ServiceEndpoint"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Request"/>
+        <Class IRI="Response"/>
+        <Class IRI="WebDocument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ServiceDescriptionDocument"/>
+        <Class IRI="WebDocument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ServiceEndpoint"/>
         <ObjectIntersectionOf>
             <ObjectUnionOf>
                 <DataHasValue>
@@ -506,25 +511,18 @@
         </ObjectIntersectionOf>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Response"/>
         <Class IRI="ServiceEndpoint"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasService"/>
+            <Class IRI="ServiceDescriptionDocument"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="ServiceDescriptionDocument"/>
-        <Class IRI="WebDocument"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="ServiceEndpoint"/>
-        <ObjectIntersectionOf>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="serveService"/>
-                <Class abbreviatedIRI="Profile:ServiceProfile"/>
-            </ObjectSomeValuesFrom>
-            <DataSomeValuesFrom>
-                <DataProperty IRI="BaseURL"/>
-                <Datatype abbreviatedIRI="xsd:anyURI"/>
-            </DataSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="BaseURL"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="THREDDS"/>
@@ -605,38 +603,13 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="WSDL"/>
-        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+        <Class IRI="ServiceDescriptionDocument"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="WebDocument"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="hasContent"/>
             <Class IRI="Content"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Profile:ServiceProfile"/>
-        <Class IRI="ServiceDescriptionDocument"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Profile:ServiceProfile"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="hasEndpoint"/>
-            <Class IRI="ServiceEndpoint"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Profile:ServiceProfile"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="provides"/>
-            <Class IRI="http://www.w3.org/ns/dcat#CatalogRecord"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Profile:ServiceProfile"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="provides"/>
-            <Class IRI="http://www.w3.org/ns/dcat#Dataset"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -675,12 +648,12 @@
         <ObjectProperty IRI="parentOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="describes"/>
         <ObjectProperty IRI="describedBy"/>
+        <ObjectProperty IRI="describes"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="hasEndpoint"/>
-        <ObjectProperty IRI="serveService"/>
+        <ObjectProperty IRI="hasService"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="provides"/>
@@ -696,7 +669,11 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasEndpoint"/>
-        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+        <Class IRI="ServiceDescriptionDocument"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasService"/>
+        <Class IRI="ServiceEndpoint"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="providedBy"/>
@@ -709,22 +686,6 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="providedBy"/>
         <Class IRI="http://www.w3.org/ns/dcat#Dataset"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="provides"/>
-        <Class abbreviatedIRI="Profile:ServiceProfile"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="serveService"/>
-        <Class IRI="ServiceEndpoint"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Profile:hasServiceProfile"/>
-        <Class IRI="ServiceDescriptionDocument"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="ServiceParameter:hasParameters"/>
-        <Class abbreviatedIRI="Profile:ServiceProfile"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="describedBy"/>
@@ -739,8 +700,8 @@
         <Class IRI="ServiceEndpoint"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="providedBy"/>
-        <Class abbreviatedIRI="Profile:ServiceProfile"/>
+        <ObjectProperty IRI="hasService"/>
+        <Class IRI="ServiceDescriptionDocument"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="provides"/>
@@ -755,20 +716,12 @@
         <Class IRI="http://www.w3.org/ns/dcat#Dataset"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="serveService"/>
-        <Class abbreviatedIRI="Profile:ServiceProfile"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Profile:hasServiceProfile"/>
-        <Class abbreviatedIRI="Profile:ServiceProfile"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="ServiceParameter:hasParameters"/>
         <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
     </ObjectPropertyRange>
     <DataPropertyDomain>
-        <DataProperty IRI="RequestWithHTTPVerb"/>
-        <Class IRI="Request"/>
+        <DataProperty IRI="HTTPResponseCode"/>
+        <Class IRI="Response"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="contentRaw"/>
@@ -777,10 +730,6 @@
     <DataPropertyDomain>
         <DataProperty IRI="contentSize"/>
         <Class IRI="Content"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="serviceName"/>
-        <Class abbreviatedIRI="Profile:ServiceProfile"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="serviceParameterFormat"/>
@@ -837,6 +786,10 @@
     <DataPropertyRange>
         <DataProperty IRI="Discovered"/>
         <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="HTTPResponseCode"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="RequestWithHTTPVerb"/>
@@ -1001,8 +954,13 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Request</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An HTTP Request that a user should do in order to get a response. Some services especify the HTTP verb, the mime type requested and the service parameters.</Literal>
+        <IRI>Protocol</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This property should be used to define the protocol of a url.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Protocol</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Protocol</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1188,6 +1146,11 @@ This ontology describes the relationships between the elements that a THREDDS do
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasService</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Every endpoint should be linked to a service profile.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>parentOf</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Relationship between 2 datasets when there are nested datasets/catalogs.</Literal>
     </AnnotationAssertion>
@@ -1200,11 +1163,6 @@ This ontology describes the relationships between the elements that a THREDDS do
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>provides</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A web service can provide Datasets or Metadata Records.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>serveService</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Every endpoint should be linked to a service profile.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1248,21 +1206,6 @@ This ontology describes the relationships between the elements that a THREDDS do
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>Profile:ServiceProfile</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">We are using the OWL-S ontology to describe a general web service.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>Profile:ServiceProfile</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Service Profile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>Profile:hasServiceProfile</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A service can have 1 or more profiles, each profile describes what the the service does. A service can have multiple profiles each serving the same datasets using different representations i.e. OpenSearch, THREDDS etc.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>ServiceParameter:ServiceParameter</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A Service Paramter aplies restrictions criteria to queries on web services. We are mainly interested in time and spatial constrains.</Literal>
     </AnnotationAssertion>
@@ -1289,7 +1232,7 @@ This ontology describes the relationships between the elements that a THREDDS do
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.iana.org/assignments/media-types/media-types.xhtml</IRI>
-        <Literal datatypeIRI="&xsd;string">Mime Type</Literal>
+        <Literal datatypeIRI="&xsd;string">MimeType</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

@@ -64,3 +64,6 @@ target/
 # Floobits
 .floo
 .flooignore
+
+# IDEA
+.idea/
