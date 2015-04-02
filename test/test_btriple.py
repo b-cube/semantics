@@ -114,24 +114,38 @@ class TestTriples(unittest.TestCase):
             self.assertEquals(result[0], urn)
 
     def test_endpoints_triples(self):
-        # TODO: endpoints
+        # prepare
         ns = 'http//purl.org/nsidc/bcube/web-services#'
         service = self.json_loader.parse(
             "service_examples/" +
             "ogcwms_130_03fe4d8784c89532539c7a121fe7a252.json")
         parent_service = self.triples.store.get_resource(
             ns + service.solr_identifier)
+        parentURI = URIRef(ns + service.solr_identifier)
+        # act
         triples = self.triples.triplelize_endpoints(
             service, parent_service)
         qres = triples.g.query(
-                """SELECT *
+                """SELECT ?subject ?parentService
                    WHERE {
+                            ?subject wso:hasService ?parentService .
                             ?subject rdf:type wso:ServiceEndpoint .
                          }""")
-        print triples.serialize("turtle")
+        # test
         self.assertEquals(len(qres), 4)
+        for result in qres:
+            # They all have to be NAM12_SurfaceWindForecasts
+            self.assertTrue("NAM12_SurfaceWindForecasts"
+                            in str(result[0].n3()))
+            # all the endpoints belong to the same service
+            self.assertEqual(result[1],
+                             parentURI)
 
-    def test_triples_can_be_queried_4(self):
+    def test_parameters_triples_can_be_queried_1(self):
+        # TODO: parameters
+        self.assertTrue(True)
+
+    def test_parameters_triples_can_be_queried_2(self):
         # TODO: parameters
         self.assertTrue(True)
 
@@ -139,6 +153,14 @@ class TestTriples(unittest.TestCase):
         # TODO: datasets
         self.assertTrue(True)
 
-    def test_triples_can_be_serialized(self):
-        # TODO: others
+    def test_triples_can_be_queried_6(self):
+        # TODO: datasets 2
+        self.assertTrue(True)
+
+    def test_triples_can_be_serialized_1(self):
+        # TODO: stdout
+        self.assertTrue(True)
+
+    def test_triples_can_be_serialized_2(self):
+        # TODO: remote SPARQL store
         self.assertTrue(True)

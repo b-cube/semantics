@@ -615,22 +615,12 @@
     <SubClassOf>
         <Class abbreviatedIRI="ServiceParameter:ServiceParameter"/>
         <ObjectIntersectionOf>
-            <ObjectUnionOf>
-                <DataHasValue>
-                    <DataProperty IRI="serviceParameterType"/>
-                    <Literal datatypeIRI="&rdf;PlainLiteral">GEO</Literal>
-                </DataHasValue>
-                <DataHasValue>
-                    <DataProperty IRI="serviceParameterType"/>
-                    <Literal datatypeIRI="&rdf;PlainLiteral">OTHER</Literal>
-                </DataHasValue>
-                <DataHasValue>
-                    <DataProperty IRI="serviceParameterType"/>
-                    <Literal datatypeIRI="&rdf;PlainLiteral">TIME</Literal>
-                </DataHasValue>
-            </ObjectUnionOf>
             <DataSomeValuesFrom>
                 <DataProperty IRI="serviceParameterFormat"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="serviceParameterType"/>
                 <Datatype abbreviatedIRI="xsd:string"/>
             </DataSomeValuesFrom>
             <DataSomeValuesFrom>
@@ -648,8 +638,8 @@
         <ObjectProperty IRI="parentOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="describedBy"/>
         <ObjectProperty IRI="describes"/>
+        <ObjectProperty IRI="describedBy"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="hasEndpoint"/>
@@ -686,6 +676,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="providedBy"/>
         <Class IRI="http://www.w3.org/ns/dcat#Dataset"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="ServiceParameter:hasParameters"/>
+        <Class IRI="ServiceEndpoint"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="describedBy"/>
