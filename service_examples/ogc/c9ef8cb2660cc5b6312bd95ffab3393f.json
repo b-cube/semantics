@@ -1,0 +1,496 @@
+{
+    "xml_namespaces": [
+        "xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"", 
+        "xmlns=\"http://www.opengis.net/wfs\"", 
+        "xmlns:wfs=\"http://www.opengis.net/wfs\"", 
+        "xmlns:ows=\"http://www.opengis.net/ows\"", 
+        "xmlns:gml=\"http://www.opengis.net/gml\"", 
+        "xmlns:ogc=\"http://www.opengis.net/ogc\"", 
+        "xmlns:xlink=\"http://www.w3.org/1999/xlink\"", 
+        "xmlns:xml=\"http://www.w3.org/XML/1998/namespace\"", 
+        "xmlns:other=\"http://sedac.ciesin.columbia.edu/es/mcc.html\"", 
+        "xmlns:cartographic=\"http://www.ciesin.columbia.edu\"", 
+        "xmlns:epi=\"http://epi.yale.edu/\"", 
+        "xmlns:ipcc=\"http://sedac.ciesin.columbia.edu/gateway/guides/synthetic.html\"", 
+        "xmlns:ferman-v1=\"http://sedac.ciesin.columbia.edu/ferman-v1\"", 
+        "xmlns:species-v1=\"http://sedac.ciesin.columbia.edu/species/\"", 
+        "xmlns:povmap=\"http://sedac.ciesin.columbia.edu/povmap\"", 
+        "xmlns:gpw-v3=\"http://sedac.ciesin.columbia.edu/gpw/\"", 
+        "xmlns:usgrid=\"http://sedac.ciesin.columbia.edu/usgrid/\"", 
+        "xmlns:superfund=\"http://sedac.ciesin.columbia.edu/data/collection/superfund\"", 
+        "xmlns:sdei=\"http://sedac.ciesin.columbia.edu/sdei/\"", 
+        "xmlns:esi=\"http://sedac.ciesin.columbia.edu/es/esi/\"", 
+        "xmlns:grump-v1=\"http://sedac.ciesin.columbia.edu/gpw/global.jsp\"", 
+        "xmlns:lecz=\"http://sedac.ciesin.columbia.edu/lecz/\"", 
+        "xmlns:ndh=\"http://sedac.ciesin.columbia.edu/wdc/hazards.jsp\"", 
+        "xmlns:lulc=\"http://sedac.ciesin.columbia.edu/data/collection/lulc\"", 
+        "xmlns:nuclear=\"http://www.nature.com\"", 
+        "xmlns:aglands=\"http://sedac.ciesin.columbia.edu/es/aglands.html\"", 
+        "xmlns:wildareas-v2=\"http://sedac.ciesin.columbia.edu/wildareas/\"", 
+        "xmlns:crop-climate=\"http://sedac.ciesin.columbia.edu/mva/cropclimate\"", 
+        "xmlns:anthromes=\"http://sedac.ciesin.columbia.edu/es/anthropogenicbiomes.html\"", 
+        "xmlns:energy=\"http://sedac.ciesin.columbia.edu/energy/\"", 
+        "xmlns:icwq=\"http://sedac.ciesin.columbia.edu/icwq\"", 
+        "xmlns:nagdc=\"http://sedac.ciesin.columbia.edu/data/collection/nagdc\"", 
+        "xmlns:grand-v1=\"http://sedac.ciesin.columbia.edu/data/collection/grand-v1\""
+    ], 
+    "title": "geoserver-GetCapabilities.application", 
+    "url": "http://sedac.ciesin.org/geoserver/ows?service=wfs&version=1.1.0&request=GetCapabilities", 
+    "type": [
+        "application/xml"
+    ], 
+    "contentLength": "11207", 
+    "segment": "20150318191446", 
+    "tstamp": "2015-03-18T19:17:12.913Z", 
+    "digest": "c9ef8cb2660cc5b6312bd95ffab3393f", 
+    "service_description": {
+        "remainder": [], 
+        "service": {
+            "rights": "NONE", 
+            "abstract": "This is the reference implementation of WFS 1.0.0 and WFS 1.1.0, supports all WFS operations including Transaction.", 
+            "title": "GeoServer Web Feature Service", 
+            "contact": "CIESIN User Services", 
+            "endpoints": [
+                {
+                    "name": "GetCapabilities", 
+                    "parameters": [
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://sedac.ciesin.columbia.edu:80/geoserver/wfs?SERVICE=WFS&VERSION=1.1.0&REQUEST=GetCapabilities", 
+                    "actionable": 1, 
+                    "formats": [
+                        "text/xml"
+                    ], 
+                    "type": "Get", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "GetCapabilities", 
+                    "parameters": [
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://sedac.ciesin.columbia.edu:80/geoserver/wfs?SERVICE=WFS&VERSION=1.1.0&REQUEST=GetCapabilities", 
+                    "actionable": 1, 
+                    "formats": [
+                        "text/xml"
+                    ], 
+                    "type": "Post", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "DescribeFeatureType", 
+                    "parameters": [
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://sedac.ciesin.columbia.edu:80/geoserver/wfs?SERVICE=WFS&VERSION=1.1.0&REQUEST=DescribeFeatureType", 
+                    "actionable": 2, 
+                    "formats": [
+                        "text/xml"
+                    ], 
+                    "type": "Get", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "DescribeFeatureType", 
+                    "parameters": [
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://sedac.ciesin.columbia.edu:80/geoserver/wfs?SERVICE=WFS&VERSION=1.1.0&REQUEST=DescribeFeatureType", 
+                    "actionable": 2, 
+                    "formats": [
+                        "text/xml"
+                    ], 
+                    "type": "Post", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "GetFeature", 
+                    "parameters": [
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://sedac.ciesin.columbia.edu:80/geoserver/wfs?SERVICE=WFS&VERSION=1.1.0&REQUEST=GetFeature", 
+                    "actionable": 2, 
+                    "formats": [
+                        "text/xml"
+                    ], 
+                    "type": "Get", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "GetFeature", 
+                    "parameters": [
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://sedac.ciesin.columbia.edu:80/geoserver/wfs?SERVICE=WFS&VERSION=1.1.0&REQUEST=GetFeature", 
+                    "actionable": 2, 
+                    "formats": [
+                        "text/xml"
+                    ], 
+                    "type": "Post", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "GetGmlObject", 
+                    "parameters": [
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://sedac.ciesin.columbia.edu:80/geoserver/wfs?SERVICE=WFS&VERSION=1.1.0&REQUEST=GetGmlObject", 
+                    "actionable": 2, 
+                    "formats": [
+                        "text/xml"
+                    ], 
+                    "type": "Get", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "GetGmlObject", 
+                    "parameters": [
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://sedac.ciesin.columbia.edu:80/geoserver/wfs?SERVICE=WFS&VERSION=1.1.0&REQUEST=GetGmlObject", 
+                    "actionable": 2, 
+                    "formats": [
+                        "text/xml"
+                    ], 
+                    "type": "Post", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "LockFeature", 
+                    "parameters": [
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://sedac.ciesin.columbia.edu:80/geoserver/wfs?SERVICE=WFS&VERSION=1.1.0&REQUEST=LockFeature", 
+                    "actionable": 2, 
+                    "formats": [
+                        "text/xml"
+                    ], 
+                    "type": "Get", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "LockFeature", 
+                    "parameters": [
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://sedac.ciesin.columbia.edu:80/geoserver/wfs?SERVICE=WFS&VERSION=1.1.0&REQUEST=LockFeature", 
+                    "actionable": 2, 
+                    "formats": [
+                        "text/xml"
+                    ], 
+                    "type": "Post", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "GetFeatureWithLock", 
+                    "parameters": [
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://sedac.ciesin.columbia.edu:80/geoserver/wfs?SERVICE=WFS&VERSION=1.1.0&REQUEST=GetFeatureWithLock", 
+                    "actionable": 2, 
+                    "formats": [
+                        "text/xml"
+                    ], 
+                    "type": "Get", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "GetFeatureWithLock", 
+                    "parameters": [
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://sedac.ciesin.columbia.edu:80/geoserver/wfs?SERVICE=WFS&VERSION=1.1.0&REQUEST=GetFeatureWithLock", 
+                    "actionable": 2, 
+                    "formats": [
+                        "text/xml"
+                    ], 
+                    "type": "Post", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "Transaction", 
+                    "parameters": [
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://sedac.ciesin.columbia.edu:80/geoserver/wfs?SERVICE=WFS&VERSION=1.1.0&REQUEST=Transaction", 
+                    "actionable": 2, 
+                    "formats": [
+                        "text/xml"
+                    ], 
+                    "type": "Get", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "Transaction", 
+                    "parameters": [
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://sedac.ciesin.columbia.edu:80/geoserver/wfs?SERVICE=WFS&VERSION=1.1.0&REQUEST=Transaction", 
+                    "actionable": 2, 
+                    "formats": [
+                        "text/xml"
+                    ], 
+                    "type": "Post", 
+                    "constraints": []
+                }
+            ], 
+            "subject": [
+                "WFS", 
+                "WMS", 
+                "GEOSERVER"
+            ]
+        }
+    }, 
+    "date": "2015-03-18T19:17:12.913Z", 
+    "_version_": 1496016756447117312, 
+    "boost": 0.0001021329, 
+    "id": "http://sedac.ciesin.org/geoserver/ows?service=wfs&version=1.1.0&request=GetCapabilities", 
+    "identity": {
+        "is_error": false, 
+        "protocol": "OGC:WFS", 
+        "language": "", 
+        "service": "GetCapabilities", 
+        "has_dataset": true, 
+        "has_metadata": false, 
+        "subtype": "service", 
+        "version": "1.1.0"
+    }
+}

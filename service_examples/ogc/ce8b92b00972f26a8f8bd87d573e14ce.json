@@ -1,0 +1,101 @@
+{
+    "xml_namespaces": [
+        "xmlns=\"http://www.opengis.net/wms\"", 
+        "xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"", 
+        "xmlns:esri_wms=\"http://www.esri.com/wms\"", 
+        "xmlns:xlink=\"http://www.w3.org/1999/xlink\""
+    ], 
+    "url": "http://maps.ngdc.noaa.gov/arcgis/services/firedetects/MapServer/WMSServer?request=GetCapabilities&service=WMS", 
+    "type": [
+        "application/xml"
+    ], 
+    "contentLength": "1632", 
+    "segment": "20150320035523", 
+    "tstamp": "2015-03-20T04:08:25.294Z", 
+    "digest": "ce8b92b00972f26a8f8bd87d573e14ce", 
+    "service_description": {
+        "remainder": [], 
+        "service": {
+            "rights": null, 
+            "abstract": "WMS", 
+            "title": "WMS", 
+            "contact": "", 
+            "endpoints": [
+                {
+                    "name": "GetCapabilities", 
+                    "parameters": [], 
+                    "url": "http://maps.ngdc.noaa.gov/arcgis/services/firedetects/MapServer/WmsServer?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities", 
+                    "actionable": 1, 
+                    "formats": [
+                        "application/vnd.ogc.wms_xml", 
+                        "text/xml"
+                    ], 
+                    "type": "Get", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "GetMap", 
+                    "parameters": [], 
+                    "url": "http://maps.ngdc.noaa.gov/arcgis/services/firedetects/MapServer/WmsServer?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap", 
+                    "actionable": 2, 
+                    "formats": [
+                        "image/bmp", 
+                        "image/jpeg", 
+                        "image/tiff", 
+                        "image/png", 
+                        "image/png8", 
+                        "image/png24", 
+                        "image/png32", 
+                        "image/gif", 
+                        "image/svg+xml"
+                    ], 
+                    "type": "Get", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "GetFeatureInfo", 
+                    "parameters": [], 
+                    "url": "http://maps.ngdc.noaa.gov/arcgis/services/firedetects/MapServer/WmsServer?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo", 
+                    "actionable": 2, 
+                    "formats": [
+                        "application/vnd.esri.wms_raw_xml", 
+                        "application/vnd.esri.wms_featureinfo_xml", 
+                        "application/vnd.ogc.wms_xml", 
+                        "application/geojson", 
+                        "text/xml", 
+                        "text/html", 
+                        "text/plain"
+                    ], 
+                    "type": "Get", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "GetStyles", 
+                    "parameters": [], 
+                    "url": "http://maps.ngdc.noaa.gov/arcgis/services/firedetects/MapServer/WmsServer?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetStyles", 
+                    "actionable": 2, 
+                    "formats": [
+                        "application/vnd.ogc.sld+xml"
+                    ], 
+                    "type": "Get", 
+                    "constraints": []
+                }
+            ], 
+            "subject": []
+        }
+    }, 
+    "date": "2015-03-20T04:08:25.294Z", 
+    "_version_": 1496142281503145985, 
+    "boost": 3.5692883e-05, 
+    "id": "http://maps.ngdc.noaa.gov/arcgis/services/firedetects/MapServer/WMSServer?request=GetCapabilities&service=WMS", 
+    "identity": {
+        "is_error": false, 
+        "protocol": "OGC:WMS", 
+        "language": "", 
+        "service": "GetCapabilities", 
+        "has_dataset": false, 
+        "has_metadata": false, 
+        "subtype": "service", 
+        "version": "1.3.0"
+    }
+}

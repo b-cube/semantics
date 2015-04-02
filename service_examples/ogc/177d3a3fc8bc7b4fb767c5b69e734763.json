@@ -1,0 +1,592 @@
+{
+    "xml_namespaces": [
+        "xmlns:xlink=\"http://www.w3.org/1999/xlink\""
+    ], 
+    "url": "http://mrdata.usgs.gov/services/ngs?request=getcapabilities&service=WMS&version=1.1.1", 
+    "boost": 4.9431055e-05, 
+    "segment": "20150319035232", 
+    "digest": "177d3a3fc8bc7b4fb767c5b69e734763", 
+    "service_description": {
+        "remainder": [], 
+        "service": {
+            "rights": "none", 
+            "abstract": null, 
+            "title": "National_Geochemical_Survey", 
+            "contact": "Peter N. Schweitzer", 
+            "endpoints": [
+                {
+                    "name": "GetCapabilities", 
+                    "parameters": [
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": null, 
+                            "name": null, 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://mrdata.usgs.gov/services/ngs?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetCapabilities", 
+                    "actionable": 1, 
+                    "formats": [
+                        "application/vnd.ogc.wms_xml"
+                    ], 
+                    "type": "Get", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "GetCapabilities", 
+                    "parameters": [
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": null, 
+                            "name": null, 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://mrdata.usgs.gov/services/ngs?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetCapabilities", 
+                    "actionable": 1, 
+                    "formats": [
+                        "application/vnd.ogc.wms_xml"
+                    ], 
+                    "type": "Post", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "GetMap", 
+                    "parameters": [
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "format", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "layers", 
+                            "format": "comma-delimtied string"
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "bbox", 
+                            "format": "minx,miny,maxx,maxy"
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "int", 
+                            "name": "height", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "int", 
+                            "name": "width", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "styles", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "srs", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "transparent", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "hexadecimal", 
+                            "name": "bgcolor", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "elevation", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "time", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://mrdata.usgs.gov/services/ngs?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap", 
+                    "actionable": 2, 
+                    "formats": [
+                        "image/png", 
+                        "image/jpeg", 
+                        "image/gif", 
+                        "image/png; mode=8bit", 
+                        "application/x-pdf", 
+                        "image/svg+xml", 
+                        "image/tiff", 
+                        "application/vnd.google-earth.kml+xml", 
+                        "application/vnd.google-earth.kmz"
+                    ], 
+                    "type": "Get", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "GetMap", 
+                    "parameters": [
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "format", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "layers", 
+                            "format": "comma-delimtied string"
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "bbox", 
+                            "format": "minx,miny,maxx,maxy"
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "int", 
+                            "name": "height", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "int", 
+                            "name": "width", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "styles", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "srs", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "transparent", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "hexadecimal", 
+                            "name": "bgcolor", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "elevation", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "time", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://mrdata.usgs.gov/services/ngs?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap", 
+                    "actionable": 2, 
+                    "formats": [
+                        "image/png", 
+                        "image/jpeg", 
+                        "image/gif", 
+                        "image/png; mode=8bit", 
+                        "application/x-pdf", 
+                        "image/svg+xml", 
+                        "image/tiff", 
+                        "application/vnd.google-earth.kml+xml", 
+                        "application/vnd.google-earth.kmz"
+                    ], 
+                    "type": "Post", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "GetFeatureInfo", 
+                    "parameters": [
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "info_format", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "int", 
+                            "name": "feature_count", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://mrdata.usgs.gov/services/ngs?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetFeatureInfo", 
+                    "actionable": 2, 
+                    "formats": [
+                        "text/html", 
+                        "application/vnd.ogc.gml", 
+                        "text/plain"
+                    ], 
+                    "type": "Get", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "GetFeatureInfo", 
+                    "parameters": [
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "info_format", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "int", 
+                            "name": "feature_count", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://mrdata.usgs.gov/services/ngs?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetFeatureInfo", 
+                    "actionable": 2, 
+                    "formats": [
+                        "text/html", 
+                        "application/vnd.ogc.gml", 
+                        "text/plain"
+                    ], 
+                    "type": "Post", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "DescribeLayer", 
+                    "parameters": [
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://mrdata.usgs.gov/services/ngs?SERVICE=WMS&VERSION=1.1.1&REQUEST=DescribeLayer", 
+                    "actionable": 2, 
+                    "formats": [
+                        "text/xml"
+                    ], 
+                    "type": "Get", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "DescribeLayer", 
+                    "parameters": [
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://mrdata.usgs.gov/services/ngs?SERVICE=WMS&VERSION=1.1.1&REQUEST=DescribeLayer", 
+                    "actionable": 2, 
+                    "formats": [
+                        "text/xml"
+                    ], 
+                    "type": "Post", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "GetLegendGraphic", 
+                    "parameters": [
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://mrdata.usgs.gov/services/ngs?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetLegendGraphic", 
+                    "actionable": 2, 
+                    "formats": [
+                        "image/png", 
+                        "image/jpeg", 
+                        "image/gif", 
+                        "image/png; mode=8bit"
+                    ], 
+                    "type": "Get", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "GetLegendGraphic", 
+                    "parameters": [
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://mrdata.usgs.gov/services/ngs?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetLegendGraphic", 
+                    "actionable": 2, 
+                    "formats": [
+                        "image/png", 
+                        "image/jpeg", 
+                        "image/gif", 
+                        "image/png; mode=8bit"
+                    ], 
+                    "type": "Post", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "GetStyles", 
+                    "parameters": [
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://mrdata.usgs.gov/services/ngs?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetStyles", 
+                    "actionable": 2, 
+                    "formats": [
+                        "text/xml"
+                    ], 
+                    "type": "Get", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "GetStyles", 
+                    "parameters": [
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://mrdata.usgs.gov/services/ngs?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetStyles", 
+                    "actionable": 2, 
+                    "formats": [
+                        "text/xml"
+                    ], 
+                    "type": "Post", 
+                    "constraints": []
+                }
+            ], 
+            "subject": []
+        }
+    }, 
+    "date": "2015-03-19T04:00:15.207Z", 
+    "_version_": 1496051055154167808, 
+    "tstamp": "2015-03-19T04:00:15.207Z", 
+    "type": [
+        "application/xml"
+    ], 
+    "id": "http://mrdata.usgs.gov/services/ngs?request=getcapabilities&service=WMS&version=1.1.1", 
+    "identity": {
+        "is_error": false, 
+        "protocol": "OGC:WMS", 
+        "language": "", 
+        "service": "GetCapabilities", 
+        "has_dataset": false, 
+        "has_metadata": false, 
+        "subtype": "service", 
+        "version": "1.1.1"
+    }
+}

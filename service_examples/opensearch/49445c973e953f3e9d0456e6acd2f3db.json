@@ -1,0 +1,279 @@
+{
+    "xml_namespaces": [
+        "xmlns=\"http://a9.com/-/spec/opensearch/1.1/\"", 
+        "xmlns:geo=\"http://a9.com/-/opensearch/extensions/geo/1.0/\""
+    ], 
+    "url": "http://uaf.nodc.noaa.gov/geoportal/openSearchDescription", 
+    "boost": 3.270504e-05, 
+    "segment": "20150319173545", 
+    "digest": "49445c973e953f3e9d0456e6acd2f3db", 
+    "service_description": {
+        "metadata": null, 
+        "remainder": [
+            {
+                "xpath": "{http://a9.com/-/spec/opensearch/1.1/}OpenSearchDescription/{http://a9.com/-/spec/opensearch/1.1/}Contact", 
+                "text": "NODC.Services@noaa.gov", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://a9.com/-/spec/opensearch/1.1/}OpenSearchDescription/{http://a9.com/-/spec/opensearch/1.1/}Image", 
+                "text": "https://test.nodc.noaa.gov/geoportal/catalog/skins/themes/nodc/images/openSearch.png", 
+                "attributes": [
+                    {
+                        "xpath": "{http://a9.com/-/spec/opensearch/1.1/}OpenSearchDescription/{http://a9.com/-/spec/opensearch/1.1/}Image/@height", 
+                        "text": "16"
+                    }, 
+                    {
+                        "xpath": "{http://a9.com/-/spec/opensearch/1.1/}OpenSearchDescription/{http://a9.com/-/spec/opensearch/1.1/}Image/@width", 
+                        "text": "16"
+                    }, 
+                    {
+                        "xpath": "{http://a9.com/-/spec/opensearch/1.1/}OpenSearchDescription/{http://a9.com/-/spec/opensearch/1.1/}Image/@type", 
+                        "text": "image/png"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://a9.com/-/spec/opensearch/1.1/}OpenSearchDescription/{http://a9.com/-/spec/opensearch/1.1/}Query", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://a9.com/-/spec/opensearch/1.1/}OpenSearchDescription/{http://a9.com/-/spec/opensearch/1.1/}Query/@role", 
+                        "text": "example"
+                    }, 
+                    {
+                        "xpath": "{http://a9.com/-/spec/opensearch/1.1/}OpenSearchDescription/{http://a9.com/-/spec/opensearch/1.1/}Query/@searchTerms", 
+                        "text": "land"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://a9.com/-/spec/opensearch/1.1/}OpenSearchDescription/{http://a9.com/-/spec/opensearch/1.1/}OutputEncoding", 
+                "text": "UTF-8", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://a9.com/-/spec/opensearch/1.1/}OpenSearchDescription/{http://a9.com/-/spec/opensearch/1.1/}InputEncoding", 
+                "text": "UTF-8", 
+                "attributes": null
+            }
+        ], 
+        "service": {
+            "endpoints": [
+                {
+                    "url": "http://uaf.nodc.noaa.gov/geoportal/rest/find/document?searchText={searchTerms}&start={startIndex?}&max={count?}&bbox={geo:box?}&f=georss", 
+                    "actionable": 0, 
+                    "type": "application/rss+xml", 
+                    "parameters": [
+                        {
+                            "prefix": "", 
+                            "type": "{startIndex?}", 
+                            "name": "start", 
+                            "namespaces": {
+                                "xml": "http://www.w3.org/XML/1998/namespace", 
+                                "default": "http://a9.com/-/spec/opensearch/1.1/", 
+                                "geo": "http://a9.com/-/opensearch/extensions/geo/1.0/"
+                            }, 
+                            "formats": null
+                        }, 
+                        {
+                            "prefix": "", 
+                            "type": "{searchTerms}", 
+                            "name": "searchText", 
+                            "namespaces": {
+                                "xml": "http://www.w3.org/XML/1998/namespace", 
+                                "default": "http://a9.com/-/spec/opensearch/1.1/", 
+                                "geo": "http://a9.com/-/opensearch/extensions/geo/1.0/"
+                            }, 
+                            "formats": null
+                        }, 
+                        {
+                            "prefix": "geo", 
+                            "type": "box?", 
+                            "name": "bbox", 
+                            "namespaces": {
+                                "xml": "http://www.w3.org/XML/1998/namespace", 
+                                "default": "http://a9.com/-/spec/opensearch/1.1/", 
+                                "geo": "http://a9.com/-/opensearch/extensions/geo/1.0/"
+                            }, 
+                            "formats": null
+                        }, 
+                        {
+                            "prefix": "", 
+                            "type": "georss", 
+                            "name": "f", 
+                            "namespaces": {
+                                "xml": "http://www.w3.org/XML/1998/namespace", 
+                                "default": "http://a9.com/-/spec/opensearch/1.1/", 
+                                "geo": "http://a9.com/-/opensearch/extensions/geo/1.0/"
+                            }, 
+                            "formats": null
+                        }, 
+                        {
+                            "prefix": "", 
+                            "type": "{count?}", 
+                            "name": "max", 
+                            "namespaces": {
+                                "xml": "http://www.w3.org/XML/1998/namespace", 
+                                "default": "http://a9.com/-/spec/opensearch/1.1/", 
+                                "geo": "http://a9.com/-/opensearch/extensions/geo/1.0/"
+                            }, 
+                            "formats": null
+                        }
+                    ]
+                }, 
+                {
+                    "url": "http://uaf.nodc.noaa.gov/geoportal/rest/find/document?searchText={searchTerms}&start={startIndex?}&max={count?}&bbox={geo:box?}&f=atom", 
+                    "actionable": 0, 
+                    "type": "application/atom+xml", 
+                    "parameters": [
+                        {
+                            "prefix": "", 
+                            "type": "{startIndex?}", 
+                            "name": "start", 
+                            "namespaces": {
+                                "xml": "http://www.w3.org/XML/1998/namespace", 
+                                "default": "http://a9.com/-/spec/opensearch/1.1/", 
+                                "geo": "http://a9.com/-/opensearch/extensions/geo/1.0/"
+                            }, 
+                            "formats": null
+                        }, 
+                        {
+                            "prefix": "", 
+                            "type": "{searchTerms}", 
+                            "name": "searchText", 
+                            "namespaces": {
+                                "xml": "http://www.w3.org/XML/1998/namespace", 
+                                "default": "http://a9.com/-/spec/opensearch/1.1/", 
+                                "geo": "http://a9.com/-/opensearch/extensions/geo/1.0/"
+                            }, 
+                            "formats": null
+                        }, 
+                        {
+                            "prefix": "geo", 
+                            "type": "box?", 
+                            "name": "bbox", 
+                            "namespaces": {
+                                "xml": "http://www.w3.org/XML/1998/namespace", 
+                                "default": "http://a9.com/-/spec/opensearch/1.1/", 
+                                "geo": "http://a9.com/-/opensearch/extensions/geo/1.0/"
+                            }, 
+                            "formats": null
+                        }, 
+                        {
+                            "prefix": "", 
+                            "type": "atom", 
+                            "name": "f", 
+                            "namespaces": {
+                                "xml": "http://www.w3.org/XML/1998/namespace", 
+                                "default": "http://a9.com/-/spec/opensearch/1.1/", 
+                                "geo": "http://a9.com/-/opensearch/extensions/geo/1.0/"
+                            }, 
+                            "formats": null
+                        }, 
+                        {
+                            "prefix": "", 
+                            "type": "{count?}", 
+                            "name": "max", 
+                            "namespaces": {
+                                "xml": "http://www.w3.org/XML/1998/namespace", 
+                                "default": "http://a9.com/-/spec/opensearch/1.1/", 
+                                "geo": "http://a9.com/-/opensearch/extensions/geo/1.0/"
+                            }, 
+                            "formats": null
+                        }
+                    ]
+                }, 
+                {
+                    "url": "http://uaf.nodc.noaa.gov/geoportal/rest/find/document?searchText={searchTerms}&start={startIndex?}&max={count?}&bbox={geo:box?}&f=searchPage", 
+                    "actionable": 0, 
+                    "type": "text/html", 
+                    "parameters": [
+                        {
+                            "prefix": "", 
+                            "type": "{startIndex?}", 
+                            "name": "start", 
+                            "namespaces": {
+                                "xml": "http://www.w3.org/XML/1998/namespace", 
+                                "default": "http://a9.com/-/spec/opensearch/1.1/", 
+                                "geo": "http://a9.com/-/opensearch/extensions/geo/1.0/"
+                            }, 
+                            "formats": null
+                        }, 
+                        {
+                            "prefix": "", 
+                            "type": "{searchTerms}", 
+                            "name": "searchText", 
+                            "namespaces": {
+                                "xml": "http://www.w3.org/XML/1998/namespace", 
+                                "default": "http://a9.com/-/spec/opensearch/1.1/", 
+                                "geo": "http://a9.com/-/opensearch/extensions/geo/1.0/"
+                            }, 
+                            "formats": null
+                        }, 
+                        {
+                            "prefix": "geo", 
+                            "type": "box?", 
+                            "name": "bbox", 
+                            "namespaces": {
+                                "xml": "http://www.w3.org/XML/1998/namespace", 
+                                "default": "http://a9.com/-/spec/opensearch/1.1/", 
+                                "geo": "http://a9.com/-/opensearch/extensions/geo/1.0/"
+                            }, 
+                            "formats": null
+                        }, 
+                        {
+                            "prefix": "", 
+                            "type": "searchPage", 
+                            "name": "f", 
+                            "namespaces": {
+                                "xml": "http://www.w3.org/XML/1998/namespace", 
+                                "default": "http://a9.com/-/spec/opensearch/1.1/", 
+                                "geo": "http://a9.com/-/opensearch/extensions/geo/1.0/"
+                            }, 
+                            "formats": null
+                        }, 
+                        {
+                            "prefix": "", 
+                            "type": "{count?}", 
+                            "name": "max", 
+                            "namespaces": {
+                                "xml": "http://www.w3.org/XML/1998/namespace", 
+                                "default": "http://a9.com/-/spec/opensearch/1.1/", 
+                                "geo": "http://a9.com/-/opensearch/extensions/geo/1.0/"
+                            }, 
+                            "formats": null
+                        }
+                    ]
+                }
+            ], 
+            "abstract": [
+                "UAF Geospatial metadata search."
+            ], 
+            "subject": [
+                "geospatial metadata"
+            ], 
+            "title": [
+                "UAF OpenSearch"
+            ]
+        }, 
+        "dataset": null
+    }, 
+    "date": "2015-03-19T17:54:12.392Z", 
+    "_version_": 1496105364474560514, 
+    "tstamp": "2015-03-19T17:54:12.392Z", 
+    "type": [
+        "application/opensearchdescription+xml"
+    ], 
+    "id": "http://uaf.nodc.noaa.gov/geoportal/openSearchDescription", 
+    "identity": {
+        "is_error": false, 
+        "protocol": "OpenSearch", 
+        "language": "", 
+        "service": "OpenSearchDescription", 
+        "has_dataset": false, 
+        "has_metadata": false, 
+        "subtype": "service", 
+        "version": "1.1"
+    }
+}

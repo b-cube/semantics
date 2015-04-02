@@ -1,0 +1,29 @@
+{
+    "xml_namespaces": [
+        "xmlns=\"http://a9.com/-/spec/opensearch/1.1/\""
+    ], 
+    "url": "http://www.rasdaman.org/search/opensearch", 
+    "boost": 0.00015580805, 
+    "contentLength": "408", 
+    "tstamp": "2015-03-18T17:36:21.765Z", 
+    "content": "Search rasdaman UTF-8 http://www.rasdaman.org/chrome/site/favicon.ico", 
+    "identity": {
+        "subtype": "service", 
+        "is_error": false, 
+        "version": "1.1", 
+        "protocol": "OpenSearch", 
+        "language": "", 
+        "service": "OpenSearchDescription", 
+        "has_dataset": false, 
+        "has_metadata": false
+    }, 
+    "type": [
+        "application/opensearchdescription+xml"
+    ], 
+    "date": "2015-03-18T17:36:21.765Z", 
+    "_version_": 1496007346205229056, 
+    "raw_content": "<?xml version=\"1.0\"?>\n<OpenSearchDescription xmlns=\"http://a9.com/-/spec/opensearch/1.1/\">\n  <ShortName>Search rasdaman</ShortName>\n  <InputEncoding>UTF-8</InputEncoding>\n  <Image width=\"16\" height=\"16\" type=\"image/x-icon\">http://www.rasdaman.org/chrome/site/favicon.ico</Image>\n  <Url type=\"text/html\" template=\"http://www.rasdaman.org/search?q={searchTerms}&amp;page={startPage}\"/>\n</OpenSearchDescription>", 
+    "segment": "20150318172214", 
+    "id": "http://www.rasdaman.org/search/opensearch", 
+    "digest": "52c1b7140af294632720ff02fbf7d2e9"
+}

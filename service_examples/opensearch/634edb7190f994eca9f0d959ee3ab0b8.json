@@ -1,0 +1,136 @@
+{
+    "xml_namespaces": [
+        "xmlns=\"http://a9.com/-/spec/opensearch/1.1/\"", 
+        "xmlns:moz=\"http://www.mozilla.org/2006/browser/search/\""
+    ], 
+    "url": "http://www.esa-ozone-cci.org/Private/opensearch_desc.php", 
+    "type": [
+        "application/opensearchdescription+xml"
+    ], 
+    "contentLength": "755", 
+    "segment": "20150319143831", 
+    "tstamp": "2015-03-19T14:40:04.509Z", 
+    "digest": "634edb7190f994eca9f0d959ee3ab0b8", 
+    "service_description": {
+        "metadata": null, 
+        "remainder": [
+            {
+                "xpath": "{http://a9.com/-/spec/opensearch/1.1/}OpenSearchDescription/{http://a9.com/-/spec/opensearch/1.1/}Image", 
+                "text": "http://www.esa-ozone-cci.org/favicon.ico", 
+                "attributes": [
+                    {
+                        "xpath": "{http://a9.com/-/spec/opensearch/1.1/}OpenSearchDescription/{http://a9.com/-/spec/opensearch/1.1/}Image/@height", 
+                        "text": "16"
+                    }, 
+                    {
+                        "xpath": "{http://a9.com/-/spec/opensearch/1.1/}OpenSearchDescription/{http://a9.com/-/spec/opensearch/1.1/}Image/@width", 
+                        "text": "16"
+                    }, 
+                    {
+                        "xpath": "{http://a9.com/-/spec/opensearch/1.1/}OpenSearchDescription/{http://a9.com/-/spec/opensearch/1.1/}Image/@type", 
+                        "text": "image/x-icon"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://a9.com/-/spec/opensearch/1.1/}OpenSearchDescription/{http://www.mozilla.org/2006/browser/search/}SearchForm", 
+                "text": "http://www.esa-ozone-cci.org/Private/index.php/Special:Search", 
+                "attributes": null
+            }
+        ], 
+        "service": {
+            "abstract": [
+                "Wiki_ozone (en)"
+            ], 
+            "endpoints": [
+                {
+                    "url": "http://www.esa-ozone-cci.org/Private/index.php?title=Special:Search&search={searchTerms}", 
+                    "actionable": 0, 
+                    "type": "text/html", 
+                    "parameters": [
+                        {
+                            "prefix": "", 
+                            "type": "{searchTerms}", 
+                            "name": "search", 
+                            "namespaces": {
+                                "xml": "http://www.w3.org/XML/1998/namespace", 
+                                "moz": "http://www.mozilla.org/2006/browser/search/", 
+                                "default": "http://a9.com/-/spec/opensearch/1.1/"
+                            }, 
+                            "formats": null
+                        }, 
+                        {
+                            "prefix": "Special", 
+                            "type": "Search", 
+                            "name": "title", 
+                            "namespaces": {
+                                "xml": "http://www.w3.org/XML/1998/namespace", 
+                                "moz": "http://www.mozilla.org/2006/browser/search/", 
+                                "default": "http://a9.com/-/spec/opensearch/1.1/"
+                            }, 
+                            "formats": null
+                        }
+                    ]
+                }, 
+                {
+                    "url": "http://www.esa-ozone-cci.org/Private/api.php?action=opensearch&search={searchTerms}&namespace=0", 
+                    "actionable": 0, 
+                    "type": "application/x-suggestions+json", 
+                    "parameters": [
+                        {
+                            "prefix": "", 
+                            "type": "opensearch", 
+                            "name": "action", 
+                            "namespaces": {
+                                "xml": "http://www.w3.org/XML/1998/namespace", 
+                                "moz": "http://www.mozilla.org/2006/browser/search/", 
+                                "default": "http://a9.com/-/spec/opensearch/1.1/"
+                            }, 
+                            "formats": null
+                        }, 
+                        {
+                            "prefix": "", 
+                            "type": "{searchTerms}", 
+                            "name": "search", 
+                            "namespaces": {
+                                "xml": "http://www.w3.org/XML/1998/namespace", 
+                                "moz": "http://www.mozilla.org/2006/browser/search/", 
+                                "default": "http://a9.com/-/spec/opensearch/1.1/"
+                            }, 
+                            "formats": null
+                        }, 
+                        {
+                            "prefix": "", 
+                            "type": "0", 
+                            "name": "namespace", 
+                            "namespaces": {
+                                "xml": "http://www.w3.org/XML/1998/namespace", 
+                                "moz": "http://www.mozilla.org/2006/browser/search/", 
+                                "default": "http://a9.com/-/spec/opensearch/1.1/"
+                            }, 
+                            "formats": null
+                        }
+                    ]
+                }
+            ], 
+            "title": [
+                "Wiki_ozone (en)"
+            ]
+        }, 
+        "dataset": null
+    }, 
+    "date": "2015-03-19T14:40:04.509Z", 
+    "_version_": 1496093796472979456, 
+    "boost": 3.3729197e-05, 
+    "id": "http://www.esa-ozone-cci.org/Private/opensearch_desc.php", 
+    "identity": {
+        "is_error": false, 
+        "protocol": "OpenSearch", 
+        "language": "", 
+        "service": "OpenSearchDescription", 
+        "has_dataset": false, 
+        "has_metadata": false, 
+        "subtype": "service", 
+        "version": "1.1"
+    }
+}

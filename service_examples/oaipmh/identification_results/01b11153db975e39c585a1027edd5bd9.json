@@ -1,0 +1,34 @@
+{
+    "xml_namespaces": [
+        "xmlns=\"http://www.openarchives.org/OAI/2.0/\"", 
+        "xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"", 
+        "xmlns=\"http://oai.dlib.vt.edu/OAI/metadata/toolkit\""
+    ], 
+    "anchor": [
+        "http://repository.abertay.ac.uk/oai/request"
+    ], 
+    "url": "http://repository.abertay.ac.uk/oai/request?verb=Identify", 
+    "boost": 8.878972e-05, 
+    "contentLength": "634", 
+    "tstamp": "2015-03-18T19:23:36.859Z", 
+    "content": "2015-03-18T19:23:36Z http://repository.abertay.ac.uk/oai/request UAD 1.8.1 http://repository.abertay.ac.uk/oai/request 2.0 dspace-help@myu.edu 2001-01-01T00:00:00Z persistent YYYY-MM-DDThh:mm:ssZ gzip deflate OCLC's OAICat Repository Framework Jeffrey A. Young jyoung@oclc.org OCLC 1.5.48 http://alcme.oclc.org/oaicat/oaicat_icon.gif http://www.oclc.org/research/software/oai/cat.shtm", 
+    "identity": {
+        "subtype": "service", 
+        "is_error": false, 
+        "version": "2.0", 
+        "protocol": "OAI-PMH", 
+        "language": "", 
+        "service": "Identify", 
+        "has_dataset": false, 
+        "has_metadata": false
+    }, 
+    "type": [
+        "application/xml"
+    ], 
+    "date": "2015-03-18T19:23:36.859Z", 
+    "_version_": 1496016751114059777, 
+    "raw_content": "<?xml version=\"1.0\" encoding=\"UTF-8\" ?><OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\"><responseDate>2015-03-18T19:23:36Z</responseDate><request verb=\"Identify\">http://repository.abertay.ac.uk/oai/request</request><Identify><repositoryName>UAD 1.8.1</repositoryName><baseURL>http://repository.abertay.ac.uk/oai/request</baseURL><protocolVersion>2.0</protocolVersion><adminEmail>dspace-help@myu.edu</adminEmail><earliestDatestamp>2001-01-01T00:00:00Z</earliestDatestamp><deletedRecord>persistent</deletedRecord><granularity>YYYY-MM-DDThh:mm:ssZ</granularity><compression>gzip</compression><compression>deflate</compression><description><toolkit xsi:schemaLocation=\"http://oai.dlib.vt.edu/OAI/metadata/toolkit http://oai.dlib.vt.edu/OAI/metadata/toolkit.xsd\" xmlns=\"http://oai.dlib.vt.edu/OAI/metadata/toolkit\"><title>OCLC's OAICat Repository Framework</title><author><name>Jeffrey A. Young</name><email>jyoung@oclc.org</email><institution>OCLC</institution></author><version>1.5.48</version><toolkitIcon>http://alcme.oclc.org/oaicat/oaicat_icon.gif</toolkitIcon><URL>http://www.oclc.org/research/software/oai/cat.shtm</URL></toolkit></description></Identify></OAI-PMH>", 
+    "segment": "20150318191446", 
+    "id": "http://repository.abertay.ac.uk/oai/request?verb=Identify", 
+    "digest": "01b11153db975e39c585a1027edd5bd9"
+}

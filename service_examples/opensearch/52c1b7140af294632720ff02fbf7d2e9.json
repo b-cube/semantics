@@ -1,0 +1,90 @@
+{
+    "xml_namespaces": [
+        "xmlns=\"http://a9.com/-/spec/opensearch/1.1/\""
+    ], 
+    "url": "http://www.rasdaman.org/search/opensearch", 
+    "type": [
+        "application/opensearchdescription+xml"
+    ], 
+    "contentLength": "408", 
+    "segment": "20150318172214", 
+    "tstamp": "2015-03-18T17:36:21.765Z", 
+    "digest": "52c1b7140af294632720ff02fbf7d2e9", 
+    "service_description": {
+        "metadata": null, 
+        "remainder": [
+            {
+                "xpath": "{http://a9.com/-/spec/opensearch/1.1/}OpenSearchDescription/{http://a9.com/-/spec/opensearch/1.1/}InputEncoding", 
+                "text": "UTF-8", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://a9.com/-/spec/opensearch/1.1/}OpenSearchDescription/{http://a9.com/-/spec/opensearch/1.1/}Image", 
+                "text": "http://www.rasdaman.org/chrome/site/favicon.ico", 
+                "attributes": [
+                    {
+                        "xpath": "{http://a9.com/-/spec/opensearch/1.1/}OpenSearchDescription/{http://a9.com/-/spec/opensearch/1.1/}Image/@width", 
+                        "text": "16"
+                    }, 
+                    {
+                        "xpath": "{http://a9.com/-/spec/opensearch/1.1/}OpenSearchDescription/{http://a9.com/-/spec/opensearch/1.1/}Image/@height", 
+                        "text": "16"
+                    }, 
+                    {
+                        "xpath": "{http://a9.com/-/spec/opensearch/1.1/}OpenSearchDescription/{http://a9.com/-/spec/opensearch/1.1/}Image/@type", 
+                        "text": "image/x-icon"
+                    }
+                ]
+            }
+        ], 
+        "service": {
+            "endpoints": [
+                {
+                    "url": "http://www.rasdaman.org/search?q={searchTerms}&page={startPage}", 
+                    "actionable": 0, 
+                    "type": "text/html", 
+                    "parameters": [
+                        {
+                            "prefix": "", 
+                            "type": "{searchTerms}", 
+                            "name": "q", 
+                            "namespaces": {
+                                "xml": "http://www.w3.org/XML/1998/namespace", 
+                                "default": "http://a9.com/-/spec/opensearch/1.1/"
+                            }, 
+                            "formats": null
+                        }, 
+                        {
+                            "prefix": "", 
+                            "type": "{startPage}", 
+                            "name": "page", 
+                            "namespaces": {
+                                "xml": "http://www.w3.org/XML/1998/namespace", 
+                                "default": "http://a9.com/-/spec/opensearch/1.1/"
+                            }, 
+                            "formats": null
+                        }
+                    ]
+                }
+            ], 
+            "title": [
+                "Search rasdaman"
+            ]
+        }, 
+        "dataset": null
+    }, 
+    "date": "2015-03-18T17:36:21.765Z", 
+    "_version_": 1496007346205229056, 
+    "boost": 0.00015580805, 
+    "id": "http://www.rasdaman.org/search/opensearch", 
+    "identity": {
+        "is_error": false, 
+        "protocol": "OpenSearch", 
+        "language": "", 
+        "service": "OpenSearchDescription", 
+        "has_dataset": false, 
+        "has_metadata": false, 
+        "subtype": "service", 
+        "version": "1.1"
+    }
+}

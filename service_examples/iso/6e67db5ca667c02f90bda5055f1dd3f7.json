@@ -1,0 +1,693 @@
+{
+    "xml_namespaces": [
+        "xmlns:gco=\"http://www.isotc211.org/2005/gco\"", 
+        "xmlns:gmd=\"http://www.isotc211.org/2005/gmd\"", 
+        "xmlns:gml=\"http://www.opengis.net/gml\"", 
+        "xmlns:xlink=\"http://www.w3.org/1999/xlink\"", 
+        "xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"", 
+        "xmlns:csw=\"http://www.opengis.net/cat/csw/2.0.2\""
+    ], 
+    "url": "http://catalog.data.gov/harvest/object/a7ad65be-ffc9-4924-bc63-25a2c8cc9d14", 
+    "type": [
+        "application/xml"
+    ], 
+    "contentLength": "2944", 
+    "segment": "20150306003913", 
+    "tstamp": "2015-03-06T01:44:46.902Z", 
+    "digest": "6e67db5ca667c02f90bda5055f1dd3f7", 
+    "service_description": {
+        "metadata": null, 
+        "remainder": [
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/@{http://www.w3.org/2001/XMLSchema-instance}schemaLocation", 
+                        "text": "http://www.isotc211.org/2005/gmd http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}fileIdentifier/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "dc2950e94fd12022579c7307b63f779f", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}language/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "eng", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}characterSet/{http://www.isotc211.org/2005/gmd}MD_CharacterSetCode", 
+                "text": "UTF-8", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}characterSet/{http://www.isotc211.org/2005/gmd}MD_CharacterSetCode/@codeList", 
+                        "text": "http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}characterSet/{http://www.isotc211.org/2005/gmd}MD_CharacterSetCode/@codeListValue", 
+                        "text": "utf8"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}hierarchyLevel/{http://www.isotc211.org/2005/gmd}MD_ScopeCode", 
+                "text": "Dataset", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}hierarchyLevel/{http://www.isotc211.org/2005/gmd}MD_ScopeCode/@codeList", 
+                        "text": "http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_ScopeCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}hierarchyLevel/{http://www.isotc211.org/2005/gmd}MD_ScopeCode/@codeListValue", 
+                        "text": "Dataset"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}hierarchyLevelName/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Dataset", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}contact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}individualName/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Diane Love", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}contact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}organisationName/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "AZGS", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}contact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}phone/{http://www.isotc211.org/2005/gmd}CI_Telephone/{http://www.isotc211.org/2005/gmd}voice/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "520-209-4119", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}contact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}deliveryPoint/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "416 W Congress", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}contact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}city/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Tucson", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}contact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}administrativeArea/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "AZ", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}contact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}postalCode/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "85701", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}contact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}electronicMailAddress/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "diane.love@azgs.az.gov", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}contact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode", 
+                "text": "pointOfContact", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}contact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeList", 
+                        "text": "http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#CI_RoleCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}contact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeListValue", 
+                        "text": "pointOfContact"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dateStamp/{http://www.isotc211.org/2005/gco}DateTime", 
+                "text": "2013-03-08T19:38:40Z", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}metadataStandardName/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "ISO-USGIN", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}metadataStandardVersion/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "1.2", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}title/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Idaho Oil and Gas Exploration Wells", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gmd}CI_Date/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gco}DateTime", 
+                "text": "2012-12-28T00:00:00", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gmd}CI_Date/{http://www.isotc211.org/2005/gmd}dateType/{http://www.isotc211.org/2005/gmd}CI_DateTypeCode", 
+                "text": "publication", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gmd}CI_Date/{http://www.isotc211.org/2005/gmd}dateType/{http://www.isotc211.org/2005/gmd}CI_DateTypeCode/@codeList", 
+                        "text": "http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gmd}CI_Date/{http://www.isotc211.org/2005/gmd}dateType/{http://www.isotc211.org/2005/gmd}CI_DateTypeCode/@codeListValue", 
+                        "text": "publication"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}individualName/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Roy Breckenridge", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}organisationName/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Idaho Geological Survey", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}phone/{http://www.isotc211.org/2005/gmd}CI_Telephone/{http://www.isotc211.org/2005/gmd}voice/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "208-885-7992", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}deliveryPoint/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "875 Perimeter Drive MS 3014, Morrill Hall, University of Idaho", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}city/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Moscow", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}administrativeArea/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "ID", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}postalCode/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "83844-3014", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}electronicMailAddress/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "roybreck@uidaho.edu", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode", 
+                "text": "originator", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeList", 
+                        "text": "http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#CI_RoleCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeListValue", 
+                        "text": "originator"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}individualName/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Dean Garwood", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}organisationName/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Idaho Geological Survey", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}phone/{http://www.isotc211.org/2005/gmd}CI_Telephone/{http://www.isotc211.org/2005/gmd}voice/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "208-885-7992", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}deliveryPoint/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "875 Perimeter Drive MS 3014, Morrill Hall, University of Idaho", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}city/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Moscow", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}administrativeArea/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "ID", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}postalCode/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "83844-3014", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}electronicMailAddress/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "dgarwood@uidaho.edu", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode", 
+                "text": "originator", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeList", 
+                        "text": "http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#CI_RoleCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeListValue", 
+                        "text": "originator"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}abstract/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "This dataset is a compilation of oil and gas exploration wellheaders compiled by the Idaho Geological Survey, published as a Web feature service, a web map service, an ESRI service, and as a set of Excel worksheets for the National Geothermal Data System. The downloadable workbook contains 8 worksheets, including information about the template, notes related to revisions of the template, Resource provider information, the data, a field list (data mapping view) and a worksheet with vocabularies for use in populating the spreadsheet (data valid terms). Data from 148 oil and gas exploration wells are included. Fields in the data table include HeaderURI, WellName , APINo, OtherID, OtherName, BoreholeName, ParentWellURI, Operator, MineralOwner, Driller, LeaseName, SpudDate, EndedDrillingDate, DrillingMethod, WellType, Status, CommodityOfInterest, StatusDate, Function, Production , ProducingInterval , ReleaseDate, County, State, Field, OtherLocationName, PLSS_Meridians, TWP, RGE, Section, SectionPart, Parcel, UTM_E, UTM_N, UTMDatumZone, LatDegree, LongDegree, SRS, LocationUncertaintyStatement, LocationUncertaintyCode, LocationUncertaintyRadius, DrillerTotalDepth, DepthReferencePoint, LengthUnits, WellBoreShape, TrueVerticalDepth, ElevationKB, ElevationDF, ElevationGL, FormationTD, BitDiameterCollar, BitDiameterTD, DiameterUnits, RelatedResource, Notes, CasingBottomDepthDriller, CasingTopDepth, CasingPipeDiameter, CasingWeight, CasingWeightUnits, CasingThickness, InformationSource.", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}status/{http://www.isotc211.org/2005/gmd}MD_ProgressCode", 
+                "text": "completed", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}status/{http://www.isotc211.org/2005/gmd}MD_ProgressCode/@codeList", 
+                        "text": "http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_ProgressCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}status/{http://www.isotc211.org/2005/gmd}MD_ProgressCode/@codeListValue", 
+                        "text": "completed"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "oil and gas", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "well headers", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Idaho", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}type/{http://www.isotc211.org/2005/gmd}MD_KeywordTypeCode", 
+                "text": "theme", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}type/{http://www.isotc211.org/2005/gmd}MD_KeywordTypeCode/@codeList", 
+                        "text": "http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}type/{http://www.isotc211.org/2005/gmd}MD_KeywordTypeCode/@codeListValue", 
+                        "text": "theme"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Idaho", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Idaho Geological Survey", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "WFS Services", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "WMS Services", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Well Headers", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Downloadable Files", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "ESRI Services", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}thesaurusName", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}thesaurusName/@{http://www.w3.org/1999/xlink}href", 
+                        "text": "/metadata/collection/"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}thesaurusName/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}title/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Server Collections", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}thesaurusName/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gmd}CI_Date/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gco}Date", 
+                "text": "2012-06-06", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}thesaurusName/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gmd}CI_Date/{http://www.isotc211.org/2005/gmd}dateType/{http://www.isotc211.org/2005/gmd}CI_DateTypeCode", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}thesaurusName/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gmd}CI_Date/{http://www.isotc211.org/2005/gmd}dateType/{http://www.isotc211.org/2005/gmd}CI_DateTypeCode/@codeList", 
+                        "text": "http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}thesaurusName/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gmd}CI_Date/{http://www.isotc211.org/2005/gmd}dateType/{http://www.isotc211.org/2005/gmd}CI_DateTypeCode/@codeListValue", 
+                        "text": "publication"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}language/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "eng", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}topicCategory/{http://www.isotc211.org/2005/gmd}MD_TopicCategoryCode", 
+                "text": "geoscientificInformation", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}extent/{http://www.isotc211.org/2005/gmd}EX_Extent/{http://www.isotc211.org/2005/gmd}geographicElement/{http://www.isotc211.org/2005/gmd}EX_GeographicBoundingBox/{http://www.isotc211.org/2005/gmd}westBoundLongitude/{http://www.isotc211.org/2005/gco}Decimal", 
+                "text": "-117.72949218749", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}extent/{http://www.isotc211.org/2005/gmd}EX_Extent/{http://www.isotc211.org/2005/gmd}geographicElement/{http://www.isotc211.org/2005/gmd}EX_GeographicBoundingBox/{http://www.isotc211.org/2005/gmd}eastBoundLongitude/{http://www.isotc211.org/2005/gco}Decimal", 
+                "text": "-110.17089843749", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}extent/{http://www.isotc211.org/2005/gmd}EX_Extent/{http://www.isotc211.org/2005/gmd}geographicElement/{http://www.isotc211.org/2005/gmd}EX_GeographicBoundingBox/{http://www.isotc211.org/2005/gmd}southBoundLatitude/{http://www.isotc211.org/2005/gco}Decimal", 
+                "text": "41.672911819602", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}extent/{http://www.isotc211.org/2005/gmd}EX_Extent/{http://www.isotc211.org/2005/gmd}geographicElement/{http://www.isotc211.org/2005/gmd}EX_GeographicBoundingBox/{http://www.isotc211.org/2005/gmd}northBoundLatitude/{http://www.isotc211.org/2005/gco}Decimal", 
+                "text": "49.181703387706", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributor/{http://www.isotc211.org/2005/gmd}MD_Distributor/{http://www.isotc211.org/2005/gmd}distributorContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}individualName/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Dean Garwood", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributor/{http://www.isotc211.org/2005/gmd}MD_Distributor/{http://www.isotc211.org/2005/gmd}distributorContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}organisationName/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Idaho Geological Survey", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributor/{http://www.isotc211.org/2005/gmd}MD_Distributor/{http://www.isotc211.org/2005/gmd}distributorContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}phone/{http://www.isotc211.org/2005/gmd}CI_Telephone/{http://www.isotc211.org/2005/gmd}voice/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "208-885-7992", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributor/{http://www.isotc211.org/2005/gmd}MD_Distributor/{http://www.isotc211.org/2005/gmd}distributorContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}deliveryPoint/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "875 Perimeter Drive MS 3014, Morrill Hall, University of Idaho", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributor/{http://www.isotc211.org/2005/gmd}MD_Distributor/{http://www.isotc211.org/2005/gmd}distributorContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}city/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Moscow", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributor/{http://www.isotc211.org/2005/gmd}MD_Distributor/{http://www.isotc211.org/2005/gmd}distributorContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}administrativeArea/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "ID", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributor/{http://www.isotc211.org/2005/gmd}MD_Distributor/{http://www.isotc211.org/2005/gmd}distributorContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}postalCode/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "83844-3014", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributor/{http://www.isotc211.org/2005/gmd}MD_Distributor/{http://www.isotc211.org/2005/gmd}distributorContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}electronicMailAddress/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "igs@uidaho.edu", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributor/{http://www.isotc211.org/2005/gmd}MD_Distributor/{http://www.isotc211.org/2005/gmd}distributorContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode", 
+                "text": "distributor", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributor/{http://www.isotc211.org/2005/gmd}MD_Distributor/{http://www.isotc211.org/2005/gmd}distributorContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeList", 
+                        "text": "http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#CI_RoleCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributor/{http://www.isotc211.org/2005/gmd}MD_Distributor/{http://www.isotc211.org/2005/gmd}distributorContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeListValue", 
+                        "text": "distributor"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/@id", 
+                        "text": "http___web2_nbmg_unr_edu_ArcGIS_services_ID_data_IDWellheaders_MapServer_WMSServer_request_GetCapabilities_service_WMS"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}linkage/{http://www.isotc211.org/2005/gmd}URL", 
+                "text": "http://web2.nbmg.unr.edu/ArcGIS/services/ID_data/IDWellheaders/MapServer/WMSServer?request=GetCapabilities=WMS", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}name/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "WMS Capabilities", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "OGC: WMS", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}function/{http://www.isotc211.org/2005/gmd}CI_OnLineFunctionCode", 
+                "text": "download", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}function/{http://www.isotc211.org/2005/gmd}CI_OnLineFunctionCode/@codeList", 
+                        "text": "http://www.fgdc.gov/nap/metadata/register/registerItemClasses.html#IC_88"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}function/{http://www.isotc211.org/2005/gmd}CI_OnLineFunctionCode/@codeListValue", 
+                        "text": "375"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/@id", 
+                        "text": "http___web2_nbmg_unr_edu_ArcGIS_services_ID_data_IDWellheaders_MapServer_WFSServer_request_GetCapabilities_service_WFS"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}linkage/{http://www.isotc211.org/2005/gmd}URL", 
+                "text": "http://web2.nbmg.unr.edu/ArcGIS/services/ID_data/IDWellheaders/MapServer/WFSServer?request=GetCapabilities=WFS", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}name/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "WFS Capabilities", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "OGC: WFS", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}function/{http://www.isotc211.org/2005/gmd}CI_OnLineFunctionCode", 
+                "text": "download", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}function/{http://www.isotc211.org/2005/gmd}CI_OnLineFunctionCode/@codeList", 
+                        "text": "http://www.fgdc.gov/nap/metadata/register/registerItemClasses.html#IC_88"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}function/{http://www.isotc211.org/2005/gmd}CI_OnLineFunctionCode/@codeListValue", 
+                        "text": "375"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/@id", 
+                        "text": "http___web2_nbmg_unr_edu_ArcGIS_rest_services_ID_data_IDWellheaders_MapServer"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}linkage/{http://www.isotc211.org/2005/gmd}URL", 
+                "text": "http://web2.nbmg.unr.edu/ArcGIS/rest/services/ID_data/IDWellheaders/MapServer", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}name/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "ESRI", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "ESRI", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}function/{http://www.isotc211.org/2005/gmd}CI_OnLineFunctionCode", 
+                "text": "download", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}function/{http://www.isotc211.org/2005/gmd}CI_OnLineFunctionCode/@codeList", 
+                        "text": "http://www.fgdc.gov/nap/metadata/register/registerItemClasses.html#IC_88"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}function/{http://www.isotc211.org/2005/gmd}CI_OnLineFunctionCode/@codeListValue", 
+                        "text": "375"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/@id", 
+                        "text": "http___repository_stategeothermaldata_org_metadata_record_dc2950e94fd12022579c7307b63f779f_file_id_wellheader_oilgas1_71_zip"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}linkage/{http://www.isotc211.org/2005/gmd}URL", 
+                "text": "http://repository.stategeothermaldata.org/metadata/record/dc2950e94fd12022579c7307b63f779f/file/id_wellheader_oilgas1.71.zip", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}name/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Zipped 2007 Excel spreadsheet containing Idaho Oil and Gas Exploration Well Header data", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}function/{http://www.isotc211.org/2005/gmd}CI_OnLineFunctionCode", 
+                "text": "download", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}function/{http://www.isotc211.org/2005/gmd}CI_OnLineFunctionCode/@codeList", 
+                        "text": "http://www.fgdc.gov/nap/metadata/register/registerItemClasses.html#IC_88"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}function/{http://www.isotc211.org/2005/gmd}CI_OnLineFunctionCode/@codeListValue", 
+                        "text": "375"
+                    }
+                ]
+            }
+        ], 
+        "service": {
+            "endpoints": [
+                {
+                    "url": "http://web2.nbmg.unr.edu/ArcGIS/services/ID_data/IDWellheaders/MapServer/WMSServer?request=GetCapabilities=WMS", 
+                    "actionable": 1, 
+                    "type": "375", 
+                    "format": ""
+                }, 
+                {
+                    "url": "http://web2.nbmg.unr.edu/ArcGIS/services/ID_data/IDWellheaders/MapServer/WFSServer?request=GetCapabilities=WFS", 
+                    "actionable": 1, 
+                    "type": "375", 
+                    "format": ""
+                }, 
+                {
+                    "url": "http://web2.nbmg.unr.edu/ArcGIS/rest/services/ID_data/IDWellheaders/MapServer", 
+                    "actionable": 1, 
+                    "type": "375", 
+                    "format": ""
+                }, 
+                {
+                    "url": "http://repository.stategeothermaldata.org/metadata/record/dc2950e94fd12022579c7307b63f779f/file/id_wellheader_oilgas1.71.zip", 
+                    "actionable": 1, 
+                    "type": "375", 
+                    "format": ""
+                }
+            ], 
+            "abstract": [
+                "This dataset is a compilation of oil and gas exploration wellheaders compiled by the Idaho Geological Survey, published as a Web feature service, a web map service, an ESRI service, and as a set of Excel worksheets for the National Geothermal Data System. The downloadable workbook contains 8 worksheets, including information about the template, notes related to revisions of the template, Resource provider information, the data, a field list (data mapping view) and a worksheet with vocabularies for use in populating the spreadsheet (data valid terms). Data from 148 oil and gas exploration wells are included. Fields in the data table include HeaderURI, WellName , APINo, OtherID, OtherName, BoreholeName, ParentWellURI, Operator, MineralOwner, Driller, LeaseName, SpudDate, EndedDrillingDate, DrillingMethod, WellType, Status, CommodityOfInterest, StatusDate, Function, Production , ProducingInterval , ReleaseDate, County, State, Field, OtherLocationName, PLSS_Meridians, TWP, RGE, Section, SectionPart, Parcel, UTM_E, UTM_N, UTMDatumZone, LatDegree, LongDegree, SRS, LocationUncertaintyStatement, LocationUncertaintyCode, LocationUncertaintyRadius, DrillerTotalDepth, DepthReferencePoint, LengthUnits, WellBoreShape, TrueVerticalDepth, ElevationKB, ElevationDF, ElevationGL, FormationTD, BitDiameterCollar, BitDiameterTD, DiameterUnits, RelatedResource, Notes, CasingBottomDepthDriller, CasingTopDepth, CasingPipeDiameter, CasingWeight, CasingWeightUnits, CasingThickness, InformationSource."
+            ], 
+            "identifier": [
+                "dc2950e94fd12022579c7307b63f779f"
+            ], 
+            "subject": [
+                "oil and gas", 
+                "well headers", 
+                "Idaho", 
+                "Idaho", 
+                "Idaho Geological Survey", 
+                "WFS Services", 
+                "WMS Services", 
+                "Well Headers", 
+                "Downloadable Files", 
+                "ESRI Services"
+            ], 
+            "title": [
+                "Idaho Oil and Gas Exploration Wells"
+            ]
+        }, 
+        "dataset": null
+    }, 
+    "date": "2015-03-06T01:44:46.902Z", 
+    "_version_": 1494863710694408192, 
+    "boost": 1.0, 
+    "id": "http://catalog.data.gov/harvest/object/a7ad65be-ffc9-4924-bc63-25a2c8cc9d14", 
+    "identity": {
+        "is_error": false, 
+        "protocol": "ISO-19115", 
+        "language": "eng", 
+        "service": "", 
+        "has_dataset": false, 
+        "has_metadata": false, 
+        "subtype": "metadata", 
+        "version": "ISO-USGIN 1.2"
+    }
+}

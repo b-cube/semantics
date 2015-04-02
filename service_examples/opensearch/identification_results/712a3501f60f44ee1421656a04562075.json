@@ -1,0 +1,30 @@
+{
+    "xml_namespaces": [
+        "xmlns=\"http://a9.com/-/spec/opensearch/1.1/\"", 
+        "xmlns:moz=\"http://www.mozilla.org/2006/browser/search/\""
+    ], 
+    "url": "http://www.africanremotesensing.org/opensearch.ashx", 
+    "boost": 2.1557573e-05, 
+    "contentLength": "361", 
+    "tstamp": "2015-03-20T04:10:20.429Z", 
+    "content": "www.africanremotesensing.org UTF-8", 
+    "identity": {
+        "subtype": "service", 
+        "is_error": false, 
+        "version": "1.1", 
+        "protocol": "OpenSearch", 
+        "language": "", 
+        "service": "OpenSearchDescription", 
+        "has_dataset": false, 
+        "has_metadata": false
+    }, 
+    "type": [
+        "application/opensearchdescription+xml"
+    ], 
+    "date": "2015-03-20T04:10:20.429Z", 
+    "_version_": 1496142311703183363, 
+    "raw_content": "\n<OpenSearchDescription xmlns=\"http://a9.com/-/spec/opensearch/1.1/\" xmlns:moz=\"http://www.mozilla.org/2006/browser/search/\">\n  <ShortName>www.africanremotesensing.org</ShortName>\n  <InputEncoding>UTF-8</InputEncoding>\n  <Url type=\"text/html\" method=\"get\" template=\"http://www.africanremotesensing.org/sys/search?q={searchTerms}\"/>\n</OpenSearchDescription>", 
+    "segment": "20150320035523", 
+    "id": "http://www.africanremotesensing.org/opensearch.ashx", 
+    "digest": "712a3501f60f44ee1421656a04562075"
+}

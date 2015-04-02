@@ -1,0 +1,131 @@
+{
+    "xml_namespaces": [
+        "xmlns=\"http://www.openarchives.org/OAI/2.0/\"", 
+        "xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"", 
+        "xmlns=\"http://www.openarchives.org/OAI/2.0/oai-identifier\""
+    ], 
+    "url": "http://oai.erudit.org/oai/?verb=Identify", 
+    "type": [
+        "application/xml"
+    ], 
+    "id": "http://oai.erudit.org/oai/?verb=Identify", 
+    "segment": "20150320035523", 
+    "tstamp": "2015-03-20T03:57:20.258Z", 
+    "digest": "bc14cac539a6d5a338ab27512f881ed6", 
+    "service_description": {
+        "metadata": null, 
+        "remainder": [
+            {
+                "xpath": "{http://www.openarchives.org/OAI/2.0/}OAI-PMH", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.openarchives.org/OAI/2.0/}OAI-PMH/@{http://www.w3.org/2001/XMLSchema-instance}schemaLocation", 
+                        "text": "http://www.openarchives.org/OAI/2.0/                              http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.openarchives.org/OAI/2.0/}OAI-PMH/{http://www.openarchives.org/OAI/2.0/}responseDate", 
+                "text": "2015-03-20T03:57:20Z", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.openarchives.org/OAI/2.0/}OAI-PMH/{http://www.openarchives.org/OAI/2.0/}request", 
+                "text": "http://oai.erudit.org/oaiproviderpublic/", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.openarchives.org/OAI/2.0/}OAI-PMH/{http://www.openarchives.org/OAI/2.0/}request/@verb", 
+                        "text": "Identify"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.openarchives.org/OAI/2.0/}OAI-PMH/{http://www.openarchives.org/OAI/2.0/}Identify/{http://www.openarchives.org/OAI/2.0/}baseURL", 
+                "text": "http://oai.erudit.org/oai/", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.openarchives.org/OAI/2.0/}OAI-PMH/{http://www.openarchives.org/OAI/2.0/}Identify/{http://www.openarchives.org/OAI/2.0/}adminEmail", 
+                "text": "erudit@umontreal.ca", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.openarchives.org/OAI/2.0/}OAI-PMH/{http://www.openarchives.org/OAI/2.0/}Identify/{http://www.openarchives.org/OAI/2.0/}earliestDatestamp", 
+                "text": "2011-06-03", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.openarchives.org/OAI/2.0/}OAI-PMH/{http://www.openarchives.org/OAI/2.0/}Identify/{http://www.openarchives.org/OAI/2.0/}deletedRecord", 
+                "text": "persistent", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.openarchives.org/OAI/2.0/}OAI-PMH/{http://www.openarchives.org/OAI/2.0/}Identify/{http://www.openarchives.org/OAI/2.0/}granularity", 
+                "text": "YYYY-MM-DDThh:mm:ssZ", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.openarchives.org/OAI/2.0/}OAI-PMH/{http://www.openarchives.org/OAI/2.0/}Identify/{http://www.openarchives.org/OAI/2.0/}description/{http://www.openarchives.org/OAI/2.0/oai-identifier}oai-identifier", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.openarchives.org/OAI/2.0/}OAI-PMH/{http://www.openarchives.org/OAI/2.0/}Identify/{http://www.openarchives.org/OAI/2.0/}description/{http://www.openarchives.org/OAI/2.0/oai-identifier}oai-identifier/@{http://www.w3.org/2001/XMLSchema-instance}schemaLocation", 
+                        "text": "http://www.openarchives.org/OAI/2.0/oai-identifier http://www.openarchives.org/OAI/2.0/oai-identifier.xsd"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.openarchives.org/OAI/2.0/}OAI-PMH/{http://www.openarchives.org/OAI/2.0/}Identify/{http://www.openarchives.org/OAI/2.0/}description/{http://www.openarchives.org/OAI/2.0/oai-identifier}oai-identifier/{http://www.openarchives.org/OAI/2.0/oai-identifier}scheme", 
+                "text": "oai", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.openarchives.org/OAI/2.0/}OAI-PMH/{http://www.openarchives.org/OAI/2.0/}Identify/{http://www.openarchives.org/OAI/2.0/}description/{http://www.openarchives.org/OAI/2.0/oai-identifier}oai-identifier/{http://www.openarchives.org/OAI/2.0/oai-identifier}repositoryIdentifier", 
+                "text": "oai.erudit.org", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.openarchives.org/OAI/2.0/}OAI-PMH/{http://www.openarchives.org/OAI/2.0/}Identify/{http://www.openarchives.org/OAI/2.0/}description/{http://www.openarchives.org/OAI/2.0/oai-identifier}oai-identifier/{http://www.openarchives.org/OAI/2.0/oai-identifier}delimiter", 
+                "text": ":", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.openarchives.org/OAI/2.0/}OAI-PMH/{http://www.openarchives.org/OAI/2.0/}Identify/{http://www.openarchives.org/OAI/2.0/}description/{http://www.openarchives.org/OAI/2.0/oai-identifier}oai-identifier/{http://www.openarchives.org/OAI/2.0/oai-identifier}sampleIdentifier", 
+                "text": "oai:erudit.org:000001ar", 
+                "attributes": null
+            }
+        ], 
+        "service": {
+            "endpoints": [
+                {
+                    "url": "http://oai.erudit.org/oai/"
+                }
+            ], 
+            "version": [
+                "2.0"
+            ], 
+            "title": [
+                "Erudit"
+            ]
+        }, 
+        "dataset": null
+    }, 
+    "date": "2015-03-20T03:57:20.258Z", 
+    "_version_": 1496142276926111746, 
+    "boost": 1.681782e-05, 
+    "anchor": [
+        "http://oai.erudit.org/oai/", 
+        "http://oai.erudit.org/oai/"
+    ], 
+    "identity": {
+        "is_error": false, 
+        "protocol": "OAI-PMH", 
+        "language": "", 
+        "service": "Identify", 
+        "has_dataset": false, 
+        "has_metadata": false, 
+        "subtype": "service", 
+        "version": "2.0"
+    }
+}

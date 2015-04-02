@@ -1,0 +1,29 @@
+{
+    "xml_namespaces": [
+        "xmlns=\"http://a9.com/-/spec/opensearch/1.1/\"", 
+        "xmlns:geo=\"http://a9.com/-/opensearch/extensions/geo/1.0/\""
+    ], 
+    "url": "http://uaf.nodc.noaa.gov/geoportal/openSearchDescription", 
+    "type": [
+        "application/opensearchdescription+xml"
+    ], 
+    "raw_content": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><!--\n See the NOTICE file distributed with\n this work for additional information regarding copyright ownership.\n Esri Inc. licenses this file to You under the Apache License, Version 2.0\n (the \"License\"); you may not use this file except in compliance with\n the License.  You may obtain a copy of the License at\n\n     http://www.apache.org/licenses/LICENSE-2.0\n\n Unless required by applicable law or agreed to in writing, software\n distributed under the License is distributed on an \"AS IS\" BASIS,\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n See the License for the specific language governing permissions and\n limitations under the License.\n--><OpenSearchDescription xmlns=\"http://a9.com/-/spec/opensearch/1.1/\" xmlns:geo=\"http://a9.com/-/opensearch/extensions/geo/1.0/\">\n  <ShortName>UAF OpenSearch</ShortName>\n  <Description>UAF Geospatial metadata search.</Description>\n  <Tags>geospatial metadata</Tags>\n  <Contact>NODC.Services@noaa.gov</Contact>\n  <Url type=\"application/rss+xml\" indexOffset=\"1\" pageOffset=\"1\" template=\"http://uaf.nodc.noaa.gov/geoportal/rest/find/document?searchText={searchTerms}&amp;start={startIndex?}&amp;max={count?}&amp;bbox={geo:box?}&amp;f=georss\"/>\n   <Url type=\"application/atom+xml\" indexOffset=\"1\" pageOffset=\"1\" template=\"http://uaf.nodc.noaa.gov/geoportal/rest/find/document?searchText={searchTerms}&amp;start={startIndex?}&amp;max={count?}&amp;bbox={geo:box?}&amp;f=atom\"/>\n  <!--Url type=\"text/html\" indexOffset=\"1\" pageOffset=\"1\"\n    template=\"http://uaf.nodc.noaa.gov/geoportal/rest/find/document?searchText={searchTerms}&amp;start={startIndex?}&amp;max={count?}&amp;bbox={geo:box?}&amp;f=html\"/-->\n  <Url type=\"text/html\" indexOffset=\"1\" pageOffset=\"1\" template=\"http://uaf.nodc.noaa.gov/geoportal/rest/find/document?searchText={searchTerms}&amp;start={startIndex?}&amp;max={count?}&amp;bbox={geo:box?}&amp;f=searchPage\"/>\n    \n  <Image height=\"16\" width=\"16\" type=\"image/png\">https://test.nodc.noaa.gov/geoportal/catalog/skins/themes/nodc/images/openSearch.png</Image>\n  <Query role=\"example\" searchTerms=\"land\"/>\n  <OutputEncoding>UTF-8</OutputEncoding>\n  <InputEncoding>UTF-8</InputEncoding>\n  \n  <!-- \n  <LongName>Example.com Web Search</LongName>\n  <Image height=\"64\" width=\"64\" type=\"image/png\">http://uaf.nodc.noaa.gov/geoportal/catalog/images/websearch.png</Image>\n  <Developer>Example.com Development Team</Developer>\n  <Attribution>Search data Copyright 2005, Example.com, Inc., All Rights Reserved</Attribution>\n  <SyndicationRight>open</SyndicationRight>\n  <AdultContent>false</AdultContent>\n  <Language>en-us</Language>\n  -->\n  \n</OpenSearchDescription>", 
+    "content": "UAF OpenSearch UAF Geospatial metadata search. geospatial metadata NODC.Services@noaa.gov https://test.nodc.noaa.gov/geoportal/catalog/skins/themes/nodc/images/openSearch.png UTF-8 UTF-8", 
+    "boost": 3.270504e-05, 
+    "identity": {
+        "subtype": "service", 
+        "is_error": false, 
+        "version": "1.1", 
+        "protocol": "OpenSearch", 
+        "language": "", 
+        "service": "OpenSearchDescription", 
+        "has_dataset": false, 
+        "has_metadata": false
+    }, 
+    "date": "2015-03-19T17:54:12.392Z", 
+    "_version_": 1496105364474560514, 
+    "tstamp": "2015-03-19T17:54:12.392Z", 
+    "segment": "20150319173545", 
+    "id": "http://uaf.nodc.noaa.gov/geoportal/openSearchDescription", 
+    "digest": "49445c973e953f3e9d0456e6acd2f3db"
+}

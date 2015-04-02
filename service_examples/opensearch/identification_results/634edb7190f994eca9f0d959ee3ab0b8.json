@@ -1,0 +1,30 @@
+{
+    "xml_namespaces": [
+        "xmlns=\"http://a9.com/-/spec/opensearch/1.1/\"", 
+        "xmlns:moz=\"http://www.mozilla.org/2006/browser/search/\""
+    ], 
+    "url": "http://www.esa-ozone-cci.org/Private/opensearch_desc.php", 
+    "boost": 3.3729197e-05, 
+    "contentLength": "755", 
+    "tstamp": "2015-03-19T14:40:04.509Z", 
+    "content": "Wiki_ozone (en) Wiki_ozone (en) http://www.esa-ozone-cci.org/favicon.ico http://www.esa-ozone-cci.org/Private/index.php/Special:Search", 
+    "identity": {
+        "subtype": "service", 
+        "is_error": false, 
+        "version": "1.1", 
+        "protocol": "OpenSearch", 
+        "language": "", 
+        "service": "OpenSearchDescription", 
+        "has_dataset": false, 
+        "has_metadata": false
+    }, 
+    "type": [
+        "application/opensearchdescription+xml"
+    ], 
+    "date": "2015-03-19T14:40:04.509Z", 
+    "_version_": 1496093796472979456, 
+    "raw_content": "<?xml version=\"1.0\"?><OpenSearchDescription xmlns=\"http://a9.com/-/spec/opensearch/1.1/\" xmlns:moz=\"http://www.mozilla.org/2006/browser/search/\"><ShortName>Wiki_ozone (en)</ShortName><Description>Wiki_ozone (en)</Description><Image height=\"16\" width=\"16\" type=\"image/x-icon\">http://www.esa-ozone-cci.org/favicon.ico</Image><Url type=\"text/html\" method=\"get\" template=\"http://www.esa-ozone-cci.org/Private/index.php?title=Special:Search&amp;search={searchTerms}\" /><Url type=\"application/x-suggestions+json\" method=\"get\" template=\"http://www.esa-ozone-cci.org/Private/api.php?action=opensearch&amp;search={searchTerms}&amp;namespace=0\" /><moz:SearchForm>http://www.esa-ozone-cci.org/Private/index.php/Special:Search</moz:SearchForm></OpenSearchDescription>", 
+    "segment": "20150319143831", 
+    "id": "http://www.esa-ozone-cci.org/Private/opensearch_desc.php", 
+    "digest": "634edb7190f994eca9f0d959ee3ab0b8"
+}

@@ -1,0 +1,254 @@
+{
+    "xml_namespaces": [
+        "xmlns:oost=\"http://www.oostethys.org/schemas/0.1.0/oostethys\"", 
+        "xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"", 
+        "xmlns:ows=\"http://www.opengis.net/ows/1.1\"", 
+        "xmlns:xlink=\"http://www.w3.org/1999/xlink\"", 
+        "xmlns:gml=\"http://www.opengis.net/gml\"", 
+        "xmlns:swe=\"http://www.opengis.net/swe/1.0\"", 
+        "xmlns:sos=\"http://www.opengis.net/sos/1.0\""
+    ], 
+    "url": "http://gcoos.disl.org/cgi-bin/oostethys_sos.cgi?request=GetCapabilities&service=SOS&version=1.0.0", 
+    "type": [
+        "application/xml"
+    ], 
+    "id": "http://gcoos.disl.org/cgi-bin/oostethys_sos.cgi?request=GetCapabilities&service=SOS&version=1.0.0", 
+    "segment": "20150306081026", 
+    "tstamp": "2015-03-06T08:40:00.409Z", 
+    "digest": "9b32bd04c863070d1708ae1ab2fb35b5", 
+    "service_description": {
+        "remainder": [], 
+        "service": {
+            "rights": "NONE", 
+            "abstract": null, 
+            "title": "Dauphin Island Sea Lab SOS", 
+            "contact": "Lei Hu", 
+            "endpoints": [
+                {
+                    "name": "GetCapabilities", 
+                    "parameters": [
+                        {
+                            "values": [
+                                "SOS"
+                            ], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [
+                                "1.0.0"
+                            ], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://gcoos.disl.org/cgi-bin/oostethys_sos.cgi?SERVICE=SOS&VERSION=1.0.0&REQUEST=GetCapabilities", 
+                    "actionable": 1, 
+                    "formats": [
+                        "text/xml"
+                    ], 
+                    "type": "Get", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "GetCapabilities", 
+                    "parameters": [
+                        {
+                            "values": [
+                                "SOS"
+                            ], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [
+                                "1.0.0"
+                            ], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://gcoos.disl.org/cgi-bin/oostethys_sos.cgi?SERVICE=SOS&VERSION=1.0.0&REQUEST=GetCapabilities", 
+                    "actionable": 1, 
+                    "formats": [
+                        "text/xml"
+                    ], 
+                    "type": "Post", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "GetObservation", 
+                    "parameters": [
+                        {
+                            "values": [
+                                "SOS"
+                            ], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [
+                                "1.0.0"
+                            ], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://gcoos.disl.org/cgi-bin/oostethys_sos.cgi?SERVICE=SOS&VERSION=1.0.0&REQUEST=GetObservation", 
+                    "actionable": 2, 
+                    "formats": [
+                        "text/xml"
+                    ], 
+                    "type": "Get", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "GetObservation", 
+                    "parameters": [
+                        {
+                            "values": [
+                                "SOS"
+                            ], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [
+                                "1.0.0"
+                            ], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://gcoos.disl.org/cgi-bin/oostethys_sos.cgi?SERVICE=SOS&VERSION=1.0.0&REQUEST=GetObservation", 
+                    "actionable": 2, 
+                    "formats": [
+                        "text/xml"
+                    ], 
+                    "type": "Post", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "DescribeSensor", 
+                    "parameters": [
+                        {
+                            "values": [
+                                "SOS"
+                            ], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [
+                                "1.0.0"
+                            ], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://gcoos.disl.org/cgi-bin/oostethys_sos.cgi?SERVICE=SOS&VERSION=1.0.0&REQUEST=DescribeSensor", 
+                    "actionable": 2, 
+                    "formats": [
+                        "text/xml"
+                    ], 
+                    "type": "Get", 
+                    "constraints": []
+                }, 
+                {
+                    "name": "DescribeSensor", 
+                    "parameters": [
+                        {
+                            "values": [
+                                "SOS"
+                            ], 
+                            "type": "string", 
+                            "name": "service", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [], 
+                            "type": "string", 
+                            "name": "request", 
+                            "format": null
+                        }, 
+                        {
+                            "values": [
+                                "1.0.0"
+                            ], 
+                            "type": "string", 
+                            "name": "version", 
+                            "format": null
+                        }
+                    ], 
+                    "url": "http://gcoos.disl.org/cgi-bin/oostethys_sos.cgi?SERVICE=SOS&VERSION=1.0.0&REQUEST=DescribeSensor", 
+                    "actionable": 2, 
+                    "formats": [
+                        "text/xml"
+                    ], 
+                    "type": "Post", 
+                    "constraints": []
+                }
+            ], 
+            "subject": [
+                "Ocean Observations"
+            ]
+        }
+    }, 
+    "date": "2015-03-06T08:40:00.409Z", 
+    "_version_": 1494901154165817344, 
+    "boost": 1.0, 
+    "anchor": [
+        "http://gcoos.disl.org/cgi-bin/oostethys_sos.cgi", 
+        "http://gcoos.disl.org/cgi-bin/oostethys_sos.cgi?request=GetCapabilities&service=SOS&version=1.0.0"
+    ], 
+    "identity": {
+        "is_error": false, 
+        "protocol": "OGC:SOS", 
+        "language": "", 
+        "service": "GetCapabilities", 
+        "has_dataset": false, 
+        "has_metadata": false, 
+        "subtype": "service", 
+        "version": "1.0.0"
+    }
+}

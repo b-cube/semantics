@@ -1,0 +1,1325 @@
+{
+    "xml_namespaces": [
+        "xmlns:gmd=\"http://www.isotc211.org/2005/gmd\"", 
+        "xmlns:gml=\"http://www.opengis.net/gml\"", 
+        "xmlns:gco=\"http://www.isotc211.org/2005/gco\"", 
+        "xmlns:geonet=\"http://www.fao.org/geonetwork\"", 
+        "xmlns:csw=\"http://www.opengis.net/cat/csw/2.0.2\"", 
+        "xmlns:gmx=\"http://www.isotc211.org/2005/gmx\"", 
+        "xmlns:srv=\"http://www.isotc211.org/2005/srv\""
+    ], 
+    "url": "http://catalog.data.gov/harvest/object/c2ddd66d-f62e-40e9-9e7b-b08228a32b99", 
+    "type": [
+        "application/xml"
+    ], 
+    "contentLength": "7970", 
+    "segment": "20150306003913", 
+    "tstamp": "2015-03-06T00:51:21.376Z", 
+    "digest": "774ca817c06bcf2277c2c0cc161889ce", 
+    "service_description": {
+        "metadata": null, 
+        "remainder": [
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}fileIdentifier/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "f87dad3b-b00a-4582-b200-3452a8deafb5", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}language/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "eng", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}hierarchyLevel/{http://www.isotc211.org/2005/gmd}MD_ScopeCode", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}hierarchyLevel/{http://www.isotc211.org/2005/gmd}MD_ScopeCode/@codeList", 
+                        "text": "http://www.isotc211.org/2005/resources/codeList.xml#MD_ScopeCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}hierarchyLevel/{http://www.isotc211.org/2005/gmd}MD_ScopeCode/@codeListValue", 
+                        "text": "dataset"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}contact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}individualName/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Ann Fritz", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}contact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}organisationName/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "North Dakota Department of Health - Division of Water Quality", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}contact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}phone/{http://www.isotc211.org/2005/gmd}CI_Telephone/{http://www.isotc211.org/2005/gmd}voice/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "701.328.5162", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}contact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}deliveryPoint/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "918 E. Divide", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}contact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}city/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Bismarck", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}contact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}administrativeArea/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "ND", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}contact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}postalCode/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "58501-1947", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}contact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}country/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "USA", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}contact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}contact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeList", 
+                        "text": "http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}contact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeListValue", 
+                        "text": "pointOfContact"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}contact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeSpace", 
+                        "text": "ISOTC211/19115"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dateStamp/{http://www.isotc211.org/2005/gco}DateTime", 
+                "text": "2014-11-03T11:44:35", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}metadataStandardName/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "ISO 19115:2003/19139", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}metadataStandardVersion/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "1.0", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}spatialRepresentationInfo/{http://www.isotc211.org/2005/gmd}MD_VectorSpatialRepresentation/{http://www.isotc211.org/2005/gmd}geometricObjects/{http://www.isotc211.org/2005/gmd}MD_GeometricObjects/{http://www.isotc211.org/2005/gmd}geometricObjectType/{http://www.isotc211.org/2005/gmd}MD_GeometricObjectTypeCode", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}spatialRepresentationInfo/{http://www.isotc211.org/2005/gmd}MD_VectorSpatialRepresentation/{http://www.isotc211.org/2005/gmd}geometricObjects/{http://www.isotc211.org/2005/gmd}MD_GeometricObjects/{http://www.isotc211.org/2005/gmd}geometricObjectType/{http://www.isotc211.org/2005/gmd}MD_GeometricObjectTypeCode/@codeList", 
+                        "text": "http://www.isotc211.org/2005/resources/codeList.xml#MD_GeometricObjectTypeCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}spatialRepresentationInfo/{http://www.isotc211.org/2005/gmd}MD_VectorSpatialRepresentation/{http://www.isotc211.org/2005/gmd}geometricObjects/{http://www.isotc211.org/2005/gmd}MD_GeometricObjects/{http://www.isotc211.org/2005/gmd}geometricObjectType/{http://www.isotc211.org/2005/gmd}MD_GeometricObjectTypeCode/@codeListValue", 
+                        "text": "complex"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}spatialRepresentationInfo/{http://www.isotc211.org/2005/gmd}MD_VectorSpatialRepresentation/{http://www.isotc211.org/2005/gmd}geometricObjects/{http://www.isotc211.org/2005/gmd}MD_GeometricObjects/{http://www.isotc211.org/2005/gmd}geometricObjectType/{http://www.isotc211.org/2005/gmd}MD_GeometricObjectTypeCode/@codeSpace", 
+                        "text": "ISOTC211/19115"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}spatialRepresentationInfo/{http://www.isotc211.org/2005/gmd}MD_VectorSpatialRepresentation/{http://www.isotc211.org/2005/gmd}geometricObjects/{http://www.isotc211.org/2005/gmd}MD_GeometricObjects/{http://www.isotc211.org/2005/gmd}geometricObjectCount/{http://www.isotc211.org/2005/gco}Integer", 
+                "text": "1904", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}title/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Watershed Boundary Dataset", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gmd}CI_Date/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gco}Date", 
+                "text": "2014-10-17", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gmd}CI_Date/{http://www.isotc211.org/2005/gmd}dateType/{http://www.isotc211.org/2005/gmd}CI_DateTypeCode", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gmd}CI_Date/{http://www.isotc211.org/2005/gmd}dateType/{http://www.isotc211.org/2005/gmd}CI_DateTypeCode/@codeList", 
+                        "text": "http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gmd}CI_Date/{http://www.isotc211.org/2005/gmd}dateType/{http://www.isotc211.org/2005/gmd}CI_DateTypeCode/@codeListValue", 
+                        "text": "publication"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gmd}CI_Date/{http://www.isotc211.org/2005/gmd}dateType/{http://www.isotc211.org/2005/gmd}CI_DateTypeCode/@codeSpace", 
+                        "text": "ISOTC211/19115"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}edition/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "1", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}organisationName/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "North Dakota", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeList", 
+                        "text": "http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeListValue", 
+                        "text": "originator"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeSpace", 
+                        "text": "ISOTC211/19115"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}organisationName/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "North Dakota Department of Health-Division of Water Quality", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeList", 
+                        "text": "http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeListValue", 
+                        "text": "publisher"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeSpace", 
+                        "text": "ISOTC211/19115"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}presentationForm/{http://www.isotc211.org/2005/gmd}CI_PresentationFormCode", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}presentationForm/{http://www.isotc211.org/2005/gmd}CI_PresentationFormCode/@codeList", 
+                        "text": "http://www.isotc211.org/2005/resources/codeList.xml#CI_PresentationFormCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}presentationForm/{http://www.isotc211.org/2005/gmd}CI_PresentationFormCode/@codeListValue", 
+                        "text": "mapDigital"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}citation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}presentationForm/{http://www.isotc211.org/2005/gmd}CI_PresentationFormCode/@codeSpace", 
+                        "text": "ISOTC211/19115"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}abstract/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "This data set is a complete digital hydrologic unit boundary layer to the Watershed (10-digit) 5th level for the entire state of North Dakota. This data set consists of geo-referenced digital data and associated attributes created in accordance with the \"Federal Guidelines, Requirements, and Procedures for the National Watershed Boundary Dataset; Chapter 3 of Section A, Federal Standards, Book 11, Collection and Delineation of Spatial Data; Techniques and Methods 11-A3 - Third Edition\" (2012). http://pubs.usgs.gov/tm/tm11a3/. Polygons are attributed with hydrologic unit codes for 5th level subwatersheds, name, size, Updates made to correct HU_10 and HU_12 names to be consistent with National Standards; incorporate changes made to include Canadian hydrologic units and correct mistakes in original dataset.", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}purpose/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "PROVISIONAL DATA! This data is presented 'as is.' This data set contains only those polygons that are within the subbasins that touch the borders of North Dakota. For WBD boundaries outside of this footprint, please go to http://nhd.usgs.gov/wbd.html and click \"Get Data\". October 17, 2014: Update includes corrected 10-digit hydrologic unit codes for the Missouri River (Region 10). Updated linework in selected areas in the Missouri River basin. These data are considered the most recent updates to the data by the ND WBD Data Steward. They may differ than what is obtained from the USGS National Map website, Watershed Boundary Dataset. March 20, 2014: Inclusion of HUC10 polygons for the entire Souris Subregion and updates for bordering regions of MT, WY, SD, and MN. The Souris River data has not been approved yet by the Federal Technical Review Team. To download the complete WBD for the U.S. go to http://nhd.usgs.gov/wbd.html and click on \"get data\" March 26, 2013: Changes made in Devils Lake and James River Headwaters subbasin to correct coding, align more closely with 1:24K NHD and bring attributes in compliance with current WBD Standards. Ottertail River subbasin, which is located entirely within the state of MN, is no longer included with this dataset. January 31st, 2013: HUC10 changes were made to 0901000203 to add add \"Upper Des Lacs Lake\" to the HU_10_NAME field for that portion north of the Canadian border. Also, changes were made to HUC10 1006000700. The HU_10_NAME was changed from \"Brush Creek\" to \"Brush Lake\" due to the fact that there is no \"Brush Creek\" in the watershed. Additionally, the HU_12_NAME was changed on 100600070001 to \"Marsland Slough\" and on 100600070002 to \"Brush Lake\". December 29, 2011: ND10 changes include many updates and corrections in the Souris River subregion (0901) plus changes made in neighboring states. Please see http://www.nd.gov/gis/help/faq/ (#11) for information regarding HU12_NAME field. December 12, 2010: Changes made to incorporate subbasin boundaries that extend across the Canadian border, incorporate changes made to neighboring state's datasets, as well as to correct coding and naming mistakes that were present in the original dataset. The Watershed and Subwatershed hydrologic unit boundaries provide a uniquely identified and uniform method of subdividing large drainage areas. The smaller sized 6th level sub-watersheds (up to 250,000 acres) are useful for numerous application programs supported by a variety of local, State, and Federal Agencies. This data set is intended to be used as a tool for water-resource management and planning activities, particularly for site-specific and localized studies requiring a level of detail provided by large-scale map information. The dataset is seamless and, for the most part, a nationally consistant geospatial database. March 26, 2013: Changes made in Devils Lake and James River Headwaters subbasin to correct coding, align more closely with 1:24K NHD and bring attributes in compliance with current WBD Standards. Ottertail River subbasin, which is located entirely within the state of MN, is no longer included with this dataset. These changes have not yet been approved by the Federal Technical Review team. To download the complete WBD for the U.S. go to http://nhd.usgs.gov/wbd.html and click on \"get data\". January 31st, 2013: HUC10 changes were made to 0901000203 to add add \"Upper Des Lacs Lake\" to the HU_10_NAME field for that portion north of the Canadian border. Also, changes were made to HUC10 1006000700. The HU_10_NAME was changed from \"Brush Creek\" to \"Brush Lake\" due to the fact that there is no \"Brush Creek\" in the watershed. Additionally, the HU_12_NAME was changed on 100600070001 to \"Marsland Slough\" and on 100600070002 to \"Brush Lake\". December 29, 2011: ND10 changes include many updates and corrections in the Souris River subregion (0901) plus changes made in neighboring states. Please see http://www.nd.gov/gis/help/faq/ (#11) for information regarding HU12_NAME field. December 12, 2010: Changes made to incorporate subbasin boundaries that extend across the Canadian border, incorporate changes made to neighboring state's datasets, as well as to correct coding and naming mistakes that were present in the original dataset. The Watershed and Subwatershed hydrologic unit boundaries provide a uniquely identified and uniform method of subdividing large drainage areas. The smaller sized 6th level sub-watersheds (up to 250,000 acres) are useful for numerous application programs supported by a variety of local, State, and Federal Agencies. This data set is intended to be used as a tool for water-resource management and planning activities, particularly for site-specific and localized studies requiring a level of detail provided by large-scale map information. The dataset is seamless and, for the most part, a nationally consistant geospatial database.", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}credit/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Funding and support for the Watershed Boundary Dataset (WBD) were provided by the Natural Resources Conservation Service, the Environmental Protection Agency, and the United States Geological Survey. Representatives from the U.S. Geological Survey and Environmental Protection Agency contributed a substantial amount of time and salary towards quality review and updating of the dataset in order to meet the Federal Standards for Delineation of Hydrologic Unit Boundaries.", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}status/{http://www.isotc211.org/2005/gmd}MD_ProgressCode", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}status/{http://www.isotc211.org/2005/gmd}MD_ProgressCode/@codeList", 
+                        "text": "http://www.isotc211.org/2005/resources/codeList.xml#MD_ProgressCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}status/{http://www.isotc211.org/2005/gmd}MD_ProgressCode/@codeListValue", 
+                        "text": "completed"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}status/{http://www.isotc211.org/2005/gmd}MD_ProgressCode/@codeSpace", 
+                        "text": "ISOTC211/19115"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}pointOfContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}individualName/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Ann Fritz", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}pointOfContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}organisationName/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "North Dakota Department of Health - Division of Water Quality", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}pointOfContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}phone/{http://www.isotc211.org/2005/gmd}CI_Telephone/{http://www.isotc211.org/2005/gmd}voice/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "701-328-5162", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}pointOfContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}deliveryPoint/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "918 E. Divide Ave.", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}pointOfContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}city/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Bismarck", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}pointOfContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}administrativeArea/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "ND", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}pointOfContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}postalCode/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "58501-1947", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}pointOfContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}electronicMailAddress/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "afritz@nd.gov", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}pointOfContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}contactInstructions/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Please email questions and requests.", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}pointOfContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}pointOfContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeList", 
+                        "text": "http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}pointOfContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeListValue", 
+                        "text": "pointOfContact"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}pointOfContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeSpace", 
+                        "text": "ISOTC211/19115"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}graphicOverview/{http://www.isotc211.org/2005/gmd}MD_BrowseGraphic/{http://www.isotc211.org/2005/gmd}fileName/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "watershedboundarydataset_s.png", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}graphicOverview/{http://www.isotc211.org/2005/gmd}MD_BrowseGraphic/{http://www.isotc211.org/2005/gmd}fileDescription/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "thumbnail", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}graphicOverview/{http://www.isotc211.org/2005/gmd}MD_BrowseGraphic/{http://www.isotc211.org/2005/gmd}fileType/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "png", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}graphicOverview/{http://www.isotc211.org/2005/gmd}MD_BrowseGraphic/{http://www.isotc211.org/2005/gmd}fileName/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "watershedboundarydataset.png", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}graphicOverview/{http://www.isotc211.org/2005/gmd}MD_BrowseGraphic/{http://www.isotc211.org/2005/gmd}fileDescription/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "large_thumbnail", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}graphicOverview/{http://www.isotc211.org/2005/gmd}MD_BrowseGraphic/{http://www.isotc211.org/2005/gmd}fileType/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "png", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Sub-basin", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "boundaries", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "WBD", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "HUC", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Subwatershed", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Hydrologic Unit Code", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Basin", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Sub-region", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Watershed Boundary Dataset", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Hydrologic Units", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Watershed Boundaries", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Watershed", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Region", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}type/{http://www.isotc211.org/2005/gmd}MD_KeywordTypeCode", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}type/{http://www.isotc211.org/2005/gmd}MD_KeywordTypeCode/@codeList", 
+                        "text": "http://www.isotc211.org/2005/resources/codeList.xml#MD_KeywordTypeCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}type/{http://www.isotc211.org/2005/gmd}MD_KeywordTypeCode/@codeListValue", 
+                        "text": "theme"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}type/{http://www.isotc211.org/2005/gmd}MD_KeywordTypeCode/@codeSpace", 
+                        "text": "ISOTC211/19115"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Red River of the North", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "North Dakota", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Missouri River", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "James River", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}keyword/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Souris River", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}type/{http://www.isotc211.org/2005/gmd}MD_KeywordTypeCode", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}type/{http://www.isotc211.org/2005/gmd}MD_KeywordTypeCode/@codeList", 
+                        "text": "http://www.isotc211.org/2005/resources/codeList.xml#MD_KeywordTypeCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}type/{http://www.isotc211.org/2005/gmd}MD_KeywordTypeCode/@codeListValue", 
+                        "text": "place"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}descriptiveKeywords/{http://www.isotc211.org/2005/gmd}MD_Keywords/{http://www.isotc211.org/2005/gmd}type/{http://www.isotc211.org/2005/gmd}MD_KeywordTypeCode/@codeSpace", 
+                        "text": "ISOTC211/19115"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}resourceConstraints/{http://www.isotc211.org/2005/gmd}MD_LegalConstraints/{http://www.isotc211.org/2005/gmd}otherConstraints/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "The distributor shall not be held liable for improper or incorrect use of this data, based on the description of appropriate/inappropriate uses described in this metadata document. It is strongly recommended that this data is directly acquired from the distributor and not indirectly through other sources which may have changed the data in some way. These data should not be used at scales greater than 1:24,000 for the purpose of identifying hydrographic watershed boundary feature locations in the U.S.A. The U.S. Department of Agriculture makes no claims for the data's suitability for other purposes. U.S. Department of Agriculture should be acknowledged as the data source in products derived from these data. The Watershed Boundary Dataset is public information and may be interpreted by all organizations, agencies, units of government, or others based on needs; however, they are responsible for the appropriate application of the data. Federal, State, or local regulatory bodies are not to reassign to the U.S. Department of Agriculture or the Natural Resources Conservation Service any authority for the decisions they make. The Natural Resources Conservation Service will not perform any evaluations of these maps or purposes related solely to State or local regulatory programs. Photographic or digital enlargement of these maps to scales greater than that at which they were originally delineated can result in misrepresentation of the data. If enlarged, the maps will not include the fine detail that would be appropriate for mapping at the small scale. Digital data files are periodically updated. Files are dated, and users are responsible for obtaining the latest version of the data from the source distributor.", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}language/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "eng", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}topicCategory/{http://www.isotc211.org/2005/gmd}MD_TopicCategoryCode", 
+                "text": "boundaries", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}extent/{http://www.isotc211.org/2005/gmd}EX_Extent/{http://www.isotc211.org/2005/gmd}geographicElement/{http://www.isotc211.org/2005/gmd}EX_GeographicBoundingBox/{http://www.isotc211.org/2005/gmd}westBoundLongitude/{http://www.isotc211.org/2005/gco}Decimal", 
+                "text": "-104.5", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}extent/{http://www.isotc211.org/2005/gmd}EX_Extent/{http://www.isotc211.org/2005/gmd}geographicElement/{http://www.isotc211.org/2005/gmd}EX_GeographicBoundingBox/{http://www.isotc211.org/2005/gmd}eastBoundLongitude/{http://www.isotc211.org/2005/gco}Decimal", 
+                "text": "-96.5", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}extent/{http://www.isotc211.org/2005/gmd}EX_Extent/{http://www.isotc211.org/2005/gmd}geographicElement/{http://www.isotc211.org/2005/gmd}EX_GeographicBoundingBox/{http://www.isotc211.org/2005/gmd}southBoundLatitude/{http://www.isotc211.org/2005/gco}Decimal", 
+                "text": "45.5", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}identificationInfo/{http://www.isotc211.org/2005/gmd}MD_DataIdentification/{http://www.isotc211.org/2005/gmd}extent/{http://www.isotc211.org/2005/gmd}EX_Extent/{http://www.isotc211.org/2005/gmd}geographicElement/{http://www.isotc211.org/2005/gmd}EX_GeographicBoundingBox/{http://www.isotc211.org/2005/gmd}northBoundLatitude/{http://www.isotc211.org/2005/gco}Decimal", 
+                "text": "49.5", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributionFormat/{http://www.isotc211.org/2005/gmd}MD_Format/{http://www.isotc211.org/2005/gmd}name/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "User-defined", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributionFormat/{http://www.isotc211.org/2005/gmd}MD_Format/{http://www.isotc211.org/2005/gmd}version/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "n/a", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributor/{http://www.isotc211.org/2005/gmd}MD_Distributor/{http://www.isotc211.org/2005/gmd}distributorContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}individualName/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Ann Fritz", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributor/{http://www.isotc211.org/2005/gmd}MD_Distributor/{http://www.isotc211.org/2005/gmd}distributorContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}organisationName/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "North Dakota Department of Health - Division of Water Quality", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributor/{http://www.isotc211.org/2005/gmd}MD_Distributor/{http://www.isotc211.org/2005/gmd}distributorContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}phone/{http://www.isotc211.org/2005/gmd}CI_Telephone/{http://www.isotc211.org/2005/gmd}voice/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "701.328.5162", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributor/{http://www.isotc211.org/2005/gmd}MD_Distributor/{http://www.isotc211.org/2005/gmd}distributorContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}deliveryPoint/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "918 W. Divide Ave.", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributor/{http://www.isotc211.org/2005/gmd}MD_Distributor/{http://www.isotc211.org/2005/gmd}distributorContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}city/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Bismarck", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributor/{http://www.isotc211.org/2005/gmd}MD_Distributor/{http://www.isotc211.org/2005/gmd}distributorContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}administrativeArea/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "ND", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributor/{http://www.isotc211.org/2005/gmd}MD_Distributor/{http://www.isotc211.org/2005/gmd}distributorContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}postalCode/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "58501-1947", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributor/{http://www.isotc211.org/2005/gmd}MD_Distributor/{http://www.isotc211.org/2005/gmd}distributorContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}country/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "USA", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributor/{http://www.isotc211.org/2005/gmd}MD_Distributor/{http://www.isotc211.org/2005/gmd}distributorContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}address/{http://www.isotc211.org/2005/gmd}CI_Address/{http://www.isotc211.org/2005/gmd}electronicMailAddress/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "afritz@nd.gov", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributor/{http://www.isotc211.org/2005/gmd}MD_Distributor/{http://www.isotc211.org/2005/gmd}distributorContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}contactInfo/{http://www.isotc211.org/2005/gmd}CI_Contact/{http://www.isotc211.org/2005/gmd}contactInstructions/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "please e-mail with data requests.", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributor/{http://www.isotc211.org/2005/gmd}MD_Distributor/{http://www.isotc211.org/2005/gmd}distributorContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributor/{http://www.isotc211.org/2005/gmd}MD_Distributor/{http://www.isotc211.org/2005/gmd}distributorContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeList", 
+                        "text": "http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributor/{http://www.isotc211.org/2005/gmd}MD_Distributor/{http://www.isotc211.org/2005/gmd}distributorContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeListValue", 
+                        "text": "pointOfContact"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}distributor/{http://www.isotc211.org/2005/gmd}MD_Distributor/{http://www.isotc211.org/2005/gmd}distributorContact/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeSpace", 
+                        "text": "ISOTC211/19115"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}linkage/{http://www.isotc211.org/2005/gmd}URL", 
+                "text": "http://www.nd.gov/gis", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}protocol/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "WWW:LINK-1.0-http--link", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}name/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "NDGIS web site", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "NDGIS web site", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}linkage/{http://www.isotc211.org/2005/gmd}URL", 
+                "text": "http://www.nd.gov/gis/apps/DataDownload/?clipping=Full=ND83-SF=SHAPE=NDHUB.HUC2_REGION", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}protocol/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "WWW:LINK-1.0-http--related", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}name/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Download Hydrologic Unit 2 Regions", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Download Hydrologic Unit 2 Regions", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}linkage/{http://www.isotc211.org/2005/gmd}URL", 
+                "text": "http://www.nd.gov/gis/apps/DataDownload/?clipping=Full=ND83-SF=SHAPE=NDHUB.HUC4_SUBREGION", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}protocol/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "WWW:LINK-1.0-http--related", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}name/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Download Hydrologic Unit 4 SubRegions", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Download Hydrologic Unit 4 SubRegions", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}linkage/{http://www.isotc211.org/2005/gmd}URL", 
+                "text": "http://www.nd.gov/gis/apps/DataDownload/?clipping=Full=ND83-SF=SHAPE=NDHUB.HUC6_BASIN", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}protocol/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "WWW:LINK-1.0-http--related", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}name/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Download Hydrologic Unit 6 Basins", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Download Hydrologic Unit 6 Basins", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}linkage/{http://www.isotc211.org/2005/gmd}URL", 
+                "text": "http://www.nd.gov/gis/apps/DataDownload/?clipping=Full=ND83-SF=SHAPE=NDHUB.HUC8_SUBBASIN", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}protocol/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "WWW:LINK-1.0-http--related", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}name/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Download Hydrologic Unit 8 SubBasins", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Download Hydrologic Unit 8 SubBasins", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}linkage/{http://www.isotc211.org/2005/gmd}URL", 
+                "text": "http://www.nd.gov/gis/apps/DataDownload/?clipping=Full=ND83-SF=SHAPE=NDHUB.HUC10_WATERSHED", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}protocol/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "WWW:LINK-1.0-http--related", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}name/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Download Hydrologic Unit 10 Watersheds", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Download Hydrologic Unit 10 Watersheds", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}linkage/{http://www.isotc211.org/2005/gmd}URL", 
+                "text": "http://www.nd.gov/gis/apps/DataDownload/?clipping=Full=ND83-SF=SHAPE=NDHUB.HUC12_SUBWATERSHED", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}protocol/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "WWW:LINK-1.0-http--related", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}name/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Download Hydrologic Unit 12 SubWatersheds", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Download Hydrologic Unit 12 SubWatersheds", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}linkage/{http://www.isotc211.org/2005/gmd}URL", 
+                "text": "http://www.nd.gov/gis/apps/DataDownload/?clipping=Full=ND83-SF=SHAPE=NDHUB.HUC12_LINE", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}protocol/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "WWW:LINK-1.0-http--related", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}name/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Download Hydrologic Unit 12 Boundary Line", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Download Hydrologic Unit 12 Boundary Line", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}linkage/{http://www.isotc211.org/2005/gmd}URL", 
+                "text": "http://ndgishub.nd.gov/arcgis/services/All_Hydrography/MapServer/WMSServer?", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}protocol/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "OGC:WMS-1.3.0-http-get-map", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}name/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Hydrologic Unit 2 Region", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Hydrologic Unit 2 Region", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}linkage/{http://www.isotc211.org/2005/gmd}URL", 
+                "text": "http://ndgishub.nd.gov/arcgis/services/All_Hydrography/MapServer/WMSServer?", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}protocol/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "OGC:WMS-1.3.0-http-get-map", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}name/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Hydrologic Unit 4 Subregion", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Hydrologic Unit 4 Subregion", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}linkage/{http://www.isotc211.org/2005/gmd}URL", 
+                "text": "http://ndgishub.nd.gov/arcgis/services/All_Hydrography/MapServer/WMSServer?", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}protocol/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "OGC:WMS-1.3.0-http-get-map", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}name/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Hydrologic Unit 6 Basin", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Hydrologic Unit 6 Basin", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}linkage/{http://www.isotc211.org/2005/gmd}URL", 
+                "text": "http://ndgishub.nd.gov/arcgis/services/All_Hydrography/MapServer/WMSServer?", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}protocol/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "OGC:WMS-1.3.0-http-get-map", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}name/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Hydrologic Unit 8 Subbasin", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Hydrologic Unit 8 Subbasin", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}linkage/{http://www.isotc211.org/2005/gmd}URL", 
+                "text": "http://ndgishub.nd.gov/arcgis/services/All_Hydrography/MapServer/WMSServer?", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}protocol/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "OGC:WMS-1.3.0-http-get-map", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}name/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Hydrologic Unit 10 Watershed", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Hydrologic Unit 10 Watershed", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}linkage/{http://www.isotc211.org/2005/gmd}URL", 
+                "text": "http://ndgishub.nd.gov/arcgis/services/All_Hydrography/MapServer/WMSServer?", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}protocol/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "OGC:WMS-1.3.0-http-get-map", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}name/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Hydrologic Unit 12 Subwatershed", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Hydrologic Unit 12 Subwatershed", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}linkage/{http://www.isotc211.org/2005/gmd}URL", 
+                "text": "http://ndgishub.nd.gov/arcgis/services/All_Hydrography/MapServer/WMSServer?", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}protocol/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "OGC:WMS-1.3.0-http-get-map", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}name/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Hydrologic Unit 12 Boundary Line", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Hydrologic Unit 12 Boundary Line", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}linkage/{http://www.isotc211.org/2005/gmd}URL", 
+                "text": "http://ndgishub.nd.gov/ArcGIS/rest/services/All_Hydrography/MapServer", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}protocol/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "WWW:LINK-1.0-http--related", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}name/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Esri REST including WMS", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Esri REST including WMS", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}linkage/{http://www.isotc211.org/2005/gmd}URL", 
+                "text": "http://ndgishub.nd.gov/ArcGIS/rest/services/Features/Hydrography/MapServer", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}protocol/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "WWW:LINK-1.0-http--related", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}name/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Esri REST including WFS and KML", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}distributionInfo/{http://www.isotc211.org/2005/gmd}MD_Distribution/{http://www.isotc211.org/2005/gmd}transferOptions/{http://www.isotc211.org/2005/gmd}MD_DigitalTransferOptions/{http://www.isotc211.org/2005/gmd}onLine/{http://www.isotc211.org/2005/gmd}CI_OnlineResource/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Esri REST including WFS and KML", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}scope/{http://www.isotc211.org/2005/gmd}DQ_Scope/{http://www.isotc211.org/2005/gmd}level/{http://www.isotc211.org/2005/gmd}MD_ScopeCode", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}scope/{http://www.isotc211.org/2005/gmd}DQ_Scope/{http://www.isotc211.org/2005/gmd}level/{http://www.isotc211.org/2005/gmd}MD_ScopeCode/@codeList", 
+                        "text": "http://www.isotc211.org/2005/resources/codeList.xml#MD_ScopeCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}scope/{http://www.isotc211.org/2005/gmd}DQ_Scope/{http://www.isotc211.org/2005/gmd}level/{http://www.isotc211.org/2005/gmd}MD_ScopeCode/@codeListValue", 
+                        "text": "dataset"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}scope/{http://www.isotc211.org/2005/gmd}DQ_Scope/{http://www.isotc211.org/2005/gmd}level/{http://www.isotc211.org/2005/gmd}MD_ScopeCode/@codeSpace", 
+                        "text": "ISOTC211/19115"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}processStep/{http://www.isotc211.org/2005/gmd}LI_ProcessStep/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Level 5 (10-digit) watersheds were delineated within a nested hierarchical structure using the existing Level 4 (8-digit) watershed delineation as a starting framework. When neccessary, corrections were made to the fourth level line. Level 6 (12-digit) subwatersheds were then nested within the 5th level framework. The typical size of a level 6 watershed is 10,000 to 40,000 acres. The order of precedence for establishing the pour point of a sub-watershed is: (1) at the outlet of a lake or pond; (2) at a confluence; (3) at some topographic feature, such as a natural gap in topography; (4) at a dam; (5) to meet the acreage limitations of the Federal Standard.", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}processStep/{http://www.isotc211.org/2005/gmd}LI_ProcessStep/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Those subbasins that were not transferred to mylar base the following steps were completed: 1) Prior to 2005, each of the paper quad sheets were scanned at a resolution of 600 dpi in black and white. After 2005, the paper quad sheets were scanned at resolution of 300dpi in full color. 2) The resultant image was rotated to a proper cardinal direction orientation and saved 3) The scanned image was imported into ArcMap and georeferenced 4) An empty shapefile was created and defined in ArcCatalog 5) Linework was head's up digitized into this empty shapefile at a scale of approximately 1:11000 ( for those subbasins completed prior to June, 2004); after June, 2004, heads-up digitizing was completed at a scale of approximatley 1:5000. 6) Shapefile was converted to ArcInfo coverage format 7) Line topology and polygon topology were built (to get attribute tables for both) 8) Labels were created 9) Required HUC items were added to the line and polygon attribute tables 10) The coverage projection definition was set to UTM, NAD83 11) HUC code attributes were added to polygons 12) HUC code attributes were added to lines Many agencies contributed to the creation of the dataset using this process; specifically the ND State Water Commission, the U.S. Forest Service, the U.S. Bureau of Reclamation, the ND Game and Fish Department and the ND Department of Health. They all had a hand in creating this dataset, and contributed to it's review and improvement.", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}processStep/{http://www.isotc211.org/2005/gmd}LI_ProcessStep/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "For subbasins , 09020313, 10130202, 10130204, 10130205, 10130206,(USGS vectorized) 09020105, 10160001, 10160002, 10160003 (SWC) the original hard copy watershed delineations were transferred to a mylar overlay quad map 1) Each of the mylar sheets were scanned in full color at a resolution of 300dpi 2) The resultant images were rotated to proper cardinal direction orientation and the color depth was reduced to two colors(black and white) and saved 3) Vectorization AML was run to convert the images linework ArcInfo coverage format a) Image was converted to an ArcInfo Grid format b) Grid was vectorized c) Linework was splined d) Coverage was georeferenced and transformed 4) Once all coverages were transformed, all were appended into one large coverage 5) Artifacts from scanned image were deleted including tics, line color script, and basin id script 6) Edgematching clean-up performed 7) Line topology and polygon topology were built (to get attribute tables for both) 8) Labels were created 9) Required HUC items were added to the line and polygon attribute tables 10) The coverage projection definition was set to UTM, zone 14 NAD83 11) HUC code attributes were added to polygons 12) HUC code attributes were added to lines This work was generously completed by the ND State Water Commission and the U.S. Geological Survey Water Resource Office in Bismarck for the subbasins as indicated.", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}processStep/{http://www.isotc211.org/2005/gmd}LI_ProcessStep/{http://www.isotc211.org/2005/gmd}dateTime/{http://www.isotc211.org/2005/gco}DateTime", 
+                "text": "2002-01-01T00:00:00", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "For the Upper Heart, Pembina, Cedar Creek, Lower Cannonball and Upper Cannonball rivers (09020313, 10130202, 10130204, 10130205, 10130206), NRCS personnel delineated hydrologic unit boundaries then inked mylar overlays that were scanned and converted to .rlc format. Scanned lines were then vectorized in ArcInfo. The ND SWC and their contractor, HUD, Inc. completed a similar process for the Devils Lake basin, James River Headwaters, Pipestem, Upper James and Elm-maple rivers. See process step for more description.", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}scaleDenominator/{http://www.isotc211.org/2005/gmd}MD_RepresentativeFraction/{http://www.isotc211.org/2005/gmd}denominator/{http://www.isotc211.org/2005/gco}Integer", 
+                "text": "24000", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}title/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Mylar tracings of hydrologic unit boundaries", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gmd}CI_Date/{http://www.isotc211.org/2005/gmd}dateType/{http://www.isotc211.org/2005/gmd}CI_DateTypeCode", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gmd}CI_Date/{http://www.isotc211.org/2005/gmd}dateType/{http://www.isotc211.org/2005/gmd}CI_DateTypeCode/@codeList", 
+                        "text": "http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gmd}CI_Date/{http://www.isotc211.org/2005/gmd}dateType/{http://www.isotc211.org/2005/gmd}CI_DateTypeCode/@codeListValue", 
+                        "text": "publication"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gmd}CI_Date/{http://www.isotc211.org/2005/gmd}dateType/{http://www.isotc211.org/2005/gmd}CI_DateTypeCode/@codeSpace", 
+                        "text": "ISOTC211/19115"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}organisationName/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Natural Resource Conservation Service - ND State Office", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeList", 
+                        "text": "http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeListValue", 
+                        "text": "originator"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeSpace", 
+                        "text": "ISOTC211/19115"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Aerial images from the cities of Bismarck, Mandan and Lincoln as well as aerial images from Cass County, ND were used for further refinement of line placement.", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}scaleDenominator/{http://www.isotc211.org/2005/gmd}MD_RepresentativeFraction/{http://www.isotc211.org/2005/gmd}denominator/{http://www.isotc211.org/2005/gco}Integer", 
+                "text": "6000", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "The North Dakota Geological Survey contributed all the 7.5 minute quad maps for this project. They were the base map for all delineations.", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}scaleDenominator/{http://www.isotc211.org/2005/gmd}MD_RepresentativeFraction/{http://www.isotc211.org/2005/gmd}denominator/{http://www.isotc211.org/2005/gco}Integer", 
+                "text": "24000", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Provided basemap for heads-up digitizing, verification of line placement.", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}scaleDenominator/{http://www.isotc211.org/2005/gmd}MD_RepresentativeFraction/{http://www.isotc211.org/2005/gmd}denominator/{http://www.isotc211.org/2005/gco}Integer", 
+                "text": "24000", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}title/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Digital Raster Graphic", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gmd}CI_Date/{http://www.isotc211.org/2005/gmd}dateType/{http://www.isotc211.org/2005/gmd}CI_DateTypeCode", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gmd}CI_Date/{http://www.isotc211.org/2005/gmd}dateType/{http://www.isotc211.org/2005/gmd}CI_DateTypeCode/@codeList", 
+                        "text": "http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gmd}CI_Date/{http://www.isotc211.org/2005/gmd}dateType/{http://www.isotc211.org/2005/gmd}CI_DateTypeCode/@codeListValue", 
+                        "text": "publication"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gmd}CI_Date/{http://www.isotc211.org/2005/gmd}dateType/{http://www.isotc211.org/2005/gmd}CI_DateTypeCode/@codeSpace", 
+                        "text": "ISOTC211/19115"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}organisationName/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "U.S.Geological Survey", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeList", 
+                        "text": "http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeListValue", 
+                        "text": "originator"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeSpace", 
+                        "text": "ISOTC211/19115"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}description/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "Provided additional detail when USGS Topographic maps were outdated, or known modifications to the landscape have occurred. Use of NAIP imagery to refine hydrologic unit boundaries is indicated by OTH in the LINESOURCE field.", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}scaleDenominator/{http://www.isotc211.org/2005/gmd}MD_RepresentativeFraction/{http://www.isotc211.org/2005/gmd}denominator/{http://www.isotc211.org/2005/gco}Integer", 
+                "text": "12000", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}title/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "National Agricultural Imagery Program", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gmd}CI_Date/{http://www.isotc211.org/2005/gmd}dateType/{http://www.isotc211.org/2005/gmd}CI_DateTypeCode", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gmd}CI_Date/{http://www.isotc211.org/2005/gmd}dateType/{http://www.isotc211.org/2005/gmd}CI_DateTypeCode/@codeList", 
+                        "text": "http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gmd}CI_Date/{http://www.isotc211.org/2005/gmd}dateType/{http://www.isotc211.org/2005/gmd}CI_DateTypeCode/@codeListValue", 
+                        "text": "publication"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}date/{http://www.isotc211.org/2005/gmd}CI_Date/{http://www.isotc211.org/2005/gmd}dateType/{http://www.isotc211.org/2005/gmd}CI_DateTypeCode/@codeSpace", 
+                        "text": "ISOTC211/19115"
+                    }
+                ]
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}organisationName/{http://www.isotc211.org/2005/gco}CharacterString", 
+                "text": "USDA-FSA-APFO", 
+                "attributes": null
+            }, 
+            {
+                "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode", 
+                "text": "", 
+                "attributes": [
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeList", 
+                        "text": "http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeListValue", 
+                        "text": "originator"
+                    }, 
+                    {
+                        "xpath": "{http://www.isotc211.org/2005/gmd}MD_Metadata/{http://www.isotc211.org/2005/gmd}dataQualityInfo/{http://www.isotc211.org/2005/gmd}DQ_DataQuality/{http://www.isotc211.org/2005/gmd}lineage/{http://www.isotc211.org/2005/gmd}LI_Lineage/{http://www.isotc211.org/2005/gmd}source/{http://www.isotc211.org/2005/gmd}LI_Source/{http://www.isotc211.org/2005/gmd}sourceCitation/{http://www.isotc211.org/2005/gmd}CI_Citation/{http://www.isotc211.org/2005/gmd}citedResponsibleParty/{http://www.isotc211.org/2005/gmd}CI_ResponsibleParty/{http://www.isotc211.org/2005/gmd}role/{http://www.isotc211.org/2005/gmd}CI_RoleCode/@codeSpace", 
+                        "text": "ISOTC211/19115"
+                    }
+                ]
+            }
+        ], 
+        "service": {
+            "identifier": [
+                "f87dad3b-b00a-4582-b200-3452a8deafb5"
+            ], 
+            "title": [
+                "Watershed Boundary Dataset"
+            ], 
+            "abstract": [
+                "This data set is a complete digital hydrologic unit boundary layer to the Watershed (10-digit) 5th level for the entire state of North Dakota. This data set consists of geo-referenced digital data and associated attributes created in accordance with the \"Federal Guidelines, Requirements, and Procedures for the National Watershed Boundary Dataset; Chapter 3 of Section A, Federal Standards, Book 11, Collection and Delineation of Spatial Data; Techniques and Methods 11-A3 - Third Edition\" (2012). http://pubs.usgs.gov/tm/tm11a3/. Polygons are attributed with hydrologic unit codes for 5th level subwatersheds, name, size, Updates made to correct HU_10 and HU_12 names to be consistent with National Standards; incorporate changes made to include Canadian hydrologic units and correct mistakes in original dataset."
+            ], 
+            "contact": [
+                "North Dakota Department of Health - Division of Water Quality"
+            ], 
+            "endpoints": [
+                {
+                    "url": "http://www.nd.gov/gis", 
+                    "actionable": 1, 
+                    "type": "", 
+                    "format": "User-defined"
+                }, 
+                {
+                    "url": "http://www.nd.gov/gis/apps/DataDownload/?clipping=Full=ND83-SF=SHAPE=NDHUB.HUC2_REGION", 
+                    "actionable": 1, 
+                    "type": "", 
+                    "format": "User-defined"
+                }, 
+                {
+                    "url": "http://www.nd.gov/gis/apps/DataDownload/?clipping=Full=ND83-SF=SHAPE=NDHUB.HUC4_SUBREGION", 
+                    "actionable": 1, 
+                    "type": "", 
+                    "format": "User-defined"
+                }, 
+                {
+                    "url": "http://www.nd.gov/gis/apps/DataDownload/?clipping=Full=ND83-SF=SHAPE=NDHUB.HUC6_BASIN", 
+                    "actionable": 1, 
+                    "type": "", 
+                    "format": "User-defined"
+                }, 
+                {
+                    "url": "http://www.nd.gov/gis/apps/DataDownload/?clipping=Full=ND83-SF=SHAPE=NDHUB.HUC8_SUBBASIN", 
+                    "actionable": 1, 
+                    "type": "", 
+                    "format": "User-defined"
+                }, 
+                {
+                    "url": "http://www.nd.gov/gis/apps/DataDownload/?clipping=Full=ND83-SF=SHAPE=NDHUB.HUC10_WATERSHED", 
+                    "actionable": 1, 
+                    "type": "", 
+                    "format": "User-defined"
+                }, 
+                {
+                    "url": "http://www.nd.gov/gis/apps/DataDownload/?clipping=Full=ND83-SF=SHAPE=NDHUB.HUC12_SUBWATERSHED", 
+                    "actionable": 1, 
+                    "type": "", 
+                    "format": "User-defined"
+                }, 
+                {
+                    "url": "http://www.nd.gov/gis/apps/DataDownload/?clipping=Full=ND83-SF=SHAPE=NDHUB.HUC12_LINE", 
+                    "actionable": 1, 
+                    "type": "", 
+                    "format": "User-defined"
+                }, 
+                {
+                    "url": "http://ndgishub.nd.gov/arcgis/services/All_Hydrography/MapServer/WMSServer?", 
+                    "actionable": 1, 
+                    "type": "", 
+                    "format": "User-defined"
+                }, 
+                {
+                    "url": "http://ndgishub.nd.gov/arcgis/services/All_Hydrography/MapServer/WMSServer?", 
+                    "actionable": 1, 
+                    "type": "", 
+                    "format": "User-defined"
+                }, 
+                {
+                    "url": "http://ndgishub.nd.gov/arcgis/services/All_Hydrography/MapServer/WMSServer?", 
+                    "actionable": 1, 
+                    "type": "", 
+                    "format": "User-defined"
+                }, 
+                {
+                    "url": "http://ndgishub.nd.gov/arcgis/services/All_Hydrography/MapServer/WMSServer?", 
+                    "actionable": 1, 
+                    "type": "", 
+                    "format": "User-defined"
+                }, 
+                {
+                    "url": "http://ndgishub.nd.gov/arcgis/services/All_Hydrography/MapServer/WMSServer?", 
+                    "actionable": 1, 
+                    "type": "", 
+                    "format": "User-defined"
+                }, 
+                {
+                    "url": "http://ndgishub.nd.gov/arcgis/services/All_Hydrography/MapServer/WMSServer?", 
+                    "actionable": 1, 
+                    "type": "", 
+                    "format": "User-defined"
+                }, 
+                {
+                    "url": "http://ndgishub.nd.gov/arcgis/services/All_Hydrography/MapServer/WMSServer?", 
+                    "actionable": 1, 
+                    "type": "", 
+                    "format": "User-defined"
+                }, 
+                {
+                    "url": "http://ndgishub.nd.gov/ArcGIS/rest/services/All_Hydrography/MapServer", 
+                    "actionable": 1, 
+                    "type": "", 
+                    "format": "User-defined"
+                }, 
+                {
+                    "url": "http://ndgishub.nd.gov/ArcGIS/rest/services/Features/Hydrography/MapServer", 
+                    "actionable": 1, 
+                    "type": "", 
+                    "format": "User-defined"
+                }
+            ], 
+            "subject": [
+                "Sub-basin", 
+                "boundaries", 
+                "WBD", 
+                "HUC", 
+                "Subwatershed", 
+                "Hydrologic Unit Code", 
+                "Basin", 
+                "Sub-region", 
+                "Watershed Boundary Dataset", 
+                "Hydrologic Units", 
+                "Watershed Boundaries", 
+                "Watershed", 
+                "Region", 
+                "Red River of the North", 
+                "North Dakota", 
+                "Missouri River", 
+                "James River", 
+                "Souris River"
+            ]
+        }, 
+        "dataset": null
+    }, 
+    "date": "2015-03-06T00:51:21.376Z", 
+    "_version_": 1494863707163852800, 
+    "boost": 1.0, 
+    "id": "http://catalog.data.gov/harvest/object/c2ddd66d-f62e-40e9-9e7b-b08228a32b99", 
+    "identity": {
+        "is_error": false, 
+        "protocol": "ISO-19115", 
+        "language": "eng", 
+        "service": "", 
+        "has_dataset": false, 
+        "has_metadata": false, 
+        "subtype": "metadata", 
+        "version": "ISO 19115:2003/19139 1.0"
+    }
+}
