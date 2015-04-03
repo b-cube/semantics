@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from rdflib import Graph, Literal, RDF, RDFS, Namespace, URIRef
+from rdflib import Graph, Literal, RDF, RDFS, Namespace, URIRef, BNode
 from rdflib.namespace import DCTERMS
 from bunch import bunchify
 from optparse import OptionParser
@@ -29,6 +29,7 @@ class Store():
 
     def bind_namespaces(self, namespaces):
         for ns in namespaces:
+            # ns is the prefix and the key
             self.g.bind(ns, Namespace(namespaces[ns]))
             self.ns[ns] = Namespace(namespaces[ns])
 
@@ -55,9 +56,6 @@ class Triplelizer():
     '''
     def __init__(self):
         self.store = Store()
-        self.WSO = Namespace('http//purl.org/nsidc/bcube/web-services#')
-        self.MEDIA = Namespace(
-            'http://www.iana.org/assignments/media-types/media-types.xhtml#')
         with open(__location__ + '/services.json', 'r') as fp:
             self.fingerprints = bunchify(json.loads(fp.read()))
         ontology_uris = {
@@ -72,6 +70,16 @@ class Triplelizer():
         }
         self.store.bind_namespaces(ontology_uris)
 
+    def _validate(self, value):
+        '''
+        Returns None if the value is empty string,
+        'null' or is non existant.
+        '''
+        if value == "" or value == "null" or value is None:
+            return None
+        else:
+            return value
+
     def identify(self, document):
         for attr in self.fingerprints:
             if attr.DocType == document.identity.protocol:
@@ -80,26 +88,45 @@ class Triplelizer():
 
     def triplelize_parameters(self, parameters, endpoint):
         '''
+        Triplelize parameters, they belong to an endpoint
+        and have a name, type and format.
         '''
-        return None
+        param_ns = self.store.ns['ServiceParameter']
+        for param in parameters:
+            p = self.store.get_resource(
+                param_ns + str(uuid.uuid4()))
+            p.add(RDF.type, URIRef("ServiceParameter:ServiceParameter"))
+            if self._validate(param.name) is not None:
+                p.add(param_ns['serviceParameterName'],
+                      Literal(param.name))
+            if self._validate(param.formats) is not None:
+                p.add(param_ns['serviceParameterFormat'],
+                      Literal(param.formats))
+            if self._validate(param.type) is not None:
+                p.add(param_ns['serviceParameterType'],
+                      Literal(param.type))
+            endpoint.add(param_ns['hasParameters'], p)
+        return self.store
 
     def triplelize_endpoints(self, doc, service):
         '''
         '''
+        wso = self.store.ns['wso']
+        media = self.store.ns['media']
         for item in doc.service.endpoints:
             endpoint = self.store.get_resource(
                 item.url + "#" + str(uuid.uuid4()))
-            endpoint.add(self.WSO["Protocol"], Literal(item.protocol))
-            endpoint.add(self.WSO["BaseURL"], URIRef(item.url))
+            endpoint.add(wso["Protocol"], Literal(item.protocol))
+            endpoint.add(wso["BaseURL"], URIRef(item.url))
             for mime_type in item.mimeType:
-                endpoint.add(self.MEDIA['type'], Literal(mime_type))
+                endpoint.add(media['type'], Literal(mime_type))
             if doc.identity.subtype == "service":
-                endpoint.add(RDF.type, self.WSO["ServiceEndpoint"])
-                endpoint.add(self.WSO["hasService"], service)
+                endpoint.add(RDF.type, wso["ServiceEndpoint"])
+                endpoint.add(wso["hasService"], service)
                 if item.parameters is not None:
                     self.triplelize_parameters(item.parameters, endpoint)
             else:
-                endpoint.add(self.WSO["childOf"], service)
+                endpoint.add(wso["childOf"], service)
             endpoint.add(RDFS.label, Literal(item.name))
         return self.store
 
@@ -110,6 +137,7 @@ class Triplelizer():
         Otherwise bunch rises an exception for not found keys
         '''
         ns = 'http//purl.org/nsidc/bcube/web-services#'
+        wso = self.store.ns['wso']
         if self.identify(document) is not None:
             doc_base_url = document.source_url
             doc_identifier = document.solr_identifier
@@ -121,11 +149,11 @@ class Triplelizer():
             resource = self.store.get_resource(ns + doc_identifier)
 
             resource.add(RDF.type, URIRef(doc_type))
-            resource.add(RDF.type, self.WSO[doc_ontology])
+            resource.add(RDF.type, wso[doc_ontology])
             resource.add(DCTERMS.title, Literal(doc_title))
             resource.add(DCTERMS.hasVersion, Literal(doc_version))
             resource.add(DCTERMS.abstract, Literal(doc_abstract))
-            resource.add(self.WSO.BaseURL, Literal(doc_base_url))
+            resource.add(wso.BaseURL, Literal(doc_base_url))
             return self.store
         else:
             return None
