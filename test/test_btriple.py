@@ -142,11 +142,35 @@ class TestTriples(unittest.TestCase):
                              parentURI)
 
     def test_parameters_triples_can_be_queried_1(self):
-        # TODO: parameters
-        self.assertTrue(True)
+        # testing that we can query paramters linked to
+        # an endpoint.
+        service = self.json_loader.parse(
+            "service_examples/" +
+            "ogcwms_130_03fe4d8784c89532539c7a121fe7a252.json")
+        parent_endpoint = self.triples.store.get_resource(
+            'http://dummy.com#')
+        triples = self.triples.triplelize_parameters(
+            service.service.endpoints[0].parameters,
+            parent_endpoint)
+        # Why!! other namespaces don't require the <NS> in SPARQL
+        qres = triples.g.query(
+                """SELECT ?name
+                   WHERE {
+                            ?subject ServiceParameter:serviceParameterName ?name .
+                            ?subject rdf:type <ServiceParameter:ServiceParameter> .
+                         }""")
+
+        self.assertEqual(len(qres), 3)
+        results = []
+        for result in qres:
+            results.append(result[0])
+        # should be a better way
+        self.assertTrue(Literal("service") in results)
+        self.assertTrue(Literal("request") in results)
+        self.assertTrue(Literal("version") in results)
 
     def test_parameters_triples_can_be_queried_2(self):
-        # TODO: parameters
+        # TODO: more parameters
         self.assertTrue(True)
 
     def test_triples_can_be_queried_5(self):

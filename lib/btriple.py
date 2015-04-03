@@ -88,23 +88,23 @@ class Triplelizer():
 
     def triplelize_parameters(self, parameters, endpoint):
         '''
+        Triplelize parameters, they belong to an endpoint
+        and have a name, type and format.
         '''
-        wso = self.store.ns['wso']
         param_ns = self.store.ns['ServiceParameter']
         for param in parameters:
-            p = BNode()
+            p = self.store.get_resource(
+                param_ns + str(uuid.uuid4()))
+            p.add(RDF.type, URIRef("ServiceParameter:ServiceParameter"))
             if self._validate(param.name) is not None:
-                self.store.add_triple(p,
-                                      param_ns['serviceParameterName'],
-                                      param.name)
+                p.add(param_ns['serviceParameterName'],
+                      Literal(param.name))
             if self._validate(param.formats) is not None:
-                self.store.add_triple(p,
-                                      param_ns['serviceParameterFormat'],
-                                      param.formats)
+                p.add(param_ns['serviceParameterFormat'],
+                      Literal(param.formats))
             if self._validate(param.type) is not None:
-                self.store.add_triple(p,
-                                      param_ns['serviceParameterType'],
-                                      param.type)
+                p.add(param_ns['serviceParameterType'],
+                      Literal(param.type))
             endpoint.add(param_ns['hasParameters'], p)
         return self.store
 
