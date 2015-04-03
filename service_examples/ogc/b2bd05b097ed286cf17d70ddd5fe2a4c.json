@@ -1,208 +1,208 @@
 {
     "xml_namespaces": [
-        "xmlns=\"http://www.opengis.net/wcs\"", 
-        "xmlns:gml=\"http://www.opengis.net/gml\"", 
+        "xmlns=\"http://www.opengis.net/wcs\"",
+        "xmlns:gml=\"http://www.opengis.net/gml\"",
         "xmlns:xlink=\"http://www.w3.org/1999/xlink\""
-    ], 
-    "url": "https://rsg.pml.ac.uk/thredds/wcs/CCI_ALL-v1.0-DAILY?service=WCS&version=1.0.0&request=GetCapabilities", 
-    "boost": 7.173114e-05, 
-    "segment": "20150319013614", 
-    "digest": "b2bd05b097ed286cf17d70ddd5fe2a4c", 
+    ],
+    "url": "https://rsg.pml.ac.uk/thredds/wcs/CCI_ALL-v1.0-DAILY?service=WCS&version=1.0.0&request=GetCapabilities",
+    "boost": 7.173114e-05,
+    "segment": "20150319013614",
+    "digest": "b2bd05b097ed286cf17d70ddd5fe2a4c",
     "service_description": {
-        "remainder": [], 
+        "remainder": [],
         "service": {
-            "rights": "NONE", 
-            "abstract": null, 
-            "title": null, 
-            "contact": "", 
+            "rights": "NONE",
+            "abstract": null,
+            "title": null,
+            "contact": "",
             "endpoints": [
                 {
-                    "name": "GetCapabilities", 
+                    "name": "GetCapabilities",
                     "parameters": [
                         {
-                            "values": [], 
-                            "type": "string", 
-                            "name": "service", 
+                            "values": [],
+                            "type": "string",
+                            "name": "service",
                             "format": null
-                        }, 
+                        },
                         {
-                            "values": [], 
-                            "type": "string", 
-                            "name": "request", 
+                            "values": [],
+                            "type": "string",
+                            "name": "request",
                             "format": null
-                        }, 
+                        },
                         {
-                            "values": [], 
-                            "type": "string", 
-                            "name": "version", 
+                            "values": [],
+                            "type": "string",
+                            "name": "version",
                             "format": null
                         }
-                    ], 
-                    "url": "https://rsg.pml.ac.uk/thredds/wcs/CCI_ALL-v1.0-DAILY?SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCapabilities", 
-                    "actionable": 1, 
-                    "formats": [], 
-                    "type": "Get", 
+                    ],
+                    "url": "https://rsg.pml.ac.uk/thredds/wcs/CCI_ALL-v1.0-DAILY?SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCapabilities",
+                    "actionable": 1,
+                    "mimeType": [],
+                    "protocol": "HTTP GET",
                     "constraints": []
-                }, 
+                },
                 {
-                    "name": "DescribeCoverage", 
+                    "name": "DescribeCoverage",
                     "parameters": [
                         {
-                            "values": [], 
-                            "type": "string", 
-                            "name": "service", 
+                            "values": [],
+                            "type": "string",
+                            "name": "service",
                             "format": null
-                        }, 
+                        },
                         {
-                            "values": [], 
-                            "type": "string", 
-                            "name": "request", 
+                            "values": [],
+                            "type": "string",
+                            "name": "request",
                             "format": null
-                        }, 
+                        },
                         {
-                            "values": [], 
-                            "type": "string", 
-                            "name": "version", 
+                            "values": [],
+                            "type": "string",
+                            "name": "version",
                             "format": null
-                        }, 
+                        },
                         {
-                            "values": [], 
-                            "type": "string", 
-                            "name": "coverage", 
+                            "values": [],
+                            "type": "string",
+                            "name": "coverage",
                             "format": null
                         }
-                    ], 
-                    "url": "https://rsg.pml.ac.uk/thredds/wcs/CCI_ALL-v1.0-DAILY?SERVICE=WCS&VERSION=1.0.0&REQUEST=DescribeCoverage", 
-                    "actionable": 2, 
-                    "formats": [], 
-                    "type": "Get", 
+                    ],
+                    "url": "https://rsg.pml.ac.uk/thredds/wcs/CCI_ALL-v1.0-DAILY?SERVICE=WCS&VERSION=1.0.0&REQUEST=DescribeCoverage",
+                    "actionable": 2,
+                    "mimeType": [],
+                    "protocol": "HTTP GET",
                     "constraints": []
-                }, 
+                },
                 {
-                    "name": "GetCoverage", 
+                    "name": "GetCoverage",
                     "parameters": [
                         {
-                            "values": [], 
-                            "type": "string", 
-                            "name": "service", 
+                            "values": [],
+                            "type": "string",
+                            "name": "service",
                             "format": null
-                        }, 
+                        },
                         {
-                            "values": [], 
-                            "type": "string", 
-                            "name": "request", 
+                            "values": [],
+                            "type": "string",
+                            "name": "request",
                             "format": null
-                        }, 
+                        },
                         {
-                            "values": [], 
-                            "type": "string", 
-                            "name": "version", 
+                            "values": [],
+                            "type": "string",
+                            "name": "version",
                             "format": null
-                        }, 
+                        },
                         {
-                            "values": [], 
-                            "type": "string", 
-                            "name": "coverage", 
+                            "values": [],
+                            "type": "string",
+                            "name": "coverage",
                             "format": null
-                        }, 
+                        },
                         {
-                            "values": [], 
-                            "type": "string", 
-                            "name": "format", 
+                            "values": [],
+                            "type": "string",
+                            "name": "format",
                             "format": null
-                        }, 
+                        },
                         {
-                            "values": [], 
-                            "type": "string", 
-                            "name": "bbox", 
+                            "values": [],
+                            "type": "string",
+                            "name": "bbox",
                             "format": "minx,miny,maxx,maxy"
-                        }, 
+                        },
                         {
-                            "values": [], 
-                            "type": "int", 
-                            "name": "height", 
+                            "values": [],
+                            "type": "int",
+                            "name": "height",
                             "format": null
-                        }, 
+                        },
                         {
-                            "values": [], 
-                            "type": "int", 
-                            "name": "width", 
+                            "values": [],
+                            "type": "int",
+                            "name": "width",
                             "format": null
-                        }, 
+                        },
                         {
-                            "values": [], 
-                            "type": "string", 
-                            "name": "featureid", 
+                            "values": [],
+                            "type": "string",
+                            "name": "featureid",
                             "format": null
-                        }, 
+                        },
                         {
-                            "values": [], 
-                            "type": "string", 
-                            "name": "crs", 
+                            "values": [],
+                            "type": "string",
+                            "name": "crs",
                             "format": null
-                        }, 
+                        },
                         {
-                            "values": [], 
-                            "type": "string", 
-                            "name": "response_crs", 
+                            "values": [],
+                            "type": "string",
+                            "name": "response_crs",
                             "format": null
-                        }, 
+                        },
                         {
-                            "values": [], 
-                            "type": "int", 
-                            "name": "resx", 
+                            "values": [],
+                            "type": "int",
+                            "name": "resx",
                             "format": null
-                        }, 
+                        },
                         {
-                            "values": [], 
-                            "type": "int", 
-                            "name": "resy", 
+                            "values": [],
+                            "type": "int",
+                            "name": "resy",
                             "format": null
-                        }, 
+                        },
                         {
-                            "values": [], 
-                            "type": "string", 
-                            "name": "time", 
+                            "values": [],
+                            "type": "string",
+                            "name": "time",
                             "format": null
-                        }, 
+                        },
                         {
-                            "values": [], 
-                            "type": "string", 
-                            "name": "parameter", 
+                            "values": [],
+                            "type": "string",
+                            "name": "parameter",
                             "format": null
-                        }, 
+                        },
                         {
-                            "values": [], 
-                            "type": "string", 
-                            "name": "interpolation", 
+                            "values": [],
+                            "type": "string",
+                            "name": "interpolation",
                             "format": null
                         }
-                    ], 
-                    "url": "https://rsg.pml.ac.uk/thredds/wcs/CCI_ALL-v1.0-DAILY?SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage", 
-                    "actionable": 2, 
-                    "formats": [], 
-                    "type": "Get", 
+                    ],
+                    "url": "https://rsg.pml.ac.uk/thredds/wcs/CCI_ALL-v1.0-DAILY?SERVICE=WCS&VERSION=1.0.0&REQUEST=GetCoverage",
+                    "actionable": 2,
+                    "mimeType": [],
+                    "protocol": "HTTP GET",
                     "constraints": []
                 }
-            ], 
+            ],
             "subject": []
         }
-    }, 
-    "date": "2015-03-19T01:47:55.139Z", 
-    "_version_": 1496042110627872768, 
-    "tstamp": "2015-03-19T01:47:55.139Z", 
+    },
+    "date": "2015-03-19T01:47:55.139Z",
+    "_version_": 1496042110627872768,
+    "tstamp": "2015-03-19T01:47:55.139Z",
     "type": [
         "application/xml"
-    ], 
-    "id": "https://rsg.pml.ac.uk/thredds/wcs/CCI_ALL-v1.0-DAILY?service=WCS&version=1.0.0&request=GetCapabilities", 
+    ],
+    "id": "https://rsg.pml.ac.uk/thredds/wcs/CCI_ALL-v1.0-DAILY?service=WCS&version=1.0.0&request=GetCapabilities",
     "identity": {
-        "is_error": false, 
-        "protocol": "OGC:WCS", 
-        "language": "", 
-        "service": "GetCapabilities", 
-        "has_dataset": true, 
-        "has_metadata": false, 
-        "subtype": "service", 
+        "is_error": false,
+        "protocol": "OGC:WCS",
+        "language": "",
+        "service": "GetCapabilities",
+        "has_dataset": true,
+        "has_metadata": false,
+        "subtype": "service",
         "version": "1.0.0"
     }
 }

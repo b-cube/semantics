@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
-from rdflib import Graph, Literal, RDF, RDFS, Namespace, URIRef, BNode
+from rdflib import Graph, Literal, RDF, RDFS, Namespace, URIRef
 from rdflib.namespace import DCTERMS
+import urllib
 from bunch import bunchify
 from optparse import OptionParser
 import os
@@ -86,6 +87,7 @@ class Triplelizer():
                 return attr.object_type, attr.ontology_class
         return None
 
+
     def triplelize_parameters(self, parameters, endpoint):
         '''
         Triplelize parameters, they belong to an endpoint
@@ -113,11 +115,20 @@ class Triplelizer():
         '''
         wso = self.store.ns['wso']
         media = self.store.ns['media']
-        for item in doc.service.endpoints:
-            endpoint = self.store.get_resource(
-                item.url + "#" + str(uuid.uuid4()))
+        endpoints = set()
+        for item in doc.service_description.service.endpoints:
+            # the next if is to create UUIDS if there are multiple endpoints
+            # in the same service using the same base url.
+            if item.url in endpoints:
+                endpoint = self.store.get_resource(
+                           urllib.quote(item.url) +
+                           "#" + str(uuid.uuid4()))
+            else:
+                endpoints.add(item.url)
+                endpoint = self.store.get_resource(
+                           urllib.quote(item.url))
             endpoint.add(wso["Protocol"], Literal(item.protocol))
-            endpoint.add(wso["BaseURL"], URIRef(item.url))
+            endpoint.add(wso["BaseURL"], URIRef(urllib.quote(item.url)))
             for mime_type in item.mimeType:
                 endpoint.add(media['type'], Literal(mime_type))
             if doc.identity.subtype == "service":
@@ -139,11 +150,11 @@ class Triplelizer():
         ns = 'http//purl.org/nsidc/bcube/web-services#'
         wso = self.store.ns['wso']
         if self.identify(document) is not None:
-            doc_base_url = document.source_url
-            doc_identifier = document.solr_identifier
+            doc_base_url = urllib.quote(document.url)
+            doc_identifier = document.digest
             doc_version = document.identity.version
-            doc_title = document.service.title
-            doc_abstract = document.service.abstract
+            doc_title = document.service_description.service.title
+            doc_abstract = document.service_description.service.abstract
             doc_type, doc_ontology = self.identify(document)
 
             resource = self.store.get_resource(ns + doc_identifier)
@@ -154,6 +165,8 @@ class Triplelizer():
             resource.add(DCTERMS.hasVersion, Literal(doc_version))
             resource.add(DCTERMS.abstract, Literal(doc_abstract))
             resource.add(wso.BaseURL, Literal(doc_base_url))
+            # now the endpoints
+            self.triplelize_endpoints(document, resource)
             return self.store
         else:
             return None
@@ -191,13 +204,13 @@ def main():
     options, arguments = p.parse_args()
     if options.path and os.path.isdir(options.path):
         j_files = JsonLoader(options.path)
-        print "Found: " + str(len(j_files.files)) + " files"
+        logger.info("Found: " + str(len(j_files.files)) + " files")
         for json_file in j_files.files:
             json_data = j_files.parse(json_file)
             if json_data is not None:
                 triples_graph = triplify(json_data)
                 if triples_graph is not None:
-                    print triples_graph.serialize(options.format)
+                    print unicode(triples_graph.serialize(options.format), 'unicode-escape')
                 else:
                     logger.error(" Triples creation failed for: " + json_file)
             else:

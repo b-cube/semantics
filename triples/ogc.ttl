@@ -1,0 +1,1137 @@
+@prefix Profile: <http://www.daml.org/services/owl-s/1.2/Profile.owl#> .
+@prefix Service: <http://ww.daml.org/services/owl-s/1.2/Service.owl#> .
+@prefix ServiceParameter: <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix media: <http://www.iana.org/assignments/media-types/media-types.xhtml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wso: <http//purl.org/nsidc/bcube/web-services#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http%3A//mrdata.usgs.gov/services/ngs%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DDescribeLayer#7851d245-e2ad-4712-8fb2-e86f0cc8c680> a wso:ServiceEndpoint ;
+    rdfs:label "DescribeLayer" ;
+    wso:BaseURL <http%3A//mrdata.usgs.gov/services/ngs%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DDescribeLayer> ;
+    wso:Protocol "HTTP POST" ;
+    wso:hasService <http//purl.org/nsidc/bcube/web-services#177d3a3fc8bc7b4fb767c5b69e734763> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#317a32a5-4e2a-4a5f-8484-2e7aded83233>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#3dab52d8-9010-4d44-951b-27bc07d94124>,
+        ServiceParameter:d2635ac5-0510-4b2f-af8d-05103d976b0c ;
+    media:type "text/xml" .
+
+<http%3A//mrdata.usgs.gov/services/ngs%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DGetCapabilities#983b10cf-f292-4236-be9e-2a02704623df> a wso:ServiceEndpoint ;
+    rdfs:label "GetCapabilities" ;
+    wso:BaseURL <http%3A//mrdata.usgs.gov/services/ngs%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DGetCapabilities> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService <http//purl.org/nsidc/bcube/web-services#177d3a3fc8bc7b4fb767c5b69e734763> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#081fce8e-89c9-4ba7-829e-d99a440574d7>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#22a82658-09d8-4439-b0eb-bf9182874b9d>,
+        ServiceParameter:c96afa67-7121-4914-9f16-ada57334b2ed,
+        ServiceParameter:d32cc628-e4f5-4dbf-a6c0-179606c99f5e ;
+    media:type "application/vnd.ogc.wms_xml" .
+
+<http%3A//mrdata.usgs.gov/services/ngs%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DGetFeatureInfo#a4e70ae7-3393-4984-bea0-1c246f75d47e> a wso:ServiceEndpoint ;
+    rdfs:label "GetFeatureInfo" ;
+    wso:BaseURL <http%3A//mrdata.usgs.gov/services/ngs%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DGetFeatureInfo> ;
+    wso:Protocol "HTTP POST" ;
+    wso:hasService <http//purl.org/nsidc/bcube/web-services#177d3a3fc8bc7b4fb767c5b69e734763> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#008a7248-8579-44ee-80e2-d522d5192b82>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#735dea85-2467-4082-9e69-9fa58a452042>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#7cfba71a-daa4-4ff8-82eb-3aca56977383>,
+        ServiceParameter:a02364ed-143a-42ae-84cd-6668707acf8f,
+        ServiceParameter:a746e877-f6e9-45ee-8a1a-3a74b0dd793d ;
+    media:type "application/vnd.ogc.gml",
+        "text/html",
+        "text/plain" .
+
+<http%3A//mrdata.usgs.gov/services/ngs%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DGetLegendGraphic#a5e018c6-d277-4bdd-aaa3-f070d5118fa9> a wso:ServiceEndpoint ;
+    rdfs:label "GetLegendGraphic" ;
+    wso:BaseURL <http%3A//mrdata.usgs.gov/services/ngs%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DGetLegendGraphic> ;
+    wso:Protocol "HTTP POST" ;
+    wso:hasService <http//purl.org/nsidc/bcube/web-services#177d3a3fc8bc7b4fb767c5b69e734763> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#762261f7-47f5-4356-9207-fbde00036d49>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#899cabc1-f87a-4db1-ad65-736d8d584ce1>,
+        ServiceParameter:a4d9f81c-3697-492e-8260-cd995b47c162 ;
+    media:type "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png; mode=8bit" .
+
+<http%3A//mrdata.usgs.gov/services/ngs%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DGetMap#e2846085-6188-42e1-bd25-54b45933a574> a wso:ServiceEndpoint ;
+    rdfs:label "GetMap" ;
+    wso:BaseURL <http%3A//mrdata.usgs.gov/services/ngs%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DGetMap> ;
+    wso:Protocol "HTTP POST" ;
+    wso:hasService <http//purl.org/nsidc/bcube/web-services#177d3a3fc8bc7b4fb767c5b69e734763> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#070e1f7e-5f97-470f-96d0-d37f82050e5c>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#12582d8b-47f5-45b0-83e3-6e3d29cf4d0b>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#21f7f05f-1b47-40ae-b7dd-78567502e496>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#58d8aa2e-011e-4a8e-9a86-91483d3a3f61>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#597b63aa-01fe-4f43-bd33-7d04366ba2ff>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#6bafee24-fbb1-4f64-a593-88c0431f8ea8>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#80045f4f-32f9-4efc-8f45-ddf13b06001d>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#804bfc6b-b463-4f2b-860b-dd3fe9f1e1a5>,
+        ServiceParameter:cd14a283-790a-4dd6-99f7-c76f293b95f0,
+        ServiceParameter:d1550a3f-1d40-4cd4-98ae-99ce0179dccc,
+        ServiceParameter:d49961d3-b1cb-43e9-a1f9-e7652be9d5c8,
+        ServiceParameter:d8cf4fbf-a6c8-4a98-8c9c-1a1f684ca070,
+        ServiceParameter:dc0a043c-6e15-4569-8e8a-b14f2328f592,
+        ServiceParameter:fab489d4-2d15-4d6c-94f8-a1dbe0377d8a ;
+    media:type "application/vnd.google-earth.kml+xml",
+        "application/vnd.google-earth.kmz",
+        "application/x-pdf",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png; mode=8bit",
+        "image/svg+xml",
+        "image/tiff" .
+
+<http%3A//mrdata.usgs.gov/services/ngs%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DGetStyles#7a103b97-9ad7-45fc-880e-83bbcb3c95cd> a wso:ServiceEndpoint ;
+    rdfs:label "GetStyles" ;
+    wso:BaseURL <http%3A//mrdata.usgs.gov/services/ngs%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DGetStyles> ;
+    wso:Protocol "HTTP POST" ;
+    wso:hasService <http//purl.org/nsidc/bcube/web-services#177d3a3fc8bc7b4fb767c5b69e734763> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#0ede396f-99a7-4fae-a3c9-cb7684981aa9>,
+        ServiceParameter:a087d344-f83c-4469-87b3-548776ad7ea3,
+        ServiceParameter:cf37615a-d1ea-4123-916b-44ed090117ab ;
+    media:type "text/xml" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#008a7248-8579-44ee-80e2-d522d5192b82> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#00cff5c9-eb6b-4e1d-9675-b48303acd100> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "layers" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#02709960-3e85-480a-9dc3-990e81491a3a> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "feature_count" ;
+    ServiceParameter:serviceParameterType "int" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#070e1f7e-5f97-470f-96d0-d37f82050e5c> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "format" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#0728d31b-aeef-43a0-86db-ee9c90f3387f> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "srs" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#081fce8e-89c9-4ba7-829e-d99a440574d7> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#0a776d83-b1f9-4df2-a664-c4597998af7d> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "bgcolor" ;
+    ServiceParameter:serviceParameterType "hexadecimal" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#0c34c7cb-de92-464a-a03c-4fd585ede09c> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#0ede396f-99a7-4fae-a3c9-cb7684981aa9> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#12582d8b-47f5-45b0-83e3-6e3d29cf4d0b> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "time" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#1d8d50c2-bbae-4ebb-a201-53b6701919a9> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#21f7f05f-1b47-40ae-b7dd-78567502e496> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "elevation" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#22a82658-09d8-4439-b0eb-bf9182874b9d> a <ServiceParameter:ServiceParameter> .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#2a93cd91-fbfa-4c4f-8f81-9bdd8b7140f1> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#317a32a5-4e2a-4a5f-8484-2e7aded83233> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#36a1ca6f-07e5-4321-b134-9cbb9cb801cc> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#3929cbdb-c917-4ab6-ab1e-a8061a15555c> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#3dab52d8-9010-4d44-951b-27bc07d94124> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#45e5da2b-8eb3-434f-a862-e362a2eb344f> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#58d8aa2e-011e-4a8e-9a86-91483d3a3f61> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "height" ;
+    ServiceParameter:serviceParameterType "int" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#597b63aa-01fe-4f43-bd33-7d04366ba2ff> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#63731293-46a3-4b62-a6af-b9ee3ec4c85f> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#6bafee24-fbb1-4f64-a593-88c0431f8ea8> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "bgcolor" ;
+    ServiceParameter:serviceParameterType "hexadecimal" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#7194478c-db15-4bcb-9b9b-a2f9f5552a6c> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#735dea85-2467-4082-9e69-9fa58a452042> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "info_format" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#762261f7-47f5-4356-9207-fbde00036d49> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#7a4ef101-0493-418b-8856-2d0203e05e7e> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#7cb6a9c1-9840-4555-809a-c3082b0af36a> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "styles" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#7cfba71a-daa4-4ff8-82eb-3aca56977383> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "feature_count" ;
+    ServiceParameter:serviceParameterType "int" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#7e583cb4-7c10-44d8-8c9d-f304c429adab> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#80045f4f-32f9-4efc-8f45-ddf13b06001d> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "transparent" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#804bfc6b-b463-4f2b-860b-dd3fe9f1e1a5> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "srs" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#8397f0f5-21c3-4e5d-91f1-ff26291a25fa> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "info_format" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#852e8200-3849-4935-98ee-3e558f56945b> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#89492af4-358a-4521-9928-f3d128d73ac2> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "height" ;
+    ServiceParameter:serviceParameterType "int" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#899cabc1-f87a-4db1-ad65-736d8d584ce1> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#8a93e578-eaee-44be-a4fa-424d1e67f052> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "width" ;
+    ServiceParameter:serviceParameterType "int" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#94946065-ab77-4272-87e4-063654c2ccea> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#99bd57e5-1514-4a32-8bb2-10a634e3790e> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:a02364ed-143a-42ae-84cd-6668707acf8f a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:a087d344-f83c-4469-87b3-548776ad7ea3 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:a33d932d-b6b0-4de5-a592-55549c1ab0f2 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "bbox" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:a4334110-7faa-4ec3-bb1f-8673191ff3d9 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:a4d9f81c-3697-492e-8260-cd995b47c162 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:a746e877-f6e9-45ee-8a1a-3a74b0dd793d a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:b52d7751-7ebb-428a-9152-eda71fc879de a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:b7c02176-9cc0-4eb3-904f-c0e99bae6f38 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "transparent" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:c3572068-df36-4ca1-b1b9-64e01fada9cb a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "time" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:c96afa67-7121-4914-9f16-ada57334b2ed a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:ccc1d0aa-13d4-4293-8bc8-fb00892b3665 a <ServiceParameter:ServiceParameter> .
+
+ServiceParameter:cd14a283-790a-4dd6-99f7-c76f293b95f0 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:cf37615a-d1ea-4123-916b-44ed090117ab a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:d1550a3f-1d40-4cd4-98ae-99ce0179dccc a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "width" ;
+    ServiceParameter:serviceParameterType "int" .
+
+ServiceParameter:d2635ac5-0510-4b2f-af8d-05103d976b0c a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:d32cc628-e4f5-4dbf-a6c0-179606c99f5e a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:d49961d3-b1cb-43e9-a1f9-e7652be9d5c8 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "bbox" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:d8cf4fbf-a6c8-4a98-8c9c-1a1f684ca070 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "layers" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:daa48c61-9930-40b0-848b-0f4e01ac2a97 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "elevation" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:dc0a043c-6e15-4569-8e8a-b14f2328f592 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:e2828b60-94d2-479c-82bb-de92ba639d64 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:e30493bc-5b0c-45ff-8d8c-f1a4a0592e8e a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:e4cc5286-875e-4675-a8c2-7f0a3f48b4c5 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:fab489d4-2d15-4d6c-94f8-a1dbe0377d8a a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "styles" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:fbe00d40-23d5-434d-a255-709f2f98633d a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "format" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http%3A//mrdata.usgs.gov/services/ngs%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DDescribeLayer> a wso:ServiceEndpoint ;
+    rdfs:label "DescribeLayer" ;
+    wso:BaseURL <http%3A//mrdata.usgs.gov/services/ngs%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DDescribeLayer> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService <http//purl.org/nsidc/bcube/web-services#177d3a3fc8bc7b4fb767c5b69e734763> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#45e5da2b-8eb3-434f-a862-e362a2eb344f>,
+        ServiceParameter:e2828b60-94d2-479c-82bb-de92ba639d64,
+        ServiceParameter:e30493bc-5b0c-45ff-8d8c-f1a4a0592e8e ;
+    media:type "text/xml" .
+
+<http%3A//mrdata.usgs.gov/services/ngs%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DGetCapabilities> a wso:ServiceEndpoint ;
+    rdfs:label "GetCapabilities" ;
+    wso:BaseURL <http%3A//mrdata.usgs.gov/services/ngs%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DGetCapabilities> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService <http//purl.org/nsidc/bcube/web-services#177d3a3fc8bc7b4fb767c5b69e734763> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#2a93cd91-fbfa-4c4f-8f81-9bdd8b7140f1>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#7e583cb4-7c10-44d8-8c9d-f304c429adab>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#94946065-ab77-4272-87e4-063654c2ccea>,
+        ServiceParameter:ccc1d0aa-13d4-4293-8bc8-fb00892b3665 ;
+    media:type "application/vnd.ogc.wms_xml" .
+
+<http%3A//mrdata.usgs.gov/services/ngs%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DGetFeatureInfo> a wso:ServiceEndpoint ;
+    rdfs:label "GetFeatureInfo" ;
+    wso:BaseURL <http%3A//mrdata.usgs.gov/services/ngs%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DGetFeatureInfo> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService <http//purl.org/nsidc/bcube/web-services#177d3a3fc8bc7b4fb767c5b69e734763> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#02709960-3e85-480a-9dc3-990e81491a3a>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#3929cbdb-c917-4ab6-ab1e-a8061a15555c>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#7a4ef101-0493-418b-8856-2d0203e05e7e>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#8397f0f5-21c3-4e5d-91f1-ff26291a25fa>,
+        ServiceParameter:e4cc5286-875e-4675-a8c2-7f0a3f48b4c5 ;
+    media:type "application/vnd.ogc.gml",
+        "text/html",
+        "text/plain" .
+
+<http%3A//mrdata.usgs.gov/services/ngs%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DGetLegendGraphic> a wso:ServiceEndpoint ;
+    rdfs:label "GetLegendGraphic" ;
+    wso:BaseURL <http%3A//mrdata.usgs.gov/services/ngs%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DGetLegendGraphic> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService <http//purl.org/nsidc/bcube/web-services#177d3a3fc8bc7b4fb767c5b69e734763> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#7194478c-db15-4bcb-9b9b-a2f9f5552a6c>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#99bd57e5-1514-4a32-8bb2-10a634e3790e>,
+        ServiceParameter:b52d7751-7ebb-428a-9152-eda71fc879de ;
+    media:type "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png; mode=8bit" .
+
+<http%3A//mrdata.usgs.gov/services/ngs%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DGetMap> a wso:ServiceEndpoint ;
+    rdfs:label "GetMap" ;
+    wso:BaseURL <http%3A//mrdata.usgs.gov/services/ngs%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DGetMap> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService <http//purl.org/nsidc/bcube/web-services#177d3a3fc8bc7b4fb767c5b69e734763> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#00cff5c9-eb6b-4e1d-9675-b48303acd100>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#0728d31b-aeef-43a0-86db-ee9c90f3387f>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#0a776d83-b1f9-4df2-a664-c4597998af7d>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#0c34c7cb-de92-464a-a03c-4fd585ede09c>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#63731293-46a3-4b62-a6af-b9ee3ec4c85f>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#7cb6a9c1-9840-4555-809a-c3082b0af36a>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#852e8200-3849-4935-98ee-3e558f56945b>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#89492af4-358a-4521-9928-f3d128d73ac2>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#8a93e578-eaee-44be-a4fa-424d1e67f052>,
+        ServiceParameter:a33d932d-b6b0-4de5-a592-55549c1ab0f2,
+        ServiceParameter:b7c02176-9cc0-4eb3-904f-c0e99bae6f38,
+        ServiceParameter:c3572068-df36-4ca1-b1b9-64e01fada9cb,
+        ServiceParameter:daa48c61-9930-40b0-848b-0f4e01ac2a97,
+        ServiceParameter:fbe00d40-23d5-434d-a255-709f2f98633d ;
+    media:type "application/vnd.google-earth.kml+xml",
+        "application/vnd.google-earth.kmz",
+        "application/x-pdf",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png; mode=8bit",
+        "image/svg+xml",
+        "image/tiff" .
+
+<http%3A//mrdata.usgs.gov/services/ngs%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DGetStyles> a wso:ServiceEndpoint ;
+    rdfs:label "GetStyles" ;
+    wso:BaseURL <http%3A//mrdata.usgs.gov/services/ngs%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DGetStyles> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService <http//purl.org/nsidc/bcube/web-services#177d3a3fc8bc7b4fb767c5b69e734763> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#1d8d50c2-bbae-4ebb-a201-53b6701919a9>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#36a1ca6f-07e5-4321-b134-9cbb9cb801cc>,
+        ServiceParameter:a4334110-7faa-4ec3-bb1f-8673191ff3d9 ;
+    media:type "text/xml" .
+
+<http//purl.org/nsidc/bcube/web-services#177d3a3fc8bc7b4fb767c5b69e734763> a wso:WMS,
+        <http://www.opengis.net/wms> ;
+    wso:BaseURL "http%3A//mrdata.usgs.gov/services/ngs%3Frequest%3Dgetcapabilities%26service%3DWMS%26version%3D1.1.1" ;
+    dc:abstract "None" ;
+    dc:hasVersion "1.1.1" ;
+    dc:title "National_Geochemical_Survey" .
+
+
+@prefix Profile: <http://www.daml.org/services/owl-s/1.2/Profile.owl#> .
+@prefix Service: <http://ww.daml.org/services/owl-s/1.2/Service.owl#> .
+@prefix ServiceParameter: <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix media: <http://www.iana.org/assignments/media-types/media-types.xhtml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wso: <http//purl.org/nsidc/bcube/web-services#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DDescribeFeatureType#888e0794-84e8-438b-aedf-fc5a3ccbc680> a wso:ServiceEndpoint ;
+    rdfs:label "DescribeFeatureType" ;
+    wso:BaseURL <http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DDescribeFeatureType> ;
+    wso:Protocol "HTTP POST" ;
+    wso:hasService wso:c9ef8cb2660cc5b6312bd95ffab3393f ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#7d955c2e-a74c-4d85-99b4-0bfd1d1961b3>,
+        ServiceParameter:a4067cad-ca5f-4bbc-9acc-57958a0f088b,
+        ServiceParameter:ceafb072-d9d3-453b-a897-cf6476ed5c7a ;
+    media:type "text/xml" .
+
+<http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DGetCapabilities#45182506-3ab4-47d0-b7af-0ae940ed98cc> a wso:ServiceEndpoint ;
+    rdfs:label "GetCapabilities" ;
+    wso:BaseURL <http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DGetCapabilities> ;
+    wso:Protocol "HTTP POST" ;
+    wso:hasService wso:c9ef8cb2660cc5b6312bd95ffab3393f ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#6ee9e048-b581-49fb-9e94-6c114077e23c>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#833bcd58-a71e-47b7-b31a-7b3ddd1f7605>,
+        ServiceParameter:a9e9f6dc-76cd-4b5d-bc99-63f660848445 ;
+    media:type "text/xml" .
+
+<http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DGetFeature#536a5e98-fa6b-4afc-8aa9-62f474e0607d> a wso:ServiceEndpoint ;
+    rdfs:label "GetFeature" ;
+    wso:BaseURL <http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DGetFeature> ;
+    wso:Protocol "HTTP POST" ;
+    wso:hasService wso:c9ef8cb2660cc5b6312bd95ffab3393f ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#46705d04-0152-4ba6-8a6a-d89e4aa56430>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#91e6bb8e-1cec-46ec-aa81-886f134838a1>,
+        ServiceParameter:d9684d96-e3b6-4698-be89-a1e54e142ba7 ;
+    media:type "text/xml" .
+
+<http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DGetFeatureWithLock#33c08025-58fb-4fa7-9d7c-d963a69f64cf> a wso:ServiceEndpoint ;
+    rdfs:label "GetFeatureWithLock" ;
+    wso:BaseURL <http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DGetFeatureWithLock> ;
+    wso:Protocol "HTTP POST" ;
+    wso:hasService wso:c9ef8cb2660cc5b6312bd95ffab3393f ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#4a6fb1e4-8b77-4b63-8f0d-35bb95f48bcd>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#6e3536ea-c562-448d-9878-6c78d4ead8cf>,
+        ServiceParameter:bb435c81-bee1-422b-9283-4700483c1d5d ;
+    media:type "text/xml" .
+
+<http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DGetGmlObject#a7babc9e-8a12-4a5a-903b-04c74da6fa91> a wso:ServiceEndpoint ;
+    rdfs:label "GetGmlObject" ;
+    wso:BaseURL <http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DGetGmlObject> ;
+    wso:Protocol "HTTP POST" ;
+    wso:hasService wso:c9ef8cb2660cc5b6312bd95ffab3393f ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#51a131cf-7f8e-4d0b-8e82-7a8debe1de1c>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#98ed7ce6-d95c-45fb-be6e-7f16685bb4df>,
+        ServiceParameter:b42a6a0d-285e-4b5d-8789-d9fed39c3650 ;
+    media:type "text/xml" .
+
+<http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DLockFeature#1cc6386b-5ce9-45f0-9c5f-c194a3731933> a wso:ServiceEndpoint ;
+    rdfs:label "LockFeature" ;
+    wso:BaseURL <http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DLockFeature> ;
+    wso:Protocol "HTTP POST" ;
+    wso:hasService wso:c9ef8cb2660cc5b6312bd95ffab3393f ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#05f36551-32b3-424b-98e2-91041bbf4104>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#0e7132d5-7a9b-4d8f-8500-3d605a531fc7>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#3d06e55f-19a6-4580-bbc0-933b85de183f> ;
+    media:type "text/xml" .
+
+<http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DTransaction#11af2798-8df1-4456-9a7b-5374fb85bdac> a wso:ServiceEndpoint ;
+    rdfs:label "Transaction" ;
+    wso:BaseURL <http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DTransaction> ;
+    wso:Protocol "HTTP POST" ;
+    wso:hasService wso:c9ef8cb2660cc5b6312bd95ffab3393f ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#3ff1cfd3-d475-4ed2-99fc-4094df4f57e2>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#920eecdb-8ba7-4da8-b57c-33efbc8d33de>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#9c01e4a7-8ad1-4288-b8f7-5b0eec6cc306> ;
+    media:type "text/xml" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#05f36551-32b3-424b-98e2-91041bbf4104> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#068794f4-abe1-426c-ad7a-0a2ec40e1449> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#0e7132d5-7a9b-4d8f-8500-3d605a531fc7> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#14bad347-bf4d-4b6f-8aab-9c3f6b4e11ca> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#22c1893d-b993-40b3-b793-3c90779a5ec4> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#2e05760f-973a-4662-b74b-55ac67d04791> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#346da8dc-8fe5-42c9-9700-4d38ae75caa0> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#3d06e55f-19a6-4580-bbc0-933b85de183f> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#3ff1cfd3-d475-4ed2-99fc-4094df4f57e2> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#46705d04-0152-4ba6-8a6a-d89e4aa56430> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#4680e83a-2a27-45f5-9777-a9f4f7b9ec4a> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#4a6fb1e4-8b77-4b63-8f0d-35bb95f48bcd> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#4ce2ca3e-d5d5-46dd-bf01-7aa4637429e6> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#51a131cf-7f8e-4d0b-8e82-7a8debe1de1c> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#5da9f537-c7f5-4156-958c-f27e0153c04b> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#5de61bd5-39bb-40a2-bd3b-43d6c13b1d74> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#6e3536ea-c562-448d-9878-6c78d4ead8cf> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#6ee9e048-b581-49fb-9e94-6c114077e23c> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#773018f1-69a8-4e88-a791-2bf7d419678a> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#7d1022a1-07a1-43a8-9bdb-3fb216f35e69> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#7d955c2e-a74c-4d85-99b4-0bfd1d1961b3> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#833bcd58-a71e-47b7-b31a-7b3ddd1f7605> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#86a273df-99e5-465e-9037-6e53ba251501> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#8a31d59a-eefe-43b3-b02b-4e4dfeed92c1> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#91e6bb8e-1cec-46ec-aa81-886f134838a1> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#920eecdb-8ba7-4da8-b57c-33efbc8d33de> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#98ed7ce6-d95c-45fb-be6e-7f16685bb4df> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#9c01e4a7-8ad1-4288-b8f7-5b0eec6cc306> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:a4067cad-ca5f-4bbc-9acc-57958a0f088b a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:a9e9f6dc-76cd-4b5d-bc99-63f660848445 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:b2e2ed7f-fe4b-42ba-8d0c-e87d5b1a4068 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:b42a6a0d-285e-4b5d-8789-d9fed39c3650 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:bb435c81-bee1-422b-9283-4700483c1d5d a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:cd50f586-0b15-4e49-b545-d0600d2e0e0b a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:ceafb072-d9d3-453b-a897-cf6476ed5c7a a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:d9684d96-e3b6-4698-be89-a1e54e142ba7 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:dda0cb18-56d7-445b-bdb1-6dd452d07e6c a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:e5b5bc6b-f38a-439d-87b1-7c4c7c0afdfd a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:f66063d4-7bbe-40da-8e51-285aa45c8a7c a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:f81fdc62-f13e-4167-b658-8631f6bcf652 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:fb4d0f61-12d4-44df-89b3-60437f3f753e a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:ff97e95c-30e7-49d4-a714-df21ab708b6a a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DDescribeFeatureType> a wso:ServiceEndpoint ;
+    rdfs:label "DescribeFeatureType" ;
+    wso:BaseURL <http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DDescribeFeatureType> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService wso:c9ef8cb2660cc5b6312bd95ffab3393f ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#773018f1-69a8-4e88-a791-2bf7d419678a>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#7d1022a1-07a1-43a8-9bdb-3fb216f35e69>,
+        ServiceParameter:ff97e95c-30e7-49d4-a714-df21ab708b6a ;
+    media:type "text/xml" .
+
+<http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DGetCapabilities> a wso:ServiceEndpoint ;
+    rdfs:label "GetCapabilities" ;
+    wso:BaseURL <http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DGetCapabilities> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService wso:c9ef8cb2660cc5b6312bd95ffab3393f ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#068794f4-abe1-426c-ad7a-0a2ec40e1449>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#22c1893d-b993-40b3-b793-3c90779a5ec4>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#5da9f537-c7f5-4156-958c-f27e0153c04b> ;
+    media:type "text/xml" .
+
+<http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DGetFeature> a wso:ServiceEndpoint ;
+    rdfs:label "GetFeature" ;
+    wso:BaseURL <http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DGetFeature> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService wso:c9ef8cb2660cc5b6312bd95ffab3393f ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#86a273df-99e5-465e-9037-6e53ba251501>,
+        ServiceParameter:f66063d4-7bbe-40da-8e51-285aa45c8a7c,
+        ServiceParameter:f81fdc62-f13e-4167-b658-8631f6bcf652 ;
+    media:type "text/xml" .
+
+<http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DGetFeatureWithLock> a wso:ServiceEndpoint ;
+    rdfs:label "GetFeatureWithLock" ;
+    wso:BaseURL <http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DGetFeatureWithLock> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService wso:c9ef8cb2660cc5b6312bd95ffab3393f ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#2e05760f-973a-4662-b74b-55ac67d04791>,
+        ServiceParameter:cd50f586-0b15-4e49-b545-d0600d2e0e0b,
+        ServiceParameter:dda0cb18-56d7-445b-bdb1-6dd452d07e6c ;
+    media:type "text/xml" .
+
+<http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DGetGmlObject> a wso:ServiceEndpoint ;
+    rdfs:label "GetGmlObject" ;
+    wso:BaseURL <http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DGetGmlObject> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService wso:c9ef8cb2660cc5b6312bd95ffab3393f ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#4680e83a-2a27-45f5-9777-a9f4f7b9ec4a>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#4ce2ca3e-d5d5-46dd-bf01-7aa4637429e6>,
+        ServiceParameter:e5b5bc6b-f38a-439d-87b1-7c4c7c0afdfd ;
+    media:type "text/xml" .
+
+<http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DLockFeature> a wso:ServiceEndpoint ;
+    rdfs:label "LockFeature" ;
+    wso:BaseURL <http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DLockFeature> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService wso:c9ef8cb2660cc5b6312bd95ffab3393f ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#346da8dc-8fe5-42c9-9700-4d38ae75caa0>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#5de61bd5-39bb-40a2-bd3b-43d6c13b1d74>,
+        ServiceParameter:fb4d0f61-12d4-44df-89b3-60437f3f753e ;
+    media:type "text/xml" .
+
+<http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DTransaction> a wso:ServiceEndpoint ;
+    rdfs:label "Transaction" ;
+    wso:BaseURL <http%3A//sedac.ciesin.columbia.edu%3A80/geoserver/wfs%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DTransaction> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService wso:c9ef8cb2660cc5b6312bd95ffab3393f ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#14bad347-bf4d-4b6f-8aab-9c3f6b4e11ca>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#8a31d59a-eefe-43b3-b02b-4e4dfeed92c1>,
+        ServiceParameter:b2e2ed7f-fe4b-42ba-8d0c-e87d5b1a4068 ;
+    media:type "text/xml" .
+
+wso:c9ef8cb2660cc5b6312bd95ffab3393f a wso:WFS,
+        <http://www.opengis.net/wfs> ;
+    wso:BaseURL "http%3A//sedac.ciesin.org/geoserver/ows%3Fservice%3Dwfs%26version%3D1.1.0%26request%3DGetCapabilities" ;
+    dc:abstract "This is the reference implementation of WFS 1.0.0 and WFS 1.1.0, supports all WFS operations including Transaction." ;
+    dc:hasVersion "1.1.0" ;
+    dc:title "GeoServer Web Feature Service" .
+
+
+@prefix Profile: <http://www.daml.org/services/owl-s/1.2/Profile.owl#> .
+@prefix Service: <http://ww.daml.org/services/owl-s/1.2/Service.owl#> .
+@prefix ServiceParameter: <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix media: <http://www.iana.org/assignments/media-types/media-types.xhtml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wso: <http//purl.org/nsidc/bcube/web-services#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http%3A//gis.srh.noaa.gov/arcgis/services/AtStormViewer/MapServer/WFSServer%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DDescribeFeatureType#e0b19d6b-fb59-4c41-b4ae-6f2f059739c8> a wso:ServiceEndpoint ;
+    rdfs:label "DescribeFeatureType" ;
+    wso:BaseURL <http%3A//gis.srh.noaa.gov/arcgis/services/AtStormViewer/MapServer/WFSServer%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DDescribeFeatureType> ;
+    wso:Protocol "HTTP POST" ;
+    wso:hasService <http//purl.org/nsidc/bcube/web-services#7a6948c6a04f6f2aa9d2cad2f0e06020> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#73ff4084-15a1-4a8d-8a46-b49d2602e402>,
+        ServiceParameter:a65c7082-fac3-40c5-a96b-49253c6b282a,
+        ServiceParameter:e8aebfac-334c-41b2-b50c-50c1152e0c8b ;
+    media:type "text/xml" .
+
+<http%3A//gis.srh.noaa.gov/arcgis/services/AtStormViewer/MapServer/WFSServer%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DGetCapabilities#5e59e43f-0ef8-4037-8760-d5c9106cc06b> a wso:ServiceEndpoint ;
+    rdfs:label "GetCapabilities" ;
+    wso:BaseURL <http%3A//gis.srh.noaa.gov/arcgis/services/AtStormViewer/MapServer/WFSServer%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DGetCapabilities> ;
+    wso:Protocol "HTTP POST" ;
+    wso:hasService <http//purl.org/nsidc/bcube/web-services#7a6948c6a04f6f2aa9d2cad2f0e06020> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#48b4ade2-c272-4b3d-bb77-84d645dadd45>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#6293fc6e-4839-4359-9d27-617e8588ab9c>,
+        ServiceParameter:e293e460-efdc-4348-862a-581e8da753e4 ;
+    media:type "text/xml" .
+
+<http%3A//gis.srh.noaa.gov/arcgis/services/AtStormViewer/MapServer/WFSServer%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DGetFeature#63cc04cf-a8dd-4f54-8510-5426f30711f2> a wso:ServiceEndpoint ;
+    rdfs:label "GetFeature" ;
+    wso:BaseURL <http%3A//gis.srh.noaa.gov/arcgis/services/AtStormViewer/MapServer/WFSServer%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DGetFeature> ;
+    wso:Protocol "HTTP POST" ;
+    wso:hasService <http//purl.org/nsidc/bcube/web-services#7a6948c6a04f6f2aa9d2cad2f0e06020> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#0a1c4ebf-6f9f-46bd-b29c-73e84c36e1b8>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#362d94de-4e79-4e47-94df-863f8bbca158>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#4f1ac08c-fd2a-484f-8160-c19b865bca17> ;
+    media:type "text/xml" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#0a1c4ebf-6f9f-46bd-b29c-73e84c36e1b8> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#1af20500-bf84-4b72-9b00-731efbfc26c1> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#1eb965c7-af4e-4fd8-aacf-e29ab49e745f> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#362d94de-4e79-4e47-94df-863f8bbca158> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#37517812-50e6-4925-99db-0ce3e3fccebc> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#3a9cf7c0-887c-4b0c-a0fd-15b845e25c30> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#48b4ade2-c272-4b3d-bb77-84d645dadd45> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#4f1ac08c-fd2a-484f-8160-c19b865bca17> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#579385b2-a99c-449f-ad1d-c7855c229c91> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#6293fc6e-4839-4359-9d27-617e8588ab9c> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#73ff4084-15a1-4a8d-8a46-b49d2602e402> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#9b335dbd-7d89-4a2c-9ced-8f5106a31558> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:a65c7082-fac3-40c5-a96b-49253c6b282a a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:d54f5459-162b-48db-b582-381edfd5f346 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:e293e460-efdc-4348-862a-581e8da753e4 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:e8aebfac-334c-41b2-b50c-50c1152e0c8b a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:e98e31a8-f1aa-412d-a4c1-e8fb6f35186a a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:ec196ca9-95c7-42a6-9a06-1f5ba3830955 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http%3A//gis.srh.noaa.gov/arcgis/services/AtStormViewer/MapServer/WFSServer%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DDescribeFeatureType> a wso:ServiceEndpoint ;
+    rdfs:label "DescribeFeatureType" ;
+    wso:BaseURL <http%3A//gis.srh.noaa.gov/arcgis/services/AtStormViewer/MapServer/WFSServer%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DDescribeFeatureType> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService <http//purl.org/nsidc/bcube/web-services#7a6948c6a04f6f2aa9d2cad2f0e06020> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#3a9cf7c0-887c-4b0c-a0fd-15b845e25c30>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#9b335dbd-7d89-4a2c-9ced-8f5106a31558>,
+        ServiceParameter:ec196ca9-95c7-42a6-9a06-1f5ba3830955 ;
+    media:type "text/xml" .
+
+<http%3A//gis.srh.noaa.gov/arcgis/services/AtStormViewer/MapServer/WFSServer%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DGetCapabilities> a wso:ServiceEndpoint ;
+    rdfs:label "GetCapabilities" ;
+    wso:BaseURL <http%3A//gis.srh.noaa.gov/arcgis/services/AtStormViewer/MapServer/WFSServer%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DGetCapabilities> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService <http//purl.org/nsidc/bcube/web-services#7a6948c6a04f6f2aa9d2cad2f0e06020> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#1af20500-bf84-4b72-9b00-731efbfc26c1>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#1eb965c7-af4e-4fd8-aacf-e29ab49e745f>,
+        ServiceParameter:d54f5459-162b-48db-b582-381edfd5f346 ;
+    media:type "text/xml" .
+
+<http%3A//gis.srh.noaa.gov/arcgis/services/AtStormViewer/MapServer/WFSServer%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DGetFeature> a wso:ServiceEndpoint ;
+    rdfs:label "GetFeature" ;
+    wso:BaseURL <http%3A//gis.srh.noaa.gov/arcgis/services/AtStormViewer/MapServer/WFSServer%3FSERVICE%3DWFS%26VERSION%3D1.1.0%26REQUEST%3DGetFeature> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService <http//purl.org/nsidc/bcube/web-services#7a6948c6a04f6f2aa9d2cad2f0e06020> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#37517812-50e6-4925-99db-0ce3e3fccebc>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#579385b2-a99c-449f-ad1d-c7855c229c91>,
+        ServiceParameter:e98e31a8-f1aa-412d-a4c1-e8fb6f35186a ;
+    media:type "text/xml" .
+
+<http//purl.org/nsidc/bcube/web-services#7a6948c6a04f6f2aa9d2cad2f0e06020> a wso:WFS,
+        <http://www.opengis.net/wfs> ;
+    wso:BaseURL "http%3A//gis.srh.noaa.gov/arcgis/services/AtStormViewer/MapServer/WFSServer%3Frequest%3DGetCapabilities%26service%3DWFS" ;
+    dc:abstract "None" ;
+    dc:hasVersion "1.1.0" ;
+    dc:title "AtStormViewer" .
+
+
+@prefix Profile: <http://www.daml.org/services/owl-s/1.2/Profile.owl#> .
+@prefix Service: <http://ww.daml.org/services/owl-s/1.2/Service.owl#> .
+@prefix ServiceParameter: <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix media: <http://www.iana.org/assignments/media-types/media-types.xhtml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wso: <http//purl.org/nsidc/bcube/web-services#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http%3A//maps.ngdc.noaa.gov/arcgis/services/firedetects/MapServer/WmsServer%3FSERVICE%3DWMS%26VERSION%3D1.3.0%26REQUEST%3DGetCapabilities> a wso:ServiceEndpoint ;
+    rdfs:label "GetCapabilities" ;
+    wso:BaseURL <http%3A//maps.ngdc.noaa.gov/arcgis/services/firedetects/MapServer/WmsServer%3FSERVICE%3DWMS%26VERSION%3D1.3.0%26REQUEST%3DGetCapabilities> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService wso:ce8b92b00972f26a8f8bd87d573e14ce ;
+    media:type "application/vnd.ogc.wms_xml",
+        "text/xml" .
+
+<http%3A//maps.ngdc.noaa.gov/arcgis/services/firedetects/MapServer/WmsServer%3FSERVICE%3DWMS%26VERSION%3D1.3.0%26REQUEST%3DGetFeatureInfo> a wso:ServiceEndpoint ;
+    rdfs:label "GetFeatureInfo" ;
+    wso:BaseURL <http%3A//maps.ngdc.noaa.gov/arcgis/services/firedetects/MapServer/WmsServer%3FSERVICE%3DWMS%26VERSION%3D1.3.0%26REQUEST%3DGetFeatureInfo> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService wso:ce8b92b00972f26a8f8bd87d573e14ce ;
+    media:type "application/geojson",
+        "application/vnd.esri.wms_featureinfo_xml",
+        "application/vnd.esri.wms_raw_xml",
+        "application/vnd.ogc.wms_xml",
+        "text/html",
+        "text/plain",
+        "text/xml" .
+
+<http%3A//maps.ngdc.noaa.gov/arcgis/services/firedetects/MapServer/WmsServer%3FSERVICE%3DWMS%26VERSION%3D1.3.0%26REQUEST%3DGetMap> a wso:ServiceEndpoint ;
+    rdfs:label "GetMap" ;
+    wso:BaseURL <http%3A//maps.ngdc.noaa.gov/arcgis/services/firedetects/MapServer/WmsServer%3FSERVICE%3DWMS%26VERSION%3D1.3.0%26REQUEST%3DGetMap> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService wso:ce8b92b00972f26a8f8bd87d573e14ce ;
+    media:type "image/bmp",
+        "image/gif",
+        "image/jpeg",
+        "image/png",
+        "image/png24",
+        "image/png32",
+        "image/png8",
+        "image/svg+xml",
+        "image/tiff" .
+
+<http%3A//maps.ngdc.noaa.gov/arcgis/services/firedetects/MapServer/WmsServer%3FSERVICE%3DWMS%26VERSION%3D1.3.0%26REQUEST%3DGetStyles> a wso:ServiceEndpoint ;
+    rdfs:label "GetStyles" ;
+    wso:BaseURL <http%3A//maps.ngdc.noaa.gov/arcgis/services/firedetects/MapServer/WmsServer%3FSERVICE%3DWMS%26VERSION%3D1.3.0%26REQUEST%3DGetStyles> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService wso:ce8b92b00972f26a8f8bd87d573e14ce ;
+    media:type "application/vnd.ogc.sld+xml" .
+
+wso:ce8b92b00972f26a8f8bd87d573e14ce a wso:WMS,
+        <http://www.opengis.net/wms> ;
+    wso:BaseURL "http%3A//maps.ngdc.noaa.gov/arcgis/services/firedetects/MapServer/WMSServer%3Frequest%3DGetCapabilities%26service%3DWMS" ;
+    dc:abstract "WMS" ;
+    dc:hasVersion "1.3.0" ;
+    dc:title "WMS" .
+
+
+@prefix Profile: <http://www.daml.org/services/owl-s/1.2/Profile.owl#> .
+@prefix Service: <http://ww.daml.org/services/owl-s/1.2/Service.owl#> .
+@prefix ServiceParameter: <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix media: <http://www.iana.org/assignments/media-types/media-types.xhtml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wso: <http//purl.org/nsidc/bcube/web-services#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#200701f0-97e3-4b5a-bed9-b4d2e6516aed> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#224de60b-368b-461e-b302-0f97abc95ec4> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "coverage" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#3aab08eb-5f53-4ef5-b41f-15a5b10e0ef9> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "resx" ;
+    ServiceParameter:serviceParameterType "int" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#3dc50246-bdc4-4145-a273-ec55ac6f6c33> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "height" ;
+    ServiceParameter:serviceParameterType "int" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#4dc9a4c0-d08b-4917-8b29-d80b587faef2> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#69aab487-e182-4ff6-ad8a-1f87f89e421d> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#6da5ff03-646e-4f83-b09d-1e95df0dfb31> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "bbox" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#7026a17b-64c9-4ffa-9e98-8a98a3bd7e75> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "parameter" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#8b32f255-7f40-4425-90ce-9fb98933bc16> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "format" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#8dc64359-2f9a-45dd-9228-c55d70ac18cf> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "interpolation" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#918eab89-f4dd-4f17-ba7a-f6f417dcd039> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "resy" ;
+    ServiceParameter:serviceParameterType "int" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#96a35177-2957-49dd-b017-4d04aee4d5bb> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#999e2886-f2b0-41d8-975b-274c26495f47> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#9e2d9069-82b4-4887-8b9e-a64ad8aad9ec> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "featureid" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:a57665ef-2e98-4516-a8a0-af366ea5a2f6 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "coverage" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:b349ea80-2534-4fca-b1b9-fbb9caaf77ce a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "time" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:b387533f-1da9-4ddc-a9d3-c53e72dcdb9f a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "version" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:cd9fa698-7f78-4ccd-949f-ab2891752f5c a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:d8f29f0f-7189-4ab3-bae6-2b44ae91af2b a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "service" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:da861687-72e8-4552-b15f-c93298cc051c a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "width" ;
+    ServiceParameter:serviceParameterType "int" .
+
+ServiceParameter:eb6a88da-fb90-4538-9621-bc54b8cde082 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "request" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:f36a2ae3-c6b0-4ea8-b28c-a8853e437e7a a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "crs" ;
+    ServiceParameter:serviceParameterType "string" .
+
+ServiceParameter:f9bb3a8e-d5d0-451e-811b-f4e9d2a2f277 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "response_crs" ;
+    ServiceParameter:serviceParameterType "string" .
+
+<https%3A//rsg.pml.ac.uk/thredds/wcs/CCI_ALL-v1.0-DAILY%3FSERVICE%3DWCS%26VERSION%3D1.0.0%26REQUEST%3DDescribeCoverage> a wso:ServiceEndpoint ;
+    rdfs:label "DescribeCoverage" ;
+    wso:BaseURL <https%3A//rsg.pml.ac.uk/thredds/wcs/CCI_ALL-v1.0-DAILY%3FSERVICE%3DWCS%26VERSION%3D1.0.0%26REQUEST%3DDescribeCoverage> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService wso:b2bd05b097ed286cf17d70ddd5fe2a4c ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#96a35177-2957-49dd-b017-4d04aee4d5bb>,
+        ServiceParameter:a57665ef-2e98-4516-a8a0-af366ea5a2f6,
+        ServiceParameter:b387533f-1da9-4ddc-a9d3-c53e72dcdb9f,
+        ServiceParameter:eb6a88da-fb90-4538-9621-bc54b8cde082 .
+
+<https%3A//rsg.pml.ac.uk/thredds/wcs/CCI_ALL-v1.0-DAILY%3FSERVICE%3DWCS%26VERSION%3D1.0.0%26REQUEST%3DGetCapabilities> a wso:ServiceEndpoint ;
+    rdfs:label "GetCapabilities" ;
+    wso:BaseURL <https%3A//rsg.pml.ac.uk/thredds/wcs/CCI_ALL-v1.0-DAILY%3FSERVICE%3DWCS%26VERSION%3D1.0.0%26REQUEST%3DGetCapabilities> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService wso:b2bd05b097ed286cf17d70ddd5fe2a4c ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#200701f0-97e3-4b5a-bed9-b4d2e6516aed>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#4dc9a4c0-d08b-4917-8b29-d80b587faef2>,
+        ServiceParameter:d8f29f0f-7189-4ab3-bae6-2b44ae91af2b .
+
+<https%3A//rsg.pml.ac.uk/thredds/wcs/CCI_ALL-v1.0-DAILY%3FSERVICE%3DWCS%26VERSION%3D1.0.0%26REQUEST%3DGetCoverage> a wso:ServiceEndpoint ;
+    rdfs:label "GetCoverage" ;
+    wso:BaseURL <https%3A//rsg.pml.ac.uk/thredds/wcs/CCI_ALL-v1.0-DAILY%3FSERVICE%3DWCS%26VERSION%3D1.0.0%26REQUEST%3DGetCoverage> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService wso:b2bd05b097ed286cf17d70ddd5fe2a4c ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#224de60b-368b-461e-b302-0f97abc95ec4>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#3aab08eb-5f53-4ef5-b41f-15a5b10e0ef9>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#3dc50246-bdc4-4145-a273-ec55ac6f6c33>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#69aab487-e182-4ff6-ad8a-1f87f89e421d>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#6da5ff03-646e-4f83-b09d-1e95df0dfb31>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#7026a17b-64c9-4ffa-9e98-8a98a3bd7e75>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#8b32f255-7f40-4425-90ce-9fb98933bc16>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#8dc64359-2f9a-45dd-9228-c55d70ac18cf>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#918eab89-f4dd-4f17-ba7a-f6f417dcd039>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#999e2886-f2b0-41d8-975b-274c26495f47>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#9e2d9069-82b4-4887-8b9e-a64ad8aad9ec>,
+        ServiceParameter:b349ea80-2534-4fca-b1b9-fbb9caaf77ce,
+        ServiceParameter:cd9fa698-7f78-4ccd-949f-ab2891752f5c,
+        ServiceParameter:da861687-72e8-4552-b15f-c93298cc051c,
+        ServiceParameter:f36a2ae3-c6b0-4ea8-b28c-a8853e437e7a,
+        ServiceParameter:f9bb3a8e-d5d0-451e-811b-f4e9d2a2f277 .
+
+wso:b2bd05b097ed286cf17d70ddd5fe2a4c a wso:WCS,
+        <http://www.opengis.net/wcs> ;
+    wso:BaseURL "https%3A//rsg.pml.ac.uk/thredds/wcs/CCI_ALL-v1.0-DAILY%3Fservice%3DWCS%26version%3D1.0.0%26request%3DGetCapabilities" ;
+    dc:abstract "None" ;
+    dc:hasVersion "1.0.0" ;
+    dc:title "None" .
+
+

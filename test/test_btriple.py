@@ -1,4 +1,5 @@
 import unittest
+import urllib
 from rdflib import Graph, URIRef, Literal
 from btriple import Store, JsonLoader, Triplelizer
 
@@ -43,12 +44,12 @@ class TestJSONLoader(unittest.TestCase):
 
     def test_parser_works(self):
         data = self.json_loader.parse(
-            "service_examples/" +
-            "opensearch_4e724e1d3a4248747b184a9b039e8758.json")
+            "service_examples/opensearch/" +
+            "3bc23f4f2985f9a83b79b90885539176.json")
         self.assertFalse(data is None)
         self.assertTrue(isinstance(data, dict))
-        self.assertEquals(data.solr_identifier,
-                          "4e724e1d3a4248747b184a9b039e8758")
+        self.assertEquals(data.digest,
+                          "3bc23f4f2985f9a83b79b90885539176")
 
 
 class TestTriples(unittest.TestCase):
@@ -64,8 +65,8 @@ class TestTriples(unittest.TestCase):
 
     def test_triples_are_created_equal(self):
         data = self.json_loader.parse(
-            "service_examples/" +
-            "opensearch_4e724e1d3a4248747b184a9b039e8758.json")
+            "service_examples/opensearch/" +
+            "3bc23f4f2985f9a83b79b90885539176.json")
         triples = self.triples.triplelize(data)
         self.assertTrue(isinstance(triples, Store))
         self.assertTrue(isinstance(triples.g, Graph))
@@ -76,12 +77,11 @@ class TestTriples(unittest.TestCase):
 
     def test_triples_can_be_queried_1(self):
         # We want to query the abstract and the url of the OpenSearch service
-        base_url = Literal("http://www.pimrisportal.org/" +
-                           "component/search/?format=opensearch")
+        base_url = Literal(urllib.quote("http://science-center.org/Search?format=opensearch&id=46"))
         abstract = Literal("[u'Pacific Islands Marine Portal(PIMRIS)']")
         data = self.json_loader.parse(
-            "service_examples/" +
-            "opensearch_4e724e1d3a4248747b184a9b039e8758.json")
+            "service_examples/opensearch/" +
+            "3bc23f4f2985f9a83b79b90885539176.json")
         triples = self.triples.triplelize(data)
         qres = triples.g.query(
                 """SELECT DISTINCT ?abstract ?base_url
@@ -99,10 +99,10 @@ class TestTriples(unittest.TestCase):
         # We want to query the service identity for all
         # opensearch documents, in this case just 1.
         urn = URIRef("http//purl.org/nsidc/bcube/web-services#" +
-                     "4e724e1d3a4248747b184a9b039e8758")
+                     "3bc23f4f2985f9a83b79b90885539176")
         data = self.json_loader.parse(
-            "service_examples/" +
-            "opensearch_4e724e1d3a4248747b184a9b039e8758.json")
+            "service_examples/opensearch/" +
+            "3bc23f4f2985f9a83b79b90885539176.json")
         triples = self.triples.triplelize(data)
         qres = triples.g.query(
                 """SELECT *
@@ -117,11 +117,11 @@ class TestTriples(unittest.TestCase):
         # prepare
         ns = 'http//purl.org/nsidc/bcube/web-services#'
         service = self.json_loader.parse(
-            "service_examples/" +
-            "ogcwms_130_03fe4d8784c89532539c7a121fe7a252.json")
+            "service_examples/ogc/" +
+            "4fae8c425742c252feb46604f3170afd.json")
         parent_service = self.triples.store.get_resource(
-            ns + service.solr_identifier)
-        parentURI = URIRef(ns + service.solr_identifier)
+            ns + service.digest)
+        parentURI = URIRef(ns + service.digest)
         # act
         triples = self.triples.triplelize_endpoints(
             service, parent_service)
@@ -132,10 +132,10 @@ class TestTriples(unittest.TestCase):
                             ?subject rdf:type wso:ServiceEndpoint .
                          }""")
         # test
-        self.assertEquals(len(qres), 4)
+        self.assertEquals(len(qres), 11)
         for result in qres:
-            # They all have to be NAM12_SurfaceWindForecasts
-            self.assertTrue("NAM12_SurfaceWindForecasts"
+            # They all have to be maps.devotes.eu
+            self.assertTrue("maps.devotes.eu"
                             in str(result[0].n3()))
             # all the endpoints belong to the same service
             self.assertEqual(result[1],
@@ -145,12 +145,12 @@ class TestTriples(unittest.TestCase):
         # testing that we can query paramters linked to
         # an endpoint.
         service = self.json_loader.parse(
-            "service_examples/" +
-            "ogcwms_130_03fe4d8784c89532539c7a121fe7a252.json")
+            "service_examples/ogc/" +
+            "177d3a3fc8bc7b4fb767c5b69e734763.json")
         parent_endpoint = self.triples.store.get_resource(
             'http://dummy.com#')
         triples = self.triples.triplelize_parameters(
-            service.service.endpoints[0].parameters,
+            service.service_description.service.endpoints[0].parameters,
             parent_endpoint)
         # Why!! other namespaces don't require the <NS> in SPARQL
         qres = triples.g.query(
@@ -171,7 +171,9 @@ class TestTriples(unittest.TestCase):
 
     def test_parameters_triples_can_be_queried_2(self):
         # TODO: more parameters
-        self.assertTrue(True)
+        service = self.json_loader.parse(
+            "service_examples/ogc/" +
+            "177d3a3fc8bc7b4fb767c5b69e734763.json")
 
     def test_triples_can_be_queried_5(self):
         # TODO: datasets
