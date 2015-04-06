@@ -73,7 +73,7 @@ class Triplelizer():
         with open(__location__ + '/services.json', 'r') as fp:
             self.fingerprints = bunchify(json.loads(fp.read()))
         ontology_uris = {
-            'wso': 'http//purl.org/nsidc/bcube/web-services#',
+            'wso': 'http://purl.org/nsidc/bcube/web-services#',
             'Profile': 'http://www.daml.org/services/owl-s/1.2/Profile.owl#',
             'Service': 'http://ww.daml.org/services/owl-s/1.2/Service.owl#',
             'ServiceParameter':
@@ -167,7 +167,7 @@ class Triplelizer():
         pip install git+https://github.com/betolink/bunch.git
         Otherwise bunch rises an exception for not found keys
         '''
-        ns = 'http//purl.org/nsidc/bcube/web-services#'
+        ns = 'http://purl.org/nsidc/bcube/web-services#'
         wso = self.store.ns['wso']
         if self.identify(document) is not None:
             doc_base_url = document.url

@@ -5,7 +5,7 @@
 @prefix media: <http://www.iana.org/assignments/media-types/media-types.xhtml#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix wso: <http//purl.org/nsidc/bcube/web-services#> .
+@prefix wso: <http://purl.org/nsidc/bcube/web-services#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -13,104 +13,104 @@
     rdfs:label "None" ;
     wso:BaseURL <http://uaf.nodc.noaa.gov/geoportal/rest/find/document?searchText=%7BsearchTerms%7D&start=%7BstartIndex?%7D&max=%7Bcount?%7D&bbox=%7Bgeo:box?%7D&f=atom> ;
     wso:Protocol "HTTP GET" ;
-    wso:hasService <http//purl.org/nsidc/bcube/web-services#49445c973e953f3e9d0456e6acd2f3db> ;
-    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#0988bd8b-372a-4787-a0a6-919c583721b4>,
-        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#33b9a838-edec-4eb0-88cf-e03f38b8ff1e>,
-        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#7fc0beda-fa21-4def-9ca5-4909cde01f7f>,
-        ServiceParameter:be63511f-9f95-470d-89bc-418b7fe6edd2,
-        ServiceParameter:e540de74-f18f-4773-a94b-eb555a2780eb ;
+    wso:hasService <http://purl.org/nsidc/bcube/web-services#49445c973e953f3e9d0456e6acd2f3db> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#38582383-7a7c-4ea0-8b92-8860c6151cfa>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#41e7b092-456d-4352-a0a4-df1e752118c7>,
+        ServiceParameter:a8b22b3c-6430-4723-8ed3-864818cee154,
+        ServiceParameter:e48dd9de-727f-40f2-a2e8-561a5d2b3b0b,
+        ServiceParameter:fef8307d-ef8f-4fd8-a689-60b0cff992e2 ;
     media:type "application/atom+xml" .
 
 <http://uaf.nodc.noaa.gov/geoportal/rest/find/document?searchText=%7BsearchTerms%7D&start=%7BstartIndex?%7D&max=%7Bcount?%7D&bbox=%7Bgeo:box?%7D&f=georss> a wso:ServiceEndpoint ;
     rdfs:label "None" ;
     wso:BaseURL <http://uaf.nodc.noaa.gov/geoportal/rest/find/document?searchText=%7BsearchTerms%7D&start=%7BstartIndex?%7D&max=%7Bcount?%7D&bbox=%7Bgeo:box?%7D&f=georss> ;
     wso:Protocol "HTTP GET" ;
-    wso:hasService <http//purl.org/nsidc/bcube/web-services#49445c973e953f3e9d0456e6acd2f3db> ;
-    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#5632c450-cdbe-4ac8-9b72-6adce21d6beb>,
-        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#58360c1b-7b2e-4869-a45c-53ea61e67e1e>,
-        ServiceParameter:b14d93f7-ee04-4384-ac3f-a7f490313085,
-        ServiceParameter:c0ae6dbc-d99c-4b9c-b4c1-1da92cd7db1d,
-        ServiceParameter:e42af164-00ae-466f-8f93-950aa9873a97 ;
+    wso:hasService <http://purl.org/nsidc/bcube/web-services#49445c973e953f3e9d0456e6acd2f3db> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#445e6f04-fd15-406b-ac70-d2625bbbc959>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#4ab952d3-5b42-446c-8865-da0efcbd35f6>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#5ddc2172-8613-49dc-8f6b-a9c2564b4a0d>,
+        ServiceParameter:a9136868-dfbf-490b-aea5-6f4e872ed1be,
+        ServiceParameter:fa1ae007-e257-4b61-a402-77913c16e570 ;
     media:type "application/rss+xml" .
 
 <http://uaf.nodc.noaa.gov/geoportal/rest/find/document?searchText=%7BsearchTerms%7D&start=%7BstartIndex?%7D&max=%7Bcount?%7D&bbox=%7Bgeo:box?%7D&f=searchPage> a wso:ServiceEndpoint ;
     rdfs:label "None" ;
     wso:BaseURL <http://uaf.nodc.noaa.gov/geoportal/rest/find/document?searchText=%7BsearchTerms%7D&start=%7BstartIndex?%7D&max=%7Bcount?%7D&bbox=%7Bgeo:box?%7D&f=searchPage> ;
     wso:Protocol "HTTP GET" ;
-    wso:hasService <http//purl.org/nsidc/bcube/web-services#49445c973e953f3e9d0456e6acd2f3db> ;
-    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#277d0fdb-472a-4b02-8fa7-134fc92080c0>,
-        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#4611106c-ef7d-4698-9306-0f60ee109be1>,
-        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#5a5c7e85-bcb8-4e94-92b1-63e5ff79ee78>,
-        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#65075d71-8f4e-40c6-a0b4-f406bf9b8da2>,
-        ServiceParameter:e764b18e-dfa0-4d07-a2e0-12dbff38d76a ;
+    wso:hasService <http://purl.org/nsidc/bcube/web-services#49445c973e953f3e9d0456e6acd2f3db> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#15039546-b425-4979-b619-1d67d015cce5>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#2119beb1-7549-42b8-841b-127b34666026>,
+        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#55185a62-b1db-4970-a9c2-5422fb562c5c>,
+        ServiceParameter:dce5fe92-75c7-4e83-852f-b175d0c0e0e3,
+        ServiceParameter:f08b04d3-9ccd-4197-ac6a-ece06864dedf ;
     media:type "text/html" .
 
-<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#0988bd8b-372a-4787-a0a6-919c583721b4> a <ServiceParameter:ServiceParameter> ;
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#15039546-b425-4979-b619-1d67d015cce5> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "searchText" ;
+    ServiceParameter:serviceParameterType "{searchTerms}" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#2119beb1-7549-42b8-841b-127b34666026> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "max" ;
+    ServiceParameter:serviceParameterType "{count?}" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#38582383-7a7c-4ea0-8b92-8860c6151cfa> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "max" ;
+    ServiceParameter:serviceParameterType "{count?}" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#41e7b092-456d-4352-a0a4-df1e752118c7> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "start" ;
+    ServiceParameter:serviceParameterType "{startIndex?}" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#445e6f04-fd15-406b-ac70-d2625bbbc959> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "max" ;
+    ServiceParameter:serviceParameterType "{count?}" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#4ab952d3-5b42-446c-8865-da0efcbd35f6> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "start" ;
+    ServiceParameter:serviceParameterType "{startIndex?}" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#55185a62-b1db-4970-a9c2-5422fb562c5c> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "bbox" ;
+    ServiceParameter:serviceParameterType "box?" .
+
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#5ddc2172-8613-49dc-8f6b-a9c2564b4a0d> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "searchText" ;
+    ServiceParameter:serviceParameterType "{searchTerms}" .
+
+ServiceParameter:a8b22b3c-6430-4723-8ed3-864818cee154 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "searchText" ;
+    ServiceParameter:serviceParameterType "{searchTerms}" .
+
+ServiceParameter:a9136868-dfbf-490b-aea5-6f4e872ed1be a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "bbox" ;
+    ServiceParameter:serviceParameterType "box?" .
+
+ServiceParameter:dce5fe92-75c7-4e83-852f-b175d0c0e0e3 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "start" ;
+    ServiceParameter:serviceParameterType "{startIndex?}" .
+
+ServiceParameter:e48dd9de-727f-40f2-a2e8-561a5d2b3b0b a <ServiceParameter:ServiceParameter> ;
     ServiceParameter:serviceParameterName "f" ;
     ServiceParameter:serviceParameterType "atom" .
 
-<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#277d0fdb-472a-4b02-8fa7-134fc92080c0> a <ServiceParameter:ServiceParameter> ;
+ServiceParameter:f08b04d3-9ccd-4197-ac6a-ece06864dedf a <ServiceParameter:ServiceParameter> ;
     ServiceParameter:serviceParameterName "f" ;
     ServiceParameter:serviceParameterType "searchPage" .
 
-<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#33b9a838-edec-4eb0-88cf-e03f38b8ff1e> a <ServiceParameter:ServiceParameter> ;
-    ServiceParameter:serviceParameterName "bbox" ;
-    ServiceParameter:serviceParameterType "box?" .
-
-<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#4611106c-ef7d-4698-9306-0f60ee109be1> a <ServiceParameter:ServiceParameter> ;
-    ServiceParameter:serviceParameterName "searchText" ;
-    ServiceParameter:serviceParameterType "{searchTerms}" .
-
-<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#5632c450-cdbe-4ac8-9b72-6adce21d6beb> a <ServiceParameter:ServiceParameter> ;
+ServiceParameter:fa1ae007-e257-4b61-a402-77913c16e570 a <ServiceParameter:ServiceParameter> ;
     ServiceParameter:serviceParameterName "f" ;
     ServiceParameter:serviceParameterType "georss" .
 
-<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#58360c1b-7b2e-4869-a45c-53ea61e67e1e> a <ServiceParameter:ServiceParameter> ;
-    ServiceParameter:serviceParameterName "start" ;
-    ServiceParameter:serviceParameterType "{startIndex?}" .
-
-<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#5a5c7e85-bcb8-4e94-92b1-63e5ff79ee78> a <ServiceParameter:ServiceParameter> ;
-    ServiceParameter:serviceParameterName "max" ;
-    ServiceParameter:serviceParameterType "{count?}" .
-
-<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#65075d71-8f4e-40c6-a0b4-f406bf9b8da2> a <ServiceParameter:ServiceParameter> ;
-    ServiceParameter:serviceParameterName "start" ;
-    ServiceParameter:serviceParameterType "{startIndex?}" .
-
-<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#7fc0beda-fa21-4def-9ca5-4909cde01f7f> a <ServiceParameter:ServiceParameter> ;
-    ServiceParameter:serviceParameterName "searchText" ;
-    ServiceParameter:serviceParameterType "{searchTerms}" .
-
-ServiceParameter:b14d93f7-ee04-4384-ac3f-a7f490313085 a <ServiceParameter:ServiceParameter> ;
-    ServiceParameter:serviceParameterName "max" ;
-    ServiceParameter:serviceParameterType "{count?}" .
-
-ServiceParameter:be63511f-9f95-470d-89bc-418b7fe6edd2 a <ServiceParameter:ServiceParameter> ;
-    ServiceParameter:serviceParameterName "start" ;
-    ServiceParameter:serviceParameterType "{startIndex?}" .
-
-ServiceParameter:c0ae6dbc-d99c-4b9c-b4c1-1da92cd7db1d a <ServiceParameter:ServiceParameter> ;
+ServiceParameter:fef8307d-ef8f-4fd8-a689-60b0cff992e2 a <ServiceParameter:ServiceParameter> ;
     ServiceParameter:serviceParameterName "bbox" ;
     ServiceParameter:serviceParameterType "box?" .
 
-ServiceParameter:e42af164-00ae-466f-8f93-950aa9873a97 a <ServiceParameter:ServiceParameter> ;
-    ServiceParameter:serviceParameterName "searchText" ;
-    ServiceParameter:serviceParameterType "{searchTerms}" .
-
-ServiceParameter:e540de74-f18f-4773-a94b-eb555a2780eb a <ServiceParameter:ServiceParameter> ;
-    ServiceParameter:serviceParameterName "max" ;
-    ServiceParameter:serviceParameterType "{count?}" .
-
-ServiceParameter:e764b18e-dfa0-4d07-a2e0-12dbff38d76a a <ServiceParameter:ServiceParameter> ;
-    ServiceParameter:serviceParameterName "bbox" ;
-    ServiceParameter:serviceParameterType "box?" .
-
-<http//purl.org/nsidc/bcube/web-services#49445c973e953f3e9d0456e6acd2f3db> a wso:OpenSearch,
-        <http://a9.com/-/spec/opensearch/> ;
-    wso:BaseURL "http://uaf.nodc.noaa.gov/geoportal/openSearchDescription" ;
+<http://purl.org/nsidc/bcube/web-services#49445c973e953f3e9d0456e6acd2f3db> a <http://a9.com/-/spec/opensearch/>,
+        wso:OpenSearch ;
     dc:abstract "[u'UAF Geospatial metadata search.']" ;
     dc:hasVersion "1.1" ;
-    dc:title "[u'UAF OpenSearch']" .
+    dc:title "[u'UAF OpenSearch']" ;
+    wso:BaseURL "http://uaf.nodc.noaa.gov/geoportal/openSearchDescription" .
 
 @prefix Profile: <http://www.daml.org/services/owl-s/1.2/Profile.owl#> .
 @prefix Service: <http://ww.daml.org/services/owl-s/1.2/Service.owl#> .
@@ -119,7 +119,7 @@ ServiceParameter:e764b18e-dfa0-4d07-a2e0-12dbff38d76a a <ServiceParameter:Servic
 @prefix media: <http://www.iana.org/assignments/media-types/media-types.xhtml#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix wso: <http//purl.org/nsidc/bcube/web-services#> .
+@prefix wso: <http://purl.org/nsidc/bcube/web-services#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -127,42 +127,42 @@ ServiceParameter:e764b18e-dfa0-4d07-a2e0-12dbff38d76a a <ServiceParameter:Servic
     rdfs:label "None" ;
     wso:BaseURL <http://science-center.org/Search?format=opensearch&id=46> ;
     wso:Protocol "HTTP GET" ;
-    wso:hasService <http//purl.org/nsidc/bcube/web-services#3bc23f4f2985f9a83b79b90885539176> ;
-    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#2c9d1c2b-42c1-4029-9bb2-08713277ae88>,
-        ServiceParameter:e20b65bc-38aa-4c5c-8aed-8c10b25b2339 ;
+    wso:hasService <http://purl.org/nsidc/bcube/web-services#3bc23f4f2985f9a83b79b90885539176> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#4d7ebb23-b7fc-418d-8c7a-8967ab7d45b8>,
+        ServiceParameter:d6e92c81-7af5-4cb9-9f50-668752268b24 ;
     media:type "application/opensearchdescription+xml" .
 
-<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#2c9d1c2b-42c1-4029-9bb2-08713277ae88> a <ServiceParameter:ServiceParameter> ;
-    ServiceParameter:serviceParameterName "id" ;
-    ServiceParameter:serviceParameterType "46" .
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#4d7ebb23-b7fc-418d-8c7a-8967ab7d45b8> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "format" ;
+    ServiceParameter:serviceParameterType "opensearch" .
 
-<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#39c42732-dc44-4875-909c-6c432a455ca1> a <ServiceParameter:ServiceParameter> ;
-    ServiceParameter:serviceParameterName "searchword" ;
-    ServiceParameter:serviceParameterType "{searchTerms}" .
-
-<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#7e2f62e4-59d9-4b0c-969a-663e446bfcd8> a <ServiceParameter:ServiceParameter> ;
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#7ca89096-77d0-41ee-b147-3b8ac8db6de0> a <ServiceParameter:ServiceParameter> ;
     ServiceParameter:serviceParameterName "option" ;
     ServiceParameter:serviceParameterType "com_search" .
 
-ServiceParameter:e20b65bc-38aa-4c5c-8aed-8c10b25b2339 a <ServiceParameter:ServiceParameter> ;
-    ServiceParameter:serviceParameterName "format" ;
-    ServiceParameter:serviceParameterType "opensearch" .
+ServiceParameter:d6e92c81-7af5-4cb9-9f50-668752268b24 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "id" ;
+    ServiceParameter:serviceParameterType "46" .
+
+ServiceParameter:f766c458-1600-4d93-8c2d-fe21ed816a35 a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "searchword" ;
+    ServiceParameter:serviceParameterType "{searchTerms}" .
 
 <http://www.pacificsciencecenter.org/index.php?option=com_search&searchword=%7BsearchTerms%7D> a wso:ServiceEndpoint ;
     rdfs:label "None" ;
     wso:BaseURL <http://www.pacificsciencecenter.org/index.php?option=com_search&searchword=%7BsearchTerms%7D> ;
     wso:Protocol "HTTP GET" ;
-    wso:hasService <http//purl.org/nsidc/bcube/web-services#3bc23f4f2985f9a83b79b90885539176> ;
-    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#39c42732-dc44-4875-909c-6c432a455ca1>,
-        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#7e2f62e4-59d9-4b0c-969a-663e446bfcd8> ;
+    wso:hasService <http://purl.org/nsidc/bcube/web-services#3bc23f4f2985f9a83b79b90885539176> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#7ca89096-77d0-41ee-b147-3b8ac8db6de0>,
+        ServiceParameter:f766c458-1600-4d93-8c2d-fe21ed816a35 ;
     media:type "text/html" .
 
-<http//purl.org/nsidc/bcube/web-services#3bc23f4f2985f9a83b79b90885539176> a wso:OpenSearch,
-        <http://a9.com/-/spec/opensearch/> ;
-    wso:BaseURL "http://science-center.org/Search?format=opensearch&id=46" ;
+<http://purl.org/nsidc/bcube/web-services#3bc23f4f2985f9a83b79b90885539176> a <http://a9.com/-/spec/opensearch/>,
+        wso:OpenSearch ;
     dc:abstract "[u'Pacific Islands Marine Portal(PIMRIS)']" ;
     dc:hasVersion "1.1" ;
-    dc:title "[u'Pacific Science Center']" .
+    dc:title "[u'Pacific Science Center']" ;
+    wso:BaseURL "http://science-center.org/Search?format=opensearch&id=46" .
 
 @prefix Profile: <http://www.daml.org/services/owl-s/1.2/Profile.owl#> .
 @prefix Service: <http://ww.daml.org/services/owl-s/1.2/Service.owl#> .
@@ -171,26 +171,26 @@ ServiceParameter:e20b65bc-38aa-4c5c-8aed-8c10b25b2339 a <ServiceParameter:Servic
 @prefix media: <http://www.iana.org/assignments/media-types/media-types.xhtml#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix wso: <http//purl.org/nsidc/bcube/web-services#> .
+@prefix wso: <http://purl.org/nsidc/bcube/web-services#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http//purl.org/nsidc/bcube/web-services#712a3501f60f44ee1421656a04562075> a wso:OpenSearch,
-        <http://a9.com/-/spec/opensearch/> ;
-    wso:BaseURL "http://www.africanremotesensing.org/opensearch.ashx" ;
+<http://purl.org/nsidc/bcube/web-services#712a3501f60f44ee1421656a04562075> a <http://a9.com/-/spec/opensearch/>,
+        wso:OpenSearch ;
     dc:abstract "None" ;
     dc:hasVersion "1.1" ;
-    dc:title "[u'www.africanremotesensing.org']" .
+    dc:title "[u'www.africanremotesensing.org']" ;
+    wso:BaseURL "http://www.africanremotesensing.org/opensearch.ashx" .
 
 <http://www.africanremotesensing.org/sys/search?q=%7BsearchTerms%7D> a wso:ServiceEndpoint ;
     rdfs:label "None" ;
     wso:BaseURL <http://www.africanremotesensing.org/sys/search?q=%7BsearchTerms%7D> ;
     wso:Protocol "HTTP GET" ;
-    wso:hasService <http//purl.org/nsidc/bcube/web-services#712a3501f60f44ee1421656a04562075> ;
-    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#7249e109-cdf2-4b70-a4ca-d6dbc2d910ba> ;
+    wso:hasService <http://purl.org/nsidc/bcube/web-services#712a3501f60f44ee1421656a04562075> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#9d63b0bc-99bb-4be8-b31e-13a2b8c02b49> ;
     media:type "text/html" .
 
-<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#7249e109-cdf2-4b70-a4ca-d6dbc2d910ba> a <ServiceParameter:ServiceParameter> ;
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#9d63b0bc-99bb-4be8-b31e-13a2b8c02b49> a <ServiceParameter:ServiceParameter> ;
     ServiceParameter:serviceParameterName "q" ;
     ServiceParameter:serviceParameterType "{searchTerms}" .
 
@@ -201,32 +201,32 @@ ServiceParameter:e20b65bc-38aa-4c5c-8aed-8c10b25b2339 a <ServiceParameter:Servic
 @prefix media: <http://www.iana.org/assignments/media-types/media-types.xhtml#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix wso: <http//purl.org/nsidc/bcube/web-services#> .
+@prefix wso: <http://purl.org/nsidc/bcube/web-services#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http//purl.org/nsidc/bcube/web-services#52c1b7140af294632720ff02fbf7d2e9> a wso:OpenSearch,
-        <http://a9.com/-/spec/opensearch/> ;
-    wso:BaseURL "http://www.rasdaman.org/search/opensearch" ;
+<http://purl.org/nsidc/bcube/web-services#52c1b7140af294632720ff02fbf7d2e9> a <http://a9.com/-/spec/opensearch/>,
+        wso:OpenSearch ;
     dc:abstract "None" ;
     dc:hasVersion "1.1" ;
-    dc:title "[u'Search rasdaman']" .
+    dc:title "[u'Search rasdaman']" ;
+    wso:BaseURL "http://www.rasdaman.org/search/opensearch" .
 
-<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#47c38a44-9826-436b-882a-263808cc95c4> a <ServiceParameter:ServiceParameter> ;
-    ServiceParameter:serviceParameterName "page" ;
-    ServiceParameter:serviceParameterType "{startPage}" .
-
-<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#5f19f107-9eb4-465a-a13b-7aa3b25498dc> a <ServiceParameter:ServiceParameter> ;
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#14c8e414-d321-4682-bb5c-c007384c07e0> a <ServiceParameter:ServiceParameter> ;
     ServiceParameter:serviceParameterName "q" ;
     ServiceParameter:serviceParameterType "{searchTerms}" .
+
+ServiceParameter:ce6fb97c-c05a-4274-9a08-e92b36174bba a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "page" ;
+    ServiceParameter:serviceParameterType "{startPage}" .
 
 <http://www.rasdaman.org/search?q=%7BsearchTerms%7D&page=%7BstartPage%7D> a wso:ServiceEndpoint ;
     rdfs:label "None" ;
     wso:BaseURL <http://www.rasdaman.org/search?q=%7BsearchTerms%7D&page=%7BstartPage%7D> ;
     wso:Protocol "HTTP GET" ;
-    wso:hasService <http//purl.org/nsidc/bcube/web-services#52c1b7140af294632720ff02fbf7d2e9> ;
-    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#47c38a44-9826-436b-882a-263808cc95c4>,
-        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#5f19f107-9eb4-465a-a13b-7aa3b25498dc> ;
+    wso:hasService <http://purl.org/nsidc/bcube/web-services#52c1b7140af294632720ff02fbf7d2e9> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#14c8e414-d321-4682-bb5c-c007384c07e0>,
+        ServiceParameter:ce6fb97c-c05a-4274-9a08-e92b36174bba ;
     media:type "text/html" .
 
 @prefix Profile: <http://www.daml.org/services/owl-s/1.2/Profile.owl#> .
@@ -236,53 +236,53 @@ ServiceParameter:e20b65bc-38aa-4c5c-8aed-8c10b25b2339 a <ServiceParameter:Servic
 @prefix media: <http://www.iana.org/assignments/media-types/media-types.xhtml#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix wso: <http//purl.org/nsidc/bcube/web-services#> .
+@prefix wso: <http://purl.org/nsidc/bcube/web-services#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#08f30604-8efb-4c1a-937a-a9187991cee4> a <ServiceParameter:ServiceParameter> ;
-    ServiceParameter:serviceParameterName "search" ;
-    ServiceParameter:serviceParameterType "{searchTerms}" .
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#0473155a-35eb-423a-bf40-1fa15aaa9c6d> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "title" ;
+    ServiceParameter:serviceParameterType "Search" .
 
-<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#1fd5fb20-55ac-4ce6-b845-31b1c7547346> a <ServiceParameter:ServiceParameter> ;
+<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#2a4a334a-99c2-4bed-9cff-0b3bccc4a66c> a <ServiceParameter:ServiceParameter> ;
     ServiceParameter:serviceParameterName "namespace" ;
     ServiceParameter:serviceParameterType "0" .
 
-<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#511bc048-c702-498b-bd2a-9dbb29dee58b> a <ServiceParameter:ServiceParameter> ;
+ServiceParameter:a551749e-5db1-43a4-8a79-7b0299674e00 a <ServiceParameter:ServiceParameter> ;
     ServiceParameter:serviceParameterName "search" ;
     ServiceParameter:serviceParameterType "{searchTerms}" .
 
-<http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#590a4a72-7699-4ba4-b8be-b1513b3cf03c> a <ServiceParameter:ServiceParameter> ;
+ServiceParameter:be69dc2f-557a-4ff8-a573-2071498ac2df a <ServiceParameter:ServiceParameter> ;
     ServiceParameter:serviceParameterName "action" ;
     ServiceParameter:serviceParameterType "opensearch" .
 
-ServiceParameter:e855a8d7-eb1e-43b2-ab4f-b1b52422f3c6 a <ServiceParameter:ServiceParameter> ;
-    ServiceParameter:serviceParameterName "title" ;
-    ServiceParameter:serviceParameterType "Search" .
+ServiceParameter:f8b62d07-eee4-4cfe-9339-39ece5de170e a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "search" ;
+    ServiceParameter:serviceParameterType "{searchTerms}" .
 
 <http://www.esa-ozone-cci.org/Private/api.php?action=opensearch&search=%7BsearchTerms%7D&namespace=0> a wso:ServiceEndpoint ;
     rdfs:label "None" ;
     wso:BaseURL <http://www.esa-ozone-cci.org/Private/api.php?action=opensearch&search=%7BsearchTerms%7D&namespace=0> ;
     wso:Protocol "HTTP GET" ;
-    wso:hasService <http//purl.org/nsidc/bcube/web-services#634edb7190f994eca9f0d959ee3ab0b8> ;
-    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#08f30604-8efb-4c1a-937a-a9187991cee4>,
-        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#1fd5fb20-55ac-4ce6-b845-31b1c7547346>,
-        <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#590a4a72-7699-4ba4-b8be-b1513b3cf03c> ;
+    wso:hasService <http://purl.org/nsidc/bcube/web-services#634edb7190f994eca9f0d959ee3ab0b8> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#2a4a334a-99c2-4bed-9cff-0b3bccc4a66c>,
+        ServiceParameter:be69dc2f-557a-4ff8-a573-2071498ac2df,
+        ServiceParameter:f8b62d07-eee4-4cfe-9339-39ece5de170e ;
     media:type "application/x-suggestions+json" .
 
 <http://www.esa-ozone-cci.org/Private/index.php?title=Special:Search&search=%7BsearchTerms%7D> a wso:ServiceEndpoint ;
     rdfs:label "None" ;
     wso:BaseURL <http://www.esa-ozone-cci.org/Private/index.php?title=Special:Search&search=%7BsearchTerms%7D> ;
     wso:Protocol "HTTP GET" ;
-    wso:hasService <http//purl.org/nsidc/bcube/web-services#634edb7190f994eca9f0d959ee3ab0b8> ;
-    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#511bc048-c702-498b-bd2a-9dbb29dee58b>,
-        ServiceParameter:e855a8d7-eb1e-43b2-ab4f-b1b52422f3c6 ;
+    wso:hasService <http://purl.org/nsidc/bcube/web-services#634edb7190f994eca9f0d959ee3ab0b8> ;
+    ServiceParameter:hasParameters <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#0473155a-35eb-423a-bf40-1fa15aaa9c6d>,
+        ServiceParameter:a551749e-5db1-43a4-8a79-7b0299674e00 ;
     media:type "text/html" .
 
-<http//purl.org/nsidc/bcube/web-services#634edb7190f994eca9f0d959ee3ab0b8> a wso:OpenSearch,
-        <http://a9.com/-/spec/opensearch/> ;
-    wso:BaseURL "http://www.esa-ozone-cci.org/Private/opensearch_desc.php" ;
+<http://purl.org/nsidc/bcube/web-services#634edb7190f994eca9f0d959ee3ab0b8> a <http://a9.com/-/spec/opensearch/>,
+        wso:OpenSearch ;
     dc:abstract "[u'Wiki_ozone (en)']" ;
     dc:hasVersion "1.1" ;
-    dc:title "[u'Wiki_ozone (en)']" .
+    dc:title "[u'Wiki_ozone (en)']" ;
+    wso:BaseURL "http://www.esa-ozone-cci.org/Private/opensearch_desc.php" .
 
