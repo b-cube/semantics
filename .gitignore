@@ -16,6 +16,8 @@ downloads/
 docs/
 ontologies/catalog*
 eggs/
+src/
+lib/src
 lib64/
 parts/
 sdist/

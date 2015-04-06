@@ -77,7 +77,7 @@ class TestTriples(unittest.TestCase):
 
     def test_triples_can_be_queried_1(self):
         # We want to query the abstract and the url of the OpenSearch service
-        base_url = Literal(urllib.quote("http://science-center.org/Search?format=opensearch&id=46"))
+        base_url = Literal("http://science-center.org/Search?format=opensearch&id=46")
         abstract = Literal("[u'Pacific Islands Marine Portal(PIMRIS)']")
         data = self.json_loader.parse(
             "service_examples/opensearch/" +
@@ -183,10 +183,60 @@ class TestTriples(unittest.TestCase):
         # TODO: datasets 2
         self.assertTrue(True)
 
-    def test_triples_can_be_serialized_1(self):
-        # TODO: stdout
-        self.assertTrue(True)
+    def test_urls_are_escaped_for_curly_brackets(self):
+        '''
+        RDFLib does not like '<>" {}|\\^`'
+        '''
+        uri = 'http//purl.org/nsidc/bcube/{some}/{value}'
+        escaped_uri = self.triples._escape_rdflib(uri)
+        self.assertTrue("{" not in escaped_uri)
+        self.assertTrue("%7B" in escaped_uri)
 
+
+class TestSerialization(unittest.TestCase):
+    '''
+    Tests that we can serialize the triples locally and
+    using a remote SPARQL endpoint.
+    '''
+    def setUp(self):
+        self.json_loader = JsonLoader("service_examples")
+
+    def tearDown(self):
+        self.json_loader = None
+
+    def test_triples_can_be_serialized_1(self):
+        # prepare
+        ns = 'http//purl.org/nsidc/bcube/web-services#'
+        service = self.json_loader.parse(
+            "service_examples/opensearch/" +
+            "3bc23f4f2985f9a83b79b90885539176.json")
+        triplelizer = Triplelizer()
+        parent_service = triplelizer.store.get_resource(
+            ns + service.digest)
+        # act
+        triples = triplelizer.triplelize_endpoints(
+            service, parent_service)
+        try:
+            turtle = triples.serialize("turtle")
+        except:
+            self.fail("Something went wrong with the serialization!")
+        self.assertEqual(type(turtle), str)
+
+    @unittest.skipIf(True, 'WAT!')
     def test_triples_can_be_serialized_2(self):
-        # TODO: remote SPARQL store
-        self.assertTrue(True)
+        # TODO: Fix this for Parliament!!
+        # Remote SPARQL store
+        # This test needs to use a dummy endpoint,
+        # it increases the execution time from .8 secs to 8 secs
+        # plus it's not working for Parliament! :(
+        endpoint = "http://54.69.87.196:8080/parliament/update.jsp"
+        data = self.json_loader.parse(
+            "service_examples/opensearch/" +
+            "3bc23f4f2985f9a83b79b90885539176.json")
+        triplelizer = Triplelizer(endpoint)
+        triples = triplelizer.triplelize(data)
+        try:
+            result = triples.update()
+            self.assertEqual(result, None)
+        except Exception:
+            self.fail("Something went wrong with the remote serialization!")

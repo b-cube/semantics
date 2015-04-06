@@ -2,7 +2,7 @@
 
 from rdflib import Graph, Literal, RDF, RDFS, Namespace, URIRef
 from rdflib.namespace import DCTERMS
-import urllib
+from rdflib.plugins.stores import sparqlstore
 from bunch import bunchify
 from optparse import OptionParser
 import os
@@ -10,6 +10,7 @@ import json
 import logging
 import glob
 import uuid
+import sys
 
 logging.basicConfig(filename="triples.log", level=logging.DEBUG)
 logger = logging.getLogger(__name__)
@@ -24,8 +25,13 @@ class Store():
     handles ontology binding and triples serialization.
     '''
 
-    def __init__(self):
-        self.g = Graph()
+    def __init__(self, endpoint=None):
+        if endpoint is None:
+            self.g = Graph()
+        else:
+            self._store = sparqlstore.SPARQLUpdateStore(endpoint, endpoint)
+            # self._store.open((endpoint, endpoint))
+            self.g = Graph(self._store)
         self.ns = {}
 
     def bind_namespaces(self, namespaces):
@@ -49,14 +55,21 @@ class Store():
     def serialize(self, format):
         return self.g.serialize(format=format)
 
+    def update(self):
+        return self.g.update(
+               "INSERT DATA { %s }" % self.g.serialize(format='nt'))
+
 
 class Triplelizer():
     '''
     This class takes the json output from semantics-preprocessing and generates
     triples
     '''
-    def __init__(self):
-        self.store = Store()
+    def __init__(self, endpoint=None):
+        if endpoint is None:
+            self.store = Store()
+        else:
+            self.store = Store(endpoint)
         with open(__location__ + '/services.json', 'r') as fp:
             self.fingerprints = bunchify(json.loads(fp.read()))
         ontology_uris = {
@@ -81,12 +94,19 @@ class Triplelizer():
         else:
             return value
 
+    def _escape_rdflib(self, url):
+        '''
+        See http://github.com/RDFLib/rdflib/blob/
+        e80c6186fee68219e19bc2adae2cd5edf20bfef9/rdflib/term.py
+        Line 73
+        '''
+        return url.replace("{", "%7B").replace("}", "%7D")
+
     def identify(self, document):
         for attr in self.fingerprints:
             if attr.DocType == document.identity.protocol:
                 return attr.object_type, attr.ontology_class
         return None
-
 
     def triplelize_parameters(self, parameters, endpoint):
         '''
@@ -121,14 +141,14 @@ class Triplelizer():
             # in the same service using the same base url.
             if item.url in endpoints:
                 endpoint = self.store.get_resource(
-                           urllib.quote(item.url) +
+                           self._escape_rdflib(item.url) +
                            "#" + str(uuid.uuid4()))
             else:
-                endpoints.add(item.url)
+                endpoints.add(self._escape_rdflib(item.url))
                 endpoint = self.store.get_resource(
-                           urllib.quote(item.url))
+                           self._escape_rdflib(item.url))
             endpoint.add(wso["Protocol"], Literal(item.protocol))
-            endpoint.add(wso["BaseURL"], URIRef(urllib.quote(item.url)))
+            endpoint.add(wso["BaseURL"], URIRef(self._escape_rdflib(item.url)))
             for mime_type in item.mimeType:
                 endpoint.add(media['type'], Literal(mime_type))
             if doc.identity.subtype == "service":
@@ -150,7 +170,7 @@ class Triplelizer():
         ns = 'http//purl.org/nsidc/bcube/web-services#'
         wso = self.store.ns['wso']
         if self.identify(document) is not None:
-            doc_base_url = urllib.quote(document.url)
+            doc_base_url = document.url
             doc_identifier = document.digest
             doc_version = document.identity.version
             doc_title = document.service_description.service.title
@@ -164,7 +184,8 @@ class Triplelizer():
             resource.add(DCTERMS.title, Literal(doc_title))
             resource.add(DCTERMS.hasVersion, Literal(doc_version))
             resource.add(DCTERMS.abstract, Literal(doc_abstract))
-            resource.add(wso.BaseURL, Literal(doc_base_url))
+            resource.add(wso.BaseURL,
+                         Literal(self._escape_rdflib(doc_base_url)))
             # now the endpoints
             self.triplelize_endpoints(document, resource)
             return self.store
@@ -210,7 +231,7 @@ def main():
             if json_data is not None:
                 triples_graph = triplify(json_data)
                 if triples_graph is not None:
-                    print unicode(triples_graph.serialize(options.format), 'unicode-escape')
+                    sys.stdout.write(triples_graph.serialize(options.format))
                 else:
                     logger.error(" Triples creation failed for: " + json_file)
             else:
