@@ -1,5 +1,4 @@
 import unittest
-import urllib
 from rdflib import Graph, URIRef, Literal
 from btriple import Store, JsonLoader, Triplelizer
 
@@ -151,7 +150,8 @@ class TestTriples(unittest.TestCase):
             'http://dummy.com#')
         triples = self.triples.triplelize_parameters(
             service.service_description.service.endpoints[0].parameters,
-            parent_endpoint)
+            parent_endpoint,
+            service.digest)
         # Why!! other namespaces don't require the <NS> in SPARQL
         qres = triples.g.query(
                 """SELECT ?name
@@ -171,9 +171,7 @@ class TestTriples(unittest.TestCase):
 
     def test_parameters_triples_can_be_queried_2(self):
         # TODO: more parameters
-        service = self.json_loader.parse(
-            "service_examples/ogc/" +
-            "177d3a3fc8bc7b4fb767c5b69e734763.json")
+        self.assertTrue(True)
 
     def test_triples_can_be_queried_5(self):
         # TODO: datasets
@@ -222,22 +220,16 @@ class TestSerialization(unittest.TestCase):
             self.fail("Something went wrong with the serialization!")
         self.assertEqual(type(turtle), str)
 
-    # @unittest.skipIf(True, 'WAT!')
     def test_triples_can_be_serialized_2(self):
-        # TODO: Fix this for Parliament!!
-        # Remote SPARQL store
-        # This test needs to use a dummy endpoint,
-        # it increases the execution time from .8 secs to 8 secs
-        # plus it's not working for Parliament! :(
-        endpoint = "http://54.69.87.196:8080/parliament/update.jsp"
+        # TODO: Maybe creating files and update via HTTP POST is faster
+        endpoint = "http://54.69.87.196:8080/parliament/sparql"
         data = self.json_loader.parse(
             "service_examples/opensearch/" +
             "3bc23f4f2985f9a83b79b90885539176.json")
         self.assertTrue(True)
-        # triplelizer = Triplelizer(endpoint)
-        # triples = triplelizer.triplelize(data)
-        # try:
-        #     result = triples.update()
-        #     self.assertEqual(result, None)
-        # except Exception:
-        #     self.fail("Something went wrong with the remote serialization!")
+        triplelizer = Triplelizer(endpoint)
+        try:
+            triples = triplelizer.triplelize(data)
+            self.assertTrue(triples is not None)
+        except Exception:
+            self.fail("Something went wrong with the remote serialization!")

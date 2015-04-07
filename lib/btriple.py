@@ -9,7 +9,6 @@ import os
 import json
 import logging
 import glob
-import uuid
 import sys
 
 logging.basicConfig(filename="triples.log", level=logging.DEBUG)
@@ -29,9 +28,9 @@ class Store():
         if endpoint is None:
             self.g = Graph()
         else:
-            self._store = sparqlstore.SPARQLUpdateStore(endpoint, endpoint)
-            # self._store.open((endpoint, endpoint))
-            self.g = Graph(self._store)
+            self._store = sparqlstore.SPARQLUpdateStore()
+            self._store.open((endpoint, endpoint))
+            self.g = Graph(self._store, URIRef('urn:x-arq:DefaultGraph'))
         self.ns = {}
 
     def bind_namespaces(self, namespaces):
@@ -108,7 +107,7 @@ class Triplelizer():
                 return attr.object_type, attr.ontology_class
         return None
 
-    def triplelize_parameters(self, parameters, endpoint):
+    def triplelize_parameters(self, parameters, endpoint, digest):
         '''
         Triplelize parameters, they belong to an endpoint
         and have a name, type and format.
@@ -116,7 +115,7 @@ class Triplelizer():
         param_ns = self.store.ns['ServiceParameter']
         for param in parameters:
             p = self.store.get_resource(
-                param_ns + str(uuid.uuid4()))
+                param_ns + digest + "/" + str(param.name))
             p.add(RDF.type, URIRef("ServiceParameter:ServiceParameter"))
             if self._validate(param.name) is not None:
                 p.add(param_ns['serviceParameterName'],
@@ -136,13 +135,14 @@ class Triplelizer():
         wso = self.store.ns['wso']
         media = self.store.ns['media']
         endpoints = set()
+        replicate_endpoint = 0
         for item in doc.service_description.service.endpoints:
-            # the next if is to create UUIDS if there are multiple endpoints
-            # in the same service using the same base url.
+            # if there are multiple endpoints using the same base url.
             if item.url in endpoints:
+                replicate_endpoint += 1
                 endpoint = self.store.get_resource(
                            self._escape_rdflib(item.url) +
-                           "#" + str(uuid.uuid4()))
+                           "#" + str(replicate_endpoint))
             else:
                 endpoints.add(self._escape_rdflib(item.url))
                 endpoint = self.store.get_resource(
@@ -155,7 +155,8 @@ class Triplelizer():
                 endpoint.add(RDF.type, wso["ServiceEndpoint"])
                 endpoint.add(wso["hasService"], service)
                 if item.parameters is not None:
-                    self.triplelize_parameters(item.parameters, endpoint)
+                    self.triplelize_parameters(item.parameters,
+                                               endpoint, doc.digest)
             else:
                 endpoint.add(wso["childOf"], service)
             endpoint.add(RDFS.label, Literal(item.name))
@@ -209,8 +210,11 @@ class JsonLoader():
             return None
 
 
-def triplify(json_data):
-    triple = Triplelizer()
+def triplify(json_data, sparql_store):
+    if sparql_store is not None:
+        triple = Triplelizer(sparql_store)
+    else:
+        triple = Triplelizer()
     triples_graph = triple.triplelize(json_data)
     if triples_graph is not None:
         return triples_graph
@@ -222,6 +226,7 @@ def main():
     p = OptionParser()
     p.add_option("--path", "-p")
     p.add_option("--format", "-f", default="turtle")
+    p.add_option("--sparlq", "-s")
     options, arguments = p.parse_args()
     if options.path and os.path.isdir(options.path):
         j_files = JsonLoader(options.path)
@@ -229,8 +234,9 @@ def main():
         for json_file in j_files.files:
             json_data = j_files.parse(json_file)
             if json_data is not None:
-                triples_graph = triplify(json_data)
+                triples_graph = triplify(json_data, options.sparql)
                 if triples_graph is not None:
+                    # TODO: pipe stdout for command composition
                     sys.stdout.write(triples_graph.serialize(options.format))
                 else:
                     logger.error(" Triples creation failed for: " + json_file)
