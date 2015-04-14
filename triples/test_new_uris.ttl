@@ -1,0 +1,277 @@
+@prefix Profile: <http://www.daml.org/services/owl-s/1.2/Profile.owl#> .
+@prefix Service: <http://ww.daml.org/services/owl-s/1.2/Service.owl#> .
+@prefix ServiceParameter: <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix media: <http://www.iana.org/assignments/media-types/media-types.xhtml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wso: <http://purl.org/nsidc/bcube/web-services#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:ServiceEndpoint:5e183929-2af8-4ab1-a26f-c6b09eefa1a8> a wso:ServiceEndpoint ;
+    wso:BaseURL <http://www.pacificsciencecenter.org/index.php?option=com_search&searchword=%7BsearchTerms%7D> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService <urn:WebDocument:9f9efad6-22aa-498a-9b89-c8f22f160077> ;
+    ServiceParameter:hasParameters <urn:ServiceParameter:570b9699-9bea-49d4-b430-bcd61aa188b1>,
+        <urn:ServiceParameter:aedafc0a-1146-409a-b97d-788ca96c78cb> ;
+    media:type "text/html" .
+
+<urn:ServiceEndpoint:5f57581b-36e3-4b04-a0c9-12312ba6f841> a wso:ServiceEndpoint ;
+    wso:BaseURL <http://science-center.org/Search?format=opensearch&id=46> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService <urn:WebDocument:9f9efad6-22aa-498a-9b89-c8f22f160077> ;
+    ServiceParameter:hasParameters <urn:ServiceParameter:2fefe058-8244-4e9a-9971-51a906a0cf2a>,
+        <urn:ServiceParameter:d6c4eef6-8bf5-4188-a262-6a393357ed4d> ;
+    media:type "application/opensearchdescription+xml" .
+
+<urn:ServiceParameter:2fefe058-8244-4e9a-9971-51a906a0cf2a> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "id" ;
+    ServiceParameter:serviceParameterType "46" .
+
+<urn:ServiceParameter:570b9699-9bea-49d4-b430-bcd61aa188b1> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "searchword" ;
+    ServiceParameter:serviceParameterType "{searchTerms}" .
+
+<urn:ServiceParameter:aedafc0a-1146-409a-b97d-788ca96c78cb> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "option" ;
+    ServiceParameter:serviceParameterType "com_search" .
+
+<urn:ServiceParameter:d6c4eef6-8bf5-4188-a262-6a393357ed4d> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "format" ;
+    ServiceParameter:serviceParameterType "opensearch" .
+
+<urn:WebDocument:9f9efad6-22aa-498a-9b89-c8f22f160077> a <http://a9.com/-/spec/opensearch/>,
+        wso:OpenSearch ;
+    dc:abstract "Pacific Islands Marine Portal(PIMRIS)" ;
+    dc:hasVersion "1.1" ;
+    dc:title "Pacific Science Center" ;
+    wso:BaseURL "http://science-center.org/Search?format=opensearch&id=46" .
+
+@prefix Profile: <http://www.daml.org/services/owl-s/1.2/Profile.owl#> .
+@prefix Service: <http://ww.daml.org/services/owl-s/1.2/Service.owl#> .
+@prefix ServiceParameter: <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix media: <http://www.iana.org/assignments/media-types/media-types.xhtml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wso: <http://purl.org/nsidc/bcube/web-services#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:ServiceEndpoint:03331104-2749-4150-8f1d-f1d8d9847367> a wso:ServiceEndpoint ;
+    wso:BaseURL <http://uaf.nodc.noaa.gov/geoportal/rest/find/document?searchText=%7BsearchTerms%7D&start=%7BstartIndex?%7D&max=%7Bcount?%7D&bbox=%7Bgeo:box?%7D&f=atom> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService <urn:WebDocument:445ef542-013d-4b1c-8032-47a1a46bd486> ;
+    ServiceParameter:hasParameters <urn:ServiceParameter:30b3f099-9f7a-452a-a174-a6a7b0d4b6c0>,
+        <urn:ServiceParameter:7eb9faa2-d462-4379-8781-605b468c2583>,
+        <urn:ServiceParameter:9966770d-5185-438e-b0fd-2c8562e1364b>,
+        <urn:ServiceParameter:9fffbe77-e92b-4098-bd4b-7d491301b26c>,
+        <urn:ServiceParameter:f90b55ef-f6fb-417c-bd3f-5f889bdf99b5> ;
+    media:type "application/atom+xml" .
+
+<urn:ServiceEndpoint:30f9a074-0c06-4bb4-a2fd-dd84fd1426e3> a wso:ServiceEndpoint ;
+    wso:BaseURL <http://uaf.nodc.noaa.gov/geoportal/rest/find/document?searchText=%7BsearchTerms%7D&start=%7BstartIndex?%7D&max=%7Bcount?%7D&bbox=%7Bgeo:box?%7D&f=searchPage> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService <urn:WebDocument:445ef542-013d-4b1c-8032-47a1a46bd486> ;
+    ServiceParameter:hasParameters <urn:ServiceParameter:28cee66b-03f9-4f88-9e3b-6510b04d2565>,
+        <urn:ServiceParameter:7eb03b6b-89ea-4e0e-94b5-0dbbb0aea74d>,
+        <urn:ServiceParameter:ca6df5f0-a11f-4823-86b6-a2d5165055e0>,
+        <urn:ServiceParameter:d582e6a6-233c-4d7a-ab0c-306fba4dee5b>,
+        <urn:ServiceParameter:e2f88c16-2b82-4727-ab5b-deed93609343> ;
+    media:type "text/html" .
+
+<urn:ServiceEndpoint:987f1d6f-0141-4feb-b76a-6c651fc7c6fb> a wso:ServiceEndpoint ;
+    wso:BaseURL <http://uaf.nodc.noaa.gov/geoportal/rest/find/document?searchText=%7BsearchTerms%7D&start=%7BstartIndex?%7D&max=%7Bcount?%7D&bbox=%7Bgeo:box?%7D&f=georss> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService <urn:WebDocument:445ef542-013d-4b1c-8032-47a1a46bd486> ;
+    ServiceParameter:hasParameters <urn:ServiceParameter:1af6a8ba-a371-4d11-b94b-9387b7ce9bdc>,
+        <urn:ServiceParameter:815ff298-4773-456b-b74b-48c49d9d20f8>,
+        <urn:ServiceParameter:960cf810-bef3-49b6-b0e4-6e69f7e2b12c>,
+        <urn:ServiceParameter:b4812caa-d9f5-4bb8-9cd4-ed383f920f89>,
+        <urn:ServiceParameter:ddfe33a6-7c5a-46d6-ad19-bc0fed891925> ;
+    media:type "application/rss+xml" .
+
+<urn:ServiceParameter:1af6a8ba-a371-4d11-b94b-9387b7ce9bdc> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "max" ;
+    ServiceParameter:serviceParameterType "{count?}" .
+
+<urn:ServiceParameter:28cee66b-03f9-4f88-9e3b-6510b04d2565> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "f" ;
+    ServiceParameter:serviceParameterType "searchPage" .
+
+<urn:ServiceParameter:30b3f099-9f7a-452a-a174-a6a7b0d4b6c0> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "max" ;
+    ServiceParameter:serviceParameterType "{count?}" .
+
+<urn:ServiceParameter:7eb03b6b-89ea-4e0e-94b5-0dbbb0aea74d> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "bbox" ;
+    ServiceParameter:serviceParameterType "box?" .
+
+<urn:ServiceParameter:7eb9faa2-d462-4379-8781-605b468c2583> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "f" ;
+    ServiceParameter:serviceParameterType "atom" .
+
+<urn:ServiceParameter:815ff298-4773-456b-b74b-48c49d9d20f8> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "start" ;
+    ServiceParameter:serviceParameterType "{startIndex?}" .
+
+<urn:ServiceParameter:960cf810-bef3-49b6-b0e4-6e69f7e2b12c> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "f" ;
+    ServiceParameter:serviceParameterType "georss" .
+
+<urn:ServiceParameter:9966770d-5185-438e-b0fd-2c8562e1364b> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "start" ;
+    ServiceParameter:serviceParameterType "{startIndex?}" .
+
+<urn:ServiceParameter:9fffbe77-e92b-4098-bd4b-7d491301b26c> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "searchText" ;
+    ServiceParameter:serviceParameterType "{searchTerms}" .
+
+<urn:ServiceParameter:b4812caa-d9f5-4bb8-9cd4-ed383f920f89> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "bbox" ;
+    ServiceParameter:serviceParameterType "box?" .
+
+<urn:ServiceParameter:ca6df5f0-a11f-4823-86b6-a2d5165055e0> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "start" ;
+    ServiceParameter:serviceParameterType "{startIndex?}" .
+
+<urn:ServiceParameter:d582e6a6-233c-4d7a-ab0c-306fba4dee5b> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "max" ;
+    ServiceParameter:serviceParameterType "{count?}" .
+
+<urn:ServiceParameter:ddfe33a6-7c5a-46d6-ad19-bc0fed891925> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "searchText" ;
+    ServiceParameter:serviceParameterType "{searchTerms}" .
+
+<urn:ServiceParameter:e2f88c16-2b82-4727-ab5b-deed93609343> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "searchText" ;
+    ServiceParameter:serviceParameterType "{searchTerms}" .
+
+<urn:ServiceParameter:f90b55ef-f6fb-417c-bd3f-5f889bdf99b5> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "bbox" ;
+    ServiceParameter:serviceParameterType "box?" .
+
+<urn:WebDocument:445ef542-013d-4b1c-8032-47a1a46bd486> a <http://a9.com/-/spec/opensearch/>,
+        wso:OpenSearch ;
+    dc:abstract "UAF Geospatial metadata search." ;
+    dc:hasVersion "1.1" ;
+    dc:title "UAF OpenSearch" ;
+    wso:BaseURL "http://uaf.nodc.noaa.gov/geoportal/openSearchDescription" .
+
+@prefix Profile: <http://www.daml.org/services/owl-s/1.2/Profile.owl#> .
+@prefix Service: <http://ww.daml.org/services/owl-s/1.2/Service.owl#> .
+@prefix ServiceParameter: <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix media: <http://www.iana.org/assignments/media-types/media-types.xhtml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wso: <http://purl.org/nsidc/bcube/web-services#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:ServiceEndpoint:3662fafe-d4a5-4e21-9c50-7910484bd626> a wso:ServiceEndpoint ;
+    wso:BaseURL <http://www.rasdaman.org/search?q=%7BsearchTerms%7D&page=%7BstartPage%7D> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService <urn:WebDocument:081efefb-54fb-4e67-b82a-ff7d692f89e0> ;
+    ServiceParameter:hasParameters <urn:ServiceParameter:b7896b8e-c979-4139-a03e-8e47831138d2>,
+        <urn:ServiceParameter:bcaa9017-5cd8-45e1-971c-10be503a8364> ;
+    media:type "text/html" .
+
+<urn:ServiceParameter:b7896b8e-c979-4139-a03e-8e47831138d2> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "page" ;
+    ServiceParameter:serviceParameterType "{startPage}" .
+
+<urn:ServiceParameter:bcaa9017-5cd8-45e1-971c-10be503a8364> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "q" ;
+    ServiceParameter:serviceParameterType "{searchTerms}" .
+
+<urn:WebDocument:081efefb-54fb-4e67-b82a-ff7d692f89e0> a <http://a9.com/-/spec/opensearch/>,
+        wso:OpenSearch ;
+    dc:hasVersion "1.1" ;
+    dc:title "Search rasdaman" ;
+    wso:BaseURL "http://www.rasdaman.org/search/opensearch" .
+
+@prefix Profile: <http://www.daml.org/services/owl-s/1.2/Profile.owl#> .
+@prefix Service: <http://ww.daml.org/services/owl-s/1.2/Service.owl#> .
+@prefix ServiceParameter: <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix media: <http://www.iana.org/assignments/media-types/media-types.xhtml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wso: <http://purl.org/nsidc/bcube/web-services#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:ServiceEndpoint:af202ea4-56fc-49de-afc9-f71a6743d508> a wso:ServiceEndpoint ;
+    wso:BaseURL <http://www.esa-ozone-cci.org/Private/api.php?action=opensearch&search=%7BsearchTerms%7D&namespace=0> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService <urn:WebDocument:4d96d2ac-3837-4625-89d4-f41a6cbf7429> ;
+    ServiceParameter:hasParameters <urn:ServiceParameter:42474bc2-d969-4d0f-95f1-9e66a9db37ef>,
+        <urn:ServiceParameter:42e02b4b-b788-4d8f-943a-8b2464f21b7c>,
+        <urn:ServiceParameter:7e835846-3ddc-4c76-a52e-104e80bd2980> ;
+    media:type "application/x-suggestions+json" .
+
+<urn:ServiceEndpoint:ef3da695-ab70-4169-9229-ce7a498c5682> a wso:ServiceEndpoint ;
+    wso:BaseURL <http://www.esa-ozone-cci.org/Private/index.php?title=Special:Search&search=%7BsearchTerms%7D> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService <urn:WebDocument:4d96d2ac-3837-4625-89d4-f41a6cbf7429> ;
+    ServiceParameter:hasParameters <urn:ServiceParameter:58229982-e072-4e26-b5bb-bceb47c8ee80>,
+        <urn:ServiceParameter:7a2a5bef-669e-443a-a6cd-732fe4868fa5> ;
+    media:type "text/html" .
+
+<urn:ServiceParameter:42474bc2-d969-4d0f-95f1-9e66a9db37ef> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "search" ;
+    ServiceParameter:serviceParameterType "{searchTerms}" .
+
+<urn:ServiceParameter:42e02b4b-b788-4d8f-943a-8b2464f21b7c> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "action" ;
+    ServiceParameter:serviceParameterType "opensearch" .
+
+<urn:ServiceParameter:58229982-e072-4e26-b5bb-bceb47c8ee80> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "title" ;
+    ServiceParameter:serviceParameterType "Search" .
+
+<urn:ServiceParameter:7a2a5bef-669e-443a-a6cd-732fe4868fa5> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "search" ;
+    ServiceParameter:serviceParameterType "{searchTerms}" .
+
+<urn:ServiceParameter:7e835846-3ddc-4c76-a52e-104e80bd2980> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "namespace" ;
+    ServiceParameter:serviceParameterType "0" .
+
+<urn:WebDocument:4d96d2ac-3837-4625-89d4-f41a6cbf7429> a <http://a9.com/-/spec/opensearch/>,
+        wso:OpenSearch ;
+    dc:abstract "Wiki_ozone (en)" ;
+    dc:hasVersion "1.1" ;
+    dc:title "Wiki_ozone (en)" ;
+    wso:BaseURL "http://www.esa-ozone-cci.org/Private/opensearch_desc.php" .
+
+@prefix Profile: <http://www.daml.org/services/owl-s/1.2/Profile.owl#> .
+@prefix Service: <http://ww.daml.org/services/owl-s/1.2/Service.owl#> .
+@prefix ServiceParameter: <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix media: <http://www.iana.org/assignments/media-types/media-types.xhtml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wso: <http://purl.org/nsidc/bcube/web-services#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:ServiceEndpoint:0cd9a624-943e-42d2-8b92-4028c5b6030a> a wso:ServiceEndpoint ;
+    wso:BaseURL <http://www.africanremotesensing.org/sys/search?q=%7BsearchTerms%7D> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService <urn:WebDocument:854eb304-2b66-4ed8-8920-b3d856fae44b> ;
+    ServiceParameter:hasParameters <urn:ServiceParameter:2bcfe4ba-951b-499f-85ba-525b626830cf> ;
+    media:type "text/html" .
+
+<urn:ServiceParameter:2bcfe4ba-951b-499f-85ba-525b626830cf> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "q" ;
+    ServiceParameter:serviceParameterType "{searchTerms}" .
+
+<urn:WebDocument:854eb304-2b66-4ed8-8920-b3d856fae44b> a <http://a9.com/-/spec/opensearch/>,
+        wso:OpenSearch ;
+    dc:hasVersion "1.1" ;
+    dc:title "www.africanremotesensing.org" ;
+    wso:BaseURL "http://www.africanremotesensing.org/opensearch.ashx" .
+

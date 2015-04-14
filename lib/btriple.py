@@ -6,10 +6,12 @@ from rdflib.plugins.stores import sparqlstore
 from bunch import bunchify
 from optparse import OptionParser
 import os
+import hashlib
 import json
 import logging
 import glob
 import sys
+from uuid import uuid4
 
 logging.basicConfig(filename="triples.log", level=logging.DEBUG)
 logger = logging.getLogger(__name__)
@@ -101,6 +103,25 @@ class Triplelizer():
         '''
         return url.replace("{", "%7B").replace("}", "%7D")
 
+    def _generate_sha_identifier(self, url):
+        '''
+        temporary document identifer as sha-1 of the source url
+        (should be implemented in solr in the near future)
+        '''
+        return hashlib.sha224(url).hexdigest()
+
+    def _generate_uri(self, object_type):
+        '''
+        generate a non-resolvable uri for any object as
+            urn:{object_type}:{identifier}
+        where object_type is the class name and identifier
+        is a random hash (uuid4 for now)
+
+        note: can't just generate a sha hash from the value
+              given that the values can repeat
+        '''
+        return 'urn:{0}:{1}'.format(object_type, str(uuid4()))
+
     def identify(self, document):
         for attr in self.fingerprints:
             if attr.DocType == document.identity.protocol:
@@ -114,8 +135,12 @@ class Triplelizer():
         '''
         param_ns = self.store.ns['ServiceParameter']
         for param in parameters:
-            p = self.store.get_resource(
-                param_ns + digest + "/" + str(param.name))
+            # p = self.store.get_resource(
+            #     param_ns + digest + "/" + str(param.name))
+
+            parameter_urn = self._generate_uri('ServiceParameter')
+            p = self.store.get_resource(parameter_urn)
+
             p.add(RDF.type, URIRef("ServiceParameter:ServiceParameter"))
             if self._validate(param.name) is not None:
                 p.add(param_ns['serviceParameterName'],
@@ -134,19 +159,25 @@ class Triplelizer():
         '''
         wso = self.store.ns['wso']
         media = self.store.ns['media']
-        endpoints = set()
-        replicate_endpoint = 0
+        # endpoints = set()
+        # replicate_endpoint = 0
         for item in doc.service_description.service.endpoints:
             # if there are multiple endpoints using the same base url.
-            if item.url in endpoints:
-                replicate_endpoint += 1
-                endpoint = self.store.get_resource(
-                           self._escape_rdflib(item.url) +
-                           "#" + str(replicate_endpoint))
-            else:
-                endpoints.add(self._escape_rdflib(item.url))
-                endpoint = self.store.get_resource(
-                           self._escape_rdflib(item.url))
+            # if item.url in endpoints:
+            #     replicate_endpoint += 1
+            #     # endpoint = self.store.get_resource(
+            #     #            self._escape_rdflib(item.url) +
+            #     #            "#" + str(replicate_endpoint))
+            # else:
+            #     endpoints.add(self._escape_rdflib(item.url))
+            #     endpoint = self.store.get_resource(
+            #                self._escape_rdflib(item.url))
+
+            # switching to the URN as URI situation so there
+            # should not be "replicated" endpoints
+            endpoint_uri = self._generate_uri('ServiceEndpoint')
+            endpoint = self.store.get_resource(endpoint_uri)
+
             endpoint.add(wso["Protocol"], Literal(item.protocol))
             endpoint.add(wso["BaseURL"], URIRef(self._escape_rdflib(item.url)))
             for mime_type in item.mimeType:
@@ -159,7 +190,9 @@ class Triplelizer():
                                                endpoint, doc.digest)
             else:
                 endpoint.add(wso["childOf"], service)
-            endpoint.add(RDFS.label, Literal(item.name))
+
+            if 'name' in item:
+                endpoint.add(RDFS.label, Literal(item.name))
         return self.store
 
     def triplelize(self, document):
@@ -168,23 +201,39 @@ class Triplelizer():
         pip install git+https://github.com/betolink/bunch.git
         Otherwise bunch rises an exception for not found keys
         '''
-        ns = 'http://purl.org/nsidc/bcube/web-services#'
+        # ns = 'http://purl.org/nsidc/bcube/web-services#'
         wso = self.store.ns['wso']
         if self.identify(document) is not None:
+            document_urn = self._generate_uri('WebDocument')
+
+            service_doc = document.get('service_description', {})
+            service = service_doc.get('service', {})
+
+            # TODO: this is actually incorrect (we could have other
+            #       things!) but good enough for today Apr 14, 2015
+            if not service_doc or not service:
+                return None
+
             doc_base_url = document.url
-            doc_identifier = document.digest
+            # doc_identifier = document.digest
             doc_version = document.identity.version
-            doc_title = document.service_description.service.title
-            doc_abstract = document.service_description.service.abstract
+            doc_title = service.get('title', [])
+            doc_abstract = service.get('abstract', [])
             doc_type, doc_ontology = self.identify(document)
 
-            resource = self.store.get_resource(ns + doc_identifier)
+            # resource = self.store.get_resource(ns + doc_identifier)
+            resource = self.store.get_resource(document_urn)
 
             resource.add(RDF.type, URIRef(doc_type))
             resource.add(RDF.type, wso[doc_ontology])
-            resource.add(DCTERMS.title, Literal(doc_title))
             resource.add(DCTERMS.hasVersion, Literal(doc_version))
-            resource.add(DCTERMS.abstract, Literal(doc_abstract))
+
+            # run as multiple elements for now
+            for title in doc_title:
+                resource.add(DCTERMS.title, Literal(title))
+            for abstract in doc_abstract:
+                resource.add(DCTERMS.abstract, Literal(abstract))
+
             resource.add(wso.BaseURL,
                          Literal(self._escape_rdflib(doc_base_url)))
             # now the endpoints
@@ -226,8 +275,9 @@ def main():
     p = OptionParser()
     p.add_option("--path", "-p")
     p.add_option("--format", "-f", default="turtle")
-    p.add_option("--sparlq", "-s")
+    p.add_option("--sparql", "-s", default=None)
     options, arguments = p.parse_args()
+
     if options.path and os.path.isdir(options.path):
         j_files = JsonLoader(options.path)
         logger.info("Found: " + str(len(j_files.files)) + " files")
