@@ -162,19 +162,6 @@ class Triplelizer():
         # endpoints = set()
         # replicate_endpoint = 0
         for item in doc.service_description.service.endpoints:
-            # if there are multiple endpoints using the same base url.
-            # if item.url in endpoints:
-            #     replicate_endpoint += 1
-            #     # endpoint = self.store.get_resource(
-            #     #            self._escape_rdflib(item.url) +
-            #     #            "#" + str(replicate_endpoint))
-            # else:
-            #     endpoints.add(self._escape_rdflib(item.url))
-            #     endpoint = self.store.get_resource(
-            #                self._escape_rdflib(item.url))
-
-            # switching to the URN as URI situation so there
-            # should not be "replicated" endpoints
             endpoint_uri = self._generate_uri('ServiceEndpoint')
             endpoint = self.store.get_resource(endpoint_uri)
 
@@ -215,7 +202,6 @@ class Triplelizer():
                 return None
 
             doc_base_url = document.url
-            # doc_identifier = document.digest
             doc_version = document.identity.version
             doc_title = service.get('title', [])
             doc_abstract = service.get('abstract', [])
@@ -247,7 +233,16 @@ class JsonLoader():
     '''
     '''
     def __init__(self, path):
-        self.files = glob.glob(os.path.join(path, '*.json'))
+        self.path = path
+
+    def load(self):
+        # generator for the files (whether path or not)
+        if os.path.isdir(self.path):
+            files = glob.glob(os.path.join(self.path, '*.json'))
+            for f in files:
+                yield f
+        elif os.path.isfile(self.path):
+            yield self.path
 
     def parse(self, j_file):
         try:
@@ -265,10 +260,8 @@ def triplify(json_data, sparql_store):
     else:
         triple = Triplelizer()
     triples_graph = triple.triplelize(json_data)
-    if triples_graph is not None:
-        return triples_graph
-    else:
-        return None
+
+    return triples_graph
 
 
 def main():
@@ -278,24 +271,26 @@ def main():
     p.add_option("--sparql", "-s", default=None)
     options, arguments = p.parse_args()
 
-    if options.path and os.path.isdir(options.path):
-        j_files = JsonLoader(options.path)
-        logger.info("Found: " + str(len(j_files.files)) + " files")
-        for json_file in j_files.files:
-            json_data = j_files.parse(json_file)
-            if json_data is not None:
-                triples_graph = triplify(json_data, options.sparql)
-                if triples_graph is not None:
-                    # TODO: pipe stdout for command composition
-                    sys.stdout.write(triples_graph.serialize(options.format))
-                else:
-                    logger.error(" Triples creation failed for: " + json_file)
-            else:
-                logger.error(" Parsing failed for : " + json_file)
-    else:
-        print options.path + " is not a valid path"
-        p.print_help()
+    if not options.path:
+        p.error('Missing a valid path')
 
+    loader = JsonLoader(options.path)
+    for j_file in loader.load():
+        json_data = loader.parse(j_file)
+
+        if not json_data:
+            logger.debug('Failed to load {0}'.format(j_file))
+            continue
+
+        logger.debug('Triples {0}'.format(j_file))
+
+        triples_graph = triplify(json_data, options.sparql)
+
+        if triples_graph is not None:
+            # TODO: pipe stdout for command composition
+            sys.stdout.write(triples_graph.serialize(options.format))
+        else:
+            logger.error(" Triples creation failed for: " + j_file)
 
 if __name__ == '__main__':
     main()
