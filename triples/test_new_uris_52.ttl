@@ -1,0 +1,33 @@
+@prefix Profile: <http://www.daml.org/services/owl-s/1.2/Profile.owl#> .
+@prefix Service: <http://ww.daml.org/services/owl-s/1.2/Service.owl#> .
+@prefix ServiceParameter: <http://www.daml.org/services/owl-s/1.2/ServiceParameter.owl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix media: <http://www.iana.org/assignments/media-types/media-types.xhtml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wso: <http://purl.org/nsidc/bcube/web-services#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:ServiceEndpoint:6544a281-4ff4-4a59-b6b0-56d199934dbd> a wso:ServiceEndpoint ;
+    wso:BaseURL <http://www.rasdaman.org/search?q=%7BsearchTerms%7D&page=%7BstartPage%7D> ;
+    wso:Protocol "HTTP GET" ;
+    wso:hasService <urn:WebDocument:77baca2e-6828-4168-b296-ee45a7acbd04> ;
+    ServiceParameter:hasParameters <urn:ServiceParameter:2cdbd3bd-145b-4b33-826d-9d1f41f0f400>,
+        <urn:ServiceParameter:884a7186-4998-4cda-a96a-f152d1494381> ;
+    media:type "text/html" .
+
+<urn:ServiceParameter:2cdbd3bd-145b-4b33-826d-9d1f41f0f400> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "page" ;
+    ServiceParameter:serviceParameterType "{startPage}" .
+
+<urn:ServiceParameter:884a7186-4998-4cda-a96a-f152d1494381> a <ServiceParameter:ServiceParameter> ;
+    ServiceParameter:serviceParameterName "q" ;
+    ServiceParameter:serviceParameterType "{searchTerms}" .
+
+<urn:WebDocument:77baca2e-6828-4168-b296-ee45a7acbd04> a <http://a9.com/-/spec/opensearch/>,
+        wso:OpenSearch ;
+    dc:hasVersion "1.1" ;
+    dc:title "Search rasdaman" ;
+    wso:BaseURL "http://www.rasdaman.org/search/opensearch" .
+

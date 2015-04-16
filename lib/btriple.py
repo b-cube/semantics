@@ -135,9 +135,6 @@ class Triplelizer():
         '''
         param_ns = self.store.ns['ServiceParameter']
         for param in parameters:
-            # p = self.store.get_resource(
-            #     param_ns + digest + "/" + str(param.name))
-
             parameter_urn = self._generate_uri('ServiceParameter')
             p = self.store.get_resource(parameter_urn)
 
@@ -207,7 +204,6 @@ class Triplelizer():
             doc_abstract = service.get('abstract', [])
             doc_type, doc_ontology = self.identify(document)
 
-            # resource = self.store.get_resource(ns + doc_identifier)
             resource = self.store.get_resource(document_urn)
 
             resource.add(RDF.type, URIRef(doc_type))
@@ -281,8 +277,6 @@ def main():
         if not json_data:
             logger.debug('Failed to load {0}'.format(j_file))
             continue
-
-        logger.debug('Triples {0}'.format(j_file))
 
         triples_graph = triplify(json_data, options.sparql)
 
