@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://purl.org/nsidc/bcube/EarthScienceDataWebServices"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://purl.org/nsidc/bcube/EarthScienceDataWebServices"
+     versionIRI="http://purl.org/nsidc/bcube/EarthScienceDataWebServices">
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Import>http://www.daml.org/services/owl-s/1.2/Profile.owl</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="&rdfs;Literal">0.5</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&xsd;string">BCube crawler ontology for the taxonomy of service advertisements (i.e., OWL-S Profiles).  </Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#OWLClass_1b123c80_d9fd_4b75_9857_aa4d331887b3"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OWLClass_84c68a13_7bcc_4bfe_8554_8d5acb98bbe1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OWLClass_96ab09d3_e57a_402f_94c9_924227ca37a7"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OWLClass_9849a018_f755_4025_89fb_6bd8cbc2453c"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OWLClass_d2cc6cd4_f1eb_4e97_835e_2876eb0dcd7c"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OWLClass_df621337_9102_4b3b_ae43_07a980540abd"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#OWLClass_1b123c80_d9fd_4b75_9857_aa4d331887b3"/>
+        <Class IRI="#OWLClass_84c68a13_7bcc_4bfe_8554_8d5acb98bbe1"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OWLClass_84c68a13_7bcc_4bfe_8554_8d5acb98bbe1"/>
+        <Class IRI="http://www.daml.org/services/owl-s/1.2/Profile.owl#Profile"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OWLClass_96ab09d3_e57a_402f_94c9_924227ca37a7"/>
+        <Class IRI="#OWLClass_84c68a13_7bcc_4bfe_8554_8d5acb98bbe1"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OWLClass_9849a018_f755_4025_89fb_6bd8cbc2453c"/>
+        <Class IRI="#OWLClass_84c68a13_7bcc_4bfe_8554_8d5acb98bbe1"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OWLClass_d2cc6cd4_f1eb_4e97_835e_2876eb0dcd7c"/>
+        <Class IRI="#OWLClass_84c68a13_7bcc_4bfe_8554_8d5acb98bbe1"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OWLClass_df621337_9102_4b3b_ae43_07a980540abd"/>
+        <Class IRI="#OWLClass_84c68a13_7bcc_4bfe_8554_8d5acb98bbe1"/>
+    </SubClassOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_1b123c80_d9fd_4b75_9857_aa4d331887b3</IRI>
+        <Literal datatypeIRI="&xsd;string">These services return data from a data set in some form or other (e.g., may be data from an OGC service).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLClass_1b123c80_d9fd_4b75_9857_aa4d331887b3</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DataService</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_84c68a13_7bcc_4bfe_8554_8d5acb98bbe1</IRI>
+        <Literal datatypeIRI="&xsd;string">Top level of an ontology of data related web services in the earth sciences.  </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLClass_84c68a13_7bcc_4bfe_8554_8d5acb98bbe1</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">EarthScienceDataWebService</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_96ab09d3_e57a_402f_94c9_924227ca37a7</IRI>
+        <Literal datatypeIRI="&xsd;string">These services operate on data sets as a whole returning those parts of a data set that match the input parameters.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLClass_96ab09d3_e57a_402f_94c9_924227ca37a7</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SubsettingService</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_9849a018_f755_4025_89fb_6bd8cbc2453c</IRI>
+        <Literal datatypeIRI="&xsd;string">These services do not return data per se, just an image of the data (e.g., a png)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLClass_9849a018_f755_4025_89fb_6bd8cbc2453c</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">MappingService</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_d2cc6cd4_f1eb_4e97_835e_2876eb0dcd7c</IRI>
+        <Literal datatypeIRI="&xsd;string">These services return some form of visualization of data.  This might include an applet displaying data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLClass_d2cc6cd4_f1eb_4e97_835e_2876eb0dcd7c</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">VisualizationService</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_df621337_9102_4b3b_ae43_07a980540abd</IRI>
+        <Literal datatypeIRI="&xsd;string">All service profiles of this type contain catalog services (i.e., they return a list of data sets that meet some set of criteria).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLClass_df621337_9102_4b3b_ae43_07a980540abd</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">CatalogService</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
