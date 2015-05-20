@@ -156,8 +156,7 @@ class Triplelizer():
         '''
         wso = self.store.ns['wso']
         media = self.store.ns['media']
-        # endpoints = set()
-        # replicate_endpoint = 0
+
         for item in doc.service_description.service.endpoints:
             endpoint_uri = self._generate_uri('ServiceEndpoint')
             endpoint = self.store.get_resource(endpoint_uri)
